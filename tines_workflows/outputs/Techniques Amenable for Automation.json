@@ -1,0 +1,1273 @@
+[
+  {
+    "att_ck_technique": "T1041",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Certificate Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Application Protocol Command Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Client-server Payload Profiling"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Community Deviation"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Per Host Download-Upload Ratio Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Protocol Metadata Anomaly Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Remote Terminal Session Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Signature Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "User Geolocation Logon Pattern Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1552",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Reissue Credential"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Authentication Cache Invalidation"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Credential Revocation"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Credential Compromise Scope Analysis"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1053.005",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Process Termination"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Daemon Monitoring"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Process Suspension"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Lineage Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Self-Modification Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Spawn Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Host Reboot"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Host Shutdown"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1003.003",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Reissue Credential"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Authentication Cache Invalidation"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Credential Revocation"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Credential Compromise Scope Analysis"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1018",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Application Protocol Command Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Client-server Payload Profiling"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Community Deviation"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Signature Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Per Host Download-Upload Ratio Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Protocol Metadata Anomaly Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Remote Terminal Session Detection"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System File Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Spawn Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Call Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "User Geolocation Logon Pattern Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1218.011",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Spawn Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Call Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1021.004",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Application Protocol Command Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Protocol Metadata Anomaly Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Remote Terminal Session Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Signature Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Client-server Payload Profiling"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Community Deviation"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Per Host Download-Upload Ratio Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "User Geolocation Logon Pattern Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Session Termination"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1071.001",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Certificate Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Application Protocol Command Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Client-server Payload Profiling"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Community Deviation"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Per Host Download-Upload Ratio Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Protocol Metadata Anomaly Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Signature Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Relay Pattern Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Remote Terminal Session Detection"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "User Geolocation Logon Pattern Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1546.008",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Application Protocol Command Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Client-server Payload Profiling"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Connection Attempt Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Administrative Network Activity Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Community Deviation"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Remote Terminal Session Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Signature Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Per Host Download-Upload Ratio Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Protocol Metadata Anomaly Detection"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore Configuration"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Dynamic Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "User Geolocation Logon Pattern Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Emulated File Analysis"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1548.002",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore Configuration"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Dynamic Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Call Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Spawn Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Emulated File Analysis"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1560",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1560.001",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1505.003",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore Network Access"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Process Termination"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Endpoint Health Beacon"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Process Suspension"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Dynamic Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Lineage Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Self-Modification Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Spawn Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Host Reboot"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Host Shutdown"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Emulated File Analysis"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1546.015",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore Database"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Dynamic Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Emulated File Analysis"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1087.002",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Unlock Account"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore User Account Access"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Account Locking"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Domain Account Monitoring"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1555",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore Database"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1053",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Process Termination"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Daemon Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Scheduled Job Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Process Suspension"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Lineage Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Self-Modification Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Spawn Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Call Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Host Reboot"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Host Shutdown"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1005",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1562.001",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Process Termination"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Daemon Monitoring"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Process Suspension"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Self-Modification Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Spawn Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Lineage Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Host Reboot"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Host Shutdown"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1140",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Application Exception Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Operational Process Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Dynamic Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Call Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Spawn Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Emulated File Analysis"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1574.001",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1059",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Dynamic Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Emulated File Analysis"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1033",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Process Termination"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore Database"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Process Suspension"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Self-Modification Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Spawn Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Call Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Lineage Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Host Reboot"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Host Shutdown"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1204.002",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Dynamic Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Emulated File Analysis"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1558",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Reissue Credential"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Authentication Cache Invalidation"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Credential Revocation"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Credential Compromise Scope Analysis"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1555.003",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore Database"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Call Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1036.005",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Call Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1547.001",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore Configuration"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Init Config Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Dynamic Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Emulated File Analysis"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1071",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Certificate Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Application Protocol Command Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Client-server Payload Profiling"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Relay Pattern Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Remote Terminal Session Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Signature Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Community Deviation"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Per Host Download-Upload Ratio Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Protocol Metadata Anomaly Detection"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "User Geolocation Logon Pattern Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1083",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1074.001",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Creation Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Call Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1003.001",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Process Termination"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Process Suspension"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Self-Modification Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Spawn Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Lineage Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Host Reboot"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Host Shutdown"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1016",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Dynamic Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Process Spawn Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "System Call Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Emulated File Analysis"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1552.001",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Analysis"
+      },
+      {
+        "def_tactic": "Restore",
+        "def_technique": "Restore File"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "File Integrity Monitoring"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "File Eviction"
+      }
+    ]
+  },
+  {
+    "att_ck_technique": "T1021.001",
+    "d3fend_techniques": [
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Application Protocol Command Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Signature Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Client-server Payload Profiling"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Network Traffic Community Deviation"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Per Host Download-Upload Ratio Analysis"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Protocol Metadata Anomaly Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "Remote Terminal Session Detection"
+      },
+      {
+        "def_tactic": "Detect",
+        "def_technique": "User Geolocation Logon Pattern Analysis"
+      },
+      {
+        "def_tactic": "Evict",
+        "def_technique": "Session Termination"
+      }
+    ]
+  }
+]
