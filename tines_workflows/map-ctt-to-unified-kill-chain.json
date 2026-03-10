@@ -1,0 +1,770 @@
+{
+  "schema_version": 28,
+  "standard_lib_version": 86,
+  "action_runtime_version": 70,
+  "name": "Map CTT to Unified Kill Chain",
+  "description": null,
+  "guid": "87d0b132e3166fdb68d285f6de554bf3",
+  "slug": "map_ctt_to_unified_kill_chain",
+  "agents": [
+    {
+      "type": "Agents::HTTPRequestAgent",
+      "name": "Get MITRE STIX",
+      "disabled": false,
+      "description": null,
+      "guid": "f67d8f0f97cdc4010d370178e156cf6b",
+      "origin_story_identifier": "cloud:b09fd93cfb41d0da179c1880dd946013:56b9ad0a93f234de1d2405ada165a361",
+      "options": {
+        "url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack.json",
+        "content_type": "application_json",
+        "method": "get"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "CTT1",
+      "disabled": false,
+      "description": null,
+      "guid": "b4514f98085a593acac6e088efa9a9f0",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:91109a5f8dff46bcfd3497bcf55db0d1",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "T1486"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Explode Techniques Associated With Common Threat Types",
+      "disabled": false,
+      "description": null,
+      "guid": "e10a19ff8e45732b6da062aa7c014bdd",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:91109a5f8dff46bcfd3497bcf55db0d1",
+      "options": {
+        "mode": "explode",
+        "path": "=DEFAULT(\n  ctt1,\n  ctt2,\n  ctt3,\n  ctt4_1,\n  ctt4_2\n)",
+        "to": "technique",
+        "limit": "50000"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Resolve Technique",
+      "disabled": false,
+      "description": null,
+      "guid": "98e5f22036c34f5728862214143bb3cb",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:91109a5f8dff46bcfd3497bcf55db0d1",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=FILTER(\n  get_mitre_stix.body.objects,\n  LAMBDA(obj, \n    AND(obj.type=\"attack-pattern\",\n      INCLUDES(MAP(obj.external_references,\"external_id\"), explode_techniques_associated_with_common_threat_types.technique)\n    )))"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Intrusion Sets Associated With Technique",
+      "disabled": false,
+      "description": null,
+      "guid": "e02a6d5dffe9745135359fcd32c01d2e",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:91109a5f8dff46bcfd3497bcf55db0d1",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=FILTER(\n  get_mitre_stix.body.objects,\n  LAMBDA(obj, \nAND(\n  obj.type=\"relationship\",\n  obj.target_ref=resolve_technique[0].id,\n  STARTS_WITH(obj.source_ref, \"intrusion-set\"))))"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Resolve Intrusion Set",
+      "disabled": false,
+      "description": null,
+      "guid": "2b6e4baa7f6176cc89e39b4cd45055ca",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:91109a5f8dff46bcfd3497bcf55db0d1",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=FILTER(\n  get_mitre_stix.body.objects,\n  LAMBDA(obj,\n  obj.id=explode_intrusion_sets_associated_with_ctt.intrusion_set\n  ))"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::HTTPRequestAgent",
+      "name": "Get Intrusion Set Details",
+      "disabled": false,
+      "description": null,
+      "guid": "200a6d97b27a4931508e9e5735e1b329",
+      "origin_story_identifier": "cloud:b09fd93cfb41d0da179c1880dd946013:56b9ad0a93f234de1d2405ada165a361",
+      "options": {
+        "url": "<<WHERE(resolve_intrusion_set[0].external_references, \"source_name\", \"mitre-attack\")[0] |> APPEND(%.url, \"/\", %.external_id, \"-enterprise-layer.json\")>>",
+        "content_type": "application_json",
+        "method": "get"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "CTT2",
+      "disabled": false,
+      "description": null,
+      "guid": "492ca6a52a4621c5dcaaa982c41c796c",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:91109a5f8dff46bcfd3497bcf55db0d1",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "T1059",
+          "T1105",
+          "T1027",
+          "T1082"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "CTT3",
+      "disabled": false,
+      "description": null,
+      "guid": "2f25850ab0f7f107aa0b41bb53a12c54",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:91109a5f8dff46bcfd3497bcf55db0d1",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "T1203",
+          "T1068",
+          "T1210",
+          "T1211"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "CTT4.1",
+      "disabled": false,
+      "description": null,
+      "guid": "373c147a7f6433edb8deaf5309196a2c",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:91109a5f8dff46bcfd3497bcf55db0d1",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "T1485",
+          "T1565"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Throttle MITRE API Queries",
+      "disabled": false,
+      "description": null,
+      "guid": "01cb0c91df7f002de38585e2440ef676",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:87d0b132e3166fdb68d285f6de554bf3",
+      "options": {
+        "mode": "throttle",
+        "interval": "minute",
+        "capacity": 20,
+        "events_per_run": 1
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Implode Intrusion Sets Associated with CTT",
+      "disabled": false,
+      "description": null,
+      "guid": "98966e2e629eea33ebfbfe871e9d65b7",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:87d0b132e3166fdb68d285f6de554bf3",
+      "options": {
+        "mode": "implode",
+        "item_path": "=intrusion_sets_associated_with_technique",
+        "guid_path": "=explode_techniques_associated_with_common_threat_types.guid",
+        "size_path": "=explode_techniques_associated_with_common_threat_types.size"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "CTT4.2",
+      "disabled": false,
+      "description": null,
+      "guid": "cae8a673928a12127de35dbfd733e545",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:91109a5f8dff46bcfd3497bcf55db0d1",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "T1041",
+          "T1567",
+          "T1052"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Explode Intrusion Sets Associated with CTT",
+      "disabled": false,
+      "description": null,
+      "guid": "71a025d1fb90e87acd5a16760d4e89fd",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:87d0b132e3166fdb68d285f6de554bf3",
+      "options": {
+        "mode": "explode",
+        "path": "=UNIQ(MAP(FLATTEN(implode_intrusion_sets_associated_with_ctt), \"source_ref\"))",
+        "to": "intrusion_set",
+        "limit": "5000"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Implode Detailed Intrusion Sets",
+      "disabled": false,
+      "description": null,
+      "guid": "1647a3517cebbed5d5ff8325e307a953",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:87d0b132e3166fdb68d285f6de554bf3",
+      "options": {
+        "mode": "implode",
+        "item_path": "=SET_KEY(\n  get_intrusion_set_details.body,\n  \"techniques\",\n  implode_detailed_intrusion_set_techniques\n)",
+        "guid_path": "=add_tactic_and_techniques_information_to_intursion_set",
+        "size_path": "=explode_intrusion_sets_associated_with_ctt.size"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Add Tactic and Techniques Information to Intursion Set Technique",
+      "disabled": false,
+      "description": null,
+      "guid": "4d6d7a1a91262a8aabe289a165dda06f",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:87d0b132e3166fdb68d285f6de554bf3",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=FILTER(get_mitre_stix.body.objects,\n        LAMBDA(obj, \n          AND(obj.type=\"attack-pattern\",\n      INCLUDES(MAP(obj.external_references,\"external_id\"), explode_intrusion_set_techniques.technique.techniqueID)\n      ))\n  )|> SET_KEY(\n    SET_KEY(\n      explode_intrusion_set_techniques.technique,\n      \"tactic\",\n      TITLEIZE(%[0].kill_chain_phases[0].phase_name)), \"technique\", %[0].name)"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Map Intrusion Sets to Unified Kill Chain",
+      "disabled": false,
+      "description": null,
+      "guid": "8d3120d2b727d054a65e96f926957005",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:87d0b132e3166fdb68d285f6de554bf3",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=MAP_LAMBDA(\n  LOCAL.kill_chain_phases,\n  LAMBDA(\n   phase,\n  SET_KEY(phase, \"techniques\", COMPACT(FLATTEN(MAP_LAMBDA(implode_detailed_intrusion_sets,\n    LAMBDA(intrusion_set,\n      FILTER(intrusion_set.techniques,\n        LAMBDA(technique, technique.tactic=phase.name)))\n  )))|> MAP_LAMBDA(UNIQ(MAP(%, \"techniqueID\")), LAMBDA(technique_id,\n    OBJECT(\n      \"techniqeID\", technique_id,\n      \"technique\", WHERE(%, \"techniqueID\", technique_id)[0].technique,\n      \"count\", COUNTIF(MAP(%, \"techniqueID\"),technique_id))))\n    |> SLICE_ARRAY(REVERSE(SORT(%,\"count\")), 0,5)\n  )))\n|> FILTER(%, LAMBDA(phase, NOT(IS_BLANK(phase.techniques))))",
+        "local": {
+          "kill_chain_phases": [
+            {
+              "name": "Reconnaissance",
+              "number": 1
+            },
+            {
+              "name": "Resource Development",
+              "number": 2
+            },
+            {
+              "name": "Delivery",
+              "number": 3
+            },
+            {
+              "name": "Social Engineering",
+              "number": 4
+            },
+            {
+              "name": "Exploitation",
+              "number": 5
+            },
+            {
+              "name": "Persistence",
+              "number": 6
+            },
+            {
+              "name": "Defense Evasion",
+              "number": 7
+            },
+            {
+              "name": "Command And Control",
+              "number": 8
+            },
+            {
+              "name": "Pivoting",
+              "number": 9
+            },
+            {
+              "name": "Discovery",
+              "number": 10
+            },
+            {
+              "name": "Privilege Escalation",
+              "number": 11
+            },
+            {
+              "name": "Execution",
+              "number": 12
+            },
+            {
+              "name": "Credential Access",
+              "number": 13
+            },
+            {
+              "name": "Lateral Movement",
+              "number": 14
+            },
+            {
+              "name": "Collection",
+              "number": 15
+            },
+            {
+              "name": "Exfiltration",
+              "number": 16
+            },
+            {
+              "name": "Impact",
+              "number": 17
+            },
+            {
+              "name": "Objectives",
+              "number": 18
+            }
+          ]
+        }
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Explode Intrusion Set Techniques",
+      "disabled": false,
+      "description": null,
+      "guid": "819cd28e14e264c73e82691ea5b6dd22",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:87d0b132e3166fdb68d285f6de554bf3",
+      "options": {
+        "mode": "explode",
+        "path": "=get_intrusion_set_details.body.techniques",
+        "to": "technique",
+        "limit": "5000"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Implode Detailed Intrusion Set Techniques",
+      "disabled": false,
+      "description": null,
+      "guid": "c6f7079066ca5216b293bc82737d7f7a",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:87d0b132e3166fdb68d285f6de554bf3",
+      "options": {
+        "mode": "implode",
+        "item_path": "=add_tactic_and_techniques_information_to_intursion_set_technique",
+        "guid_path": "=explode_intrusion_set_techniques.guid",
+        "size_path": "=explode_intrusion_set_techniques.size"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    }
+  ],
+  "diagram_notes": [],
+  "links": [
+    {
+      "source": 0,
+      "receiver": 2
+    },
+    {
+      "source": 1,
+      "receiver": 0
+    },
+    {
+      "source": 2,
+      "receiver": 3
+    },
+    {
+      "source": 3,
+      "receiver": 4
+    },
+    {
+      "source": 4,
+      "receiver": 11
+    },
+    {
+      "source": 5,
+      "receiver": 10
+    },
+    {
+      "source": 6,
+      "receiver": 17
+    },
+    {
+      "source": 7,
+      "receiver": 0
+    },
+    {
+      "source": 8,
+      "receiver": 0
+    },
+    {
+      "source": 9,
+      "receiver": 0
+    },
+    {
+      "source": 10,
+      "receiver": 6
+    },
+    {
+      "source": 11,
+      "receiver": 13
+    },
+    {
+      "source": 12,
+      "receiver": 0
+    },
+    {
+      "source": 13,
+      "receiver": 5
+    },
+    {
+      "source": 14,
+      "receiver": 16
+    },
+    {
+      "source": 15,
+      "receiver": 18
+    },
+    {
+      "source": 17,
+      "receiver": 15
+    },
+    {
+      "source": 18,
+      "receiver": 14
+    }
+  ],
+  "diagram_layout": "{\"01cb0c91df7f002de38585e2440ef676\":[360,735],\"1647a3517cebbed5d5ff8325e307a953\":[360,1170],\"200a6d97b27a4931508e9e5735e1b329\":[360,810],\"2b6e4baa7f6176cc89e39b4cd45055ca\":[360,660],\"2f25850ab0f7f107aa0b41bb53a12c54\":[360,105],\"373c147a7f6433edb8deaf5309196a2c\":[540,105],\"492ca6a52a4621c5dcaaa982c41c796c\":[180,105],\"4d6d7a1a91262a8aabe289a165dda06f\":[360,975],\"71a025d1fb90e87acd5a16760d4e89fd\":[360,570],\"819cd28e14e264c73e82691ea5b6dd22\":[360,885],\"8d3120d2b727d054a65e96f926957005\":[360,1275],\"98966e2e629eea33ebfbfe871e9d65b7\":[360,480],\"98e5f22036c34f5728862214143bb3cb\":[360,315],\"b4514f98085a593acac6e088efa9a9f0\":[15,105],\"c6f7079066ca5216b293bc82737d7f7a\":[360,1080],\"cae8a673928a12127de35dbfd733e545\":[705,105],\"e02a6d5dffe9745135359fcd32c01d2e\":[360,390],\"e10a19ff8e45732b6da062aa7c014bdd\":[360,240],\"f67d8f0f97cdc4010d370178e156cf6b\":[360,180]}",
+  "story_library_metadata": {},
+  "monitor_failures": false,
+  "synchronous_webhooks_enabled": false,
+  "integrations": [],
+  "sections": [],
+  "parent_only_send_to_story": false,
+  "send_to_story_timeout_enabled": false,
+  "send_to_story_timeout_duration_seconds": null,
+  "keep_events_for": 3600,
+  "reporting_status": true,
+  "send_to_story_enabled": false,
+  "entry_agent_guid": null,
+  "exit_agent_guids": [],
+  "api_entry_action_guids": [],
+  "api_exit_action_guids": [],
+  "send_to_story_access": null,
+  "send_to_story_access_source": 0,
+  "send_to_story_skill_use_requires_confirmation": true,
+  "pages": [],
+  "tags": [],
+  "time_saved_unit": "minutes",
+  "time_saved_value": 0,
+  "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:87d0b132e3166fdb68d285f6de554bf3",
+  "recipients": [],
+  "integration_product": null,
+  "integration_vendor": null,
+  "llm_product_instructions": "",
+  "start_reference": null,
+  "send_to_stories": [],
+  "exported_at": "2026-03-10T11:44:44Z",
+  "icon": ":custom-bc45e21c-e732-43a0-b4c2-abb6f65a947d:"
+}
