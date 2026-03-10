@@ -1,0 +1,624 @@
+{
+  "schema_version": 28,
+  "standard_lib_version": 86,
+  "action_runtime_version": 70,
+  "name": "Playbook Generator",
+  "description": null,
+  "guid": "6dcd9b1487fd74065a368cd0fc3b15fe",
+  "slug": "playbook_generator",
+  "agents": [
+    {
+      "type": "Agents::FormAgent",
+      "name": "Submit Technique",
+      "disabled": false,
+      "description": null,
+      "guid": "61f918c705979e71f46fb701b2871ef4",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:6dcd9b1487fd74065a368cd0fc3b15fe",
+      "options": {
+        "fields": "",
+        "mode": "story_run",
+        "visibility": "tenant",
+        "anonymize": false,
+        "auto_submit": false,
+        "page_logo": {
+          "contents": "iVBORw0KGgoAAAANSUhEUgAAAFQAAAAYCAYAAABk8drWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARCSURBVHgB7VhLctpAEB1k7LVyA/kEgRMEn8BQ5e8qcALjE1icAPsEkJW/VeATwA1QTmDlBCE7l3/kPblbTIiMJcVOeaFXBRrN9Mz0vOnu6ZExBQoUKFCgwAdByX4ZDAbuw8PDwWw2a+LVk+rAcZxgZWWl02g0QpMSl5eXXRlnvLq62kLfqcmIi4uLZqlU+lwulztJ/aGvJ/p+39nZ6cu8R3j30c/f3t7umP8MRwtXV1df7+/vb6iMmZNJVJ6enppom5ydnbVNCpAIjENZF786Fn1kMgLE1PDocRz0HyTJQKe2zNOjMbBO3o1sZgS2Ybw29KqYd0ZEKMg8AGl980zAS3BhqV0Sv0Qmsho8/iCQi5T6XED/WtJmoj7W9/b2Vgk9gXUGWM+JtoF4H/VdFEdK/HvB4UIxuZ+2A2SPlykFayLhXkJ9z/wDsJlHaTZld3fXR4ho7O3tHWudRbyrxC+Ca+L4rxFuyXlJ7c7j4yOtKcuuuXd3d+0XJvMkZPwFWpm4cV64sLTBawuGB/UYus7Pz7vUB3NOYLGxV+EsuIHrT2ydITNCn5/sxyfaKdO0x02Qo8wNY7Yt52ChmeOKraAN2ZxlyBxLZb6xFCuvxWN4UE361PGYYn1egli0KSQJxIy42VIfso959rCehplFOYYUkY0MCJvn68C5CDUJLi2ho7msExVa3Pk0QL9veJxIuZ3W0pkZIMNYR3GodSBjA3VVlsUAPK1HprCOuqoQpmHGRV3FzNfcQvZQpSx06YjcFx3fMW8E7mBK0W6egwEk+ObZKkjqIO0hR1Ih/0vfYeGhpmAwgLpUX4OkMQv7+/shCNV0i+GtBrlYX5Kn2QLjNTeCMVvby6KkZ7IhsF/E6jyTDhqDfZMBJAHzUHHGP1cOuR8mJ05PTz0zPzs2MfZM20BgLAfCXGzmEAYTWbN4YRPy3JQxNusauo1V3hF3yopg4T1TbISSB3nSKLhZgL6HLDN8oLxp3ga8vPSTfnD3MTcTzw1ypeHASI6NX88+5Jy1tTWmF1luMRw8voHIKeeZbHBTHGCJgGseW4dU7pySrm3m6w62trZa9o/kQcdrkTNwaw9c8fZVhcV+oqtb5FY0DDgSTw7TKgKT7+gkhH0jyQK6Tt4kG+7eMtmMIAasLj6ELULqtsfw8oJ1jdA+YGjgLYvvPCcoR84Yc63+UWiIxucf78HiSsuUZFvLTpgF73rzSAI3FMS0MnQJtUCSmD/KdwvdGFfyygnb5NZIBGI8ShzTpwnzUcpaWU2oh1p8ytOVmDIsxIlImOkB0w/9AGFDFhaabJhCmcNlH0zgYoGxXHKxHW451LSF86vXQPdQ6sYqy7BmhYlofs7NPpImaZumR5y3jzVvsFLI0nW6ko9WRG6oaVg0v/nA0JCwjHhx1aktw3jGA+yF8dykr2ZisRVsZLg4XpIcSGWOG+b5ilagQIECBZLxG5sJ41WbSDouAAAAAElFTkSuQmCC\n",
+          "display_logo": false,
+          "name": "nites.jpeg",
+          "type": "image/jpeg"
+        },
+        "page_width": "auto",
+        "pages_action_color": "#777FFF",
+        "pages_appearance_mode": "light",
+        "pages_background_color": "#ffffff",
+        "auto_close_tab_on_submit": false,
+        "url_identifier": "3baf87d4376708439124e826a8280ec5",
+        "loading_message": "Please wait…"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null
+    },
+    {
+      "type": "Agents::HTTPRequestAgent",
+      "name": "Get MITRE D3FEND",
+      "disabled": false,
+      "description": null,
+      "guid": "c48f65b5983fbae9c823f9dce2a49527",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:7000cd8864f47adac26ec8a687546077",
+      "options": {
+        "url": "https://d3fend.mitre.org/api/ontology/inference/d3fend-full-mappings.json",
+        "content_type": "application_json",
+        "method": "get"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Get related D3FEND techniques",
+      "disabled": false,
+      "description": null,
+      "guid": "de1ac34ad9f3052cade7159aaf2e2341",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:6dcd9b1487fd74065a368cd0fc3b15fe",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=FILTER(\n  get_mitre_d3fend.body.results.bindings,\n  LAMBDA(\n    binding,\n    AND(\nINCLUDES(['Detect', 'Evict','Restore'],binding.def_tactic_label.value),binding.off_tech_id.value=STRIP(submit_technique.body.technique_id)\n  )\n))\n|> OBJECT(\n  \"attck_technique_id\", APPEND(\"[\",%[0].off_tech_id.value,\"](https://attack.mitre.org/techniques/\",%[0].off_tech_id.value,\")\"),\n  \"attck_technique\", %[0].off_tech_label.value,\n  \"attck_tactic\", %[0].off_tactic_label.value,\n  \"d3fend\",\n  UNIQ(MAP_LAMBDA(%, LAMBDA(binding,\n    OBJECT(\n      \"tactic\",binding.def_tactic_label.value,\n      \"technique\",APPEND(\"[\",binding.def_tech_label.value,\"](https://d3fend.mitre.org/technique/d3f:\", SPLIT(binding.def_tech.value,\"#\")[1],\")\")\n      )\n    )\n  ))\n)"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::FormAgent",
+      "name": "Results",
+      "disabled": false,
+      "description": null,
+      "guid": "b9c4cdaf1c5c6b5d64a365265e82fc8a",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:6dcd9b1487fd74065a368cd0fc3b15fe",
+      "options": {
+        "fields": "",
+        "mode": "success_page",
+        "submissionMessage": "Thank you for your submission",
+        "visibility": "tenant",
+        "anonymize": false,
+        "auto_submit": false,
+        "page_logo": {
+          "contents": "iVBORw0KGgoAAAANSUhEUgAAAFQAAAAYCAYAAABk8drWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARCSURBVHgB7VhLctpAEB1k7LVyA/kEgRMEn8BQ5e8qcALjE1icAPsEkJW/VeATwA1QTmDlBCE7l3/kPblbTIiMJcVOeaFXBRrN9Mz0vOnu6ZExBQoUKFCgwAdByX4ZDAbuw8PDwWw2a+LVk+rAcZxgZWWl02g0QpMSl5eXXRlnvLq62kLfqcmIi4uLZqlU+lwulztJ/aGvJ/p+39nZ6cu8R3j30c/f3t7umP8MRwtXV1df7+/vb6iMmZNJVJ6enppom5ydnbVNCpAIjENZF786Fn1kMgLE1PDocRz0HyTJQKe2zNOjMbBO3o1sZgS2Ybw29KqYd0ZEKMg8AGl980zAS3BhqV0Sv0Qmsho8/iCQi5T6XED/WtJmoj7W9/b2Vgk9gXUGWM+JtoF4H/VdFEdK/HvB4UIxuZ+2A2SPlykFayLhXkJ9z/wDsJlHaTZld3fXR4ho7O3tHWudRbyrxC+Ca+L4rxFuyXlJ7c7j4yOtKcuuuXd3d+0XJvMkZPwFWpm4cV64sLTBawuGB/UYus7Pz7vUB3NOYLGxV+EsuIHrT2ydITNCn5/sxyfaKdO0x02Qo8wNY7Yt52ChmeOKraAN2ZxlyBxLZb6xFCuvxWN4UE361PGYYn1egli0KSQJxIy42VIfso959rCehplFOYYUkY0MCJvn68C5CDUJLi2ho7msExVa3Pk0QL9veJxIuZ3W0pkZIMNYR3GodSBjA3VVlsUAPK1HprCOuqoQpmHGRV3FzNfcQvZQpSx06YjcFx3fMW8E7mBK0W6egwEk+ObZKkjqIO0hR1Ih/0vfYeGhpmAwgLpUX4OkMQv7+/shCNV0i+GtBrlYX5Kn2QLjNTeCMVvby6KkZ7IhsF/E6jyTDhqDfZMBJAHzUHHGP1cOuR8mJ05PTz0zPzs2MfZM20BgLAfCXGzmEAYTWbN4YRPy3JQxNusauo1V3hF3yopg4T1TbISSB3nSKLhZgL6HLDN8oLxp3ga8vPSTfnD3MTcTzw1ypeHASI6NX88+5Jy1tTWmF1luMRw8voHIKeeZbHBTHGCJgGseW4dU7pySrm3m6w62trZa9o/kQcdrkTNwaw9c8fZVhcV+oqtb5FY0DDgSTw7TKgKT7+gkhH0jyQK6Tt4kG+7eMtmMIAasLj6ELULqtsfw8oJ1jdA+YGjgLYvvPCcoR84Yc63+UWiIxucf78HiSsuUZFvLTpgF73rzSAI3FMS0MnQJtUCSmD/KdwvdGFfyygnb5NZIBGI8ShzTpwnzUcpaWU2oh1p8ytOVmDIsxIlImOkB0w/9AGFDFhaabJhCmcNlH0zgYoGxXHKxHW451LSF86vXQPdQ6sYqy7BmhYlofs7NPpImaZumR5y3jzVvsFLI0nW6ko9WRG6oaVg0v/nA0JCwjHhx1aktw3jGA+yF8dykr2ZisRVsZLg4XpIcSGWOG+b5ilagQIECBZLxG5sJ41WbSDouAAAAAElFTkSuQmCC\n",
+          "display_logo": false,
+          "name": "nites.jpeg",
+          "type": "image/jpeg"
+        },
+        "page_width": "large",
+        "pages_action_color": "#777FFF",
+        "pages_appearance_mode": "light",
+        "pages_background_color": "#F9F9F9",
+        "auto_close_tab_on_submit": false,
+        "url_identifier": "d472fd9cc3be41c1cdfe17295fe068ac"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Create Table",
+      "disabled": false,
+      "description": null,
+      "guid": "b85f6976e799351f40d59b6357814094",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:6dcd9b1487fd74065a368cd0fc3b15fe",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": {
+          "attck": "| Technique ID | Technique | Tactic |\n|---|---|---|\n|<<get_related_d3fend_techniques.attck_technique_id>>|<<get_related_d3fend_techniques.attck_technique>>|<<get_related_d3fend_techniques.attck_tactic>>|",
+          "d3fend": "<%for tactic in SORT(UNIQ(MAP(get_related_d3fend_techniques.d3fend,\"tactic\")))%>|<<tactic>><<IF(FORLOOP.last, \"|\")>><%endfor%>\n<%for tactic in UNIQ(MAP(get_related_d3fend_techniques.d3fend,\"tactic\"))%>|---<<IF(FORLOOP.last, \"|\")>><%endfor%><%for counter in LAST(SORT(MAP_LAMBDA(UNIQ(MAP(get_related_d3fend_techniques.d3fend,\"tactic\")),LAMBDA(tactic,OBJECT(\"tactic\",tactic,\"techniques\",WHERE(get_related_d3fend_techniques.d3fend,\"tactic\",tactic),\"count\",SIZE(WHERE(get_related_d3fend_techniques.d3fend,\"tactic\",tactic))))),\"count\")).techniques%>\n<%for tactic in SORT(UNIQ(MAP(get_related_d3fend_techniques.d3fend,\"tactic\")))%>|<<WHERE(get_related_d3fend_techniques.d3fend,\"tactic\",tactic)[INDEX_OF(LAST(SORT(MAP_LAMBDA(UNIQ(MAP(get_related_d3fend_techniques.d3fend,\"tactic\")),LAMBDA(tactic,OBJECT(\"tactic\",tactic,\"techniques\",WHERE(get_related_d3fend_techniques.d3fend,\"tactic\",tactic),\"count\",SIZE(WHERE(get_related_d3fend_techniques.d3fend,\"tactic\",tactic))))),\"count\")).techniques,counter)].technique>><<IF(FORLOOP.last,\"|\")>><%endfor%><%endfor%>"
+        }
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    }
+  ],
+  "diagram_notes": [],
+  "links": [
+    {
+      "source": 0,
+      "receiver": 1
+    },
+    {
+      "source": 1,
+      "receiver": 2
+    },
+    {
+      "source": 2,
+      "receiver": 4
+    },
+    {
+      "source": 4,
+      "receiver": 3
+    }
+  ],
+  "diagram_layout": "{\"61f918c705979e71f46fb701b2871ef4\":[495,60],\"b85f6976e799351f40d59b6357814094\":[495,465],\"b9c4cdaf1c5c6b5d64a365265e82fc8a\":[495,540],\"c48f65b5983fbae9c823f9dce2a49527\":[495,315],\"de1ac34ad9f3052cade7159aaf2e2341\":[495,375]}",
+  "story_library_metadata": {},
+  "monitor_failures": false,
+  "synchronous_webhooks_enabled": false,
+  "integrations": [],
+  "sections": [],
+  "parent_only_send_to_story": false,
+  "send_to_story_timeout_enabled": false,
+  "send_to_story_timeout_duration_seconds": null,
+  "keep_events_for": 604800,
+  "reporting_status": true,
+  "send_to_story_enabled": false,
+  "entry_agent_guid": null,
+  "exit_agent_guids": [],
+  "api_entry_action_guids": [],
+  "api_exit_action_guids": [],
+  "send_to_story_access": null,
+  "send_to_story_access_source": 0,
+  "send_to_story_skill_use_requires_confirmation": true,
+  "pages": [
+    {
+      "containers": [
+        {
+          "guid": "59f805ced42a6864eed508f5880d8787",
+          "ranking": 0,
+          "category": 0,
+          "name": "Container",
+          "layout": "vertical",
+          "alignment": "no_alignment",
+          "loop": "",
+          "spacing": "no_spacing",
+          "user_driven_loop": false
+        },
+        {
+          "guid": "aea8c3d096edf274bdea02152dbf1a92",
+          "ranking": 1,
+          "category": 0,
+          "name": "Container",
+          "layout": "vertical",
+          "alignment": "no_alignment",
+          "loop": "",
+          "spacing": "no_spacing",
+          "user_driven_loop": false
+        },
+        {
+          "guid": "13a794106801a6b1d615f5ed1a94f3a7",
+          "ranking": 2,
+          "category": 0,
+          "name": "Container",
+          "layout": "vertical",
+          "alignment": "no_alignment",
+          "loop": "",
+          "spacing": "no_spacing",
+          "user_driven_loop": false
+        }
+      ],
+      "conditions": [],
+      "fields": [
+        {
+          "guid": "eeedad44fc14ca8747b2f558eb67926e",
+          "name": "Heading",
+          "description": "",
+          "required": false,
+          "type": "TITLE",
+          "multi_select": false,
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "ranking": 0,
+          "max_characters": null,
+          "default_value": null,
+          "content": "Submit MITRE ATT&CK Technique",
+          "validation_pattern": null,
+          "validation_error_message": null,
+          "style": "primary",
+          "container_guid": "59f805ced42a6864eed508f5880d8787",
+          "graph_type": 0,
+          "graph_direction": "HORIZONTAL",
+          "date_mode": "DATE",
+          "store_value_as": "=password_value",
+          "allow_table_row_selection": false,
+          "is_searchable": false,
+          "height": null,
+          "image_fit": "CONTAIN",
+          "min_value": 0,
+          "max_value": 100,
+          "step": 1,
+          "width": "AUTO",
+          "width_type": "FLEX_WIDTH",
+          "width_fixed_px": 0,
+          "boolean_label_true": "Yes",
+          "boolean_label_false": "No"
+        },
+        {
+          "guid": "e78817603a41d7da7ce8be663a943973",
+          "name": "Technique ID",
+          "description": "",
+          "required": false,
+          "type": "SHORT_TEXT",
+          "multi_select": false,
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "ranking": 0,
+          "max_characters": null,
+          "default_value": null,
+          "content": null,
+          "validation_pattern": null,
+          "validation_error_message": null,
+          "style": "primary",
+          "container_guid": "aea8c3d096edf274bdea02152dbf1a92",
+          "graph_type": 0,
+          "graph_direction": "HORIZONTAL",
+          "date_mode": "DATE",
+          "store_value_as": "=password_value",
+          "allow_table_row_selection": false,
+          "is_searchable": false,
+          "height": null,
+          "image_fit": "CONTAIN",
+          "min_value": 0,
+          "max_value": 100,
+          "step": 1,
+          "width": "AUTO",
+          "width_type": "FLEX_WIDTH",
+          "width_fixed_px": 0,
+          "boolean_label_true": "Yes",
+          "boolean_label_false": "No"
+        },
+        {
+          "guid": "d28e9694ea8f7c0dcb58afc5d771c3c3",
+          "name": "Button",
+          "description": "",
+          "required": false,
+          "type": "BUTTON",
+          "multi_select": false,
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "ranking": 0,
+          "max_characters": null,
+          "default_value": null,
+          "content": "Submit",
+          "validation_pattern": null,
+          "validation_error_message": null,
+          "style": "primary",
+          "container_guid": "13a794106801a6b1d615f5ed1a94f3a7",
+          "graph_type": 0,
+          "graph_direction": "HORIZONTAL",
+          "date_mode": "DATE",
+          "store_value_as": "=password_value",
+          "allow_table_row_selection": false,
+          "is_searchable": false,
+          "height": null,
+          "image_fit": "CONTAIN",
+          "min_value": 0,
+          "max_value": 100,
+          "step": 1,
+          "width": "AUTO",
+          "width_type": "FLEX_WIDTH",
+          "width_fixed_px": 0,
+          "boolean_label_true": "Yes",
+          "boolean_label_false": "No"
+        }
+      ],
+      "visibility": "tenant",
+      "agent_guid": "61f918c705979e71f46fb701b2871ef4",
+      "success_message": "",
+      "loading_message": "Please wait…",
+      "logo_contents": "iVBORw0KGgoAAAANSUhEUgAAAFQAAAAYCAYAAABk8drWAAAACXBIWXMAAAsT\nAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARCSURB\nVHgB7VhLctpAEB1k7LVyA/kEgRMEn8BQ5e8qcALjE1icAPsEkJW/VeATwA1Q\nTmDlBCE7l3/kPblbTIiMJcVOeaFXBRrN9Mz0vOnu6ZExBQoUKFCgwAdByX4Z\nDAbuw8PDwWw2a+LVk+rAcZxgZWWl02g0QpMSl5eXXRlnvLq62kLfqcmIi4uL\nZqlU+lwulztJ/aGvJ/p+39nZ6cu8R3j30c/f3t7umP8MRwtXV1df7+/vb6iM\nmZNJVJ6enppom5ydnbVNCpAIjENZF786Fn1kMgLE1PDocRz0HyTJQKe2zNOj\nMbBO3o1sZgS2Ybw29KqYd0ZEKMg8AGl980zAS3BhqV0Sv0Qmsho8/iCQi5T6\nXED/WtJmoj7W9/b2Vgk9gXUGWM+JtoF4H/VdFEdK/HvB4UIxuZ+2A2SPlykF\nayLhXkJ9z/wDsJlHaTZld3fXR4ho7O3tHWudRbyrxC+Ca+L4rxFuyXlJ7c7j\n4yOtKcuuuXd3d+0XJvMkZPwFWpm4cV64sLTBawuGB/UYus7Pz7vUB3NOYLGx\nV+EsuIHrT2ydITNCn5/sxyfaKdO0x02Qo8wNY7Yt52ChmeOKraAN2ZxlyBxL\nZb6xFCuvxWN4UE361PGYYn1egli0KSQJxIy42VIfso959rCehplFOYYUkY0M\nCJvn68C5CDUJLi2ho7msExVa3Pk0QL9veJxIuZ3W0pkZIMNYR3GodSBjA3VV\nlsUAPK1HprCOuqoQpmHGRV3FzNfcQvZQpSx06YjcFx3fMW8E7mBK0W6egwEk\n+ObZKkjqIO0hR1Ih/0vfYeGhpmAwgLpUX4OkMQv7+/shCNV0i+GtBrlYX5Kn\n2QLjNTeCMVvby6KkZ7IhsF/E6jyTDhqDfZMBJAHzUHHGP1cOuR8mJ05PTz0z\nPzs2MfZM20BgLAfCXGzmEAYTWbN4YRPy3JQxNusauo1V3hF3yopg4T1TbISS\nB3nSKLhZgL6HLDN8oLxp3ga8vPSTfnD3MTcTzw1ypeHASI6NX88+5Jy1tTWm\nF1luMRw8voHIKeeZbHBTHGCJgGseW4dU7pySrm3m6w62trZa9o/kQcdrkTNw\naw9c8fZVhcV+oqtb5FY0DDgSTw7TKgKT7+gkhH0jyQK6Tt4kG+7eMtmMIAas\nLj6ELULqtsfw8oJ1jdA+YGjgLYvvPCcoR84Yc63+UWiIxucf78HiSsuUZFvL\nTpgF73rzSAI3FMS0MnQJtUCSmD/KdwvdGFfyygnb5NZIBGI8ShzTpwnzUcpa\nWU2oh1p8ytOVmDIsxIlImOkB0w/9AGFDFhaabJhCmcNlH0zgYoGxXHKxHW45\n1LSF86vXQPdQ6sYqy7BmhYlofs7NPpImaZumR5y3jzVvsFLI0nW6ko9WRG6o\naVg0v/nA0JCwjHhx1aktw3jGA+yF8dykr2ZisRVsZLg4XpIcSGWOG+b5ilag\nQIECBZLxG5sJ41WbSDouAAAAAElFTkSuQmCC\n",
+      "logo_filename": "image",
+      "display_logo": false,
+      "icon": ":custom-bc45e21c-e732-43a0-b4c2-abb6f65a947d:",
+      "sso_groups": null,
+      "display_mode": "bordered",
+      "app": null
+    },
+    {
+      "containers": [
+        {
+          "guid": "11fdf9689d311bc8125a3db83dcefc72",
+          "ranking": 0,
+          "category": 0,
+          "name": "Container",
+          "layout": "vertical",
+          "alignment": "no_alignment",
+          "loop": "",
+          "spacing": "no_spacing",
+          "user_driven_loop": false
+        },
+        {
+          "guid": "a21a330042fd3ca620968647c5bac467",
+          "ranking": 1,
+          "category": 0,
+          "name": "Container",
+          "layout": "vertical",
+          "alignment": "no_alignment",
+          "loop": "",
+          "spacing": "no_spacing",
+          "user_driven_loop": false
+        },
+        {
+          "guid": "a45c437197f589a0fc9121604d50d49f",
+          "ranking": 2,
+          "category": 0,
+          "name": "Container",
+          "layout": "vertical",
+          "alignment": "no_alignment",
+          "loop": "",
+          "spacing": "no_spacing",
+          "user_driven_loop": false
+        }
+      ],
+      "conditions": [
+        {
+          "container_guids": [
+            "a21a330042fd3ca620968647c5bac467"
+          ],
+          "condition_type": "show",
+          "match_rule": "every_rule",
+          "rules": [
+            {
+              "rule": "formula_is_true",
+              "value": "=IS_BLANK(get_related_d3fend_techniques.d3fend)",
+              "page_element_guid": null,
+              "match_case": true
+            }
+          ]
+        },
+        {
+          "container_guids": [
+            "a45c437197f589a0fc9121604d50d49f"
+          ],
+          "condition_type": "show",
+          "match_rule": "every_rule",
+          "rules": [
+            {
+              "rule": "formula_is_true",
+              "value": "=NOT(IS_BLANK(get_related_d3fend_techniques.d3fend))",
+              "page_element_guid": null,
+              "match_case": true
+            }
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "guid": "a038cf550314af7985b7c82856b2fb68",
+          "name": "Heading",
+          "description": "",
+          "required": false,
+          "type": "TITLE",
+          "multi_select": false,
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "ranking": 0,
+          "max_characters": null,
+          "default_value": null,
+          "content": "Detection and Response Techniques",
+          "validation_pattern": null,
+          "validation_error_message": null,
+          "style": "primary",
+          "container_guid": "11fdf9689d311bc8125a3db83dcefc72",
+          "graph_type": 0,
+          "graph_direction": "HORIZONTAL",
+          "date_mode": "DATE",
+          "store_value_as": "=password_value",
+          "allow_table_row_selection": false,
+          "is_searchable": false,
+          "height": null,
+          "image_fit": "CONTAIN",
+          "min_value": 0,
+          "max_value": 100,
+          "step": 1,
+          "width": "AUTO",
+          "width_type": "FLEX_WIDTH",
+          "width_fixed_px": 0,
+          "boolean_label_true": "Yes",
+          "boolean_label_false": "No"
+        },
+        {
+          "guid": "28893ca985d489d9092e26caf827355b",
+          "name": "Rich text",
+          "description": "",
+          "required": false,
+          "type": "PARAGRAPH",
+          "multi_select": false,
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "ranking": 0,
+          "max_characters": null,
+          "default_value": null,
+          "content": "No detection and response techniques found for <<STRIP(submit_technique.body.technique_id)>>.",
+          "validation_pattern": null,
+          "validation_error_message": null,
+          "style": "primary",
+          "container_guid": "a21a330042fd3ca620968647c5bac467",
+          "graph_type": 0,
+          "graph_direction": "HORIZONTAL",
+          "date_mode": "DATE",
+          "store_value_as": "=password_value",
+          "allow_table_row_selection": false,
+          "is_searchable": false,
+          "height": null,
+          "image_fit": "CONTAIN",
+          "min_value": 0,
+          "max_value": 100,
+          "step": 1,
+          "width": "AUTO",
+          "width_type": "FLEX_WIDTH",
+          "width_fixed_px": 0,
+          "boolean_label_true": "Yes",
+          "boolean_label_false": "No"
+        },
+        {
+          "guid": "519d348e45a4e9fc82fea0f7a6a17900",
+          "name": "Rich text",
+          "description": "",
+          "required": false,
+          "type": "PARAGRAPH",
+          "multi_select": false,
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "ranking": 0,
+          "max_characters": null,
+          "default_value": null,
+          "content": "<<create_table.attck>>",
+          "validation_pattern": null,
+          "validation_error_message": null,
+          "style": "primary",
+          "container_guid": "a45c437197f589a0fc9121604d50d49f",
+          "graph_type": 0,
+          "graph_direction": "HORIZONTAL",
+          "date_mode": "DATE",
+          "store_value_as": "=password_value",
+          "allow_table_row_selection": false,
+          "is_searchable": false,
+          "height": null,
+          "image_fit": "CONTAIN",
+          "min_value": 0,
+          "max_value": 100,
+          "step": 1,
+          "width": "AUTO",
+          "width_type": "FLEX_WIDTH",
+          "width_fixed_px": 0,
+          "boolean_label_true": "Yes",
+          "boolean_label_false": "No"
+        },
+        {
+          "guid": "ddacb030910e1c7301e8080813857c5a",
+          "name": "Rich text",
+          "description": "",
+          "required": false,
+          "type": "PARAGRAPH",
+          "multi_select": false,
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "ranking": 1,
+          "max_characters": null,
+          "default_value": null,
+          "content": "<<create_table.d3fend>>",
+          "validation_pattern": null,
+          "validation_error_message": null,
+          "style": "primary",
+          "container_guid": "a45c437197f589a0fc9121604d50d49f",
+          "graph_type": 0,
+          "graph_direction": "HORIZONTAL",
+          "date_mode": "DATE",
+          "store_value_as": "=password_value",
+          "allow_table_row_selection": false,
+          "is_searchable": false,
+          "height": null,
+          "image_fit": "CONTAIN",
+          "min_value": 0,
+          "max_value": 100,
+          "step": 1,
+          "width": "AUTO",
+          "width_type": "FLEX_WIDTH",
+          "width_fixed_px": 0,
+          "boolean_label_true": "Yes",
+          "boolean_label_false": "No"
+        }
+      ],
+      "visibility": "tenant",
+      "agent_guid": "b9c4cdaf1c5c6b5d64a365265e82fc8a",
+      "success_message": "Thank you for your submission",
+      "loading_message": "",
+      "logo_contents": "iVBORw0KGgoAAAANSUhEUgAAAFQAAAAYCAYAAABk8drWAAAACXBIWXMAAAsT\nAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARCSURB\nVHgB7VhLctpAEB1k7LVyA/kEgRMEn8BQ5e8qcALjE1icAPsEkJW/VeATwA1Q\nTmDlBCE7l3/kPblbTIiMJcVOeaFXBRrN9Mz0vOnu6ZExBQoUKFCgwAdByX4Z\nDAbuw8PDwWw2a+LVk+rAcZxgZWWl02g0QpMSl5eXXRlnvLq62kLfqcmIi4uL\nZqlU+lwulztJ/aGvJ/p+39nZ6cu8R3j30c/f3t7umP8MRwtXV1df7+/vb6iM\nmZNJVJ6enppom5ydnbVNCpAIjENZF786Fn1kMgLE1PDocRz0HyTJQKe2zNOj\nMbBO3o1sZgS2Ybw29KqYd0ZEKMg8AGl980zAS3BhqV0Sv0Qmsho8/iCQi5T6\nXED/WtJmoj7W9/b2Vgk9gXUGWM+JtoF4H/VdFEdK/HvB4UIxuZ+2A2SPlykF\nayLhXkJ9z/wDsJlHaTZld3fXR4ho7O3tHWudRbyrxC+Ca+L4rxFuyXlJ7c7j\n4yOtKcuuuXd3d+0XJvMkZPwFWpm4cV64sLTBawuGB/UYus7Pz7vUB3NOYLGx\nV+EsuIHrT2ydITNCn5/sxyfaKdO0x02Qo8wNY7Yt52ChmeOKraAN2ZxlyBxL\nZb6xFCuvxWN4UE361PGYYn1egli0KSQJxIy42VIfso959rCehplFOYYUkY0M\nCJvn68C5CDUJLi2ho7msExVa3Pk0QL9veJxIuZ3W0pkZIMNYR3GodSBjA3VV\nlsUAPK1HprCOuqoQpmHGRV3FzNfcQvZQpSx06YjcFx3fMW8E7mBK0W6egwEk\n+ObZKkjqIO0hR1Ih/0vfYeGhpmAwgLpUX4OkMQv7+/shCNV0i+GtBrlYX5Kn\n2QLjNTeCMVvby6KkZ7IhsF/E6jyTDhqDfZMBJAHzUHHGP1cOuR8mJ05PTz0z\nPzs2MfZM20BgLAfCXGzmEAYTWbN4YRPy3JQxNusauo1V3hF3yopg4T1TbISS\nB3nSKLhZgL6HLDN8oLxp3ga8vPSTfnD3MTcTzw1ypeHASI6NX88+5Jy1tTWm\nF1luMRw8voHIKeeZbHBTHGCJgGseW4dU7pySrm3m6w62trZa9o/kQcdrkTNw\naw9c8fZVhcV+oqtb5FY0DDgSTw7TKgKT7+gkhH0jyQK6Tt4kG+7eMtmMIAas\nLj6ELULqtsfw8oJ1jdA+YGjgLYvvPCcoR84Yc63+UWiIxucf78HiSsuUZFvL\nTpgF73rzSAI3FMS0MnQJtUCSmD/KdwvdGFfyygnb5NZIBGI8ShzTpwnzUcpa\nWU2oh1p8ytOVmDIsxIlImOkB0w/9AGFDFhaabJhCmcNlH0zgYoGxXHKxHW45\n1LSF86vXQPdQ6sYqy7BmhYlofs7NPpImaZumR5y3jzVvsFLI0nW6ko9WRG6o\naVg0v/nA0JCwjHhx1aktw3jGA+yF8dykr2ZisRVsZLg4XpIcSGWOG+b5ilag\nQIECBZLxG5sJ41WbSDouAAAAAElFTkSuQmCC\n",
+      "logo_filename": "image",
+      "display_logo": false,
+      "icon": ":video_game:",
+      "sso_groups": null,
+      "display_mode": "bordered",
+      "app": null
+    }
+  ],
+  "tags": [],
+  "time_saved_unit": "minutes",
+  "time_saved_value": 0,
+  "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:6dcd9b1487fd74065a368cd0fc3b15fe",
+  "recipients": [],
+  "integration_product": null,
+  "integration_vendor": null,
+  "llm_product_instructions": "",
+  "start_reference": null,
+  "send_to_stories": [],
+  "exported_at": "2026-03-10T20:01:53Z",
+  "icon": ":custom-bc45e21c-e732-43a0-b4c2-abb6f65a947d:"
+}
