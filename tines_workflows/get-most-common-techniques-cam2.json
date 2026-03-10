@@ -1,0 +1,275 @@
+{
+  "schema_version": 28,
+  "standard_lib_version": 86,
+  "action_runtime_version": 70,
+  "name": "Get most common techniques CAM2",
+  "description": null,
+  "guid": "91109a5f8dff46bcfd3497bcf55db0d1",
+  "slug": "get_most_common_techniques_cam2",
+  "agents": [
+    {
+      "type": "Agents::HTTPRequestAgent",
+      "name": "Get MITRE STIX",
+      "disabled": false,
+      "description": null,
+      "guid": "1fe363530d23e92e49ec079c0a91dbd1",
+      "origin_story_identifier": "cloud:b09fd93cfb41d0da179c1880dd946013:56b9ad0a93f234de1d2405ada165a361",
+      "options": {
+        "url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack.json",
+        "content_type": "application_json",
+        "method": "get"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Filter for Malware",
+      "disabled": false,
+      "description": null,
+      "guid": "ec88a52d7b724e2bd983e476b7ba460a",
+      "origin_story_identifier": "cloud:b09fd93cfb41d0da179c1880dd946013:56b9ad0a93f234de1d2405ada165a361",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=FILTER(get_mitre_stix.body.objects, LAMBDA(object, object.type=\"malware\"))\n|> FLATTEN(MAP(%, \"external_references\"))\n|> FILTER(%, LAMBDA(malware,malware.source_name=\"mitre-attack\"))\n|> MAP_LAMBDA(%, LAMBDA(mitre_malware,\n    APPEND(\n      mitre_malware.url,\"/\",\n      mitre_malware.external_id,\n      \"-enterprise-layer.json\"\n      )))"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::HTTPRequestAgent",
+      "name": "Get Malware Details",
+      "disabled": false,
+      "description": null,
+      "guid": "975f43f587c6bf40f6f412245dd3affa",
+      "origin_story_identifier": "cloud:b09fd93cfb41d0da179c1880dd946013:56b9ad0a93f234de1d2405ada165a361",
+      "options": {
+        "url": "<<explode_malware_links.link>>",
+        "content_type": "application_json",
+        "method": "get"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Explode Malware Links",
+      "disabled": false,
+      "description": null,
+      "guid": "653e2cc377493e46f1dce30448aea863",
+      "origin_story_identifier": "cloud:b09fd93cfb41d0da179c1880dd946013:56b9ad0a93f234de1d2405ada165a361",
+      "options": {
+        "mode": "explode",
+        "path": "=filter_for_malware",
+        "to": "link",
+        "limit": "5000"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Throttle MITRE quering",
+      "disabled": false,
+      "description": null,
+      "guid": "02470b2731b7f3cf9fb1439b8f459a10",
+      "origin_story_identifier": "cloud:b09fd93cfb41d0da179c1880dd946013:56b9ad0a93f234de1d2405ada165a361",
+      "options": {
+        "mode": "throttle",
+        "interval": "minute",
+        "capacity": 30,
+        "events_per_run": 1
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Implode Malware Details",
+      "disabled": false,
+      "description": null,
+      "guid": "ce52e7fd77188d81f23776042661fb27",
+      "origin_story_identifier": "cloud:b09fd93cfb41d0da179c1880dd946013:56b9ad0a93f234de1d2405ada165a361",
+      "options": {
+        "mode": "implode",
+        "item_path": "=get_malware_details",
+        "guid_path": "=explode_malware_links.guid",
+        "size_path": "=explode_malware_links.size"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Most Common Techniques CAM2",
+      "disabled": false,
+      "description": null,
+      "guid": "221d6830b9ebdb7f11f78ebc7ed4ed13",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:91109a5f8dff46bcfd3497bcf55db0d1",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=UNIQ(FLATTEN(\n  MAP_LAMBDA(implode_malware_details,\n  LAMBDA(malware_details,\n    MAP(malware_details.body.techniques,\"techniqueID\"))\n  )))\n|> MAP_LAMBDA(%,\n  LAMBDA(\n    technique,\n    OBJECT(\n      \"technique\", technique,\n      \"count\",\n      SIZE(\n        FILTER(implode_malware_details,\n        LAMBDA(m_details,\n          INCLUDES(\n          MAP(m_details.body.techniques,\"techniqueID\"),\n            technique)\n          )\n         )\n        )\n       )\n      )\n     )\n|> SLICE_ARRAY(REVERSE(SORT(%, \"count\")),0,10)"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    }
+  ],
+  "diagram_notes": [],
+  "links": [
+    {
+      "source": 0,
+      "receiver": 1
+    },
+    {
+      "source": 1,
+      "receiver": 3
+    },
+    {
+      "source": 2,
+      "receiver": 5
+    },
+    {
+      "source": 3,
+      "receiver": 4
+    },
+    {
+      "source": 4,
+      "receiver": 2
+    },
+    {
+      "source": 5,
+      "receiver": 6
+    }
+  ],
+  "diagram_layout": "{\"02470b2731b7f3cf9fb1439b8f459a10\":[0,375],\"1fe363530d23e92e49ec079c0a91dbd1\":[0,150],\"221d6830b9ebdb7f11f78ebc7ed4ed13\":[0,600],\"653e2cc377493e46f1dce30448aea863\":[0,300],\"975f43f587c6bf40f6f412245dd3affa\":[0,450],\"ce52e7fd77188d81f23776042661fb27\":[0,525],\"ec88a52d7b724e2bd983e476b7ba460a\":[0,225]}",
+  "story_library_metadata": {},
+  "monitor_failures": false,
+  "synchronous_webhooks_enabled": false,
+  "integrations": [],
+  "sections": [],
+  "parent_only_send_to_story": false,
+  "send_to_story_timeout_enabled": false,
+  "send_to_story_timeout_duration_seconds": null,
+  "keep_events_for": 86400,
+  "reporting_status": true,
+  "send_to_story_enabled": false,
+  "entry_agent_guid": null,
+  "exit_agent_guids": [],
+  "api_entry_action_guids": [],
+  "api_exit_action_guids": [],
+  "send_to_story_access": null,
+  "send_to_story_access_source": 0,
+  "send_to_story_skill_use_requires_confirmation": true,
+  "pages": [],
+  "tags": [],
+  "time_saved_unit": "minutes",
+  "time_saved_value": 0,
+  "origin_story_identifier": "cloud:b09fd93cfb41d0da179c1880dd946013:56b9ad0a93f234de1d2405ada165a361",
+  "recipients": [],
+  "integration_product": null,
+  "integration_vendor": null,
+  "llm_product_instructions": "",
+  "start_reference": null,
+  "send_to_stories": [],
+  "exported_at": "2026-03-10T09:33:40Z",
+  "icon": ":custom-bc45e21c-e732-43a0-b4c2-abb6f65a947d:"
+}
