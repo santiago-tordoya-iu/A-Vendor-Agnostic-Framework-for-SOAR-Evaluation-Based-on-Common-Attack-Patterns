@@ -1,0 +1,407 @@
+CTT1
+
+[
+  {
+    "name": "Reconnaissance",
+    "number": 1,
+    "techniques": [
+      {
+        "techniqeID": "T1591",
+        "technique": "Gather Victim Org Information",
+        "count": 4
+      },
+      {
+        "techniqeID": "T1598",
+        "technique": "Phishing for Information",
+        "count": 4
+      },
+      {
+        "techniqeID": "T1598.003",
+        "technique": "Spearphishing Link",
+        "count": 4
+      },
+      {
+        "techniqeID": "T1589",
+        "technique": "Gather Victim Identity Information",
+        "count": 4
+      },
+      {
+        "techniqeID": "T1589.002",
+        "technique": "Email Addresses",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "name": "Resource Development",
+    "number": 2,
+    "techniques": [
+      {
+        "techniqeID": "T1583",
+        "technique": "Acquire Infrastructure",
+        "count": 12
+      },
+      {
+        "techniqeID": "T1588",
+        "technique": "Obtain Capabilities",
+        "count": 12
+      },
+      {
+        "techniqeID": "T1588.002",
+        "technique": "Tool",
+        "count": 11
+      },
+      {
+        "techniqeID": "T1583.001",
+        "technique": "Domains",
+        "count": 8
+      },
+      {
+        "techniqeID": "T1585",
+        "technique": "Establish Accounts",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "name": "Persistence",
+    "number": 6,
+    "techniques": [
+      {
+        "techniqeID": "T1136",
+        "technique": "Create Account",
+        "count": 7
+      },
+      {
+        "techniqeID": "T1543",
+        "technique": "Create or Modify System Process",
+        "count": 7
+      },
+      {
+        "techniqeID": "T1543.003",
+        "technique": "Windows Service",
+        "count": 6
+      },
+      {
+        "techniqeID": "T1505.003",
+        "technique": "Web Shell",
+        "count": 6
+      },
+      {
+        "techniqeID": "T1505",
+        "technique": "Server Software Component",
+        "count": 6
+      }
+    ]
+  },
+  {
+    "name": "Defense Evasion",
+    "number": 7,
+    "techniques": [
+      {
+        "techniqeID": "T1078",
+        "technique": "Valid Accounts",
+        "count": 13
+      },
+      {
+        "techniqeID": "T1027",
+        "technique": "Obfuscated Files or Information",
+        "count": 12
+      },
+      {
+        "techniqeID": "T1562",
+        "technique": "Impair Defenses",
+        "count": 12
+      },
+      {
+        "techniqeID": "T1036",
+        "technique": "Masquerading",
+        "count": 11
+      },
+      {
+        "techniqeID": "T1070",
+        "technique": "Indicator Removal",
+        "count": 10
+      }
+    ]
+  },
+  {
+    "name": "Command And Control",
+    "number": 8,
+    "techniques": [
+      {
+        "techniqeID": "T1105",
+        "technique": "Ingress Tool Transfer",
+        "count": 14
+      },
+      {
+        "techniqeID": "T1071",
+        "technique": "Application Layer Protocol",
+        "count": 11
+      },
+      {
+        "techniqeID": "T1071.001",
+        "technique": "Web Protocols",
+        "count": 9
+      },
+      {
+        "techniqeID": "T1219",
+        "technique": "Remote Access Tools",
+        "count": 9
+      },
+      {
+        "techniqeID": "T1102",
+        "technique": "Web Service",
+        "count": 6
+      }
+    ]
+  },
+  {
+    "name": "Discovery",
+    "number": 10,
+    "techniques": [
+      {
+        "techniqeID": "T1082",
+        "technique": "System Information Discovery",
+        "count": 11
+      },
+      {
+        "techniqeID": "T1087",
+        "technique": "Account Discovery",
+        "count": 11
+      },
+      {
+        "techniqeID": "T1033",
+        "technique": "System Owner/User Discovery",
+        "count": 9
+      },
+      {
+        "techniqeID": "T1018",
+        "technique": "Remote System Discovery",
+        "count": 9
+      },
+      {
+        "techniqeID": "T1087.002",
+        "technique": "Domain Account",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "name": "Privilege Escalation",
+    "number": 11,
+    "techniques": [
+      {
+        "techniqeID": "T1546",
+        "technique": "Event Triggered Execution",
+        "count": 3
+      },
+      {
+        "techniqeID": "T1068",
+        "technique": "Exploitation for Privilege Escalation",
+        "count": 3
+      },
+      {
+        "techniqeID": "T1548",
+        "technique": "Abuse Elevation Control Mechanism",
+        "count": 2
+      },
+      {
+        "techniqeID": "T1548.002",
+        "technique": "Bypass User Account Control",
+        "count": 2
+      },
+      {
+        "techniqeID": "T1546.011",
+        "technique": "Application Shimming",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Execution",
+    "number": 12,
+    "techniques": [
+      {
+        "techniqeID": "T1059",
+        "technique": "Command and Scripting Interpreter",
+        "count": 15
+      },
+      {
+        "techniqeID": "T1059.001",
+        "technique": "PowerShell",
+        "count": 14
+      },
+      {
+        "techniqeID": "T1059.003",
+        "technique": "Windows Command Shell",
+        "count": 12
+      },
+      {
+        "techniqeID": "T1204",
+        "technique": "User Execution",
+        "count": 10
+      },
+      {
+        "techniqeID": "T1047",
+        "technique": "Windows Management Instrumentation",
+        "count": 10
+      }
+    ]
+  },
+  {
+    "name": "Credential Access",
+    "number": 13,
+    "techniques": [
+      {
+        "techniqeID": "T1003",
+        "technique": "OS Credential Dumping",
+        "count": 10
+      },
+      {
+        "techniqeID": "T1003.001",
+        "technique": "LSASS Memory",
+        "count": 7
+      },
+      {
+        "techniqeID": "T1555",
+        "technique": "Credentials from Password Stores",
+        "count": 6
+      },
+      {
+        "techniqeID": "T1110",
+        "technique": "Brute Force",
+        "count": 4
+      },
+      {
+        "techniqeID": "T1003.003",
+        "technique": "NTDS",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "name": "Lateral Movement",
+    "number": 14,
+    "techniques": [
+      {
+        "techniqeID": "T1021",
+        "technique": "Remote Services",
+        "count": 13
+      },
+      {
+        "techniqeID": "T1021.001",
+        "technique": "Remote Desktop Protocol",
+        "count": 10
+      },
+      {
+        "techniqeID": "T1570",
+        "technique": "Lateral Tool Transfer",
+        "count": 7
+      },
+      {
+        "techniqeID": "T1021.002",
+        "technique": "SMB/Windows Admin Shares",
+        "count": 5
+      },
+      {
+        "techniqeID": "T1021.004",
+        "technique": "SSH",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "name": "Collection",
+    "number": 15,
+    "techniques": [
+      {
+        "techniqeID": "T1560",
+        "technique": "Archive Collected Data",
+        "count": 6
+      },
+      {
+        "techniqeID": "T1074",
+        "technique": "Data Staged",
+        "count": 6
+      },
+      {
+        "techniqeID": "T1005",
+        "technique": "Data from Local System",
+        "count": 5
+      },
+      {
+        "techniqeID": "T1056",
+        "technique": "Input Capture",
+        "count": 5
+      },
+      {
+        "techniqeID": "T1560.001",
+        "technique": "Archive via Utility",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "name": "Exfiltration",
+    "number": 16,
+    "techniques": [
+      {
+        "techniqeID": "T1567",
+        "technique": "Exfiltration Over Web Service",
+        "count": 9
+      },
+      {
+        "techniqeID": "T1567.002",
+        "technique": "Exfiltration to Cloud Storage",
+        "count": 7
+      },
+      {
+        "techniqeID": "T1041",
+        "technique": "Exfiltration Over C2 Channel",
+        "count": 4
+      },
+      {
+        "techniqeID": "T1048",
+        "technique": "Exfiltration Over Alternative Protocol",
+        "count": 3
+      },
+      {
+        "techniqeID": "T1048.003",
+        "technique": "Exfiltration Over Unencrypted Non-C2 Protocol",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "name": "Impact",
+    "number": 17,
+    "techniques": [
+      {
+        "techniqeID": "T1486",
+        "technique": "Data Encrypted for Impact",
+        "count": 17
+      },
+      {
+        "techniqeID": "T1657",
+        "technique": "Financial Theft",
+        "count": 6
+      },
+      {
+        "techniqeID": "T1490",
+        "technique": "Inhibit System Recovery",
+        "count": 5
+      },
+      {
+        "techniqeID": "T1485",
+        "technique": "Data Destruction",
+        "count": 3
+      },
+      {
+        "techniqeID": "T1489",
+        "technique": "Service Stop",
+        "count": 3
+      }
+    ]
+  }
+]
