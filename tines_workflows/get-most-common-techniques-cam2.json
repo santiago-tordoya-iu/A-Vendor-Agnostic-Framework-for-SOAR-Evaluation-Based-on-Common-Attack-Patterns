@@ -193,7 +193,7 @@
       "options": {
         "mode": "message_only",
         "loop": false,
-        "payload": "=UNIQ(FLATTEN(\n  MAP_LAMBDA(implode_malware_details,\n  LAMBDA(malware_details,\n    MAP(malware_details.body.techniques,\"techniqueID\"))\n  )))\n|> MAP_LAMBDA(%,\n  LAMBDA(\n    technique,\n    OBJECT(\n      \"technique\", technique,\n      \"count\",\n      SIZE(\n        FILTER(implode_malware_details,\n        LAMBDA(m_details,\n          INCLUDES(\n          MAP(m_details.body.techniques,\"techniqueID\"),\n            technique)\n          )\n         )\n        )\n       )\n      )\n     )\n|> SLICE_ARRAY(REVERSE(SORT(%, \"count\")),0,10)"
+        "payload": "=UNIQ(FLATTEN(\n  MAP_LAMBDA(implode_malware_details,\n  LAMBDA(malware_details,\n    MAP(malware_details.body.techniques,\"techniqueID\"))\n  )))\n|> MAP_LAMBDA(%,\n  LAMBDA(\n    technique,\n    OBJECT(\n      \"technique\", technique,\n      \"count\",\n      SIZE(\n        FILTER(implode_malware_details,\n        LAMBDA(m_details,\n          INCLUDES(\n          MAP(m_details.body.techniques,\"techniqueID\"),\n            technique)\n          )\n         )\n        )\n       )\n      )\n     )\n|> SLICE_ARRAY(REVERSE(SORT(%, \"count\")),0,5)"
       },
       "reporting": {
         "time_saved_value": 0,
