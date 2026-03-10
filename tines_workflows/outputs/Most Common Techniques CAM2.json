@@ -1,0 +1,22 @@
+[
+  {
+    "technique": "T1059",
+    "count": 417
+  },
+  {
+    "technique": "T1105",
+    "count": 365
+  },
+  {
+    "technique": "T1027",
+    "count": 355
+  },
+  {
+    "technique": "T1071",
+    "count": 349
+  },
+  {
+    "technique": "T1082",
+    "count": 325
+  }
+]
