@@ -31,7 +31,7 @@
         "pages_appearance_mode": "light",
         "pages_background_color": "#ffffff",
         "auto_close_tab_on_submit": false,
-        "url_identifier": "1b70bc8670d6c59a693863245f66b2e6",
+        "url_identifier": "17400ab9565eee5384be4a3b41952a03",
         "loading_message": "Please wait…"
       },
       "reporting": {
@@ -89,7 +89,7 @@
       "options": {
         "mode": "message_only",
         "loop": false,
-        "payload": "=FILTER(\n  get_mitre_d3fend.body.results.bindings,\n  LAMBDA(\n    binding,\n    AND(\nINCLUDES(['Detect', 'Evict','Restore'],binding.def_tactic_label.value),binding.off_tech_id.value=STRIP(submit_technique.body.technique_id)\n  )\n))\n|> OBJECT(\n  \"attck_technique_id\", APPEND(\"[\",%[0].off_tech_id.value,\"](https://attack.mitre.org/techniques/\",%[0].off_tech_id.value,\")\"),\n  \"attck_technique\", %[0].off_tech_label.value,\n  \"attck_tactic\", %[0].off_tactic_label.value,\n  \"d3fend\",\n  CONCAT(UNIQ(MAP_LAMBDA(%, LAMBDA(binding,\n    OBJECT(\n      \"tactic\",binding.def_tactic_label.value,\n      \"technique\",APPEND(\"[\",binding.def_tech_label.value,\"](https://d3fend.mitre.org/technique/d3f:\", SPLIT(binding.def_tech.value,\"#\")[1],\")\")\n      )\n    )\n  )), attck_detection_techniques)\n)"
+        "payload": "=IF_ERROR(FILTER(\n  get_mitre_d3fend.body.results.bindings,\n  LAMBDA(\n    binding,\n    AND(\nINCLUDES(['Detect', 'Evict','Restore'],binding.def_tactic_label.value),binding.off_tech_id.value=STRIP(submit_technique.body.technique_id)\n  )\n))\n|> OBJECT(\n  \"d3fend\",\n  CONCAT(UNIQ(MAP_LAMBDA(%, LAMBDA(binding,\n    OBJECT(\n      \"tactic\",binding.def_tactic_label.value,\n      \"technique\",APPEND(\"[\",binding.def_tech_label.value,\"](https://d3fend.mitre.org/technique/d3f:\", SPLIT(binding.def_tech.value,\"#\")[1],\")\")\n      )\n    )\n  )), attck_details.detections)\n), NULL)"
       },
       "reporting": {
         "time_saved_value": 0,
@@ -133,7 +133,7 @@
         "pages_appearance_mode": "light",
         "pages_background_color": "#F9F9F9",
         "auto_close_tab_on_submit": false,
-        "url_identifier": "ede21f29b1c272a0e04150ce943d506b"
+        "url_identifier": "84edd8ba6f93cc8e8c7c226965096149"
       },
       "reporting": {
         "time_saved_value": 0,
@@ -162,7 +162,7 @@
         "mode": "message_only",
         "loop": false,
         "payload": {
-          "attck": "| Technique ID | Technique | Tactic |\n|---|---|---|\n|<<get_related_d3fend_techniques.attck_technique_id>>|<<get_related_d3fend_techniques.attck_technique>>|<<get_related_d3fend_techniques.attck_tactic>>|",
+          "attck": "| Technique ID | Technique | Tactic |\n|---|---|---|\n|<<attck_details.technique_id>>|<<attck_details.technique>>|<<attck_details.tactic>>|",
           "d3fend": "<%for tactic in SORT(UNIQ(MAP(get_related_d3fend_techniques.d3fend,\"tactic\")))%>|<<tactic>><<IF(FORLOOP.last, \"|\")>><%endfor%>\n<%for tactic in UNIQ(MAP(get_related_d3fend_techniques.d3fend,\"tactic\"))%>|---<<IF(FORLOOP.last, \"|\")>><%endfor%><%for counter in LAST(SORT(MAP_LAMBDA(UNIQ(MAP(get_related_d3fend_techniques.d3fend,\"tactic\")),LAMBDA(tactic,OBJECT(\"tactic\",tactic,\"techniques\",WHERE(get_related_d3fend_techniques.d3fend,\"tactic\",tactic),\"count\",SIZE(WHERE(get_related_d3fend_techniques.d3fend,\"tactic\",tactic))))),\"count\")).techniques%>\n<%for tactic in SORT(UNIQ(MAP(get_related_d3fend_techniques.d3fend,\"tactic\")))%>|<<WHERE(get_related_d3fend_techniques.d3fend,\"tactic\",tactic)[INDEX_OF(LAST(SORT(MAP_LAMBDA(UNIQ(MAP(get_related_d3fend_techniques.d3fend,\"tactic\")),LAMBDA(tactic,OBJECT(\"tactic\",tactic,\"techniques\",WHERE(get_related_d3fend_techniques.d3fend,\"tactic\",tactic),\"count\",SIZE(WHERE(get_related_d3fend_techniques.d3fend,\"tactic\",tactic))))),\"count\")).techniques,counter)].technique>><<IF(FORLOOP.last,\"|\")>><%endfor%><%endfor%>"
         }
       },
@@ -214,15 +214,18 @@
     },
     {
       "type": "Agents::EventTransformationAgent",
-      "name": "ATTCK Detection Techniques",
+      "name": "ATTCK Details",
       "disabled": false,
       "description": null,
-      "guid": "1a1a9bd0f3ef21001ce5c15e465a960d",
+      "guid": "159c35fcc34612614223eeb5a7f9a4a8",
       "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:0630ab7ced539f1fab4e7f0225af556a",
       "options": {
         "mode": "message_only",
         "loop": false,
-        "payload": "=FILTER(\n  get_mitre_attck_stix.body.objects,\n  LAMBDA(obj, \n    AND(obj.type=\"attack-pattern\",\n      INCLUDES(MAP(obj.external_references,\"external_id\"), STRIP(submit_technique.body.technique_id)\n    ))))[0].id\n|>FILTER(\n  get_mitre_attck_stix.body.objects,\n  LAMBDA(obj, \nAND(\n  obj.type=\"relationship\",\n  obj.target_ref=%)))\n|> MAP_LAMBDA(\n  WHERE(%, \"relationship_type\", \"detects\"),\n  LAMBDA(\n    rel,\n    FILTER(\n      get_mitre_attck_stix.body.objects,\n      LAMBDA(obj, obj.id=rel.source_ref)))\n  )\n|> UNIQ(MAP_LAMBDA(\n  FLATTEN(%),\n  LAMBDA(det,\n    OBJECT(\"tactic\",\"Detect\",\n      \"technique\", APPEND(\"[\",det.name,\"](\",FILTER(det.external_references,LAMBDA(ref,ref.external_id))[0].url,\")\"))\n  )))"
+        "payload": "=IF_ERROR(\nOBJECT(\n  \"technique_id\",\n  WHERE(LOCAL.submission.external_references, \"source_name\", \"mitre-attack\")[0]|>APPEND(\"[\",%.external_id,\"](\",%.url,\")\"),\n  \"technique\", LOCAL.submission.name,\n  \"tactic\", TITLEIZE(WHERE(LOCAL.submission.kill_chain_phases, \"kill_chain_name\", \"mitre-attack\")[0].phase_name),\n  \"detections\",FILTER(\n  get_mitre_attck_stix.body.objects,\n  LAMBDA(obj, \nAND(\n  obj.type=\"relationship\",\n  obj.target_ref=LOCAL.submission.id)))\n|> MAP_LAMBDA(\n  WHERE(%, \"relationship_type\", \"detects\"),\n  LAMBDA(\n    rel,\n    FILTER(\n      get_mitre_attck_stix.body.objects,\n      LAMBDA(obj, obj.id=rel.source_ref)))\n  )\n|>UNIQ(MAP_LAMBDA(\n  FLATTEN(%),\n  LAMBDA(det,\n    OBJECT(\"tactic\",\"Detect\",\n      \"technique\", APPEND(\"[\",det.name,\"](\",FILTER(det.external_references,LAMBDA(ref,ref.external_id))[0].url,\")\"))\n  )))\n  ), NULL)",
+        "local": {
+          "submission": "=FILTER(\n  get_mitre_attck_stix.body.objects,\n  LAMBDA(obj, \n    AND(obj.type=\"attack-pattern\",\n      INCLUDES(MAP(obj.external_references,\"external_id\"), STRIP(submit_technique.body.technique_id)\n    ))))[0]"
+        }
       },
       "reporting": {
         "time_saved_value": 0,
@@ -269,7 +272,7 @@
       "receiver": 1
     }
   ],
-  "diagram_layout": "{\"0a80139078db506196a62cac93383e22\":[495,-135],\"0af86cc7d4ff657e85cebbb99056798c\":[495,540],\"1a1a9bd0f3ef21001ce5c15e465a960d\":[495,225],\"882e1d10de4443d2017f7e4881467ea1\":[495,135],\"8b8cdc42d625671a05afe0a73c64556f\":[495,300],\"b6dc00d54e0b8f95a56c198259bd3fad\":[495,465],\"d65bdec5141cf9642aad3b6883da75a5\":[495,375]}",
+  "diagram_layout": "{\"0a80139078db506196a62cac93383e22\":[495,-375],\"0af86cc7d4ff657e85cebbb99056798c\":[495,270],\"159c35fcc34612614223eeb5a7f9a4a8\":[495,-15],\"882e1d10de4443d2017f7e4881467ea1\":[495,-90],\"8b8cdc42d625671a05afe0a73c64556f\":[495,45],\"b6dc00d54e0b8f95a56c198259bd3fad\":[495,195],\"d65bdec5141cf9642aad3b6883da75a5\":[495,105]}",
   "story_library_metadata": {},
   "monitor_failures": false,
   "synchronous_webhooks_enabled": false,
@@ -685,6 +688,6 @@
   "llm_product_instructions": "",
   "start_reference": null,
   "send_to_stories": [],
-  "exported_at": "2026-03-11T12:18:24Z",
+  "exported_at": "2026-03-11T14:13:43Z",
   "icon": ":custom-bc45e21c-e732-43a0-b4c2-abb6f65a947d:"
 }
