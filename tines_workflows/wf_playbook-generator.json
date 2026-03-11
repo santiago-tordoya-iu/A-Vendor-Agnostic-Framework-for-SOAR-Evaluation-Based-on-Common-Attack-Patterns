@@ -4,7 +4,7 @@
   "action_runtime_version": 70,
   "name": "Playbook Generator",
   "description": null,
-  "guid": "6dcd9b1487fd74065a368cd0fc3b15fe",
+  "guid": "0630ab7ced539f1fab4e7f0225af556a",
   "slug": "playbook_generator",
   "agents": [
     {
@@ -12,12 +12,12 @@
       "name": "Submit Technique",
       "disabled": false,
       "description": null,
-      "guid": "61f918c705979e71f46fb701b2871ef4",
+      "guid": "0a80139078db506196a62cac93383e22",
       "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:6dcd9b1487fd74065a368cd0fc3b15fe",
       "options": {
         "fields": "",
         "mode": "story_run",
-        "visibility": "tenant",
+        "visibility": "world",
         "anonymize": false,
         "auto_submit": false,
         "page_logo": {
@@ -31,7 +31,7 @@
         "pages_appearance_mode": "light",
         "pages_background_color": "#ffffff",
         "auto_close_tab_on_submit": false,
-        "url_identifier": "3baf87d4376708439124e826a8280ec5",
+        "url_identifier": "1b70bc8670d6c59a693863245f66b2e6",
         "loading_message": "Please wait…"
       },
       "reporting": {
@@ -55,7 +55,7 @@
       "name": "Get MITRE D3FEND",
       "disabled": false,
       "description": null,
-      "guid": "c48f65b5983fbae9c823f9dce2a49527",
+      "guid": "8b8cdc42d625671a05afe0a73c64556f",
       "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:7000cd8864f47adac26ec8a687546077",
       "options": {
         "url": "https://d3fend.mitre.org/api/ontology/inference/d3fend-full-mappings.json",
@@ -84,12 +84,12 @@
       "name": "Get related D3FEND techniques",
       "disabled": false,
       "description": null,
-      "guid": "de1ac34ad9f3052cade7159aaf2e2341",
+      "guid": "d65bdec5141cf9642aad3b6883da75a5",
       "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:6dcd9b1487fd74065a368cd0fc3b15fe",
       "options": {
         "mode": "message_only",
         "loop": false,
-        "payload": "=FILTER(\n  get_mitre_d3fend.body.results.bindings,\n  LAMBDA(\n    binding,\n    AND(\nINCLUDES(['Detect', 'Evict','Restore'],binding.def_tactic_label.value),binding.off_tech_id.value=STRIP(submit_technique.body.technique_id)\n  )\n))\n|> OBJECT(\n  \"attck_technique_id\", APPEND(\"[\",%[0].off_tech_id.value,\"](https://attack.mitre.org/techniques/\",%[0].off_tech_id.value,\")\"),\n  \"attck_technique\", %[0].off_tech_label.value,\n  \"attck_tactic\", %[0].off_tactic_label.value,\n  \"d3fend\",\n  UNIQ(MAP_LAMBDA(%, LAMBDA(binding,\n    OBJECT(\n      \"tactic\",binding.def_tactic_label.value,\n      \"technique\",APPEND(\"[\",binding.def_tech_label.value,\"](https://d3fend.mitre.org/technique/d3f:\", SPLIT(binding.def_tech.value,\"#\")[1],\")\")\n      )\n    )\n  ))\n)"
+        "payload": "=FILTER(\n  get_mitre_d3fend.body.results.bindings,\n  LAMBDA(\n    binding,\n    AND(\nINCLUDES(['Detect', 'Evict','Restore'],binding.def_tactic_label.value),binding.off_tech_id.value=STRIP(submit_technique.body.technique_id)\n  )\n))\n|> OBJECT(\n  \"attck_technique_id\", APPEND(\"[\",%[0].off_tech_id.value,\"](https://attack.mitre.org/techniques/\",%[0].off_tech_id.value,\")\"),\n  \"attck_technique\", %[0].off_tech_label.value,\n  \"attck_tactic\", %[0].off_tactic_label.value,\n  \"d3fend\",\n  CONCAT(UNIQ(MAP_LAMBDA(%, LAMBDA(binding,\n    OBJECT(\n      \"tactic\",binding.def_tactic_label.value,\n      \"technique\",APPEND(\"[\",binding.def_tech_label.value,\"](https://d3fend.mitre.org/technique/d3f:\", SPLIT(binding.def_tech.value,\"#\")[1],\")\")\n      )\n    )\n  )), attck_detection_techniques)\n)"
       },
       "reporting": {
         "time_saved_value": 0,
@@ -113,13 +113,13 @@
       "name": "Results",
       "disabled": false,
       "description": null,
-      "guid": "b9c4cdaf1c5c6b5d64a365265e82fc8a",
+      "guid": "0af86cc7d4ff657e85cebbb99056798c",
       "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:6dcd9b1487fd74065a368cd0fc3b15fe",
       "options": {
         "fields": "",
         "mode": "success_page",
         "submissionMessage": "Thank you for your submission",
-        "visibility": "tenant",
+        "visibility": "world",
         "anonymize": false,
         "auto_submit": false,
         "page_logo": {
@@ -133,7 +133,7 @@
         "pages_appearance_mode": "light",
         "pages_background_color": "#F9F9F9",
         "auto_close_tab_on_submit": false,
-        "url_identifier": "d472fd9cc3be41c1cdfe17295fe068ac"
+        "url_identifier": "ede21f29b1c272a0e04150ce943d506b"
       },
       "reporting": {
         "time_saved_value": 0,
@@ -156,7 +156,7 @@
       "name": "Create Table",
       "disabled": false,
       "description": null,
-      "guid": "b85f6976e799351f40d59b6357814094",
+      "guid": "b6dc00d54e0b8f95a56c198259bd3fad",
       "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:6dcd9b1487fd74065a368cd0fc3b15fe",
       "options": {
         "mode": "message_only",
@@ -182,13 +182,71 @@
       },
       "width": null,
       "schedule": null
+    },
+    {
+      "type": "Agents::HTTPRequestAgent",
+      "name": "Get MITRE ATTCK STIX",
+      "disabled": false,
+      "description": null,
+      "guid": "882e1d10de4443d2017f7e4881467ea1",
+      "origin_story_identifier": "cloud:b09fd93cfb41d0da179c1880dd946013:56b9ad0a93f234de1d2405ada165a361",
+      "options": {
+        "url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack.json",
+        "content_type": "application_json",
+        "method": "get"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "ATTCK Detection Techniques",
+      "disabled": false,
+      "description": null,
+      "guid": "1a1a9bd0f3ef21001ce5c15e465a960d",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:0630ab7ced539f1fab4e7f0225af556a",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=FILTER(\n  get_mitre_attck_stix.body.objects,\n  LAMBDA(obj, \n    AND(obj.type=\"attack-pattern\",\n      INCLUDES(MAP(obj.external_references,\"external_id\"), STRIP(submit_technique.body.technique_id)\n    ))))[0].id\n|>FILTER(\n  get_mitre_attck_stix.body.objects,\n  LAMBDA(obj, \nAND(\n  obj.type=\"relationship\",\n  obj.target_ref=%)))\n|> MAP_LAMBDA(\n  WHERE(%, \"relationship_type\", \"detects\"),\n  LAMBDA(\n    rel,\n    FILTER(\n      get_mitre_attck_stix.body.objects,\n      LAMBDA(obj, obj.id=rel.source_ref)))\n  )\n|> UNIQ(MAP_LAMBDA(\n  FLATTEN(%),\n  LAMBDA(det,\n    OBJECT(\"tactic\",\"Detect\",\n      \"technique\", APPEND(\"[\",det.name,\"](\",FILTER(det.external_references,LAMBDA(ref,ref.external_id))[0].url,\")\"))\n  )))"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
     }
   ],
   "diagram_notes": [],
   "links": [
     {
       "source": 0,
-      "receiver": 1
+      "receiver": 5
     },
     {
       "source": 1,
@@ -201,9 +259,17 @@
     {
       "source": 4,
       "receiver": 3
+    },
+    {
+      "source": 5,
+      "receiver": 6
+    },
+    {
+      "source": 6,
+      "receiver": 1
     }
   ],
-  "diagram_layout": "{\"61f918c705979e71f46fb701b2871ef4\":[495,60],\"b85f6976e799351f40d59b6357814094\":[495,465],\"b9c4cdaf1c5c6b5d64a365265e82fc8a\":[495,540],\"c48f65b5983fbae9c823f9dce2a49527\":[495,315],\"de1ac34ad9f3052cade7159aaf2e2341\":[495,375]}",
+  "diagram_layout": "{\"0a80139078db506196a62cac93383e22\":[495,-135],\"0af86cc7d4ff657e85cebbb99056798c\":[495,540],\"1a1a9bd0f3ef21001ce5c15e465a960d\":[495,225],\"882e1d10de4443d2017f7e4881467ea1\":[495,135],\"8b8cdc42d625671a05afe0a73c64556f\":[495,300],\"b6dc00d54e0b8f95a56c198259bd3fad\":[495,465],\"d65bdec5141cf9642aad3b6883da75a5\":[495,375]}",
   "story_library_metadata": {},
   "monitor_failures": false,
   "synchronous_webhooks_enabled": false,
@@ -212,7 +278,7 @@
   "parent_only_send_to_story": false,
   "send_to_story_timeout_enabled": false,
   "send_to_story_timeout_duration_seconds": null,
-  "keep_events_for": 604800,
+  "keep_events_for": 3600,
   "reporting_status": true,
   "send_to_story_enabled": false,
   "entry_agent_guid": null,
@@ -370,12 +436,12 @@
           "boolean_label_false": "No"
         }
       ],
-      "visibility": "tenant",
-      "agent_guid": "61f918c705979e71f46fb701b2871ef4",
+      "visibility": "world",
+      "agent_guid": "0a80139078db506196a62cac93383e22",
       "success_message": "",
       "loading_message": "Please wait…",
       "logo_contents": "iVBORw0KGgoAAAANSUhEUgAAAFQAAAAYCAYAAABk8drWAAAACXBIWXMAAAsT\nAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARCSURB\nVHgB7VhLctpAEB1k7LVyA/kEgRMEn8BQ5e8qcALjE1icAPsEkJW/VeATwA1Q\nTmDlBCE7l3/kPblbTIiMJcVOeaFXBRrN9Mz0vOnu6ZExBQoUKFCgwAdByX4Z\nDAbuw8PDwWw2a+LVk+rAcZxgZWWl02g0QpMSl5eXXRlnvLq62kLfqcmIi4uL\nZqlU+lwulztJ/aGvJ/p+39nZ6cu8R3j30c/f3t7umP8MRwtXV1df7+/vb6iM\nmZNJVJ6enppom5ydnbVNCpAIjENZF786Fn1kMgLE1PDocRz0HyTJQKe2zNOj\nMbBO3o1sZgS2Ybw29KqYd0ZEKMg8AGl980zAS3BhqV0Sv0Qmsho8/iCQi5T6\nXED/WtJmoj7W9/b2Vgk9gXUGWM+JtoF4H/VdFEdK/HvB4UIxuZ+2A2SPlykF\nayLhXkJ9z/wDsJlHaTZld3fXR4ho7O3tHWudRbyrxC+Ca+L4rxFuyXlJ7c7j\n4yOtKcuuuXd3d+0XJvMkZPwFWpm4cV64sLTBawuGB/UYus7Pz7vUB3NOYLGx\nV+EsuIHrT2ydITNCn5/sxyfaKdO0x02Qo8wNY7Yt52ChmeOKraAN2ZxlyBxL\nZb6xFCuvxWN4UE361PGYYn1egli0KSQJxIy42VIfso959rCehplFOYYUkY0M\nCJvn68C5CDUJLi2ho7msExVa3Pk0QL9veJxIuZ3W0pkZIMNYR3GodSBjA3VV\nlsUAPK1HprCOuqoQpmHGRV3FzNfcQvZQpSx06YjcFx3fMW8E7mBK0W6egwEk\n+ObZKkjqIO0hR1Ih/0vfYeGhpmAwgLpUX4OkMQv7+/shCNV0i+GtBrlYX5Kn\n2QLjNTeCMVvby6KkZ7IhsF/E6jyTDhqDfZMBJAHzUHHGP1cOuR8mJ05PTz0z\nPzs2MfZM20BgLAfCXGzmEAYTWbN4YRPy3JQxNusauo1V3hF3yopg4T1TbISS\nB3nSKLhZgL6HLDN8oLxp3ga8vPSTfnD3MTcTzw1ypeHASI6NX88+5Jy1tTWm\nF1luMRw8voHIKeeZbHBTHGCJgGseW4dU7pySrm3m6w62trZa9o/kQcdrkTNw\naw9c8fZVhcV+oqtb5FY0DDgSTw7TKgKT7+gkhH0jyQK6Tt4kG+7eMtmMIAas\nLj6ELULqtsfw8oJ1jdA+YGjgLYvvPCcoR84Yc63+UWiIxucf78HiSsuUZFvL\nTpgF73rzSAI3FMS0MnQJtUCSmD/KdwvdGFfyygnb5NZIBGI8ShzTpwnzUcpa\nWU2oh1p8ytOVmDIsxIlImOkB0w/9AGFDFhaabJhCmcNlH0zgYoGxXHKxHW45\n1LSF86vXQPdQ6sYqy7BmhYlofs7NPpImaZumR5y3jzVvsFLI0nW6ko9WRG6o\naVg0v/nA0JCwjHhx1aktw3jGA+yF8dykr2ZisRVsZLg4XpIcSGWOG+b5ilag\nQIECBZLxG5sJ41WbSDouAAAAAElFTkSuQmCC\n",
-      "logo_filename": "image",
+      "logo_filename": "nites.jpeg",
       "display_logo": false,
       "icon": ":custom-bc45e21c-e732-43a0-b4c2-abb6f65a947d:",
       "sso_groups": null,
@@ -596,12 +662,12 @@
           "boolean_label_false": "No"
         }
       ],
-      "visibility": "tenant",
-      "agent_guid": "b9c4cdaf1c5c6b5d64a365265e82fc8a",
+      "visibility": "world",
+      "agent_guid": "0af86cc7d4ff657e85cebbb99056798c",
       "success_message": "Thank you for your submission",
       "loading_message": "",
       "logo_contents": "iVBORw0KGgoAAAANSUhEUgAAAFQAAAAYCAYAAABk8drWAAAACXBIWXMAAAsT\nAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARCSURB\nVHgB7VhLctpAEB1k7LVyA/kEgRMEn8BQ5e8qcALjE1icAPsEkJW/VeATwA1Q\nTmDlBCE7l3/kPblbTIiMJcVOeaFXBRrN9Mz0vOnu6ZExBQoUKFCgwAdByX4Z\nDAbuw8PDwWw2a+LVk+rAcZxgZWWl02g0QpMSl5eXXRlnvLq62kLfqcmIi4uL\nZqlU+lwulztJ/aGvJ/p+39nZ6cu8R3j30c/f3t7umP8MRwtXV1df7+/vb6iM\nmZNJVJ6enppom5ydnbVNCpAIjENZF786Fn1kMgLE1PDocRz0HyTJQKe2zNOj\nMbBO3o1sZgS2Ybw29KqYd0ZEKMg8AGl980zAS3BhqV0Sv0Qmsho8/iCQi5T6\nXED/WtJmoj7W9/b2Vgk9gXUGWM+JtoF4H/VdFEdK/HvB4UIxuZ+2A2SPlykF\nayLhXkJ9z/wDsJlHaTZld3fXR4ho7O3tHWudRbyrxC+Ca+L4rxFuyXlJ7c7j\n4yOtKcuuuXd3d+0XJvMkZPwFWpm4cV64sLTBawuGB/UYus7Pz7vUB3NOYLGx\nV+EsuIHrT2ydITNCn5/sxyfaKdO0x02Qo8wNY7Yt52ChmeOKraAN2ZxlyBxL\nZb6xFCuvxWN4UE361PGYYn1egli0KSQJxIy42VIfso959rCehplFOYYUkY0M\nCJvn68C5CDUJLi2ho7msExVa3Pk0QL9veJxIuZ3W0pkZIMNYR3GodSBjA3VV\nlsUAPK1HprCOuqoQpmHGRV3FzNfcQvZQpSx06YjcFx3fMW8E7mBK0W6egwEk\n+ObZKkjqIO0hR1Ih/0vfYeGhpmAwgLpUX4OkMQv7+/shCNV0i+GtBrlYX5Kn\n2QLjNTeCMVvby6KkZ7IhsF/E6jyTDhqDfZMBJAHzUHHGP1cOuR8mJ05PTz0z\nPzs2MfZM20BgLAfCXGzmEAYTWbN4YRPy3JQxNusauo1V3hF3yopg4T1TbISS\nB3nSKLhZgL6HLDN8oLxp3ga8vPSTfnD3MTcTzw1ypeHASI6NX88+5Jy1tTWm\nF1luMRw8voHIKeeZbHBTHGCJgGseW4dU7pySrm3m6w62trZa9o/kQcdrkTNw\naw9c8fZVhcV+oqtb5FY0DDgSTw7TKgKT7+gkhH0jyQK6Tt4kG+7eMtmMIAas\nLj6ELULqtsfw8oJ1jdA+YGjgLYvvPCcoR84Yc63+UWiIxucf78HiSsuUZFvL\nTpgF73rzSAI3FMS0MnQJtUCSmD/KdwvdGFfyygnb5NZIBGI8ShzTpwnzUcpa\nWU2oh1p8ytOVmDIsxIlImOkB0w/9AGFDFhaabJhCmcNlH0zgYoGxXHKxHW45\n1LSF86vXQPdQ6sYqy7BmhYlofs7NPpImaZumR5y3jzVvsFLI0nW6ko9WRG6o\naVg0v/nA0JCwjHhx1aktw3jGA+yF8dykr2ZisRVsZLg4XpIcSGWOG+b5ilag\nQIECBZLxG5sJ41WbSDouAAAAAElFTkSuQmCC\n",
-      "logo_filename": "image",
+      "logo_filename": "nites.jpeg",
       "display_logo": false,
       "icon": ":video_game:",
       "sso_groups": null,
@@ -619,6 +685,6 @@
   "llm_product_instructions": "",
   "start_reference": null,
   "send_to_stories": [],
-  "exported_at": "2026-03-10T20:01:53Z",
+  "exported_at": "2026-03-11T12:18:24Z",
   "icon": ":custom-bc45e21c-e732-43a0-b4c2-abb6f65a947d:"
 }
