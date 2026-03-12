@@ -1406,6 +1406,35 @@
       },
       "width": null,
       "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Resolve evict and restore redudancies",
+      "disabled": false,
+      "description": null,
+      "guid": "f3a002c108eef30b5a9a3529d2681c87",
+      "origin_story_identifier": "cloud:a275b1e78883a96704277261c2a16488:139e5d20bf82361b6808e7cc03e8562f",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=MAP_LAMBDA(\n  group_mappings_by_detection_and_response_set,\n  LAMBDA(\n    sop,\n    FLATTEN(VALUES(sop))[0].d3fend_techniques\n    |> SORT(%,\"def_technique\")\n    |> FILTER(%, LAMBDA(def, def.def_tactic!=\"Detect\"))\n    |> TEXT(MAP(%,\"def_technique\"))\n    |> SET_KEY(sop, \"tech_set\", %)\n    ))\n|> GROUP_BY(%, \"tech_set\")\n|> MAP_LAMBDA(\n  KEYS(%),\n  LAMBDA(\n    key,\n    OBJECT(\n      key,\n      GET(\n        %,\n        APPEND(\n          \"['\",\n          key,\n          \"']\"\n        )\n      )\n    )\n  )\n)\n|> MAP_LAMBDA(\n  %,\n  LAMBDA(sop,\n    OBJECT(\n      APPEND(\"SOP\",INDEX_OF(%,sop)+1),\n      FLATTEN(VALUES(REMOVE_KEY(FLATTEN(VALUES(sop))[0],\"tech_set\")))\n)))\n"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
     }
   ],
   "diagram_notes": [],
@@ -1413,9 +1442,13 @@
     {
       "source": 0,
       "receiver": 1
+    },
+    {
+      "source": 1,
+      "receiver": 2
     }
   ],
-  "diagram_layout": "{\"3b645a856fc91456130b0babc9d7fe4e\":[525,135],\"e6eb0fc1df0422fc863fe6d770ce3075\":[525,210]}",
+  "diagram_layout": "{\"3b645a856fc91456130b0babc9d7fe4e\":[525,135],\"e6eb0fc1df0422fc863fe6d770ce3075\":[525,225],\"f3a002c108eef30b5a9a3529d2681c87\":[525,315]}",
   "story_library_metadata": {},
   "monitor_failures": false,
   "synchronous_webhooks_enabled": false,
@@ -1445,6 +1478,6 @@
   "llm_product_instructions": "",
   "start_reference": null,
   "send_to_stories": [],
-  "exported_at": "2026-03-12T13:21:27Z",
+  "exported_at": "2026-03-12T19:35:41Z",
   "icon": ":fishing_pole_and_fish:"
 }
