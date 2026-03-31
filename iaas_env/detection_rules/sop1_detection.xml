@@ -5,7 +5,7 @@
     <field name="win.eventdata.parentImage" type="pcre2">(?i)(^|\\\\)cmd\.exe$</field>
     <field name="win.eventdata.commandLine" type="pcre2">(?i)^\s*(?:"?[^"]*\\\\makecab\.exe"?|makecab\.exe)\s+(?:"C:\\\\Temp\\\\[^"]+"|C:\\\\Temp\\\\\S+)\s+(?:"[^"]+"|\S+)\s*$</field>
 
-    <description>Atomic Red Team T1560.001 detected: makecab.exe executed via cmd.exe with source file in C:\Temp</description>
+    <description>Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\Temp</description>
     <mitre>
       <id>T1560.001</id>
     </mitre>
