@@ -3,10 +3,10 @@
   <rule id="100003" level="16">
     <if_group>authentication_success</if_group>
     <field name="win.system.computer" type="pcre2">^dc01(\.|$)</field>
-    <field name="win.eventdata.logonType" type="pcre2">^(3|10)$</field>
+    <field name="win.eventdata.logonType" type="pcre2">^10$</field>
     <field name="win.eventdata.ipAddress" negate="yes" type="pcre2">^10\.0\.0\.(0|[1-9]|[1-5][0-9]|6[0-3])$</field>
 
-    <description>CASS T1021.001: Logon to dc01 from unauthorized subnet (srcip: $(win.eventdata.ipAddress) - not in bastion 10.0.0.0/26)</description>
+    <description>CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: $(win.eventdata.ipAddress) - not in bastion 10.0.0.0/26)</description>
 
     <mitre>
       <id>T1021.001</id>
