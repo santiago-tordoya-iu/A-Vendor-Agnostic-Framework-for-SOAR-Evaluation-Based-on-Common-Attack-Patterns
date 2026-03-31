@@ -1,0 +1,19 @@
+<group name="atomic_red_team,">
+
+  <rule id="100006" level="16">
+    <if_group>sysmon_event1</if_group>
+
+    <field name="win.eventdata.image" type="pcre2">(?i)xcopy\.exe</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)xcopy.*inetpub.*wwwroot</field>
+
+    <description>Atomic Red Team T1505.003: Web shell deployment - xcopy to C:\inetpub\wwwroot</description>
+
+    <mitre>
+      <id>T1505.003</id>
+    </mitre>
+
+    <group>atomic_red_team,web_shell,persistence,</group>
+    <options>no_full_log</options>
+  </rule>
+
+</group>
