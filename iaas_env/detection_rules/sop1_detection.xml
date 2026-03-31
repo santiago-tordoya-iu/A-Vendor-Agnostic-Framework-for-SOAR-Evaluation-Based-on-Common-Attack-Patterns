@@ -9,6 +9,5 @@
     <mitre>
       <id>T1560.001</id>
     </mitre>
-    <group>atomic_red_team,</group>
   </rule>
 </group>
