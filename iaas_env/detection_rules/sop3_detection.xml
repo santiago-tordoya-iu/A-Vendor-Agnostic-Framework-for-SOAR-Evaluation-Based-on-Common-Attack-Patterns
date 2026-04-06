@@ -1,5 +1,5 @@
 <group name="atomic_red_team">
-  <rule id="100003" level="16" ignore="300">
+  <rule id="100003" level="16" ignore="1">
     <if_group>authentication_success</if_group>
     <field name="win.system.computer" type="pcre2">^dc01(\.|$)</field>
     <field name="win.eventdata.logonType" type="pcre2">^10$</field>
