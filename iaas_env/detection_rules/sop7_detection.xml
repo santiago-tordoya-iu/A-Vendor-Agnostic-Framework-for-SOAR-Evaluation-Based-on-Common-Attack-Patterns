@@ -1,15 +1,15 @@
 <group name="atomic_red_team">
-  <rule id="100007" level="16">
-    <if_group>sysmon_event_13</if_group>
-    <field name="win.system.eventID" type="pcre2">^13$</field>
-   
-    <field name="win.eventdata.targetObject" type="pcre2">(?i)HKU\\S-1-5-.*_Classes\\CLSID\\{[0-9a-fA-F-]+}\\InprocServer32</field>
-    <field name="win.eventdata.details" type="pcre2">(?i).dll</field>
-   
-    <description>Atomic Red Team T1546.015 #3: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)</description>
-    <mitre>
-      <id>T1546.015</id>
-    </mitre>
-    <options>no_full_log</options>
-  </rule>
+  <rule id="100007" level="16">
+    <if_group>sysmon_event_13</if_group>
+    <field name="win.system.eventID" type="pcre2">^13$</field>
+
+    <field name="win.eventdata.targetObject" type="pcre2">(?i)HKU\\\\S-1-5-.*_Classes\\\\CLSID\\\\\{[0-9a-fA-F-]+\}\\\\InprocServer32</field>
+    <field name="win.eventdata.details" type="pcre2">(?i)\.dll</field>
+
+    <description>Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)</description>
+    <mitre>
+      <id>T1546.015</id>
+    </mitre>
+    <options>no_full_log</options>
+  </rule>
 </group>
