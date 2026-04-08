@@ -1,4 +1,4 @@
-<group name="atomic_red_team,">
+<group name="auxiliary_rules_atomic">
 
     <rule id="100103" level="8">
       <if_group>windows</if_group>
@@ -10,33 +10,35 @@
         <id>T1087.002</id>
       </mitre>
       <options>no_full_log</options>
-      
-    </rule>
-        <rule id="100102" level="9">
-        <if_group>windows</if_group>
-        <field name="win.system.channel">Microsoft-Windows-PowerShell/Operational</field>
-        <field name="win.system.eventID">4104</field>
-        <field name="win.eventdata.scriptBlockText" type="pcre2">(?i)\bADRecon\.ps1\b</field>
-        <description>ADRecon.ps1 observed in PowerShell script block</description>
-        <mitre>
-          <id>T1087.002</id>
-        </mitre>
-        <options>no_full_log</options>
     </rule>
 
-      <rule id="100101" level="10">
-        <if_group>windows</if_group>
-        <field name="win.system.channel">Microsoft-Windows-PowerShell/Operational</field>
-        <field name="win.system.eventID">4104</field>
-        <field name="win.eventdata.scriptBlockText" type="pcre2">(?i)(Get-CimInstance|Get-CimAssociatedInstance|New-CimSession|New-CimSessionOption|Get-WmiObject|Win32_Service|System\.DirectoryServices|DirectorySearcher)</field>
-        <description>T1087.002 primitive: PowerShell AD/CIM reconnaissance fragment</description>
-        <mitre>
-          <id>T1087.002</id>
-        </mitre>
-        <options>no_full_log</options>
-      </rule>
+    <rule id="100102" level="9">
+      <if_group>windows</if_group>
+      <field name="win.system.channel">Microsoft-Windows-PowerShell/Operational</field>
+      <field name="win.system.eventID">4104</field>
+      <field name="win.eventdata.scriptBlockText" type="pcre2">(?i)\bADRecon\.ps1\b</field>
+      <description>ADRecon.ps1 observed in PowerShell script block</description>
+      <mitre>
+        <id>T1087.002</id>
+      </mitre>
+      <options>no_full_log</options>
+    </rule>
 
-  <rule id="100009" level="16" frequency="3" timeframe="20" ignore="60">
+<rule id="100101" level="10">
+  <if_group>windows</if_group>
+  <field name="win.system.channel">Microsoft-Windows-PowerShell/Operational</field>
+  <field name="win.system.eventID">4103</field>
+  <field name="win.eventdata.payload" type="pcre2">(?i)CommandInvocation\(Set-Alias\).*ParameterBinding\(Set-Alias\): name=\\?"Value\\?"; value=\\?"(?:Get-CimAssociatedInstance|New-CimSessionOption|New-CimSession)\\?"</field>
+  <description>T1087.002 primitive: PowerShell AD/CIM reconnaissance fragment</description>
+  <mitre>
+    <id>T1087.002</id>
+  </mitre>
+  <options>no_full_log</options>
+</rule>
+</group>
+
+<group name="atomic_red_team">
+  <rule id="100009" level="16" frequency="2" timeframe="1" ignore="60">
     <if_matched_sid>100101</if_matched_sid>
     <same_field>win.system.computer</same_field>
     <description>Atomic Red Team T1087.002 #4: Correlated PowerShell AD reconnaissance behavior</description>
@@ -45,5 +47,4 @@
     </mitre>
     <options>no_full_log</options>
   </rule>
-  
 </group>
