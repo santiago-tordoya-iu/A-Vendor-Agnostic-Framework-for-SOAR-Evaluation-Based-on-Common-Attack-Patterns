@@ -21,7 +21,8 @@ New-ADUser `
     -Name $UserName `
     -SamAccountName $UserName `
     -AccountPassword $SecurePassword `
-    -Enabled $true
+    -Enabled $true `
+    -ChangePasswordAtLogon $false
 
 Add-ADPrincipalGroupMembership `
     -Identity $UserName `
