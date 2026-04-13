@@ -597,7 +597,7 @@
             },
             {
               "name": "arguments",
-              "value": "={{ [\"reissue-credential\", \"-UserName\",$('User').item.json.name,\"-Password\",\"Temp1234!\",\"-Groups\",\"Domain Admins\"] }}"
+              "value": "={{ [\"reissue-credential\", \"-UserName\",$('User').item.json.name,\"-Password\",\"Placholder_ChangeMe\",\"-Groups\",\"Domain Admins\"] }}"
             }
           ]
         },
