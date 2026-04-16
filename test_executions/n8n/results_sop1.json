@@ -1,1 +1,3637 @@
-
+{
+  "run1": {
+    "id": "480",
+    "finished": true,
+    "mode": "webhook",
+    "retryOf": null,
+    "retrySuccessId": null,
+    "status": "success",
+    "createdAt": "2026-04-16T18:34:31.584Z",
+    "startedAt": "2026-04-16T18:34:31.665Z",
+    "stoppedAt": "2026-04-16T18:34:31.894Z",
+    "deletedAt": null,
+    "workflowId": "sb92rJRguA3af3k8",
+    "waitTill": null,
+    "storedAt": "db",
+    "data": {
+      "version": 1,
+      "startData": {},
+      "resultData": {
+        "runData": {
+          "Webhook": [
+            {
+              "startTime": 1776364471702,
+              "executionIndex": 0,
+              "source": [],
+              "hints": [],
+              "executionTime": 0,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [
+                    {
+                      "json": {
+                        "headers": {
+                          "host": "soar-thesis-lab.app.n8n.cloud",
+                          "user-agent": "wazuh-custom-n8n/1.0",
+                          "content-length": "6354",
+                          "accept-encoding": "gzip, br",
+                          "cdn-loop": "cloudflare; loops=1; subreqs=1",
+                          "cf-connecting-ip": "20.113.133.11",
+                          "cf-ew-via": "15",
+                          "cf-ipcountry": "DE",
+                          "cf-ray": "9ed548daebe4361b-FRA",
+                          "cf-visitor": "{\"scheme\":\"https\"}",
+                          "cf-worker": "n8n.cloud",
+                          "content-type": "application/json",
+                          "x-forwarded-for": "20.113.133.11, 172.68.194.166",
+                          "x-forwarded-host": "soar-thesis-lab.app.n8n.cloud",
+                          "x-forwarded-port": "443",
+                          "x-forwarded-proto": "https",
+                          "x-forwarded-server": "traefik-prod-users-gwc-104-78d5558646-xtgwv",
+                          "x-is-trusted": "yes",
+                          "x-real-ip": "20.113.133.11",
+                          "x-wazuh-key": "kVYCwSlNruCGf6hCa4yfDCNqJ6TkieTqjRx1GMBw"
+                        },
+                        "params": {},
+                        "query": {},
+                        "body": {
+                          "source": "wazuh",
+                          "rule": {
+                            "level": 16,
+                            "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                            "id": "100001",
+                            "mitre": {
+                              "id": [
+                                "T1560.001"
+                              ],
+                              "tactic": [
+                                "Collection"
+                              ],
+                              "technique": [
+                                "Archive via Utility"
+                              ]
+                            },
+                            "firedtimes": 1,
+                            "mail": true,
+                            "groups": [
+                              "atomic_red_team"
+                            ]
+                          },
+                          "agent": {
+                            "id": "003",
+                            "name": "ws01",
+                            "ip": "10.0.3.4"
+                          },
+                          "manager": {
+                            "name": "wazuh01"
+                          },
+                          "decoder": {
+                            "name": "windows_eventchannel"
+                          },
+                          "data": {
+                            "win": {
+                              "system": {
+                                "providerName": "Microsoft-Windows-Sysmon",
+                                "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                "eventID": "1",
+                                "version": "5",
+                                "level": "4",
+                                "task": "1",
+                                "opcode": "0",
+                                "keywords": "0x8000000000000000",
+                                "systemTime": "2026-04-16T18:34:30.1678926Z",
+                                "eventRecordID": "426612",
+                                "processID": "3844",
+                                "threadID": "4712",
+                                "channel": "Microsoft-Windows-Sysmon/Operational",
+                                "computer": "ws01.corp.soarlab.test",
+                                "severityValue": "INFORMATION",
+                                "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-16 18:34:30.163\r\nProcessGuid: {826a7360-2bb6-69e1-1303-000000003a00}\r\nProcessId: 4048\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-ff55-69e0-b95d-2d0000000000}\r\nLogonId: 0x2D5DB9\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-2bb6-69e1-1103-000000003a00}\r\nParentProcessId: 4428\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: ws01\\ws_administrator\""
+                              },
+                              "eventdata": {
+                                "utcTime": "2026-04-16 18:34:30.163",
+                                "processGuid": "{826a7360-2bb6-69e1-1303-000000003a00}",
+                                "processId": "4048",
+                                "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                "description": "Microsoft® Cabinet Maker",
+                                "product": "Microsoft® Windows® Operating System",
+                                "company": "Microsoft Corporation",
+                                "originalFileName": "makecab.exe",
+                                "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                "user": "ws01\\\\ws_administrator",
+                                "logonGuid": "{826a7360-ff55-69e0-b95d-2d0000000000}",
+                                "logonId": "0x2d5db9",
+                                "terminalSessionId": "2",
+                                "integrityLevel": "High",
+                                "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                "parentProcessGuid": "{826a7360-2bb6-69e1-1103-000000003a00}",
+                                "parentProcessId": "4428",
+                                "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                "parentUser": "ws01\\\\ws_administrator"
+                              }
+                            }
+                          },
+                          "location": "EventChannel",
+                          "timestamp": "2026-04-16T18:34:30.735+0000",
+                          "full_alert": {
+                            "timestamp": "2026-04-16T18:34:30.735+0000",
+                            "rule": {
+                              "level": 16,
+                              "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                              "id": "100001",
+                              "mitre": {
+                                "id": [
+                                  "T1560.001"
+                                ],
+                                "tactic": [
+                                  "Collection"
+                                ],
+                                "technique": [
+                                  "Archive via Utility"
+                                ]
+                              },
+                              "firedtimes": 1,
+                              "mail": true,
+                              "groups": [
+                                "atomic_red_team"
+                              ]
+                            },
+                            "agent": {
+                              "id": "003",
+                              "name": "ws01",
+                              "ip": "10.0.3.4"
+                            },
+                            "manager": {
+                              "name": "wazuh01"
+                            },
+                            "id": "1776364470.12007988",
+                            "decoder": {
+                              "name": "windows_eventchannel"
+                            },
+                            "data": {
+                              "win": {
+                                "system": {
+                                  "providerName": "Microsoft-Windows-Sysmon",
+                                  "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                  "eventID": "1",
+                                  "version": "5",
+                                  "level": "4",
+                                  "task": "1",
+                                  "opcode": "0",
+                                  "keywords": "0x8000000000000000",
+                                  "systemTime": "2026-04-16T18:34:30.1678926Z",
+                                  "eventRecordID": "426612",
+                                  "processID": "3844",
+                                  "threadID": "4712",
+                                  "channel": "Microsoft-Windows-Sysmon/Operational",
+                                  "computer": "ws01.corp.soarlab.test",
+                                  "severityValue": "INFORMATION",
+                                  "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-16 18:34:30.163\r\nProcessGuid: {826a7360-2bb6-69e1-1303-000000003a00}\r\nProcessId: 4048\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-ff55-69e0-b95d-2d0000000000}\r\nLogonId: 0x2D5DB9\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-2bb6-69e1-1103-000000003a00}\r\nParentProcessId: 4428\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: ws01\\ws_administrator\""
+                                },
+                                "eventdata": {
+                                  "utcTime": "2026-04-16 18:34:30.163",
+                                  "processGuid": "{826a7360-2bb6-69e1-1303-000000003a00}",
+                                  "processId": "4048",
+                                  "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                  "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                  "description": "Microsoft® Cabinet Maker",
+                                  "product": "Microsoft® Windows® Operating System",
+                                  "company": "Microsoft Corporation",
+                                  "originalFileName": "makecab.exe",
+                                  "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                  "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                  "user": "ws01\\\\ws_administrator",
+                                  "logonGuid": "{826a7360-ff55-69e0-b95d-2d0000000000}",
+                                  "logonId": "0x2d5db9",
+                                  "terminalSessionId": "2",
+                                  "integrityLevel": "High",
+                                  "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                  "parentProcessGuid": "{826a7360-2bb6-69e1-1103-000000003a00}",
+                                  "parentProcessId": "4428",
+                                  "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                  "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                  "parentUser": "ws01\\\\ws_administrator"
+                                }
+                              }
+                            },
+                            "location": "EventChannel"
+                          }
+                        },
+                        "webhookUrl": "https://soar-thesis-lab.app.n8n.cloud/webhook/fba4a184-a8e7-4242-b09f-49fed95d6b8c",
+                        "executionMode": "production"
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "Time to Respond": [
+            {
+              "startTime": 1776364471703,
+              "executionIndex": 1,
+              "source": [
+                {
+                  "previousNode": "Webhook",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 2,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [
+                    {
+                      "json": {
+                        "timeDifference": {
+                          "milliseconds": 1538
+                        }
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "Get Wazuh Auth Token": [
+            {
+              "startTime": 1776364471705,
+              "executionIndex": 2,
+              "source": [
+                {
+                  "previousNode": "Time to Respond",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 101,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [
+                    {
+                      "json": {
+                        "data": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2MzY0NDcxLCJleHAiOjE3NzYzNjUzNzEsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaGtVNxwWv4iXqG0HpMMB90L8ZEmX8uL6Z-HkKHmCpP6k80dVXuciwqDvkNuImb3j73C5PJOyH56GGoi16WX36ldAUblsjiZtNHJWcoBcrheGCmruHqdmkuGx0_-aVpOTmYd0OrF3NFcdrZAPib91qENxKnPfn9od5TyLv1WoknUxWXS"
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "SOP1": [
+            {
+              "startTime": 1776364471806,
+              "executionIndex": 3,
+              "source": [
+                {
+                  "previousNode": "Get Wazuh Auth Token",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 6,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [
+                    {
+                      "json": {
+                        "data": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2MzY0NDcxLCJleHAiOjE3NzYzNjUzNzEsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaGtVNxwWv4iXqG0HpMMB90L8ZEmX8uL6Z-HkKHmCpP6k80dVXuciwqDvkNuImb3j73C5PJOyH56GGoi16WX36ldAUblsjiZtNHJWcoBcrheGCmruHqdmkuGx0_-aVpOTmYd0OrF3NFcdrZAPib91qENxKnPfn9od5TyLv1WoknUxWXS"
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ],
+                  []
+                ]
+              }
+            }
+          ],
+          "File Path": [
+            {
+              "startTime": 1776364471812,
+              "executionIndex": 4,
+              "source": [
+                {
+                  "previousNode": "SOP1",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 6,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [
+                    {
+                      "json": {
+                        "path": "C:\\Temp\\art.zip"
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "Invoke File Eviction": [
+            {
+              "startTime": 1776364471818,
+              "executionIndex": 5,
+              "source": [
+                {
+                  "previousNode": "File Path",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 45,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [
+                    {
+                      "json": {
+                        "data": {
+                          "affected_items": [
+                            "003"
+                          ],
+                          "total_affected_items": 1,
+                          "total_failed_items": 0,
+                          "failed_items": []
+                        },
+                        "message": "AR command was sent to all agents",
+                        "error": 0
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "SOP1 Time to Control": [
+            {
+              "startTime": 1776364471864,
+              "executionIndex": 6,
+              "source": [
+                {
+                  "previousNode": "Invoke File Eviction",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 11,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [
+                    {
+                      "json": {
+                        "timeDifference": {
+                          "milliseconds": 1705
+                        }
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "SOP1 SOAR Processing Time": [
+            {
+              "startTime": 1776364471875,
+              "executionIndex": 7,
+              "source": [
+                {
+                  "previousNode": "SOP1 Time to Control",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 2,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [
+                    {
+                      "json": {
+                        "timeDifference": {
+                          "milliseconds": 167
+                        }
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "Time to Detect": [
+            {
+              "startTime": 1776364471877,
+              "executionIndex": 8,
+              "source": [
+                {
+                  "previousNode": "SOP1 SOAR Processing Time",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 12,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [
+                    {
+                      "json": {
+                        "timeDifference": {
+                          "milliseconds": 568
+                        }
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "SOP2": [
+            {
+              "startTime": 1776364471889,
+              "executionIndex": 9,
+              "source": [
+                {
+                  "previousNode": "Get Wazuh Auth Token",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 0,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [],
+                  [
+                    {
+                      "json": {
+                        "data": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2MzY0NDcxLCJleHAiOjE3NzYzNjUzNzEsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaGtVNxwWv4iXqG0HpMMB90L8ZEmX8uL6Z-HkKHmCpP6k80dVXuciwqDvkNuImb3j73C5PJOyH56GGoi16WX36ldAUblsjiZtNHJWcoBcrheGCmruHqdmkuGx0_-aVpOTmYd0OrF3NFcdrZAPib91qENxKnPfn9od5TyLv1WoknUxWXS"
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "SOP3": [
+            {
+              "startTime": 1776364471890,
+              "executionIndex": 10,
+              "source": [
+                {
+                  "previousNode": "Get Wazuh Auth Token",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 0,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [],
+                  [
+                    {
+                      "json": {
+                        "data": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2MzY0NDcxLCJleHAiOjE3NzYzNjUzNzEsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaGtVNxwWv4iXqG0HpMMB90L8ZEmX8uL6Z-HkKHmCpP6k80dVXuciwqDvkNuImb3j73C5PJOyH56GGoi16WX36ldAUblsjiZtNHJWcoBcrheGCmruHqdmkuGx0_-aVpOTmYd0OrF3NFcdrZAPib91qENxKnPfn9od5TyLv1WoknUxWXS"
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "SOP4": [
+            {
+              "startTime": 1776364471890,
+              "executionIndex": 11,
+              "source": [
+                {
+                  "previousNode": "Get Wazuh Auth Token",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 1,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [],
+                  [
+                    {
+                      "json": {
+                        "data": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2MzY0NDcxLCJleHAiOjE3NzYzNjUzNzEsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaGtVNxwWv4iXqG0HpMMB90L8ZEmX8uL6Z-HkKHmCpP6k80dVXuciwqDvkNuImb3j73C5PJOyH56GGoi16WX36ldAUblsjiZtNHJWcoBcrheGCmruHqdmkuGx0_-aVpOTmYd0OrF3NFcdrZAPib91qENxKnPfn9od5TyLv1WoknUxWXS"
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "SOP5": [
+            {
+              "startTime": 1776364471891,
+              "executionIndex": 12,
+              "source": [
+                {
+                  "previousNode": "Get Wazuh Auth Token",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 0,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [],
+                  [
+                    {
+                      "json": {
+                        "data": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2MzY0NDcxLCJleHAiOjE3NzYzNjUzNzEsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaGtVNxwWv4iXqG0HpMMB90L8ZEmX8uL6Z-HkKHmCpP6k80dVXuciwqDvkNuImb3j73C5PJOyH56GGoi16WX36ldAUblsjiZtNHJWcoBcrheGCmruHqdmkuGx0_-aVpOTmYd0OrF3NFcdrZAPib91qENxKnPfn9od5TyLv1WoknUxWXS"
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "SOP6": [
+            {
+              "startTime": 1776364471891,
+              "executionIndex": 13,
+              "source": [
+                {
+                  "previousNode": "Get Wazuh Auth Token",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 1,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [],
+                  [
+                    {
+                      "json": {
+                        "data": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2MzY0NDcxLCJleHAiOjE3NzYzNjUzNzEsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaGtVNxwWv4iXqG0HpMMB90L8ZEmX8uL6Z-HkKHmCpP6k80dVXuciwqDvkNuImb3j73C5PJOyH56GGoi16WX36ldAUblsjiZtNHJWcoBcrheGCmruHqdmkuGx0_-aVpOTmYd0OrF3NFcdrZAPib91qENxKnPfn9od5TyLv1WoknUxWXS"
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "SOP7": [
+            {
+              "startTime": 1776364471892,
+              "executionIndex": 14,
+              "source": [
+                {
+                  "previousNode": "Get Wazuh Auth Token",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 1,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [],
+                  [
+                    {
+                      "json": {
+                        "data": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2MzY0NDcxLCJleHAiOjE3NzYzNjUzNzEsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaGtVNxwWv4iXqG0HpMMB90L8ZEmX8uL6Z-HkKHmCpP6k80dVXuciwqDvkNuImb3j73C5PJOyH56GGoi16WX36ldAUblsjiZtNHJWcoBcrheGCmruHqdmkuGx0_-aVpOTmYd0OrF3NFcdrZAPib91qENxKnPfn9od5TyLv1WoknUxWXS"
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "SOP8": [
+            {
+              "startTime": 1776364471893,
+              "executionIndex": 15,
+              "source": [
+                {
+                  "previousNode": "Get Wazuh Auth Token",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 0,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [],
+                  [
+                    {
+                      "json": {
+                        "data": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2MzY0NDcxLCJleHAiOjE3NzYzNjUzNzEsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaGtVNxwWv4iXqG0HpMMB90L8ZEmX8uL6Z-HkKHmCpP6k80dVXuciwqDvkNuImb3j73C5PJOyH56GGoi16WX36ldAUblsjiZtNHJWcoBcrheGCmruHqdmkuGx0_-aVpOTmYd0OrF3NFcdrZAPib91qENxKnPfn9od5TyLv1WoknUxWXS"
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "SOP9": [
+            {
+              "startTime": 1776364471893,
+              "executionIndex": 16,
+              "source": [
+                {
+                  "previousNode": "Get Wazuh Auth Token",
+                  "previousNodeOutput": 0,
+                  "previousNodeRun": 0
+                }
+              ],
+              "hints": [],
+              "executionTime": 1,
+              "executionStatus": "success",
+              "data": {
+                "main": [
+                  [],
+                  [
+                    {
+                      "json": {
+                        "data": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2MzY0NDcxLCJleHAiOjE3NzYzNjUzNzEsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaGtVNxwWv4iXqG0HpMMB90L8ZEmX8uL6Z-HkKHmCpP6k80dVXuciwqDvkNuImb3j73C5PJOyH56GGoi16WX36ldAUblsjiZtNHJWcoBcrheGCmruHqdmkuGx0_-aVpOTmYd0OrF3NFcdrZAPib91qENxKnPfn9od5TyLv1WoknUxWXS"
+                      },
+                      "pairedItem": {
+                        "item": 0
+                      }
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        "lastNodeExecuted": "SOP9"
+      },
+      "executionData": {
+        "contextData": {},
+        "nodeExecutionStack": [],
+        "metadata": {},
+        "waitingExecution": {},
+        "waitingExecutionSource": {},
+        "runtimeData": {
+          "version": 1,
+          "establishedAt": 1776364471700,
+          "source": "webhook",
+          "redaction": {
+            "version": 1,
+            "policy": "none"
+          },
+          "triggerNode": {
+            "name": "Webhook",
+            "type": "n8n-nodes-base.webhook"
+          }
+        }
+      },
+      "resumeToken": "e96d9aeaecfe3b2450224218187c07daccc721210ed38fed241e44cf2167f942"
+    },
+    "workflowData": {
+      "id": "sb92rJRguA3af3k8",
+      "name": "SOAR Lab SOPs",
+      "active": true,
+      "activeVersionId": "484456c2-9f9c-4f8f-8d47-23bc5d1bf2f9",
+      "isArchived": false,
+      "createdAt": "2026-04-03T21:57:53.607Z",
+      "updatedAt": "2026-04-16T15:05:09.631Z",
+      "nodes": [
+        {
+          "parameters": {
+            "multipleMethods": false,
+            "httpMethod": "POST",
+            "path": "fba4a184-a8e7-4242-b09f-49fed95d6b8c",
+            "authentication": "headerAuth",
+            "responseMode": "onReceived",
+            "contentTypeNotice": "",
+            "options": {
+              "responseCode": {
+                "values": {
+                  "responseCode": 200
+                }
+              },
+              "responseData": ""
+            }
+          },
+          "type": "n8n-nodes-base.webhook",
+          "typeVersion": 2.1,
+          "position": [
+            -240,
+            112
+          ],
+          "id": "4cdb593b-543a-4f74-aa7b-2f9cd29b8e1a",
+          "name": "Webhook",
+          "webhookId": "fba4a184-a8e7-4242-b09f-49fed95d6b8c",
+          "credentials": {
+            "httpHeaderAuth": {
+              "id": "g0ESUeInGZsvcOfk",
+              "name": "Header Auth account"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "operation": "getTimeBetweenDates",
+            "startDate": "={{ $('Webhook').item.json.body.data.win.system.systemTime.replace(/(\\.\\d{3})\\d+Z$/, '$1Z') }}",
+            "endDate": "={{ $('Webhook').item.json.body.full_alert.timestamp.replace(/([+-]\\d{2})(\\d{2})$/, '$1:$2') }}",
+            "units": [
+              "millisecond"
+            ],
+            "outputFieldName": "timeDifference",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.dateTime",
+          "typeVersion": 2,
+          "position": [
+            2208,
+            96
+          ],
+          "id": "01f9cbbe-1b6b-4cd4-a389-f26059c5ad09",
+          "name": "Time to Detect"
+        },
+        {
+          "parameters": {
+            "operation": "getTimeBetweenDates",
+            "startDate": "={{ $json.body.data.win.system.systemTime.toDateTime()}}",
+            "endDate": "={{$now.toUTC()}}",
+            "units": [
+              "millisecond"
+            ],
+            "outputFieldName": "timeDifference",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.dateTime",
+          "typeVersion": 2,
+          "position": [
+            -80,
+            112
+          ],
+          "id": "e58ba5e0-4365-4e78-9981-f710a69192f8",
+          "name": "Time to Respond"
+        },
+        {
+          "parameters": {
+            "conditions": {
+              "options": {
+                "caseSensitive": true,
+                "leftValue": "",
+                "typeValidation": "strict",
+                "version": 3
+              },
+              "conditions": [
+                {
+                  "id": "6f3350c0-cff2-4f09-b991-4559ee2f6cd8",
+                  "leftValue": "={{ $('Webhook').item.json.body.rule.description }}",
+                  "rightValue": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                  "operator": {
+                    "type": "string",
+                    "operation": "equals",
+                    "name": "filter.operator.equals"
+                  }
+                }
+              ],
+              "combinator": "and"
+            },
+            "looseTypeValidation": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.if",
+          "typeVersion": 2.3,
+          "position": [
+            368,
+            -752
+          ],
+          "id": "7fca563f-9316-40c2-bf32-a080129ea549",
+          "name": "SOP1"
+        },
+        {
+          "parameters": {
+            "mode": "raw",
+            "duplicateItem": false,
+            "jsonOutput": "={\n  \"path\": \"{{ $('Webhook').item.json.body.data.win.eventdata.parentCommandLine.match(/.*(C:\\\\.*)$/)?.[1] }}\"\n}\n ",
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            624,
+            -768
+          ],
+          "id": "8490c70b-8615-42c7-b5e5-0fde38e23848",
+          "name": "File Path"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "POST",
+            "url": "https://20.170.75.248:55000/security/user/authenticate?raw=true",
+            "authentication": "genericCredentialType",
+            "genericAuthType": "httpBasicAuth",
+            "provideSslCertificates": false,
+            "sendQuery": false,
+            "sendHeaders": false,
+            "sendBody": false,
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            112,
+            112
+          ],
+          "id": "bd1d13d0-02e0-4a45-b157-fbfdde0d9173",
+          "name": "Get Wazuh Auth Token",
+          "credentials": {
+            "httpBasicAuth": {
+              "id": "2Uj9EI0gwOcvgGLS",
+              "name": "Wazuh API"
+            }
+          }
+        },
+        {
+          "parameters": {
+            "conditions": {
+              "options": {
+                "caseSensitive": true,
+                "leftValue": "",
+                "typeValidation": "strict",
+                "version": 3
+              },
+              "conditions": [
+                {
+                  "id": "6f3350c0-cff2-4f09-b991-4559ee2f6cd8",
+                  "leftValue": "={{ $('Webhook').item.json.body.rule.description }}",
+                  "rightValue": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                  "operator": {
+                    "type": "string",
+                    "operation": "equals"
+                  }
+                }
+              ],
+              "combinator": "and"
+            },
+            "looseTypeValidation": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.if",
+          "typeVersion": 2.3,
+          "position": [
+            368,
+            688
+          ],
+          "id": "a820a535-c6fd-4fdf-84ac-423d7928b732",
+          "name": "SOP8"
+        },
+        {
+          "parameters": {
+            "conditions": {
+              "options": {
+                "caseSensitive": true,
+                "leftValue": "",
+                "typeValidation": "strict",
+                "version": 3
+              },
+              "conditions": [
+                {
+                  "id": "6f3350c0-cff2-4f09-b991-4559ee2f6cd8",
+                  "leftValue": "={{ $('Webhook').item.json.body.rule.description }}",
+                  "rightValue": "Atomic Red Team T1087.002 #4: Correlated PowerShell AD reconnaissance behavior",
+                  "operator": {
+                    "type": "string",
+                    "operation": "equals",
+                    "name": "filter.operator.equals"
+                  }
+                }
+              ],
+              "combinator": "and"
+            },
+            "looseTypeValidation": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.if",
+          "typeVersion": 2.3,
+          "position": [
+            368,
+            880
+          ],
+          "id": "25697bc7-1d69-4456-b3bc-baebefd509d9",
+          "name": "SOP9"
+        },
+        {
+          "parameters": {
+            "conditions": {
+              "options": {
+                "caseSensitive": true,
+                "leftValue": "",
+                "typeValidation": "strict",
+                "version": 3
+              },
+              "conditions": [
+                {
+                  "id": "6f3350c0-cff2-4f09-b991-4559ee2f6cd8",
+                  "leftValue": "={{ $('Webhook').item.json.body.rule.description }}",
+                  "rightValue": "Atomic Red Team T1033 #4: User Discovery via Environment Variables + Out-File",
+                  "operator": {
+                    "type": "string",
+                    "operation": "equals",
+                    "name": "filter.operator.equals"
+                  }
+                }
+              ],
+              "combinator": "and"
+            },
+            "looseTypeValidation": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.if",
+          "typeVersion": 2.3,
+          "position": [
+            368,
+            112
+          ],
+          "id": "142fe10c-6aec-4095-85db-c57631c4c3fc",
+          "name": "SOP5"
+        },
+        {
+          "parameters": {
+            "conditions": {
+              "options": {
+                "caseSensitive": true,
+                "leftValue": "",
+                "typeValidation": "strict",
+                "version": 3
+              },
+              "conditions": [
+                {
+                  "id": "6f3350c0-cff2-4f09-b991-4559ee2f6cd8",
+                  "leftValue": "={{ $('Webhook').item.json.body.rule.description }}",
+                  "rightValue": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                  "operator": {
+                    "type": "string",
+                    "operation": "equals",
+                    "name": "filter.operator.equals"
+                  }
+                }
+              ],
+              "combinator": "and"
+            },
+            "looseTypeValidation": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.if",
+          "typeVersion": 2.3,
+          "position": [
+            368,
+            304
+          ],
+          "id": "f0ba33d5-1c5e-49a5-9a5e-139bfd19b8e2",
+          "name": "SOP6"
+        },
+        {
+          "parameters": {
+            "conditions": {
+              "options": {
+                "caseSensitive": true,
+                "leftValue": "",
+                "typeValidation": "strict",
+                "version": 3
+              },
+              "conditions": [
+                {
+                  "id": "6f3350c0-cff2-4f09-b991-4559ee2f6cd8",
+                  "leftValue": "={{ $('Webhook').item.json.body.rule.description }}",
+                  "rightValue": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification",
+                  "operator": {
+                    "type": "string",
+                    "operation": "equals",
+                    "name": "filter.operator.equals"
+                  }
+                }
+              ],
+              "combinator": "and"
+            },
+            "looseTypeValidation": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.if",
+          "typeVersion": 2.3,
+          "position": [
+            368,
+            496
+          ],
+          "id": "01b8e5db-4c6b-46ab-be90-e243e9dad832",
+          "name": "SOP7"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('Webhook').item.json.body.agent.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"file-eviction\", \"-TargetPath\", $json.path] }}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            816,
+            -768
+          ],
+          "id": "e1e47440-b0d4-4301-9a7d-2714ef1a6990",
+          "name": "Invoke File Eviction"
+        },
+        {
+          "parameters": {
+            "operation": "getTimeBetweenDates",
+            "startDate": "={{ $('Webhook').item.json.body.data.win.system.systemTime.toDateTime()}}",
+            "endDate": "={{ $now.toUTC() }}",
+            "units": [
+              "millisecond"
+            ],
+            "outputFieldName": "timeDifference",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.dateTime",
+          "typeVersion": 2,
+          "position": [
+            1632,
+            -768
+          ],
+          "id": "c34e45ee-df8f-4eaf-91e0-6d1582ef6aa3",
+          "name": "SOP1 Time to Control"
+        },
+        {
+          "parameters": {
+            "conditions": {
+              "options": {
+                "caseSensitive": true,
+                "leftValue": "",
+                "typeValidation": "strict",
+                "version": 3
+              },
+              "conditions": [
+                {
+                  "id": "6f3350c0-cff2-4f09-b991-4559ee2f6cd8",
+                  "leftValue": "={{ $('Webhook').item.json.body.rule.description }}",
+                  "rightValue": "CASS T1558.001 detected: Mimikatz Golden Ticket creation",
+                  "operator": {
+                    "type": "string",
+                    "operation": "contains"
+                  }
+                }
+              ],
+              "combinator": "and"
+            },
+            "looseTypeValidation": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.if",
+          "typeVersion": 2.3,
+          "position": [
+            368,
+            -576
+          ],
+          "id": "13251853-6c5b-4e70-9cf1-36e89d11caa5",
+          "name": "SOP2"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $json.data.affected_items.find(agent => agent.group?.includes('domain_controller'))?.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"credential-revocation\", \"-UserName\", $json.name]}}"
+                },
+                {
+                  "name": "",
+                  "value": ""
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            1024,
+            -592
+          ],
+          "id": "d6c4be92-820f-4509-a0d1-a9db02c4684a",
+          "name": "Invoke Credential Revocation"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('Webhook').item.json.body.agent.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"auth-cache-invalidation\"]}}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            1232,
+            -592
+          ],
+          "id": "5d0a0812-f290-43b7-9d66-d9eec6cc31bb",
+          "name": "Invoke Auth Cache Invalidation"
+        },
+        {
+          "parameters": {
+            "operation": "getTimeBetweenDates",
+            "startDate": "={{ $('Webhook').item.json.body.data.win.system.systemTime.toDateTime()}}",
+            "endDate": "={{ $now.toUTC() }}",
+            "units": [
+              "millisecond"
+            ],
+            "outputFieldName": "timeDifference",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.dateTime",
+          "typeVersion": 2,
+          "position": [
+            1632,
+            -592
+          ],
+          "id": "baa72945-eb8e-460f-b22b-b2ddc2d39461",
+          "name": "SOP2 Time to Control"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "GET",
+            "url": "https://20.170.75.248:55000/agents?pretty=true",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": false,
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": false,
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            624,
+            -592
+          ],
+          "id": "713aa7b2-dd14-42fa-9741-5398866e5371",
+          "name": "List Wazuh Agents"
+        },
+        {
+          "parameters": {
+            "mode": "raw",
+            "duplicateItem": false,
+            "jsonOutput": "={\n  \"name\": \"{{ $('Webhook').item.json.body.full_alert.data.win.eventdata.user.replace(/^.*\\\\/, '') }}\"\n}\n ",
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            816,
+            -592
+          ],
+          "id": "1dd73c2a-5efe-41c0-9727-d8a62e1f526b",
+          "name": "User"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $json.data.affected_items.find(agent => agent.group?.includes('domain_controller'))?.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"reissue-credential\", \"-UserName\",$('User').item.json.name,\"-Password\",\"Temp1234!\",\"-Groups\",\"Domain Admins\"] }}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            1440,
+            -592
+          ],
+          "id": "2bff02a5-6249-4771-b2dc-073e32eebaf7",
+          "name": "Invoke Reiusse Credential"
+        },
+        {
+          "parameters": {
+            "conditions": {
+              "options": {
+                "caseSensitive": true,
+                "leftValue": "",
+                "typeValidation": "strict",
+                "version": 3
+              },
+              "conditions": [
+                {
+                  "id": "6f3350c0-cff2-4f09-b991-4559ee2f6cd8",
+                  "leftValue": "={{ $('Webhook').item.json.body.rule.description }}",
+                  "rightValue": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet ",
+                  "operator": {
+                    "type": "string",
+                    "operation": "contains"
+                  }
+                }
+              ],
+              "combinator": "and"
+            },
+            "looseTypeValidation": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.if",
+          "typeVersion": 2.3,
+          "position": [
+            368,
+            -384
+          ],
+          "id": "df8aa9c8-1f72-413e-8a90-428fc8016e67",
+          "name": "SOP3"
+        },
+        {
+          "parameters": {
+            "conditions": {
+              "options": {
+                "caseSensitive": true,
+                "leftValue": "",
+                "typeValidation": "strict",
+                "version": 3
+              },
+              "conditions": [
+                {
+                  "id": "6f3350c0-cff2-4f09-b991-4559ee2f6cd8",
+                  "leftValue": "={{ $('Webhook').item.json.body.rule.description }}",
+                  "rightValue": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                  "operator": {
+                    "type": "string",
+                    "operation": "equals",
+                    "name": "filter.operator.equals"
+                  }
+                }
+              ],
+              "combinator": "and"
+            },
+            "looseTypeValidation": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.if",
+          "typeVersion": 2.3,
+          "position": [
+            368,
+            -192
+          ],
+          "id": "0c2301ed-807f-4616-8874-d897102ee818",
+          "name": "SOP4"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $json.data.affected_items.find(agent => agent.group?.includes('domain_controller'))?.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"session-termination\", \"-LogonIdHex\", $('Webhook').item.json.body.data.win.eventdata.targetLinkedLogonId]}}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            816,
+            -400
+          ],
+          "id": "f39f17b2-2d45-4cf3-a69f-e0967c8f4b8d",
+          "name": "Invoke Session Termination"
+        },
+        {
+          "parameters": {
+            "operation": "getTimeBetweenDates",
+            "startDate": "={{ $('Webhook').item.json.body.data.win.system.systemTime.toDateTime()}}",
+            "endDate": "={{ $now.toUTC() }}",
+            "units": [
+              "millisecond"
+            ],
+            "outputFieldName": "timeDifference",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.dateTime",
+          "typeVersion": 2,
+          "position": [
+            1632,
+            -400
+          ],
+          "id": "214e1de8-9992-4766-9590-53f11e04f916",
+          "name": "SOP3 Time to Control"
+        },
+        {
+          "parameters": {
+            "mode": "raw",
+            "duplicateItem": false,
+            "jsonOutput": "={\n  \"list\": \"{{ [...(($('Webhook').item.json.body.data.win.eventdata.parentCommandLine || '').matchAll(/\\/tn\\s+\\\\\"([^\"]+)\\\\\"/g))].map(m => m[1]).join(', ') || '' }}\"\n}\n ",
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            624,
+            -208
+          ],
+          "id": "d692840f-6890-424c-b0ba-fdeefdf32169",
+          "name": "Scheduled Task"
+        },
+        {
+          "parameters": {
+            "conditions": {
+              "options": {
+                "caseSensitive": true,
+                "leftValue": "",
+                "typeValidation": "strict",
+                "version": 3
+              },
+              "conditions": [
+                {
+                  "id": "87045e38-d50a-4193-badc-b2c594a1acc6",
+                  "leftValue": "={{ $json.list }}",
+                  "rightValue": "",
+                  "operator": {
+                    "type": "string",
+                    "operation": "notEmpty",
+                    "singleValue": true
+                  }
+                }
+              ],
+              "combinator": "and"
+            },
+            "looseTypeValidation": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.if",
+          "typeVersion": 2.3,
+          "position": [
+            816,
+            -208
+          ],
+          "id": "375f0218-6bcc-4bc0-92fe-d0d439c6c601",
+          "name": "Tasks present"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('Webhook').item.json.body.agent.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"process-termination\", \"-ProcessId\",$('Webhook').item.json.body.full_alert.data.win.eventdata.processId, \"-TaskNames\",$('Scheduled Task').item.json.list]}}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            1232,
+            -304
+          ],
+          "id": "dbbb85cd-7286-4885-b855-756af53105c3",
+          "name": "Invoke Process Termination with Task Deletion"
+        },
+        {
+          "parameters": {
+            "operation": "getTimeBetweenDates",
+            "startDate": "={{ $('Webhook').item.json.body.data.win.system.systemTime.toDateTime()}}",
+            "endDate": "={{ $now.toUTC() }}",
+            "units": [
+              "millisecond"
+            ],
+            "outputFieldName": "timeDifference",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.dateTime",
+          "typeVersion": 2,
+          "position": [
+            1632,
+            -224
+          ],
+          "id": "5ddd4d77-f97a-4c45-b834-8b3a003e785a",
+          "name": "SOP4 Time to Control"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('Webhook').item.json.body.agent.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"process-termination\", \"-ProcessId\",$('Webhook').item.json.body.full_alert.data.win.eventdata.processId]}}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            1232,
+            -112
+          ],
+          "id": "e68203fd-ac27-4181-b80a-471fde0ca2ea",
+          "name": "Invoke Process Termination"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('Webhook').item.json.body.agent.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"process-termination\", \"-ProcessId\",$('Webhook').item.json.body.full_alert.data.win.eventdata.processId]}}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            624,
+            96
+          ],
+          "id": "69fc9d71-c3f0-436d-bd2f-f33ec6c0fd4f",
+          "name": "Invoke Process Termination1"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('Webhook').item.json.body.agent.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"file-eviction\", \"-TargetPath\", $json.path] }}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            1232,
+            96
+          ],
+          "id": "008bf00f-496d-4c8d-ab01-073439de1f18",
+          "name": "Invoke File Eviction1"
+        },
+        {
+          "parameters": {
+            "mode": "raw",
+            "duplicateItem": false,
+            "jsonOutput": "={\"name\":{{ (($('Webhook').item.json.body.data.win.eventdata.commandLine || '').match(/-FilePath\\s+.*?[\\\\\\/]([^\\\\\\/\\s\"]+\\.\\w+)/i) || [,''])[1] || '' }}",
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            816,
+            96
+          ],
+          "id": "9ca1052a-04a2-47ad-8e39-1f59ab7757e0",
+          "name": "Extract File Name"
+        },
+        {
+          "parameters": {
+            "mode": "raw",
+            "duplicateItem": false,
+            "jsonOutput": "={\n  \"path\": \"{{ ($('Webhook').item.json.body.data.win.eventdata.currentDirectory || '') + ($json.name || '') }}\"\n}",
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            1008,
+            96
+          ],
+          "id": "db1a272d-f554-4acf-b873-bc38be6a66eb",
+          "name": "Concat Path with Filename"
+        },
+        {
+          "parameters": {
+            "operation": "getTimeBetweenDates",
+            "startDate": "={{ $('Webhook').item.json.body.data.win.system.systemTime.toDateTime()}}",
+            "endDate": "={{ $now.toUTC() }}",
+            "units": [
+              "millisecond"
+            ],
+            "outputFieldName": "timeDifference",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.dateTime",
+          "typeVersion": 2,
+          "position": [
+            1632,
+            96
+          ],
+          "id": "7f7b0de6-d947-479a-bcb5-a2a65132b46d",
+          "name": "SOP5 Time to Control"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('Webhook').item.json.body.agent.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"process-termination\", \"-ProcessId\",$('Webhook').item.json.body.full_alert.data.win.eventdata.processId]}}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            624,
+            288
+          ],
+          "id": "9c38617d-cbb8-4261-80c2-d6f56746d0f4",
+          "name": "Invoke Process Termination2"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('Webhook').item.json.body.agent.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"file-eviction\", \"-TargetPath\", $json.path] }}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            1008,
+            288
+          ],
+          "id": "b64342a1-04a9-4e9a-a06d-de5f2bef2b1c",
+          "name": "Invoke File Eviction2"
+        },
+        {
+          "parameters": {
+            "mode": "raw",
+            "duplicateItem": false,
+            "jsonOutput": "={\n  \"path\": \"{{ (($('Webhook').item.json.body.data.win.eventdata.commandLine || '').match(/(\"?[^\"\\s]+\"?)$/) || [,''])[1].replace(/^\"|\"$/g, '') }}\n}\n ",
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            816,
+            288
+          ],
+          "id": "d953fd90-d0fb-41ff-93c1-c6a8fbd59caa",
+          "name": "File Path1"
+        },
+        {
+          "parameters": {
+            "operation": "getTimeBetweenDates",
+            "startDate": "={{ $('Webhook').item.json.body.data.win.system.systemTime.toDateTime()}}",
+            "endDate": "={{ $now.toUTC() }}",
+            "units": [
+              "millisecond"
+            ],
+            "outputFieldName": "timeDifference",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.dateTime",
+          "typeVersion": 2,
+          "position": [
+            1632,
+            288
+          ],
+          "id": "c2472929-53f7-4607-9605-6faef788309c",
+          "name": "SOP6 Time to Control"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('Webhook').item.json.body.agent.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"host-reboot\"] }}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            1232,
+            288
+          ],
+          "id": "8765a070-f2ed-46fa-b68d-c27868e943a8",
+          "name": "Host Reboot"
+        },
+        {
+          "parameters": {
+            "operation": "getTimeBetweenDates",
+            "startDate": "={{ $('Webhook').item.json.body.data.win.system.systemTime.toDateTime()}}",
+            "endDate": "={{ $now.toUTC() }}",
+            "units": [
+              "millisecond"
+            ],
+            "outputFieldName": "timeDifference",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.dateTime",
+          "typeVersion": 2,
+          "position": [
+            1632,
+            480
+          ],
+          "id": "d4d7fd40-1c89-49c0-b013-2722215bcf8e",
+          "name": "SOP7 Time to Control"
+        },
+        {
+          "parameters": {
+            "mode": "runOnceForAllItems",
+            "language": "javaScript",
+            "jsCode": "const rawPath = $('Webhook').item.json.body.data.win.eventdata.targetObject || '';\n\nif (!rawPath) {\n\tthrow new Error('targetObject is empty');\n}\n\nconst cleaned = rawPath.replace(/\\\\\\\\/g, '\\\\');\nconst match = cleaned.match(/^(HKU\\\\S-1-[^\\\\]+_Classes\\\\CLSID\\\\\\{[0-9A-Fa-f-]{36}\\})/i);\n\nif (!match) {\n\tthrow new Error('No CLSID parent found in: ' + rawPath);\n}\n\nreturn [\n\t{\n\t\tjson: {\n\t\t\ttargetPath: match[1]\n\t\t}\n\t}\n];",
+            "notice": ""
+          },
+          "type": "n8n-nodes-base.code",
+          "typeVersion": 2,
+          "position": [
+            624,
+            480
+          ],
+          "id": "9c280d97-9a4e-494f-8d05-84de4c13a216",
+          "name": "Extract Registry Path"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('Webhook').item.json.body.agent.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"file-eviction\", \"-TargetPath\", $json.targetPath]}}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            816,
+            480
+          ],
+          "id": "8e36430e-f04a-4fb1-b240-18e1f653f984",
+          "name": "Invoke File Eviction for Registry Path"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('Webhook').item.json.body.agent.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"file-eviction\", \"-TargetPath\",$('Webhook').item.json.body.full_alert.data.win.eventdata.targetFilename] }}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            624,
+            672
+          ],
+          "id": "7a5f78e1-2cee-4e6d-a2a7-0215043e872c",
+          "name": "Invoke File Eviction3"
+        },
+        {
+          "parameters": {
+            "operation": "getTimeBetweenDates",
+            "startDate": "={{ $('Webhook').item.json.body.data.win.system.systemTime.toDateTime()}}",
+            "endDate": "={{ $now.toUTC() }}",
+            "units": [
+              "millisecond"
+            ],
+            "outputFieldName": "timeDifference",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.dateTime",
+          "typeVersion": 2,
+          "position": [
+            1632,
+            672
+          ],
+          "id": "a1cc1b9b-ff15-4e93-af41-dc3947a5386f",
+          "name": "SOP8 Time to Control"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('List Wazuh Agents2').item.json.data.affected_items.find(agent => agent.group?.includes('domain_controller'))?.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"lock-account\", \"-UserName\",$json.path] }}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            1024,
+            864
+          ],
+          "id": "9efe2837-9c6c-4aa8-9a2c-d887e0ecb973",
+          "name": "Invoke Account Locking"
+        },
+        {
+          "parameters": {
+            "mode": "raw",
+            "duplicateItem": false,
+            "jsonOutput": "={\n  \"path\": \"{{ (($('Webhook').item.json.body.data.win.eventdata.contextInfo || '').match(/User\\s*=\\s*(.*?)\\s+Connected User\\s*=/) || [,''])[1]?.trim() || '' }}\"\n}",
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            832,
+            864
+          ],
+          "id": "0441fa25-e8aa-475d-b5c3-541f94ce740b",
+          "name": "Extract Username"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "GET",
+            "url": "https://20.170.75.248:55000/agents?pretty=true",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": false,
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": false,
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            624,
+            864
+          ],
+          "id": "3df543d3-7f51-45e0-87b3-62dd56836962",
+          "name": "List Wazuh Agents2"
+        },
+        {
+          "parameters": {
+            "operation": "getTimeBetweenDates",
+            "startDate": "={{ $('Webhook').item.json.body.data.win.system.systemTime.toDateTime()}}",
+            "endDate": "={{ $now.toUTC() }}",
+            "units": [
+              "millisecond"
+            ],
+            "outputFieldName": "timeDifference",
+            "options": {}
+          },
+          "type": "n8n-nodes-base.dateTime",
+          "typeVersion": 2,
+          "position": [
+            1632,
+            864
+          ],
+          "id": "ba0d87a3-5dea-49a1-b8a4-2a83defbfd90",
+          "name": "SOP9 Time to Control"
+        },
+        {
+          "parameters": {
+            "curlImport": "",
+            "method": "PUT",
+            "url": "https://20.170.75.248:55000/active-response",
+            "authentication": "none",
+            "provideSslCertificates": false,
+            "sendQuery": true,
+            "specifyQuery": "keypair",
+            "queryParameters": {
+              "parameters": [
+                {
+                  "name": "agents_list",
+                  "value": "={{ $('List Wazuh Agents2').item.json.data.affected_items.find(agent => agent.group?.includes('domain_controller'))?.id }}"
+                }
+              ]
+            },
+            "sendHeaders": true,
+            "specifyHeaders": "keypair",
+            "headerParameters": {
+              "parameters": [
+                {
+                  "name": "Authorization",
+                  "value": "=Bearer {{ $('Get Wazuh Auth Token').item.json.data }}"
+                }
+              ]
+            },
+            "sendBody": true,
+            "contentType": "json",
+            "specifyBody": "keypair",
+            "bodyParameters": {
+              "parameters": [
+                {
+                  "name": "command",
+                  "value": "!launcher.cmd"
+                },
+                {
+                  "name": "arguments",
+                  "value": "={{ [\"unlock-account\", \"-UserName\",$('Extract Username').item.json.path] }}"
+                }
+              ]
+            },
+            "options": {
+              "allowUnauthorizedCerts": true
+            },
+            "infoMessage": ""
+          },
+          "type": "n8n-nodes-base.httpRequest",
+          "typeVersion": 4.4,
+          "position": [
+            1248,
+            864
+          ],
+          "id": "93771593-346c-4988-a586-280aacd7250f",
+          "name": "Invoke Account Unlocking"
+        },
+        {
+          "parameters": {
+            "mode": "manual",
+            "duplicateItem": false,
+            "assignments": {
+              "assignments": [
+                {
+                  "id": "3cef5dce-2a15-45d3-8cac-e238bafc372e",
+                  "name": "timeDifference.milliseconds",
+                  "value": "={{ $json.timeDifference.milliseconds - $('Time to Respond').item.json.timeDifference.milliseconds }}",
+                  "type": "number"
+                }
+              ]
+            },
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            1856,
+            -768
+          ],
+          "id": "cb1d5eec-685d-4eca-87ad-c422afc6a93e",
+          "name": "SOP1 SOAR Processing Time"
+        },
+        {
+          "parameters": {
+            "mode": "manual",
+            "duplicateItem": false,
+            "assignments": {
+              "assignments": [
+                {
+                  "id": "3cef5dce-2a15-45d3-8cac-e238bafc372e",
+                  "name": "timeDifference.milliseconds",
+                  "value": "={{ $json.timeDifference.milliseconds - $('Time to Respond').item.json.timeDifference.milliseconds }}",
+                  "type": "number"
+                }
+              ]
+            },
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            1856,
+            -592
+          ],
+          "id": "2ec07a24-49fb-435c-9e77-16ea451dc979",
+          "name": "SOP2 SOAR Processing Time"
+        },
+        {
+          "parameters": {
+            "mode": "manual",
+            "duplicateItem": false,
+            "assignments": {
+              "assignments": [
+                {
+                  "id": "3cef5dce-2a15-45d3-8cac-e238bafc372e",
+                  "name": "timeDifference.milliseconds",
+                  "value": "={{ $json.timeDifference.milliseconds - $('Time to Respond').item.json.timeDifference.milliseconds }}",
+                  "type": "number"
+                }
+              ]
+            },
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            1856,
+            -400
+          ],
+          "id": "eb8e4bd5-2bf6-4955-9231-0531ed4bbb15",
+          "name": "SOP3 SOAR Processing Time"
+        },
+        {
+          "parameters": {
+            "mode": "manual",
+            "duplicateItem": false,
+            "assignments": {
+              "assignments": [
+                {
+                  "id": "3cef5dce-2a15-45d3-8cac-e238bafc372e",
+                  "name": "timeDifference.milliseconds",
+                  "value": "={{ $json.timeDifference.milliseconds - $('Time to Respond').item.json.timeDifference.milliseconds }}",
+                  "type": "number"
+                }
+              ]
+            },
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            1856,
+            96
+          ],
+          "id": "32e46ffe-6657-4042-9913-00c4a98458b7",
+          "name": "SOP5 SOAR Processing Time"
+        },
+        {
+          "parameters": {
+            "mode": "manual",
+            "duplicateItem": false,
+            "assignments": {
+              "assignments": [
+                {
+                  "id": "3cef5dce-2a15-45d3-8cac-e238bafc372e",
+                  "name": "timeDifference.milliseconds",
+                  "value": "={{ $json.timeDifference.milliseconds - $('Time to Respond').item.json.timeDifference.milliseconds }}",
+                  "type": "number"
+                }
+              ]
+            },
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            1856,
+            -224
+          ],
+          "id": "d8c93581-93ed-48fd-af13-7e7ff05bf5b3",
+          "name": "SOP4 SOAR Processing Time"
+        },
+        {
+          "parameters": {
+            "mode": "manual",
+            "duplicateItem": false,
+            "assignments": {
+              "assignments": [
+                {
+                  "id": "3cef5dce-2a15-45d3-8cac-e238bafc372e",
+                  "name": "timeDifference.milliseconds",
+                  "value": "={{ $json.timeDifference.milliseconds - $('Time to Respond').item.json.timeDifference.milliseconds }}",
+                  "type": "number"
+                }
+              ]
+            },
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            1856,
+            288
+          ],
+          "id": "f6837ca3-4906-4603-af10-56df28b94e5a",
+          "name": "SOP6 SOAR Processing Time"
+        },
+        {
+          "parameters": {
+            "mode": "manual",
+            "duplicateItem": false,
+            "assignments": {
+              "assignments": [
+                {
+                  "id": "3cef5dce-2a15-45d3-8cac-e238bafc372e",
+                  "name": "timeDifference.milliseconds",
+                  "value": "={{ $json.timeDifference.milliseconds - $('Time to Respond').item.json.timeDifference.milliseconds }}",
+                  "type": "number"
+                }
+              ]
+            },
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            1856,
+            480
+          ],
+          "id": "a25db7cf-3def-454e-9aed-75efe7ce02c9",
+          "name": "SOP7 SOAR Processing Time"
+        },
+        {
+          "parameters": {
+            "mode": "manual",
+            "duplicateItem": false,
+            "assignments": {
+              "assignments": [
+                {
+                  "id": "3cef5dce-2a15-45d3-8cac-e238bafc372e",
+                  "name": "timeDifference.milliseconds",
+                  "value": "={{ $json.timeDifference.milliseconds - $('Time to Respond').item.json.timeDifference.milliseconds }}",
+                  "type": "number"
+                }
+              ]
+            },
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            1856,
+            672
+          ],
+          "id": "dbded84c-71f5-4e29-8580-dea571418823",
+          "name": "SOP8 SOAR Processing Time"
+        },
+        {
+          "parameters": {
+            "mode": "manual",
+            "duplicateItem": false,
+            "assignments": {
+              "assignments": [
+                {
+                  "id": "3cef5dce-2a15-45d3-8cac-e238bafc372e",
+                  "name": "timeDifference.milliseconds",
+                  "value": "={{ $json.timeDifference.milliseconds - $('Time to Respond').item.json.timeDifference.milliseconds }}",
+                  "type": "number"
+                }
+              ]
+            },
+            "includeOtherFields": false,
+            "options": {}
+          },
+          "type": "n8n-nodes-base.set",
+          "typeVersion": 3.4,
+          "position": [
+            1856,
+            864
+          ],
+          "id": "9710531d-fc49-42df-9eb9-ac6a75a9dd75",
+          "name": "SOP9 SOAR Processing Time"
+        }
+      ],
+      "connections": {
+        "Webhook": {
+          "main": [
+            [
+              {
+                "node": "Time to Respond",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Time to Respond": {
+          "main": [
+            [
+              {
+                "node": "Get Wazuh Auth Token",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Time to Detect": {
+          "main": [
+            []
+          ]
+        },
+        "SOP1": {
+          "main": [
+            [
+              {
+                "node": "File Path",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "File Path": {
+          "main": [
+            [
+              {
+                "node": "Invoke File Eviction",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Get Wazuh Auth Token": {
+          "main": [
+            [
+              {
+                "node": "SOP1",
+                "type": "main",
+                "index": 0
+              },
+              {
+                "node": "SOP3",
+                "type": "main",
+                "index": 0
+              },
+              {
+                "node": "SOP4",
+                "type": "main",
+                "index": 0
+              },
+              {
+                "node": "SOP5",
+                "type": "main",
+                "index": 0
+              },
+              {
+                "node": "SOP6",
+                "type": "main",
+                "index": 0
+              },
+              {
+                "node": "SOP7",
+                "type": "main",
+                "index": 0
+              },
+              {
+                "node": "SOP8",
+                "type": "main",
+                "index": 0
+              },
+              {
+                "node": "SOP9",
+                "type": "main",
+                "index": 0
+              },
+              {
+                "node": "SOP2",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke File Eviction": {
+          "main": [
+            [
+              {
+                "node": "SOP1 Time to Control",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP1 Time to Control": {
+          "main": [
+            [
+              {
+                "node": "SOP1 SOAR Processing Time",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP2": {
+          "main": [
+            [
+              {
+                "node": "List Wazuh Agents",
+                "type": "main",
+                "index": 0
+              }
+            ],
+            []
+          ]
+        },
+        "Invoke Credential Revocation": {
+          "main": [
+            [
+              {
+                "node": "Invoke Auth Cache Invalidation",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke Auth Cache Invalidation": {
+          "main": [
+            [
+              {
+                "node": "Invoke Reiusse Credential",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP2 Time to Control": {
+          "main": [
+            [
+              {
+                "node": "SOP2 SOAR Processing Time",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "List Wazuh Agents": {
+          "main": [
+            [
+              {
+                "node": "User",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "User": {
+          "main": [
+            [
+              {
+                "node": "Invoke Credential Revocation",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke Reiusse Credential": {
+          "main": [
+            [
+              {
+                "node": "SOP2 Time to Control",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP3": {
+          "main": [
+            [
+              {
+                "node": "Invoke Session Termination",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke Session Termination": {
+          "main": [
+            [
+              {
+                "node": "SOP3 Time to Control",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP3 Time to Control": {
+          "main": [
+            [
+              {
+                "node": "SOP3 SOAR Processing Time",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP4": {
+          "main": [
+            [
+              {
+                "node": "Scheduled Task",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Scheduled Task": {
+          "main": [
+            [
+              {
+                "node": "Tasks present",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Tasks present": {
+          "main": [
+            [
+              {
+                "node": "Invoke Process Termination with Task Deletion",
+                "type": "main",
+                "index": 0
+              }
+            ],
+            [
+              {
+                "node": "Invoke Process Termination",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke Process Termination with Task Deletion": {
+          "main": [
+            [
+              {
+                "node": "SOP4 Time to Control",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP4 Time to Control": {
+          "main": [
+            [
+              {
+                "node": "SOP4 SOAR Processing Time",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke Process Termination": {
+          "main": [
+            [
+              {
+                "node": "SOP4 Time to Control",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP5": {
+          "main": [
+            [
+              {
+                "node": "Invoke Process Termination1",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke Process Termination1": {
+          "main": [
+            [
+              {
+                "node": "Extract File Name",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Extract File Name": {
+          "main": [
+            [
+              {
+                "node": "Concat Path with Filename",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Concat Path with Filename": {
+          "main": [
+            [
+              {
+                "node": "Invoke File Eviction1",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke File Eviction1": {
+          "main": [
+            [
+              {
+                "node": "SOP5 Time to Control",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP5 Time to Control": {
+          "main": [
+            [
+              {
+                "node": "SOP5 SOAR Processing Time",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP6": {
+          "main": [
+            [
+              {
+                "node": "Invoke Process Termination2",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke Process Termination2": {
+          "main": [
+            [
+              {
+                "node": "File Path1",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "File Path1": {
+          "main": [
+            [
+              {
+                "node": "Invoke File Eviction2",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke File Eviction2": {
+          "main": [
+            [
+              {
+                "node": "Host Reboot",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Host Reboot": {
+          "main": [
+            [
+              {
+                "node": "SOP6 Time to Control",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP6 Time to Control": {
+          "main": [
+            [
+              {
+                "node": "SOP6 SOAR Processing Time",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP7": {
+          "main": [
+            [
+              {
+                "node": "Extract Registry Path",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP7 Time to Control": {
+          "main": [
+            [
+              {
+                "node": "SOP7 SOAR Processing Time",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Extract Registry Path": {
+          "main": [
+            [
+              {
+                "node": "Invoke File Eviction for Registry Path",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke File Eviction for Registry Path": {
+          "main": [
+            [
+              {
+                "node": "SOP7 Time to Control",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP8": {
+          "main": [
+            [
+              {
+                "node": "Invoke File Eviction3",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke File Eviction3": {
+          "main": [
+            [
+              {
+                "node": "SOP8 Time to Control",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP8 Time to Control": {
+          "main": [
+            [
+              {
+                "node": "SOP8 SOAR Processing Time",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP9": {
+          "main": [
+            [
+              {
+                "node": "List Wazuh Agents2",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Extract Username": {
+          "main": [
+            [
+              {
+                "node": "Invoke Account Locking",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "List Wazuh Agents2": {
+          "main": [
+            [
+              {
+                "node": "Extract Username",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke Account Locking": {
+          "main": [
+            [
+              {
+                "node": "Invoke Account Unlocking",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP9 Time to Control": {
+          "main": [
+            [
+              {
+                "node": "SOP9 SOAR Processing Time",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "Invoke Account Unlocking": {
+          "main": [
+            [
+              {
+                "node": "SOP9 Time to Control",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP1 SOAR Processing Time": {
+          "main": [
+            [
+              {
+                "node": "Time to Detect",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP2 SOAR Processing Time": {
+          "main": [
+            [
+              {
+                "node": "Time to Detect",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP3 SOAR Processing Time": {
+          "main": [
+            [
+              {
+                "node": "Time to Detect",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP5 SOAR Processing Time": {
+          "main": [
+            [
+              {
+                "node": "Time to Detect",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP4 SOAR Processing Time": {
+          "main": [
+            [
+              {
+                "node": "Time to Detect",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP6 SOAR Processing Time": {
+          "main": [
+            [
+              {
+                "node": "Time to Detect",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP7 SOAR Processing Time": {
+          "main": [
+            [
+              {
+                "node": "Time to Detect",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP8 SOAR Processing Time": {
+          "main": [
+            [
+              {
+                "node": "Time to Detect",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        },
+        "SOP9 SOAR Processing Time": {
+          "main": [
+            [
+              {
+                "node": "Time to Detect",
+                "type": "main",
+                "index": 0
+              }
+            ]
+          ]
+        }
+      },
+      "settings": {
+        "executionOrder": "v1",
+        "binaryMode": "separate"
+      },
+      "staticData": {},
+      "pinData": {
+        "Webhook": [
+          {
+            "json": {
+              "headers": {
+                "host": "soar-thesis-lab.app.n8n.cloud",
+                "user-agent": "wazuh-custom-n8n/1.0",
+                "content-length": "6362",
+                "accept-encoding": "gzip, br",
+                "cdn-loop": "cloudflare; loops=1; subreqs=1",
+                "cf-connecting-ip": "20.113.133.11",
+                "cf-ew-via": "15",
+                "cf-ipcountry": "DE",
+                "cf-ray": "9ecde6dc89693836-FRA",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "cf-worker": "n8n.cloud",
+                "content-type": "application/json",
+                "x-forwarded-for": "20.113.133.11, 162.158.94.18",
+                "x-forwarded-host": "soar-thesis-lab.app.n8n.cloud",
+                "x-forwarded-port": "443",
+                "x-forwarded-proto": "https",
+                "x-forwarded-server": "traefik-prod-users-gwc-104-78d5558646-24zrn",
+                "x-is-trusted": "yes",
+                "x-real-ip": "20.113.133.11",
+                "x-wazuh-key": "kVYCwSlNruCGf6hCa4yfDCNqJ6TkieTqjRx1GMBw"
+              },
+              "params": {},
+              "query": {},
+              "body": {
+                "source": "wazuh",
+                "rule": {
+                  "level": 16,
+                  "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                  "id": "100001",
+                  "mitre": {
+                    "id": [
+                      "T1560.001"
+                    ],
+                    "tactic": [
+                      "Collection"
+                    ],
+                    "technique": [
+                      "Archive via Utility"
+                    ]
+                  },
+                  "firedtimes": 1,
+                  "mail": true,
+                  "groups": [
+                    "atomic_red_team"
+                  ]
+                },
+                "agent": {
+                  "id": "003",
+                  "name": "ws01",
+                  "ip": "10.0.3.4"
+                },
+                "manager": {
+                  "name": "wazuh01"
+                },
+                "decoder": {
+                  "name": "windows_eventchannel"
+                },
+                "data": {
+                  "win": {
+                    "system": {
+                      "providerName": "Microsoft-Windows-Sysmon",
+                      "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                      "eventID": "1",
+                      "version": "5",
+                      "level": "4",
+                      "task": "1",
+                      "opcode": "0",
+                      "keywords": "0x8000000000000000",
+                      "systemTime": "2026-04-15T21:04:14.9209906Z",
+                      "eventRecordID": "423777",
+                      "processID": "4392",
+                      "threadID": "4888",
+                      "channel": "Microsoft-Windows-Sysmon/Operational",
+                      "computer": "ws01.corp.soarlab.test",
+                      "severityValue": "INFORMATION",
+                      "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-15 21:04:14.916\r\nProcessGuid: {826a7360-fd4e-69df-eb02-000000003900}\r\nProcessId: 10904\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-f995-69df-d226-ad0000000000}\r\nLogonId: 0xAD26D2\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-fd4e-69df-e902-000000003900}\r\nParentProcessId: 10980\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: ws01\\ws_administrator\""
+                    },
+                    "eventdata": {
+                      "utcTime": "2026-04-15 21:04:14.916",
+                      "processGuid": "{826a7360-fd4e-69df-eb02-000000003900}",
+                      "processId": "10904",
+                      "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                      "fileVersion": "5.00 (WinBuild.160101.0800)",
+                      "description": "Microsoft® Cabinet Maker",
+                      "product": "Microsoft® Windows® Operating System",
+                      "company": "Microsoft Corporation",
+                      "originalFileName": "makecab.exe",
+                      "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                      "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                      "user": "ws01\\\\ws_administrator",
+                      "logonGuid": "{826a7360-f995-69df-d226-ad0000000000}",
+                      "logonId": "0xad26d2",
+                      "terminalSessionId": "2",
+                      "integrityLevel": "High",
+                      "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                      "parentProcessGuid": "{826a7360-fd4e-69df-e902-000000003900}",
+                      "parentProcessId": "10980",
+                      "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                      "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                      "parentUser": "ws01\\\\ws_administrator"
+                    }
+                  }
+                },
+                "location": "EventChannel",
+                "timestamp": "2026-04-15T21:04:15.780+0000",
+                "full_alert": {
+                  "timestamp": "2026-04-15T21:04:15.780+0000",
+                  "rule": {
+                    "level": 16,
+                    "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                    "id": "100001",
+                    "mitre": {
+                      "id": [
+                        "T1560.001"
+                      ],
+                      "tactic": [
+                        "Collection"
+                      ],
+                      "technique": [
+                        "Archive via Utility"
+                      ]
+                    },
+                    "firedtimes": 1,
+                    "mail": true,
+                    "groups": [
+                      "atomic_red_team"
+                    ]
+                  },
+                  "agent": {
+                    "id": "003",
+                    "name": "ws01",
+                    "ip": "10.0.3.4"
+                  },
+                  "manager": {
+                    "name": "wazuh01"
+                  },
+                  "id": "1776287055.10171903",
+                  "decoder": {
+                    "name": "windows_eventchannel"
+                  },
+                  "data": {
+                    "win": {
+                      "system": {
+                        "providerName": "Microsoft-Windows-Sysmon",
+                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                        "eventID": "1",
+                        "version": "5",
+                        "level": "4",
+                        "task": "1",
+                        "opcode": "0",
+                        "keywords": "0x8000000000000000",
+                        "systemTime": "2026-04-15T21:04:14.9209906Z",
+                        "eventRecordID": "423777",
+                        "processID": "4392",
+                        "threadID": "4888",
+                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                        "computer": "ws01.corp.soarlab.test",
+                        "severityValue": "INFORMATION",
+                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-15 21:04:14.916\r\nProcessGuid: {826a7360-fd4e-69df-eb02-000000003900}\r\nProcessId: 10904\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-f995-69df-d226-ad0000000000}\r\nLogonId: 0xAD26D2\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-fd4e-69df-e902-000000003900}\r\nParentProcessId: 10980\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: ws01\\ws_administrator\""
+                      },
+                      "eventdata": {
+                        "utcTime": "2026-04-15 21:04:14.916",
+                        "processGuid": "{826a7360-fd4e-69df-eb02-000000003900}",
+                        "processId": "10904",
+                        "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                        "fileVersion": "5.00 (WinBuild.160101.0800)",
+                        "description": "Microsoft® Cabinet Maker",
+                        "product": "Microsoft® Windows® Operating System",
+                        "company": "Microsoft Corporation",
+                        "originalFileName": "makecab.exe",
+                        "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                        "user": "ws01\\\\ws_administrator",
+                        "logonGuid": "{826a7360-f995-69df-d226-ad0000000000}",
+                        "logonId": "0xad26d2",
+                        "terminalSessionId": "2",
+                        "integrityLevel": "High",
+                        "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                        "parentProcessGuid": "{826a7360-fd4e-69df-e902-000000003900}",
+                        "parentProcessId": "10980",
+                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                        "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                        "parentUser": "ws01\\\\ws_administrator"
+                      }
+                    }
+                  },
+                  "location": "EventChannel"
+                }
+              },
+              "webhookUrl": "https://soar-thesis-lab.app.n8n.cloud/webhook/fba4a184-a8e7-4242-b09f-49fed95d6b8c",
+              "executionMode": "production"
+            },
+            "pairedItem": {
+              "item": 0
+            }
+          }
+        ]
+      }
+    },
+    "workflowVersionId": "484456c2-9f9c-4f8f-8d47-23bc5d1bf2f9",
+    "customData": {}
+  }
+}
