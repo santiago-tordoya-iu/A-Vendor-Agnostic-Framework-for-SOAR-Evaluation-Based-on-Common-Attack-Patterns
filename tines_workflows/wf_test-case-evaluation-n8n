@@ -1,0 +1,720 @@
+{
+  "schema_version": 28,
+  "standard_lib_version": 90,
+  "action_runtime_version": 74,
+  "name": "Test Case Evaluation n8n",
+  "description": null,
+  "guid": "236261b69a0ad4d1e7faf50a60261900",
+  "slug": "test_case_evaluation_n8n",
+  "agents": [
+    {
+      "type": "Agents::HTTPRequestAgent",
+      "name": "Get Results from n8n",
+      "disabled": false,
+      "description": null,
+      "guid": "ec48ed4aed13e4e3230becb1d61eef22",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "url": "https://soar-thesis-lab.app.n8n.cloud/api/v1/executions/<<explode_executions.execution>>?includeData=true",
+        "content_type": "application_json",
+        "method": "get",
+        "headers": {
+          "X-N8N-API-KEY": "<<CREDENTIAL.n8n>>"
+        }
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Implode Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "ae6455fcb9ed4604b1b148e1282e67cb",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "implode",
+        "item_path": "=enumerate_results",
+        "size_path": "=10"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP2 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "cc0e705f7539a5d4762ffab302ec4bff",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "500",
+          "501",
+          "502",
+          "503",
+          "504",
+          "505",
+          "506",
+          "507",
+          "508",
+          "509"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Explode Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "c1612e1b10122ca35ccceebb17ffbb28",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "explode",
+        "path": "=executions",
+        "to": "execution",
+        "limit": "500"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Enumerate results",
+      "disabled": false,
+      "description": null,
+      "guid": "d02a78f093a0ac5ed42e015946700878",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": {
+          "<<APPEND(\"run\", explode_executions.index+1)>>": "=get_results_from_n8n.body"
+        }
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Results n8n per Execution",
+      "disabled": false,
+      "description": null,
+      "guid": "40cc1c7b624d704fb46b9dcf01389e42",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=MAP_LAMBDA(\n  implode_executions,\n  LAMBDA(\n    result,\n    OBJECT(\n      \"run\", KEYS(result)[0],\n      \"Execution Time\",\n      DEFAULT(\n        VALUES(result)[0].data.resultData.runData.Webhook[0].data.main[0][0].json.body.data.win.eventdata.utcTime,\n        DATE(VALUES(result)[0].data.resultData.runData.Webhook[0].data.main[0][0].json.body.data.win.system.systemTime,\"%Y-%m-%d %H:%M:%S.%L\")),\n      \"Time to Detect\",\n      VALUES(result)[0].data.resultData.runData['Time to Detect'][0].data.main[0][0].json.timeDifference.milliseconds,\n      \"Time to Respond\",VALUES(result)[0].data.resultData.runData['Time to Respond'][0].data.main[0][0].json.timeDifference.milliseconds,\n      \"Time to Control\",\n      VALUES(\n        REJECT(\n        VALUES(result)[0].data.resultData.runData,\n        LAMBDA(key, value, NOT(MATCH(key,\"Time to Control\")))))[0][0].data.main[0][0].json.timeDifference.milliseconds,\n      \"SOAR Processing Time\",\n      VALUES(\n        REJECT(\n        VALUES(result)[0].data.resultData.runData,\n        LAMBDA(key, value, NOT(MATCH(key,\"SOAR Processing Time\")))))[0][0].data.main[0][0].json.timeDifference.milliseconds,\n      \"Containment Success\",\n      REJECT(\n        VALUES(result)[0].data.resultData.runData,\n        LAMBDA(key, value, NOT(MATCH(key, \"Invoke\"))))\n      |> MAP(FLATTEN(VALUES(%)),\"executionStatus\")\n      |> IF(UNIQ(%)=[\"success\"],1,0),\n      \"Event Consumption\",\n      SIZE(VALUES(result)[0].data.resultData.runData),\n      \"Cost per Execution\",(24/2500)*1)\n    )\n  ) |>SORT(%, \"Execution Time\")"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Throttle n8n Execution Collection",
+      "disabled": false,
+      "description": null,
+      "guid": "bf8e36c7a86e23e49ffedd6bfc4baa03",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "throttle",
+        "interval": "minute",
+        "capacity": 30,
+        "events_per_run": 1
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP1 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "7d4810fdfd76bc9d8cc007e25d9dfb3c",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "480",
+          "482",
+          "484",
+          "485",
+          "486",
+          "487",
+          "488",
+          "489",
+          "490",
+          "491"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "ce3412d6d94c54bd1c5543f8ed167781",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=DEFAULT(\n  sop1_executions,\n  sop2_executions,\n  sop3_executions,\n  sop4_executions,\n  sop5_executions,\n  sop6_executions,\n  sop7_executions,\n  sop8_executions,\n  sop9_executions\n)"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP3 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "63665f13762a4e85f5f6dbdb18005bed",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "510",
+          "511",
+          "512",
+          "513",
+          "514",
+          "515",
+          "516",
+          "517",
+          "518",
+          "519"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP4 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "1dec6ebf47a6c254e41f3c6fb2e1d1a8",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "520",
+          "521",
+          "522",
+          "523",
+          "524",
+          "525",
+          "526",
+          "527",
+          "528",
+          "529"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP5 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "7d4b8dd25d350eeab948165ed46edc37",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "531",
+          "532",
+          "533",
+          "534",
+          "535",
+          "536",
+          "537",
+          "538",
+          "539",
+          "540"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP6 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "5c31699ca5deed8c7d1823bba55952ba",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "541",
+          "542",
+          "543",
+          "544",
+          "545",
+          "546",
+          "547",
+          "548",
+          "549",
+          "550"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP7 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "0ee614a42d2cd81a9d27e3e2674eaade",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "552",
+          "553",
+          "554",
+          "555",
+          "556",
+          "557",
+          "558",
+          "559",
+          "560",
+          "561"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP8 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "fa59b2b021e630f19bbc743271e3cda4",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "568",
+          "569",
+          "570",
+          "571",
+          "572",
+          "573",
+          "574",
+          "575",
+          "577",
+          "578"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP9 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "8df36dcd072efd02af40e64b1183d5bd",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "571",
+          "572",
+          "573",
+          "574",
+          "575",
+          "576",
+          "577",
+          "578",
+          "579",
+          "590"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Scorecard per SOP",
+      "disabled": false,
+      "description": null,
+      "guid": "3ef5148567c27e7cf0c367227e8d531b",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": {
+          "test_case": "=SWITCH(\n  TRUE,\n  IS_PRESENT(sop1_executions),\n  \"SOP1\",\n  IS_PRESENT(sop2_executions),\n  \"SOP2\",\n  IS_PRESENT(sop3_executions),\n  \"SOP3\",\n  IS_PRESENT(sop4_executions),\n  \"SOP4\",\n  IS_PRESENT(sop5_executions),\n  \"SOP5\",\n  IS_PRESENT(sop6_executions),\n  \"SOP6\",\n  IS_PRESENT(sop7_executions),\n  \"SOP7\",\n  IS_PRESENT(sop7_executions),\n  \"SOP8\",\n  \"SOP9\"\n)",
+          "mttd": "=AVERAGE(MAP(results_n8n_per_execution,\"['Time to Detect']\"))",
+          "mttr": "=AVERAGE(MAP(results_n8n_per_execution,\"['Time to Respond']\"))",
+          "mttc": "=AVERAGE(MAP(results_n8n_per_execution,\"['Time to Control']\"))",
+          "mspt": "=AVERAGE(MAP(results_n8n_per_execution,\"['SOAR Processing Time']\"))",
+          "csr": "=ROUND(AVERAGE(MAP(results_n8n_per_execution,\"['Containment Success']\"))*100,2)",
+          "mec": "=AVERAGE(MAP(results_n8n_per_execution,\"['Event Consumption']\"))",
+          "mcpe": "=AVERAGE(MAP(results_n8n_per_execution,\"['Cost per Execution']\"))"
+        },
+        "local": {
+          "sop": "=SWITCH(\n  TRUE,\n  IS_PRESENT(sop1_executions),\n  \"SOP1\",\n  IS_PRESENT(sop2_executions),\n  \"SOP2\",\n  IS_PRESENT(sop3_executions),\n  \"SOP3\",\n  IS_PRESENT(sop4_executions),\n  \"SOP4\",\n  IS_PRESENT(sop5_executions),\n  \"SOP5\",\n  IS_PRESENT(sop6_executions),\n  \"SOP6\",\n  IS_PRESENT(sop7_executions),\n  \"SOP7\",\n  IS_PRESENT(sop7_executions),\n  \"SOP8\",\n  \"SOP9\"\n)"
+        }
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    }
+  ],
+  "diagram_notes": [],
+  "links": [
+    {
+      "source": 0,
+      "receiver": 4
+    },
+    {
+      "source": 1,
+      "receiver": 5
+    },
+    {
+      "source": 2,
+      "receiver": 8
+    },
+    {
+      "source": 3,
+      "receiver": 6
+    },
+    {
+      "source": 4,
+      "receiver": 1
+    },
+    {
+      "source": 5,
+      "receiver": 16
+    },
+    {
+      "source": 6,
+      "receiver": 0
+    },
+    {
+      "source": 7,
+      "receiver": 8
+    },
+    {
+      "source": 8,
+      "receiver": 3
+    },
+    {
+      "source": 9,
+      "receiver": 8
+    },
+    {
+      "source": 10,
+      "receiver": 8
+    },
+    {
+      "source": 11,
+      "receiver": 8
+    },
+    {
+      "source": 12,
+      "receiver": 8
+    },
+    {
+      "source": 13,
+      "receiver": 8
+    },
+    {
+      "source": 14,
+      "receiver": 8
+    },
+    {
+      "source": 15,
+      "receiver": 8
+    }
+  ],
+  "diagram_layout": "{\"0ee614a42d2cd81a9d27e3e2674eaade\":[1485,-240],\"1dec6ebf47a6c254e41f3c6fb2e1d1a8\":[900,-240],\"3ef5148567c27e7cf0c367227e8d531b\":[1095,360],\"40cc1c7b624d704fb46b9dcf01389e42\":[1095,285],\"5c31699ca5deed8c7d1823bba55952ba\":[1305,-240],\"63665f13762a4e85f5f6dbdb18005bed\":[735,-240],\"7d4810fdfd76bc9d8cc007e25d9dfb3c\":[360,-240],\"7d4b8dd25d350eeab948165ed46edc37\":[1095,-240],\"8df36dcd072efd02af40e64b1183d5bd\":[1815,-240],\"ae6455fcb9ed4604b1b148e1282e67cb\":[1095,225],\"bf8e36c7a86e23e49ffedd6bfc4baa03\":[1095,-15],\"c1612e1b10122ca35ccceebb17ffbb28\":[1095,-90],\"cc0e705f7539a5d4762ffab302ec4bff\":[555,-240],\"ce3412d6d94c54bd1c5543f8ed167781\":[1095,-165],\"d02a78f093a0ac5ed42e015946700878\":[1095,150],\"ec48ed4aed13e4e3230becb1d61eef22\":[1095,75],\"fa59b2b021e630f19bbc743271e3cda4\":[1650,-240]}",
+  "story_library_metadata": {},
+  "monitor_failures": false,
+  "synchronous_webhooks_enabled": false,
+  "integrations": [],
+  "sections": [],
+  "parent_only_send_to_story": false,
+  "send_to_story_timeout_enabled": false,
+  "send_to_story_timeout_duration_seconds": null,
+  "keep_events_for": 86400,
+  "reporting_status": true,
+  "send_to_story_enabled": false,
+  "entry_agent_guid": null,
+  "exit_agent_guids": [],
+  "api_entry_action_guids": [],
+  "api_exit_action_guids": [],
+  "send_to_story_access": null,
+  "send_to_story_access_source": 0,
+  "send_to_story_skill_use_requires_confirmation": true,
+  "pages": [],
+  "tags": [],
+  "time_saved_unit": "minutes",
+  "time_saved_value": 0,
+  "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+  "recipients": [],
+  "integration_product": null,
+  "integration_vendor": null,
+  "llm_product_instructions": "",
+  "start_reference": null,
+  "send_to_stories": [],
+  "exported_at": "2026-04-18T22:25:57Z",
+  "icon": ":building_construction:"
+}
