@@ -587,7 +587,7 @@
         "mode": "message_only",
         "loop": false,
         "payload": {
-          "test_case": "=SWITCH(\n  TRUE,\n  IS_PRESENT(sop1_executions),\n  \"SOP1\",\n  IS_PRESENT(sop2_executions),\n  \"SOP2\",\n  IS_PRESENT(sop3_executions),\n  \"SOP3\",\n  IS_PRESENT(sop4_executions),\n  \"SOP4\",\n  IS_PRESENT(sop5_executions),\n  \"SOP5\",\n  IS_PRESENT(sop6_executions),\n  \"SOP6\",\n  IS_PRESENT(sop7_executions),\n  \"SOP7\",\n  IS_PRESENT(sop7_executions),\n  \"SOP8\",\n  \"SOP9\"\n)",
+          "test_case": "=SWITCH(\n  TRUE,\n  IS_PRESENT(sop1_executions),\n  \"SOP1\",\n  IS_PRESENT(sop2_executions),\n  \"SOP2\",\n  IS_PRESENT(sop3_executions),\n  \"SOP3\",\n  IS_PRESENT(sop4_executions),\n  \"SOP4\",\n  IS_PRESENT(sop5_executions),\n  \"SOP5\",\n  IS_PRESENT(sop6_executions),\n  \"SOP6\",\n  IS_PRESENT(sop7_executions),\n  \"SOP7\",\n  IS_PRESENT(sop8_executions),\n  \"SOP8\",\n  \"SOP9\"\n)",
           "mttd": "=AVERAGE(MAP(results_n8n_per_execution,\"['Time to Detect']\"))",
           "mttr": "=AVERAGE(MAP(results_n8n_per_execution,\"['Time to Respond']\"))",
           "mttc": "=AVERAGE(MAP(results_n8n_per_execution,\"['Time to Control']\"))",
@@ -595,9 +595,6 @@
           "csr": "=ROUND(AVERAGE(MAP(results_n8n_per_execution,\"['Containment Success']\"))*100,2)",
           "mec": "=AVERAGE(MAP(results_n8n_per_execution,\"['Event Consumption']\"))",
           "mcpe": "=AVERAGE(MAP(results_n8n_per_execution,\"['Cost per Execution']\"))"
-        },
-        "local": {
-          "sop": "=SWITCH(\n  TRUE,\n  IS_PRESENT(sop1_executions),\n  \"SOP1\",\n  IS_PRESENT(sop2_executions),\n  \"SOP2\",\n  IS_PRESENT(sop3_executions),\n  \"SOP3\",\n  IS_PRESENT(sop4_executions),\n  \"SOP4\",\n  IS_PRESENT(sop5_executions),\n  \"SOP5\",\n  IS_PRESENT(sop6_executions),\n  \"SOP6\",\n  IS_PRESENT(sop7_executions),\n  \"SOP7\",\n  IS_PRESENT(sop7_executions),\n  \"SOP8\",\n  \"SOP9\"\n)"
         }
       },
       "reporting": {
