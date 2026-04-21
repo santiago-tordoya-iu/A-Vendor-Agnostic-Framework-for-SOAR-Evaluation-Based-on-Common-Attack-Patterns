@@ -1,0 +1,2305 @@
+{
+  "id": "3b93edbe-70d6-451a-ace1-34b39cfe8614",
+  "name": "SOAR Lab SOPs",
+  "description": "",
+  "tags": [],
+  "published": true,
+  "spec": {
+    "triggers": [
+      {
+        "startStepNames": [
+          "Get_Alert_Data"
+        ],
+        "monitorTrigger": {}
+      }
+    ],
+    "steps": [
+      {
+        "name": "Get_Alert_Data",
+        "actionId": "com.datadoghq.dd.logs.listLogsV2",
+        "parameters": [
+          {
+            "name": "time_range",
+            "value": "2d"
+          },
+          {
+            "name": "storage_tier",
+            "value": "indexes"
+          },
+          {
+            "name": "query",
+            "value": "source:wazuh @full_alert.id:{{Trigger.alert_id}}"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Time_to_Respond",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 0,
+            "y": 156
+          }
+        }
+      },
+      {
+        "name": "Time_to_Respond",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Get_Wazuh_Auth_Token",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 0,
+            "y": 300
+          }
+        }
+      },
+      {
+        "name": "Get_Wazuh_Auth_Token",
+        "actionId": "com.datadoghq.http.request",
+        "connectionLabel": "INTEGRATION_NONE",
+        "parameters": [
+          {
+            "name": "verb",
+            "value": "GET"
+          },
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/security/user/authenticate?raw=true"
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP1",
+            "branchName": "main"
+          },
+          {
+            "nextStepName": "SOP2",
+            "branchName": "main"
+          },
+          {
+            "nextStepName": "SOP3",
+            "branchName": "main"
+          },
+          {
+            "nextStepName": "SOP4",
+            "branchName": "main"
+          },
+          {
+            "nextStepName": "SOP5",
+            "branchName": "main"
+          },
+          {
+            "nextStepName": "SOP6",
+            "branchName": "main"
+          },
+          {
+            "nextStepName": "SOP7",
+            "branchName": "main"
+          },
+          {
+            "nextStepName": "SOP9",
+            "branchName": "main"
+          },
+          {
+            "nextStepName": "SOP8",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 0,
+            "y": 384
+          }
+        }
+      },
+      {
+        "name": "SOP1",
+        "actionId": "com.datadoghq.core.if",
+        "parameters": [
+          {
+            "name": "joinOperator",
+            "value": "and"
+          },
+          {
+            "name": "conditions",
+            "value": [
+              {
+                "comparisonOperator": "eq",
+                "leftValue": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.wazuh_rule_description }}",
+                "rightValue": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp"
+              }
+            ]
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Extract_File_Path",
+            "branchName": "true"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -2184,
+            "y": 588
+          }
+        }
+      },
+      {
+        "name": "Extract_File_Path",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const s = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.eventdata.parentCommandLine;\nconst m = s.match(/.*(C:\\\\.*)$/);\nreturn m ? m[1] : null;"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_File_Eviction",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -2184,
+            "y": 768
+          }
+        }
+      },
+      {
+        "name": "Invoke_File_Eviction",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.agent.id }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "file-eviction",
+                "-TargetPath",
+                "{{ Steps.Extract_File_Path.data }}"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP1_Time_to_Control",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -2184,
+            "y": 1392
+          }
+        }
+      },
+      {
+        "name": "SOP1_Time_to_Control",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP1_SOAR_Processing_Time",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -2184,
+            "y": 1620
+          }
+        }
+      },
+      {
+        "name": "SOP1_SOAR_Processing_Time",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "return Number($.Steps.SOP1_Time_to_Control.data) - Number($.Steps.Time_to_Respond.data);"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Time_to_Detect",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -2184,
+            "y": 1704
+          }
+        }
+      },
+      {
+        "name": "Time_to_Detect",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const attrs = $.Steps.Get_Alert_Data.data[0].attributes.attributes;\r\n\r\nconst systemTime = attrs.data.win.system.systemTime.replace(/(\\.\\d{3})\\d+Z$/, '$1Z');\r\nconst alertTimestamp = attrs.timestamp.replace(/([+-]\\d{2})(\\d{2})$/, '$1:$2');\r\n\r\nreturn Date.parse(alertTimestamp) - Date.parse(systemTime);"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Summary",
+            "branchName": "main"
+          }
+        ],
+        "readinessGate": {
+          "thresholdType": "ANY"
+        },
+        "display": {
+          "bounds": {
+            "x": 0,
+            "y": 1836
+          }
+        }
+      },
+      {
+        "name": "SOP2",
+        "actionId": "com.datadoghq.core.if",
+        "parameters": [
+          {
+            "name": "joinOperator",
+            "value": "and"
+          },
+          {
+            "name": "conditions",
+            "value": [
+              {
+                "comparisonOperator": "contains",
+                "leftValue": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.wazuh_rule_description }}",
+                "rightValue": "CASS T1558.001 detected: Mimikatz Golden Ticket creation"
+              }
+            ]
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "List_Wazuh_Agents",
+            "branchName": "true"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1704,
+            "y": 588
+          }
+        }
+      },
+      {
+        "name": "SOP3",
+        "actionId": "com.datadoghq.core.if",
+        "parameters": [
+          {
+            "name": "joinOperator",
+            "value": "and"
+          },
+          {
+            "name": "conditions",
+            "value": [
+              {
+                "comparisonOperator": "contains",
+                "leftValue": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.wazuh_rule_description }}",
+                "rightValue": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet"
+              }
+            ]
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_Session_Termination",
+            "branchName": "true"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1224,
+            "y": 588
+          }
+        }
+      },
+      {
+        "name": "SOP4",
+        "actionId": "com.datadoghq.core.if",
+        "parameters": [
+          {
+            "name": "joinOperator",
+            "value": "and"
+          },
+          {
+            "name": "conditions",
+            "value": [
+              {
+                "comparisonOperator": "contains",
+                "leftValue": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.wazuh_rule_description }}",
+                "rightValue": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task"
+              }
+            ]
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Extract_Scheduled_Task",
+            "branchName": "true"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -660,
+            "y": 588
+          }
+        }
+      },
+      {
+        "name": "SOP5",
+        "actionId": "com.datadoghq.core.if",
+        "parameters": [
+          {
+            "name": "joinOperator",
+            "value": "and"
+          },
+          {
+            "name": "conditions",
+            "value": [
+              {
+                "comparisonOperator": "eq",
+                "leftValue": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.wazuh_rule_description }}",
+                "rightValue": "Atomic Red Team T1033 #4: User Discovery via Environment Variables + Out-File"
+              }
+            ]
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_Process_Termination1",
+            "branchName": "true"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 0,
+            "y": 588
+          }
+        }
+      },
+      {
+        "name": "SOP6",
+        "actionId": "com.datadoghq.core.if",
+        "parameters": [
+          {
+            "name": "joinOperator",
+            "value": "and"
+          },
+          {
+            "name": "conditions",
+            "value": [
+              {
+                "comparisonOperator": "eq",
+                "leftValue": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.wazuh_rule_description }}",
+                "rightValue": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot"
+              }
+            ]
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_Process_Termination2",
+            "branchName": "true"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 528,
+            "y": 588
+          }
+        }
+      },
+      {
+        "name": "SOP7",
+        "actionId": "com.datadoghq.core.if",
+        "parameters": [
+          {
+            "name": "joinOperator",
+            "value": "and"
+          },
+          {
+            "name": "conditions",
+            "value": [
+              {
+                "comparisonOperator": "contains",
+                "leftValue": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.wazuh_rule_description }}",
+                "rightValue": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification"
+              }
+            ]
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Extract_Registry_Path",
+            "branchName": "true"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1020,
+            "y": 588
+          }
+        }
+      },
+      {
+        "name": "SOP8",
+        "actionId": "com.datadoghq.core.if",
+        "parameters": [
+          {
+            "name": "joinOperator",
+            "value": "and"
+          },
+          {
+            "name": "conditions",
+            "value": [
+              {
+                "comparisonOperator": "eq",
+                "leftValue": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.wazuh_rule_description }}",
+                "rightValue": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder"
+              }
+            ]
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_File_Eviction3",
+            "branchName": "true"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1512,
+            "y": 588
+          }
+        }
+      },
+      {
+        "name": "SOP9",
+        "actionId": "com.datadoghq.core.if",
+        "parameters": [
+          {
+            "name": "joinOperator",
+            "value": "and"
+          },
+          {
+            "name": "conditions",
+            "value": [
+              {
+                "comparisonOperator": "eq",
+                "leftValue": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.wazuh_rule_description }}",
+                "rightValue": "Atomic Red Team T1087.002 #4: Correlated PowerShell AD reconnaissance behavior"
+              }
+            ]
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "List_Wazuh_Agents1",
+            "branchName": "true"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1968,
+            "y": 588
+          }
+        }
+      },
+      {
+        "name": "List_Wazuh_Agents",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/agents?pretty=true"
+          },
+          {
+            "name": "verb",
+            "value": "GET"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Extract_DC",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1716,
+            "y": 720
+          }
+        }
+      },
+      {
+        "name": "Extract_Username",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "return $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.eventdata.user.replace(/^.*\\\\/, '');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_Credential_Revocation",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1716,
+            "y": 960
+          }
+        }
+      },
+      {
+        "name": "Invoke_Credential_Revocation",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Extract_DC.data }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "credential-revocation",
+                "-UserName",
+                "{{ Steps.Extract_Username.data }}"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_Auth_Cache_Invalidation",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1716,
+            "y": 1032
+          }
+        }
+      },
+      {
+        "name": "Invoke_Auth_Cache_Invalidation",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.agent.id }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "auth-cache-invalidation"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_Reissue_Credential",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1716,
+            "y": 1212
+          }
+        }
+      },
+      {
+        "name": "Invoke_Reissue_Credential",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Extract_DC.data }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "reissue-credential",
+                "-UserName",
+                "{{ Steps.Extract_Username.data }}",
+                "-Password",
+                "Temp1234!",
+                "-Groups",
+                "Domain Admins"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP2_Time_to_Control",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1716,
+            "y": 1392
+          }
+        }
+      },
+      {
+        "name": "SOP2_Time_to_Control",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP2_SOAR_Processing_Time",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1716,
+            "y": 1620
+          }
+        }
+      },
+      {
+        "name": "SOP2_SOAR_Processing_Time",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "return Number($.Steps.SOP2_Time_to_Control.data) - Number($.Steps.Time_to_Respond.data);"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Time_to_Detect",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1716,
+            "y": 1704
+          }
+        }
+      },
+      {
+        "name": "Invoke_Session_Termination",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.agent.id }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "session-termination",
+                "-LogonIdHex",
+                "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.data.win.eventdata.targetLinkedLogonId }}"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP3_Time_to_Control",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1224,
+            "y": 1392
+          }
+        }
+      },
+      {
+        "name": "SOP3_Time_to_Control",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP3_SOAR_Processing_Time",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1224,
+            "y": 1620
+          }
+        }
+      },
+      {
+        "name": "SOP3_SOAR_Processing_Time",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Time_to_Detect",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1224,
+            "y": 1704
+          }
+        }
+      },
+      {
+        "name": "Extract_Scheduled_Task",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const parentCommandLine =\n  $.Steps.Get_Alert_Data.data[0].attributes.attributes.data.win.eventdata.parentCommandLine || '';\n\nconst normalized = parentCommandLine\n  .replace(/&amp;/g, '&')\n  .replace(/\\\\\"/g, '\"');\n\nconst matches = [];\nconst regex = /\\/tn\\s+\"([^\"]+)\"/g;\nlet m;\n\nwhile ((m = regex.exec(normalized)) !== null) {\n  matches.push(m[1]);\n}\n\nreturn {\n  taskNames: matches.join(', ')\n};"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Tasks_present",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -660,
+            "y": 720
+          }
+        }
+      },
+      {
+        "name": "Tasks_present",
+        "actionId": "com.datadoghq.core.if",
+        "parameters": [
+          {
+            "name": "joinOperator",
+            "value": "and"
+          },
+          {
+            "name": "conditions",
+            "value": [
+              {
+                "comparisonOperator": "notempty",
+                "value": "{{ Steps.Extract_Scheduled_Task.data.taskNames }}"
+              }
+            ]
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_Process_Termination_with_Task_Deletion",
+            "branchName": "true"
+          },
+          {
+            "nextStepName": "Invoke_Process_Termination",
+            "branchName": "false"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -660,
+            "y": 804
+          }
+        }
+      },
+      {
+        "name": "Invoke_Process_Termination_with_Task_Deletion",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.agent.id }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": "{\"arguments\":[\"process-termination\",\"-ProcessId\",\"{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.data.win.eventdata.processId }}\",\"-TaskNames\",\"{{ Steps.Extract_Scheduled_Task.data.taskNames }}\"],\"command\":\"!launcher.cmd\"}"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP4_Time_to_Control",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -828,
+            "y": 1392
+          }
+        }
+      },
+      {
+        "name": "Invoke_Process_Termination",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.agent.id }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "process-termination",
+                "-ProcessId",
+                "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.data.win.eventdata.processId }}"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP4_Time_to_Control",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -456,
+            "y": 1392
+          }
+        }
+      },
+      {
+        "name": "SOP4_Time_to_Control",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP4_SOAR_Processing_Time",
+            "branchName": "main"
+          }
+        ],
+        "readinessGate": {
+          "thresholdType": "ANY"
+        },
+        "display": {
+          "bounds": {
+            "x": -648,
+            "y": 1620
+          }
+        }
+      },
+      {
+        "name": "SOP4_SOAR_Processing_Time",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Time_to_Detect",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -648,
+            "y": 1704
+          }
+        }
+      },
+      {
+        "name": "Invoke_Process_Termination1",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.agent.id }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "process-termination",
+                "-ProcessId",
+                "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.data.win.system.processID }}"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Extract_File_Name",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 0,
+            "y": 720
+          }
+        }
+      },
+      {
+        "name": "Extract_File_Name",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const commandLine =\n  $.Steps.Get_Alert_Data.data[0].attributes.attributes.data.win.eventdata.commandLine || '';\n\nreturn ((commandLine.match(/-FilePath\\s+.*?[\\\\\\/]([^\\\\\\/\\s\"]+\\.\\w+)/i) || [, ''])[1]) || '';"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Concat_Path_with_File_Name",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 0,
+            "y": 912
+          }
+        }
+      },
+      {
+        "name": "Concat_Path_with_File_Name",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const currentDirectory =\n  $.Steps.Get_Alert_Data.data[0].attributes.attributes.data.win.eventdata.currentDirectory || '';\n\nconst name = $.Steps.Extract_File_Name.data || '';\n\nreturn currentDirectory + name;"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_File_Eviction1",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 0,
+            "y": 1008
+          }
+        }
+      },
+      {
+        "name": "Invoke_File_Eviction1",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.agent.id }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "file-eviction",
+                "-TargetPath",
+                "{{ Steps.Concat_Path_with_File_Name.data }}"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP5_Time_to_Control",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 0,
+            "y": 1392
+          }
+        }
+      },
+      {
+        "name": "SOP5_Time_to_Control",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP5_SOAR_Processing_Time",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 0,
+            "y": 1620
+          }
+        }
+      },
+      {
+        "name": "SOP5_SOAR_Processing_Time",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Time_to_Detect",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 0,
+            "y": 1704
+          }
+        }
+      },
+      {
+        "name": "Invoke_Process_Termination2",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.agent.id }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "process-termination",
+                "-ProcessId",
+                "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.full_alert.data.win.eventdata.processId }}"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Extract_File_Path1",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 528,
+            "y": 720
+          }
+        }
+      },
+      {
+        "name": "Extract_File_Path1",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const parentCommandLine =\n  $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.eventdata.parentCommandLine || '';\n\nreturn ((parentCommandLine.match(/(\"?[^\"\\s]+\"?)$/) || ['', ''])[1] || '').replace(/^\"|\"$/g, '');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_File_Eviction2",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 528,
+            "y": 912
+          }
+        }
+      },
+      {
+        "name": "Invoke_File_Eviction2",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.agent.id }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "file-eviction",
+                "-TargetPath",
+                "{{ Steps.Extract_File_Path1.data }}"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_Host_Reboot",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 528,
+            "y": 1008
+          }
+        }
+      },
+      {
+        "name": "Invoke_Host_Reboot",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.agent.id }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "host-reboot"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP6_Time_to_Control",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 528,
+            "y": 1392
+          }
+        }
+      },
+      {
+        "name": "SOP6_Time_to_Control",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP6_SOAR_Processing_Time",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 528,
+            "y": 1620
+          }
+        }
+      },
+      {
+        "name": "SOP6_SOAR_Processing_Time",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Time_to_Detect",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 528,
+            "y": 1704
+          }
+        }
+      },
+      {
+        "name": "Extract_Registry_Path",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const rawPath =\n  $.Steps.Get_Alert_Data.data[0].attributes.attributes.data.win.eventdata.targetObject || '';\n\nif (!rawPath) {\n  throw new Error('targetObject is empty');\n}\n\nconst cleaned = rawPath.replace(/\\\\\\\\/g, '\\\\');\nconst match = cleaned.match(/^(HKU\\\\S-1-[^\\\\]+_Classes\\\\CLSID\\\\\\{[0-9A-Fa-f-]{36}\\})/i);\n\nif (!match) {\n  throw new Error('No CLSID parent found in: ' + rawPath);\n}\n\nreturn {\n  targetPath: match[1]\n};"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_File_Eviction_for_Registry_Path",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1020,
+            "y": 720
+          }
+        }
+      },
+      {
+        "name": "Invoke_File_Eviction_for_Registry_Path",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.agent.id }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "file-eviction",
+                "-TargetPath",
+                "{{ Steps.Extract_Registry_Path.data.targetPath }}"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP7_Time_to_Control",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1020,
+            "y": 1392
+          }
+        }
+      },
+      {
+        "name": "SOP7_Time_to_Control",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP7_SOAR_Processing_Time",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1020,
+            "y": 1620
+          }
+        }
+      },
+      {
+        "name": "SOP7_SOAR_Processing_Time",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Time_to_Detect",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1020,
+            "y": 1704
+          }
+        }
+      },
+      {
+        "name": "Invoke_File_Eviction3",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.agent.id }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "file-eviction",
+                "-TargetPath",
+                "{{ Steps.Get_Alert_Data.data.[0].attributes.attributes.full_alert.data.win.eventdata.targetFilename }}"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP8_Time_to_Control",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1512,
+            "y": 1392
+          }
+        }
+      },
+      {
+        "name": "SOP8_Time_to_Control",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP8_SOAR_Processing_Time",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1512,
+            "y": 1620
+          }
+        }
+      },
+      {
+        "name": "SOP8_SOAR_Processing_Time",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Time_to_Detect",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1512,
+            "y": 1704
+          }
+        }
+      },
+      {
+        "name": "List_Wazuh_Agents1",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/agents?pretty=true"
+          },
+          {
+            "name": "verb",
+            "value": "GET"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Extract_DC1",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1968,
+            "y": 768
+          }
+        }
+      },
+      {
+        "name": "Extract_Username1",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const contextInfo =\n  $.Steps.Get_Alert_Data.data[0].attributes.attributes.data.win.eventdata.contextInfo || '';\n\nreturn ((contextInfo.match(/User\\s*=\\s*(.*?)\\s+Connected User\\s*=/) || ['', ''])[1] || '').trim();"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_Account_Locking",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1968,
+            "y": 1056
+          }
+        }
+      },
+      {
+        "name": "Invoke_Account_Locking",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Extract_DC1.data }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "lock-account",
+                "-UserName",
+                "{{ Steps.Extract_Username1.data }}"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Invoke_Account_Unlocking",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1968,
+            "y": 1188
+          }
+        }
+      },
+      {
+        "name": "Invoke_Account_Unlocking",
+        "actionId": "com.datadoghq.http.request",
+        "parameters": [
+          {
+            "name": "url",
+            "value": "https://20.170.75.248:55000/active-response"
+          },
+          {
+            "name": "verb",
+            "value": "PUT"
+          },
+          {
+            "name": "requestHeaders",
+            "value": [
+              {
+                "key": "Content-Type",
+                "value": [
+                  "application/json"
+                ]
+              },
+              {
+                "key": "Authorization",
+                "value": [
+                  "Bearer {{ Steps.Get_Wazuh_Auth_Token.body }}"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "urlParams",
+            "value": [
+              {
+                "key": "agents_list",
+                "value": "{{ Steps.Extract_DC1.data }}"
+              }
+            ]
+          },
+          {
+            "name": "allowExpiredCertificate",
+            "value": true
+          },
+          {
+            "name": "body",
+            "value": {
+              "arguments": [
+                "unlock-account",
+                "-UserName",
+                "{{ Steps.Extract_Username1.data }}"
+              ],
+              "command": "!launcher.cmd"
+            }
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP9_Time_to_Control",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1968,
+            "y": 1392
+          }
+        }
+      },
+      {
+        "name": "SOP9_Time_to_Control",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "SOP9_SOAR_Processing_Time",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1968,
+            "y": 1620
+          }
+        }
+      },
+      {
+        "name": "SOP9_SOAR_Processing_Time",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Time_to_Detect",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1968,
+            "y": 1704
+          }
+        }
+      },
+      {
+        "name": "Summary",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "const controlStepNames = [\n  \"SOP1_Time_to_Control\",\n  \"SOP2_Time_to_Control\",\n  \"SOP3_Time_to_Control\",\n  \"SOP4_Time_to_Control\",\n  \"SOP5_Time_to_Control\",\n  \"SOP6_Time_to_Control\",\n  \"SOP7_Time_to_Control\",\n  \"SOP8_Time_to_Control\",\n  \"SOP9_Time_to_Control\"\n];\n\nconst processingStepNames = [\n  \"SOP1_SOAR_Processing_Time\",\n  \"SOP2_SOAR_Processing_Time\",\n  \"SOP3_SOAR_Processing_Time\",\n  \"SOP4_SOAR_Processing_Time\",\n  \"SOP5_SOAR_Processing_Time\",\n  \"SOP6_SOAR_Processing_Time\",\n  \"SOP7_SOAR_Processing_Time\",\n  \"SOP8_SOAR_Processing_Time\",\n  \"SOP9_SOAR_Processing_Time\"\n];\n\nconst timeToControl = controlStepNames\n  .map(function(name) {\n    return $.Steps[name] ? $.Steps[name].data : null;\n  })\n  .find(function(value) {\n    return value != null;\n  }) || null;\n\nconst timeToProcess = processingStepNames\n  .map(function(name) {\n    return $.Steps[name] ? $.Steps[name].data : null;\n  })\n  .find(function(value) {\n    return value != null;\n  }) || null;\n\nconst invokeStatuses = Object.keys($.Steps)\n  .filter(function(name) {\n    return name.indexOf(\"Invoke\") === 0;\n  })\n  .map(function(name) {\n    return $.Steps[name] ? $.Steps[name].status : null;\n  })\n  .filter(function(status) {\n    return status != null;\n  });\n\nconst containmentSuccess =\n  invokeStatuses.length > 0 &&\n  invokeStatuses.every(function(status) {\n    return status === 200;\n  })\n    ? 1\n    : 0;\n\nreturn {\n  \"Execution Time\": $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime,\n  \"Time to Detect\": $.Steps.Time_to_Detect.data,\n  \"Time to Respond\": $.Steps.Time_to_Respond.data,\n  \"Time to Control\": timeToControl,\n  \"SOAR Processing Time\": timeToProcess,\n  \"Containment Success\": containmentSuccess,\n  \"Event Consumption\": Object.keys($.Steps).length + 1,\n  \"Cost per Execution\": 14 / 100\n};"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 0,
+            "y": 1920
+          }
+        }
+      },
+      {
+        "name": "Extract_DC",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "return ($.Steps.List_Wazuh_Agents.body.data.affected_items.find(function(agent) {\n  return agent.group && agent.group.includes(\"domain_controller\");\n}) || {}).id || null;"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Extract_Username",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": -1716,
+            "y": 888
+          }
+        }
+      },
+      {
+        "name": "Extract_DC1",
+        "actionId": "com.datadoghq.datatransformation.func",
+        "parameters": [
+          {
+            "name": "script",
+            "value": "return ($.Steps.List_Wazuh_Agents1.body.data.affected_items.find(function(agent) {\n  return agent.group && agent.group.includes(\"domain_controller\");\n}) || {}).id || null;"
+          }
+        ],
+        "outboundEdges": [
+          {
+            "nextStepName": "Extract_Username1",
+            "branchName": "main"
+          }
+        ],
+        "display": {
+          "bounds": {
+            "x": 1968,
+            "y": 948
+          }
+        }
+      }
+    ],
+    "handle": "soarlab",
+    "connectionEnvs": [
+      {
+        "env": "default",
+        "connections": [
+          {
+            "connectionId": "e8021273-096f-46eb-bfd9-904aa7c41ec4",
+            "label": "INTEGRATION_NONE"
+          }
+        ]
+      }
+    ],
+    "inputSchema": {
+      "parameters": [
+        {
+          "name": "alert_id",
+          "type": "STRING"
+        }
+      ]
+    },
+    "outputSchema": {
+      "parameters": [
+        {
+          "name": "output",
+          "type": "OBJECT",
+          "value": "{{ Steps.Summary.data }}"
+        }
+      ]
+    }
+  }
+}
