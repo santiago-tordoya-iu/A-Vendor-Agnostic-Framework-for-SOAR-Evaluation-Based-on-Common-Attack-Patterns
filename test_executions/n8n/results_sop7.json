@@ -1,5 +1,5 @@
 [
-"run1":"{
+"run1":{
   "id": "552",
   "finished": true,
   "mode": "webhook",
@@ -3602,8 +3602,8 @@
   },
   "workflowVersionId": "63fecfaf-f98c-4e98-903d-65a0959b1019",
   "customData": {}
-}",
-"run2":"{
+},
+"run2":{
   "id": "553",
   "finished": true,
   "mode": "webhook",
@@ -7206,8 +7206,8 @@
   },
   "workflowVersionId": "63fecfaf-f98c-4e98-903d-65a0959b1019",
   "customData": {}
-}",
-"run3":"{
+},
+"run3":{
   "id": "554",
   "finished": true,
   "mode": "webhook",
@@ -10810,8 +10810,8 @@
   },
   "workflowVersionId": "63fecfaf-f98c-4e98-903d-65a0959b1019",
   "customData": {}
-}",
-"run4":"{
+},
+"run4":{
   "id": "555",
   "finished": true,
   "mode": "webhook",
@@ -14414,8 +14414,8 @@
   },
   "workflowVersionId": "63fecfaf-f98c-4e98-903d-65a0959b1019",
   "customData": {}
-}",
-"run5":"{
+},
+"run5":{
   "id": "556",
   "finished": true,
   "mode": "webhook",
@@ -18018,8 +18018,8 @@
   },
   "workflowVersionId": "63fecfaf-f98c-4e98-903d-65a0959b1019",
   "customData": {}
-}",
-"run6":"{
+},
+"run6":{
   "id": "557",
   "finished": true,
   "mode": "webhook",
@@ -21622,8 +21622,8 @@
   },
   "workflowVersionId": "63fecfaf-f98c-4e98-903d-65a0959b1019",
   "customData": {}
-}",
-"run7":"{
+},
+"run7":{
   "id": "558",
   "finished": true,
   "mode": "webhook",
@@ -25226,8 +25226,8 @@
   },
   "workflowVersionId": "63fecfaf-f98c-4e98-903d-65a0959b1019",
   "customData": {}
-}",
-"run8":"{
+},
+"run8":{
   "id": "559",
   "finished": true,
   "mode": "webhook",
@@ -28830,8 +28830,8 @@
   },
   "workflowVersionId": "63fecfaf-f98c-4e98-903d-65a0959b1019",
   "customData": {}
-}",
-"run9":"{
+},
+"run9":{
   "id": "560",
   "finished": true,
   "mode": "webhook",
@@ -32434,8 +32434,8 @@
   },
   "workflowVersionId": "63fecfaf-f98c-4e98-903d-65a0959b1019",
   "customData": {}
-}",
-"run10":"{
+},
+"run10":{
   "id": "561",
   "finished": true,
   "mode": "webhook",
@@ -36038,5 +36038,5 @@
   },
   "workflowVersionId": "63fecfaf-f98c-4e98-903d-65a0959b1019",
   "customData": {}
-}"
+}
 ]
