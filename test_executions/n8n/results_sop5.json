@@ -1,5 +1,5 @@
 [
-  "run1":"{
+  "run1":{
   "id": "531",
   "finished": true,
   "mode": "webhook",
@@ -3698,8 +3698,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run2":"{
+},
+  "run2":{
   "id": "532",
   "finished": true,
   "mode": "webhook",
@@ -7398,8 +7398,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run3":"{
+},
+  "run3":{
   "id": "533",
   "finished": true,
   "mode": "webhook",
@@ -11098,8 +11098,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run4":"{
+},
+  "run4":{
   "id": "534",
   "finished": true,
   "mode": "webhook",
@@ -14798,8 +14798,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run5":"{
+},
+  "run5":{
   "id": "535",
   "finished": true,
   "mode": "webhook",
@@ -18498,8 +18498,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run6":"{
+},
+  "run6":{
   "id": "536",
   "finished": true,
   "mode": "webhook",
@@ -22198,8 +22198,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run7":"{
+},
+  "run7":{
   "id": "537",
   "finished": true,
   "mode": "webhook",
@@ -25898,8 +25898,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run8":"{
+},
+  "run8":{
   "id": "538",
   "finished": true,
   "mode": "webhook",
@@ -29598,8 +29598,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run9":"{
+},
+  "run9":{
   "id": "539",
   "finished": true,
   "mode": "webhook",
@@ -33298,8 +33298,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run10":"{
+},
+  "run10":{
   "id": "540",
   "finished": true,
   "mode": "webhook",
@@ -36998,5 +36998,5 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}"
+}
 ]
