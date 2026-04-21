@@ -1,5 +1,5 @@
 [
-  "run1":"{
+  "run1":{
     "Extract_File_Path": {
         "data": "C:\\\\Temp\\\\art.zip"
     },
@@ -271,8 +271,8 @@
     "Time_to_Respond": {
         "data": 64156
     }
-}",
-  "run2":"{
+},
+  "run2":{
     "Extract_File_Path": {
         "data": "C:\\\\Temp\\\\art.zip"
     },
@@ -544,8 +544,8 @@
     "Time_to_Respond": {
         "data": 103344
     }
-}",
-  "run3":"{
+},
+  "run3":{
     "Extract_File_Path": {
         "data": "C:\\\\Temp\\\\art.zip"
     },
@@ -817,8 +817,8 @@
     "Time_to_Respond": {
         "data": 77013
     }
-}",
-  "run4":"{
+},
+  "run4":{
     "Extract_File_Path": {
         "data": "C:\\\\Temp\\\\art.zip"
     },
@@ -1090,8 +1090,8 @@
     "Time_to_Respond": {
         "data": 97114
     }
-}",
-  "run5":"{
+},
+  "run5":{
     "Extract_File_Path": {
         "data": "C:\\\\Temp\\\\art.zip"
     },
@@ -1363,8 +1363,8 @@
     "Time_to_Respond": {
         "data": 79928
     }
-}",
-  "run6":"{
+},
+  "run6":{
     "Extract_File_Path": {
         "data": "C:\\\\Temp\\\\art.zip"
     },
@@ -1636,8 +1636,8 @@
     "Time_to_Respond": {
         "data": 121198
     }
-}",
-  "run7":"{
+},
+  "run7":{
     "Extract_File_Path": {
         "data": "C:\\\\Temp\\\\art.zip"
     },
@@ -1909,8 +1909,8 @@
     "Time_to_Respond": {
         "data": 105840
     }
-}",
-  "run8":"{
+},
+  "run8":{
     "Extract_File_Path": {
         "data": "C:\\\\Temp\\\\art.zip"
     },
@@ -2182,8 +2182,8 @@
     "Time_to_Respond": {
         "data": 120210
     }
-}",
-  "run9":"{
+},
+  "run9":{
     "Extract_File_Path": {
         "data": "C:\\\\Temp\\\\art.zip"
     },
@@ -2455,8 +2455,8 @@
     "Time_to_Respond": {
         "data": 90736
     }
-}",
-  "run10":"{
+},
+  "run10":{
     "Extract_File_Path": {
         "data": "C:\\\\Temp\\\\art.zip"
     },
@@ -2728,5 +2728,5 @@
     "Time_to_Respond": {
         "data": 83355
     }
-}"
+}
 ]
