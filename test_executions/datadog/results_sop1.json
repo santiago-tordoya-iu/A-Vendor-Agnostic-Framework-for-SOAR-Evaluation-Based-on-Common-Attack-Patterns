@@ -1,1 +1,2732 @@
-TBD
+[
+  "run1":"{
+    "Extract_File_Path": {
+        "data": "C:\\\\Temp\\\\art.zip"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Microsoft® Cabinet Maker",
+                                    "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                    "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                    "integrityLevel": "Medium",
+                                    "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                    "logonId": "0x3b09c7",
+                                    "originalFileName": "makecab.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-ca00-69e7-a406-000000004c00}",
+                                    "parentProcessId": "9488",
+                                    "parentUser": "CORP\\\\testuser",
+                                    "processGuid": "{826a7360-ca00-69e7-a606-000000004c00}",
+                                    "processId": "8568",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "CORP\\\\testuser",
+                                    "utcTime": "2026-04-21 19:03:28.415"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "463942",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:03:28.415\r\nProcessGuid: {826a7360-ca00-69e7-a606-000000004c00}\r\nProcessId: 8568\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-ca00-69e7-a406-000000004c00}\r\nParentProcessId: 9488\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                    "opcode": "0",
+                                    "processID": "3660",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-21T19:03:28.4183720Z",
+                                    "task": "1",
+                                    "threadID": "4760",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Microsoft® Cabinet Maker",
+                                        "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                        "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                        "integrityLevel": "Medium",
+                                        "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                        "logonId": "0x3b09c7",
+                                        "originalFileName": "makecab.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-ca00-69e7-a406-000000004c00}",
+                                        "parentProcessId": "9488",
+                                        "parentUser": "CORP\\\\testuser",
+                                        "processGuid": "{826a7360-ca00-69e7-a606-000000004c00}",
+                                        "processId": "8568",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "CORP\\\\testuser",
+                                        "utcTime": "2026-04-21 19:03:28.415"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "463942",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:03:28.415\r\nProcessGuid: {826a7360-ca00-69e7-a606-000000004c00}\r\nProcessId: 8568\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-ca00-69e7-a406-000000004c00}\r\nParentProcessId: 9488\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                        "opcode": "0",
+                                        "processID": "3660",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-21T19:03:28.4183720Z",
+                                        "task": "1",
+                                        "threadID": "4760",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776798209.39549415",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                                "firedtimes": 1,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100001",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1560.001"
+                                    ],
+                                    "tactic": [
+                                        "Collection"
+                                    ],
+                                    "technique": [
+                                        "Archive via Utility"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-21T19:03:29.069+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                            "firedtimes": 1,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100001",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1560.001"
+                                ],
+                                "tactic": [
+                                    "Collection"
+                                ],
+                                "technique": [
+                                    "Archive via Utility"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-21T19:03:29.069+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                        "wazuh_rule_id": "100001",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100001: Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-21T19:03:29.069Z"
+                },
+                "id": "AwAAAZ2xbRQt-QxCoQAAABhBWjJ4YlJqQkFBRDIyS3otanB3b1NBQUEAAAAkZjE5ZGIxNmQtMTQyZC00ZDZlLThlMTktMTA0ODNkY2JjYzU5AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 75,
+            "request_id": "pddv1ChZDb2RJQTF1X1JqYWk2dGtYb1kxLWV3IiwKHK-t2wPbvAwPAPo8KCPH6AOZSKPicta3XQu4p-USDF6Palua0kw6xcDtLg",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2Nzk4MjczLCJleHAiOjE3NzY3OTkxNzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AB91K6IjmLwQFgwiL6eNh-XdhYGcJeyDsmIMgmhhSZQ16eNYHkAzba0JdTfF5LJVu49qiJO7OgOW1V5EmrwjnlujAVKMjPvce21BZzr8hUSCKaWtcyrDwY3hCUdcGib4D12FPNPhQcRTFfZWNOCG6OTemhqr3pNvCFwPQn8zyvtqlEhU",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Tue, 21 Apr 2026 19:04:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Tue, 21 Apr 2026 19:04:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP1_SOAR_Processing_Time": {
+        "data": 3021
+    },
+    "SOP1_Time_to_Control": {
+        "data": 67177
+    },
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 651
+    },
+    "Time_to_Respond": {
+        "data": 64156
+    }
+}",
+  "run2":"{
+    "Extract_File_Path": {
+        "data": "C:\\\\Temp\\\\art.zip"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Microsoft® Cabinet Maker",
+                                    "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                    "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                    "integrityLevel": "Medium",
+                                    "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                    "logonId": "0x3b09c7",
+                                    "originalFileName": "makecab.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-cb05-69e7-af06-000000004c00}",
+                                    "parentProcessId": "3956",
+                                    "parentUser": "CORP\\\\testuser",
+                                    "processGuid": "{826a7360-cb05-69e7-b106-000000004c00}",
+                                    "processId": "9132",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "CORP\\\\testuser",
+                                    "utcTime": "2026-04-21 19:07:49.285"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "463981",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:07:49.285\r\nProcessGuid: {826a7360-cb05-69e7-b106-000000004c00}\r\nProcessId: 9132\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-cb05-69e7-af06-000000004c00}\r\nParentProcessId: 3956\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                    "opcode": "0",
+                                    "processID": "3660",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-21T19:07:49.2877734Z",
+                                    "task": "1",
+                                    "threadID": "4760",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Microsoft® Cabinet Maker",
+                                        "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                        "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                        "integrityLevel": "Medium",
+                                        "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                        "logonId": "0x3b09c7",
+                                        "originalFileName": "makecab.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-cb05-69e7-af06-000000004c00}",
+                                        "parentProcessId": "3956",
+                                        "parentUser": "CORP\\\\testuser",
+                                        "processGuid": "{826a7360-cb05-69e7-b106-000000004c00}",
+                                        "processId": "9132",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "CORP\\\\testuser",
+                                        "utcTime": "2026-04-21 19:07:49.285"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "463981",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:07:49.285\r\nProcessGuid: {826a7360-cb05-69e7-b106-000000004c00}\r\nProcessId: 9132\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-cb05-69e7-af06-000000004c00}\r\nParentProcessId: 3956\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                        "opcode": "0",
+                                        "processID": "3660",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-21T19:07:49.2877734Z",
+                                        "task": "1",
+                                        "threadID": "4760",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776798469.39750749",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                                "firedtimes": 2,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100001",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1560.001"
+                                    ],
+                                    "tactic": [
+                                        "Collection"
+                                    ],
+                                    "technique": [
+                                        "Archive via Utility"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-21T19:07:49.949+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                            "firedtimes": 2,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100001",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1560.001"
+                                ],
+                                "tactic": [
+                                    "Collection"
+                                ],
+                                "technique": [
+                                    "Archive via Utility"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-21T19:07:49.949+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                        "wazuh_rule_id": "100001",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100001: Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-21T19:07:49.949Z"
+                },
+                "id": "AwAAAZ2xcQ89YqFKXwAAABhBWjJ4Y1JUdEFBRHpZWTlHcWw1Rml3QUEAAAAkZjE5ZGIxNzEtMGYzZC00YzYzLWFhYTEtNTRhYWZmM2Y5ZWY3AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 51,
+            "request_id": "pddv1ChY0ZUEyc08tUVNaeTJDdUh6THZTaEJRIiwKHBrTXFD-d14e3DSYvaiDGBbyYrMh115BpFHDM0sSDPBwcJqR5eYUJ9ZMAg",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2Nzk4NTczLCJleHAiOjE3NzY3OTk0NzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AfBmnXTuYL-P25SAsXOQG2Wp0XgNQq5t3qDQisrPxtOi5rG_p4qgkzvfZuS17ANap312FPWw1bQQHL--YBaL4ozeANUOLuRW7OSuOJJmblmYwz3tEJl52HSv57DqrTblGfay-xJ14MRjCRp4ZZDo5cfXiQuLjy7gzvHTydLysgXb1b7l",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Tue, 21 Apr 2026 19:09:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Tue, 21 Apr 2026 19:09:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP1_SOAR_Processing_Time": {
+        "data": 2651
+    },
+    "SOP1_Time_to_Control": {
+        "data": 105995
+    },
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 662
+    },
+    "Time_to_Respond": {
+        "data": 103344
+    }
+}",
+  "run3":"{
+    "Extract_File_Path": {
+        "data": "C:\\\\Temp\\\\art.zip"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Microsoft® Cabinet Maker",
+                                    "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                    "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                    "integrityLevel": "Medium",
+                                    "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                    "logonId": "0x3b09c7",
+                                    "originalFileName": "makecab.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-cbd3-69e7-b906-000000004c00}",
+                                    "parentProcessId": "6076",
+                                    "parentUser": "CORP\\\\testuser",
+                                    "processGuid": "{826a7360-cbd3-69e7-bb06-000000004c00}",
+                                    "processId": "2256",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "CORP\\\\testuser",
+                                    "utcTime": "2026-04-21 19:11:15.667"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "464013",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:11:15.667\r\nProcessGuid: {826a7360-cbd3-69e7-bb06-000000004c00}\r\nProcessId: 2256\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-cbd3-69e7-b906-000000004c00}\r\nParentProcessId: 6076\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                    "opcode": "0",
+                                    "processID": "3660",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-21T19:11:15.6690117Z",
+                                    "task": "1",
+                                    "threadID": "4760",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Microsoft® Cabinet Maker",
+                                        "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                        "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                        "integrityLevel": "Medium",
+                                        "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                        "logonId": "0x3b09c7",
+                                        "originalFileName": "makecab.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-cbd3-69e7-b906-000000004c00}",
+                                        "parentProcessId": "6076",
+                                        "parentUser": "CORP\\\\testuser",
+                                        "processGuid": "{826a7360-cbd3-69e7-bb06-000000004c00}",
+                                        "processId": "2256",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "CORP\\\\testuser",
+                                        "utcTime": "2026-04-21 19:11:15.667"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "464013",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:11:15.667\r\nProcessGuid: {826a7360-cbd3-69e7-bb06-000000004c00}\r\nProcessId: 2256\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-cbd3-69e7-b906-000000004c00}\r\nParentProcessId: 6076\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                        "opcode": "0",
+                                        "processID": "3660",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-21T19:11:15.6690117Z",
+                                        "task": "1",
+                                        "threadID": "4760",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776798676.39941797",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                                "firedtimes": 3,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100001",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1560.001"
+                                    ],
+                                    "tactic": [
+                                        "Collection"
+                                    ],
+                                    "technique": [
+                                        "Archive via Utility"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-21T19:11:16.654+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                            "firedtimes": 3,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100001",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1560.001"
+                                ],
+                                "tactic": [
+                                    "Collection"
+                                ],
+                                "technique": [
+                                    "Archive via Utility"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-21T19:11:16.654+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                        "wazuh_rule_id": "100001",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100001: Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-21T19:11:16.654Z"
+                },
+                "id": "AwAAAZ2xdDauIDdjuwAAABhBWjJ4ZERwTEFBQjdzRmJFZjIzT3h3QUEAAAAkZjE5ZGIxNzQtMzZhZS00YTQ5LTg1MzgtNDlhZDI2ZjE0MGMxAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 29,
+            "request_id": "pddv1ChZUek9qRWFsNVFmMjRIY1JiTTlkZEhBIiwKHCjx3IMllOyIif3maB8JU6n7V6eUxU9hoCJhq_4SDHub51UmBKLdp3mVZw",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2Nzk4NzUzLCJleHAiOjE3NzY3OTk2NTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.ACHD5P8Vk8ZwAXKxjpamvN4CLb6vGo_Je37EtdvYUOu0sdGkl7qvipvHAYUh30uA-1eBsC0nJZBw_muGsJ_AxOfAANMTvcMwdfQH-IygmFR9thN_-M1kwNnqi-H5YN23tYjwU3ghdNhdogZv30sbt4HD4ORwhZbySxuG0FaJSVvR2JgE",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Tue, 21 Apr 2026 19:12:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Tue, 21 Apr 2026 19:12:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP1_SOAR_Processing_Time": {
+        "data": 2576
+    },
+    "SOP1_Time_to_Control": {
+        "data": 79589
+    },
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 985
+    },
+    "Time_to_Respond": {
+        "data": 77013
+    }
+}",
+  "run4":"{
+    "Extract_File_Path": {
+        "data": "C:\\\\Temp\\\\art.zip"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Microsoft® Cabinet Maker",
+                                    "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                    "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                    "integrityLevel": "Medium",
+                                    "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                    "logonId": "0x3b09c7",
+                                    "originalFileName": "makecab.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-ccaf-69e7-c706-000000004c00}",
+                                    "parentProcessId": "7900",
+                                    "parentUser": "CORP\\\\testuser",
+                                    "processGuid": "{826a7360-ccaf-69e7-c906-000000004c00}",
+                                    "processId": "2036",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "CORP\\\\testuser",
+                                    "utcTime": "2026-04-21 19:14:55.459"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "464055",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:14:55.459\r\nProcessGuid: {826a7360-ccaf-69e7-c906-000000004c00}\r\nProcessId: 2036\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-ccaf-69e7-c706-000000004c00}\r\nParentProcessId: 7900\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                    "opcode": "0",
+                                    "processID": "3660",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-21T19:14:55.4618962Z",
+                                    "task": "1",
+                                    "threadID": "4760",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Microsoft® Cabinet Maker",
+                                        "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                        "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                        "integrityLevel": "Medium",
+                                        "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                        "logonId": "0x3b09c7",
+                                        "originalFileName": "makecab.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-ccaf-69e7-c706-000000004c00}",
+                                        "parentProcessId": "7900",
+                                        "parentUser": "CORP\\\\testuser",
+                                        "processGuid": "{826a7360-ccaf-69e7-c906-000000004c00}",
+                                        "processId": "2036",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "CORP\\\\testuser",
+                                        "utcTime": "2026-04-21 19:14:55.459"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "464055",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:14:55.459\r\nProcessGuid: {826a7360-ccaf-69e7-c906-000000004c00}\r\nProcessId: 2036\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-ccaf-69e7-c706-000000004c00}\r\nParentProcessId: 7900\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                        "opcode": "0",
+                                        "processID": "3660",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-21T19:14:55.4618962Z",
+                                        "task": "1",
+                                        "threadID": "4760",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776798896.40147511",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                                "firedtimes": 4,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100001",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1560.001"
+                                    ],
+                                    "tactic": [
+                                        "Collection"
+                                    ],
+                                    "technique": [
+                                        "Archive via Utility"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-21T19:14:56.111+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                            "firedtimes": 4,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100001",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1560.001"
+                                ],
+                                "tactic": [
+                                    "Collection"
+                                ],
+                                "technique": [
+                                    "Archive via Utility"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-21T19:14:56.111+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                        "wazuh_rule_id": "100001",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100001: Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-21T19:14:56.111Z"
+                },
+                "id": "AwAAAZ2xd4_vJofL-gAAABhBWjJ4ZDVaV0FBQ0ZpVTBPUXlxelFnQUEAAAAkZjE5ZGIxNzctOGZlZi00YjkxLWFmNjEtYjRlMDQ5MDI3ZTA0AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 46,
+            "request_id": "pddv1ChZva0JXQ19BZVJhRzRSOUFpMEJlbkp3Ii0KHYNRxKoyNUcvDatF1jMZQCuAvFDmC0wydCV82ybuEgyvEBO2wyjv_AV_joc",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2Nzk4OTkzLCJleHAiOjE3NzY3OTk4OTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AJs7za_JMQdREczTD4sDUpakvv6ZDnJY-kBSarV1pU-ElTn-1EhA__J8I0rni0LlS7vQaxfoNE51FI35XVj2qSAiAcuSLY5f3hcMOIosLXWjA0ahX8Fm3xPVUsMnHrI8UDFDwL7g8t3YZl42p2bOCVNao33_o1PF-cXcXF027rMl9P2k",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Tue, 21 Apr 2026 19:16:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Tue, 21 Apr 2026 19:16:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP1_SOAR_Processing_Time": {
+        "data": 2824
+    },
+    "SOP1_Time_to_Control": {
+        "data": 99938
+    },
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 650
+    },
+    "Time_to_Respond": {
+        "data": 97114
+    }
+}",
+  "run5":"{
+    "Extract_File_Path": {
+        "data": "C:\\\\Temp\\\\art.zip"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Microsoft® Cabinet Maker",
+                                    "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                    "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                    "integrityLevel": "Medium",
+                                    "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                    "logonId": "0x3b09c7",
+                                    "originalFileName": "makecab.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-cd75-69e7-d106-000000004c00}",
+                                    "parentProcessId": "8648",
+                                    "parentUser": "CORP\\\\testuser",
+                                    "processGuid": "{826a7360-cd75-69e7-d306-000000004c00}",
+                                    "processId": "3292",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "CORP\\\\testuser",
+                                    "utcTime": "2026-04-21 19:18:13.282"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "464094",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:18:13.282\r\nProcessGuid: {826a7360-cd75-69e7-d306-000000004c00}\r\nProcessId: 3292\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-cd75-69e7-d106-000000004c00}\r\nParentProcessId: 8648\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                    "opcode": "0",
+                                    "processID": "3660",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-21T19:18:13.2849456Z",
+                                    "task": "1",
+                                    "threadID": "4760",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Microsoft® Cabinet Maker",
+                                        "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                        "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                        "integrityLevel": "Medium",
+                                        "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                        "logonId": "0x3b09c7",
+                                        "originalFileName": "makecab.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-cd75-69e7-d106-000000004c00}",
+                                        "parentProcessId": "8648",
+                                        "parentUser": "CORP\\\\testuser",
+                                        "processGuid": "{826a7360-cd75-69e7-d306-000000004c00}",
+                                        "processId": "3292",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "CORP\\\\testuser",
+                                        "utcTime": "2026-04-21 19:18:13.282"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "464094",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:18:13.282\r\nProcessGuid: {826a7360-cd75-69e7-d306-000000004c00}\r\nProcessId: 3292\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-cd75-69e7-d106-000000004c00}\r\nParentProcessId: 8648\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                        "opcode": "0",
+                                        "processID": "3660",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-21T19:18:13.2849456Z",
+                                        "task": "1",
+                                        "threadID": "4760",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776799093.40367692",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                                "firedtimes": 5,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100001",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1560.001"
+                                    ],
+                                    "tactic": [
+                                        "Collection"
+                                    ],
+                                    "technique": [
+                                        "Archive via Utility"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-21T19:18:13.958+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                            "firedtimes": 5,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100001",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1560.001"
+                                ],
+                                "tactic": [
+                                    "Collection"
+                                ],
+                                "technique": [
+                                    "Archive via Utility"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-21T19:18:13.958+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                        "wazuh_rule_id": "100001",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100001: Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-21T19:18:13.958Z"
+                },
+                "id": "AwAAAZ2xepTGDt9gqAAAABhBWjJ4ZXB4QUFBQkVTb19rVHA5RktnQUEAAAAkZjE5ZGIxN2EtOTRjNi00YzExLTk4MzQtMWZmNDdhMDFkNmYwAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 41,
+            "request_id": "pddv1ChZuQU5GUlg3cVQ0T0R2NXZaVlFETThBIi0KHebunY0SYpyyXImECumcCCHJ_09n7Vp3URuF2_vqEgzqR89AKZCjq-pNxc8",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2Nzk5MTczLCJleHAiOjE3NzY4MDAwNzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.Ad3644uiTCR5taINiPeQY_VKQQy9iR-jarCHBA4eugUm8g3-jPIXuNcHUNEygrsuyqJpKSFKX5XWdcWqtFj3uhWkAGtRPtdMqq4cwpnMibNzxO7a6-8KON5RUltDk4Pq4QvcEY2PtHw3S9B1gm8LhKQiVNzNaehguSQ31b4usu0WHdHA",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Tue, 21 Apr 2026 19:19:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Tue, 21 Apr 2026 19:19:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP1_SOAR_Processing_Time": {
+        "data": 2660
+    },
+    "SOP1_Time_to_Control": {
+        "data": 82588
+    },
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 674
+    },
+    "Time_to_Respond": {
+        "data": 79928
+    }
+}",
+  "run6":"{
+    "Extract_File_Path": {
+        "data": "C:\\\\Temp\\\\art.zip"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Microsoft® Cabinet Maker",
+                                    "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                    "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                    "integrityLevel": "Medium",
+                                    "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                    "logonId": "0x3b09c7",
+                                    "originalFileName": "makecab.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-ce3b-69e7-db06-000000004c00}",
+                                    "parentProcessId": "9016",
+                                    "parentUser": "CORP\\\\testuser",
+                                    "processGuid": "{826a7360-ce3b-69e7-dd06-000000004c00}",
+                                    "processId": "9088",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "CORP\\\\testuser",
+                                    "utcTime": "2026-04-21 19:21:31.333"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "464128",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:21:31.333\r\nProcessGuid: {826a7360-ce3b-69e7-dd06-000000004c00}\r\nProcessId: 9088\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-ce3b-69e7-db06-000000004c00}\r\nParentProcessId: 9016\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                    "opcode": "0",
+                                    "processID": "3660",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-21T19:21:31.3366731Z",
+                                    "task": "1",
+                                    "threadID": "4760",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Microsoft® Cabinet Maker",
+                                        "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                        "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                        "integrityLevel": "Medium",
+                                        "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                        "logonId": "0x3b09c7",
+                                        "originalFileName": "makecab.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-ce3b-69e7-db06-000000004c00}",
+                                        "parentProcessId": "9016",
+                                        "parentUser": "CORP\\\\testuser",
+                                        "processGuid": "{826a7360-ce3b-69e7-dd06-000000004c00}",
+                                        "processId": "9088",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "CORP\\\\testuser",
+                                        "utcTime": "2026-04-21 19:21:31.333"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "464128",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:21:31.333\r\nProcessGuid: {826a7360-ce3b-69e7-dd06-000000004c00}\r\nProcessId: 9088\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-ce3b-69e7-db06-000000004c00}\r\nParentProcessId: 9016\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                        "opcode": "0",
+                                        "processID": "3660",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-21T19:21:31.3366731Z",
+                                        "task": "1",
+                                        "threadID": "4760",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776799292.41312876",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                                "firedtimes": 6,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100001",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1560.001"
+                                    ],
+                                    "tactic": [
+                                        "Collection"
+                                    ],
+                                    "technique": [
+                                        "Archive via Utility"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-21T19:21:32.000+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                            "firedtimes": 6,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100001",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1560.001"
+                                ],
+                                "tactic": [
+                                    "Collection"
+                                ],
+                                "technique": [
+                                    "Archive via Utility"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-21T19:21:32.000+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                        "wazuh_rule_id": "100001",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100001: Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-21T19:21:32Z"
+                },
+                "id": "AwAAAZ2xfZpgu9OTVgAAABhBWjJ4Zlo1dEFBRDREc2NqcXhmTFFRQUEAAAAkZjE5ZGIxN2QtOWE2MC00ZTZmLWE2ZjUtMmI2NDU4YTdiOWYzAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 56,
+            "request_id": "pddv1ChZUMUVwM2lZMlF4TzJUdURJYWZKMThnIiwKHOGP-1WMPVXxOO8k0c9t1-wOY-cYvluEqd3TVe4SDPpPbzwnpJUPE_de8w",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2Nzk5NDEzLCJleHAiOjE3NzY4MDAzMTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AFsSkITxhnSyg6mw3Ws1JG2d2rKBlgG9GZBN2IHo6ULygjgdhfIPoM8m0lz1XMnEYyW7b7hn4O1bPLpRnwoX6GxFAScEAS3jWLLAbUghu5skwenR07lxzBzU6kPReXSbHb2oujpEu0s8id8Ip9kx6LYjGse2MBl6ro_rQ1r5RWZazPk8",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Tue, 21 Apr 2026 19:23:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Tue, 21 Apr 2026 19:23:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP1_SOAR_Processing_Time": {
+        "data": 2622
+    },
+    "SOP1_Time_to_Control": {
+        "data": 123820
+    },
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 664
+    },
+    "Time_to_Respond": {
+        "data": 121198
+    }
+}",
+  "run7":"{
+    "Extract_File_Path": {
+        "data": "C:\\\\Temp\\\\art.zip"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Microsoft® Cabinet Maker",
+                                    "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                    "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                    "integrityLevel": "Medium",
+                                    "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                    "logonId": "0x3b09c7",
+                                    "originalFileName": "makecab.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-cf3b-69e7-e906-000000004c00}",
+                                    "parentProcessId": "3224",
+                                    "parentUser": "CORP\\\\testuser",
+                                    "processGuid": "{826a7360-cf3b-69e7-eb06-000000004c00}",
+                                    "processId": "10156",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "CORP\\\\testuser",
+                                    "utcTime": "2026-04-21 19:25:47.517"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "464168",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:25:47.517\r\nProcessGuid: {826a7360-cf3b-69e7-eb06-000000004c00}\r\nProcessId: 10156\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-cf3b-69e7-e906-000000004c00}\r\nParentProcessId: 3224\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                    "opcode": "0",
+                                    "processID": "3660",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-21T19:25:47.5224012Z",
+                                    "task": "1",
+                                    "threadID": "4760",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Microsoft® Cabinet Maker",
+                                        "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                        "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                        "integrityLevel": "Medium",
+                                        "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                        "logonId": "0x3b09c7",
+                                        "originalFileName": "makecab.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-cf3b-69e7-e906-000000004c00}",
+                                        "parentProcessId": "3224",
+                                        "parentUser": "CORP\\\\testuser",
+                                        "processGuid": "{826a7360-cf3b-69e7-eb06-000000004c00}",
+                                        "processId": "10156",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "CORP\\\\testuser",
+                                        "utcTime": "2026-04-21 19:25:47.517"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "464168",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:25:47.517\r\nProcessGuid: {826a7360-cf3b-69e7-eb06-000000004c00}\r\nProcessId: 10156\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-cf3b-69e7-e906-000000004c00}\r\nParentProcessId: 3224\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                        "opcode": "0",
+                                        "processID": "3660",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-21T19:25:47.5224012Z",
+                                        "task": "1",
+                                        "threadID": "4760",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776799548.41557703",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                                "firedtimes": 7,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100001",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1560.001"
+                                    ],
+                                    "tactic": [
+                                        "Collection"
+                                    ],
+                                    "technique": [
+                                        "Archive via Utility"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-21T19:25:48.154+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                            "firedtimes": 7,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100001",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1560.001"
+                                ],
+                                "tactic": [
+                                    "Collection"
+                                ],
+                                "technique": [
+                                    "Archive via Utility"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-21T19:25:48.154+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                        "wazuh_rule_id": "100001",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100001: Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-21T19:25:48.154Z"
+                },
+                "id": "AwAAAZ2xgYL66XRKXwAAABhBWjJ4Z1lkbkFBRHpZWTlHcXBiTVhnQUEAAAAkZjE5ZGIxODEtODJmYS00Yzc5LWJjMjUtYWRlZDRiMmQ5ZDg0AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 46,
+            "request_id": "pddv1ChZRZElZQ1VndVRTU0txaUZZamU2T3Z3IiwKHMGBcYmQsNuIF727dQfycvDVkXZWSmW0dEwywW0SDK4BS5uWJYsMGNbgtg",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2Nzk5NjUzLCJleHAiOjE3NzY4MDA1NTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AMEPV97VS_Q2TjtBDGpiOvsFST5zKDDd8uCRqqrO2T3FeYlLvG5UF3Uz0UqXOwNFFSXxl5R785M9V6tGfI7ix7nDAdTWe3HjlXm-0OzI6rgji_Eh-GuTEQsKMmjbyEDOt2AOa2FK__Q1n7g5XARaGydUbia6PDnZADEkjAjpWVYOXpFy",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Tue, 21 Apr 2026 19:27:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Tue, 21 Apr 2026 19:27:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP1_SOAR_Processing_Time": {
+        "data": 2761
+    },
+    "SOP1_Time_to_Control": {
+        "data": 108601
+    },
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 632
+    },
+    "Time_to_Respond": {
+        "data": 105840
+    }
+}",
+  "run8":"{
+    "Extract_File_Path": {
+        "data": "C:\\\\Temp\\\\art.zip"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Microsoft® Cabinet Maker",
+                                    "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                    "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                    "integrityLevel": "Medium",
+                                    "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                    "logonId": "0x3b09c7",
+                                    "originalFileName": "makecab.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-d01c-69e7-f506-000000004c00}",
+                                    "parentProcessId": "7360",
+                                    "parentUser": "CORP\\\\testuser",
+                                    "processGuid": "{826a7360-d01c-69e7-f706-000000004c00}",
+                                    "processId": "9956",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "CORP\\\\testuser",
+                                    "utcTime": "2026-04-21 19:29:32.988"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "464204",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:29:32.988\r\nProcessGuid: {826a7360-d01c-69e7-f706-000000004c00}\r\nProcessId: 9956\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-d01c-69e7-f506-000000004c00}\r\nParentProcessId: 7360\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                    "opcode": "0",
+                                    "processID": "3660",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-21T19:29:32.9901442Z",
+                                    "task": "1",
+                                    "threadID": "4760",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Microsoft® Cabinet Maker",
+                                        "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                        "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                        "integrityLevel": "Medium",
+                                        "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                        "logonId": "0x3b09c7",
+                                        "originalFileName": "makecab.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-d01c-69e7-f506-000000004c00}",
+                                        "parentProcessId": "7360",
+                                        "parentUser": "CORP\\\\testuser",
+                                        "processGuid": "{826a7360-d01c-69e7-f706-000000004c00}",
+                                        "processId": "9956",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "CORP\\\\testuser",
+                                        "utcTime": "2026-04-21 19:29:32.988"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "464204",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:29:32.988\r\nProcessGuid: {826a7360-d01c-69e7-f706-000000004c00}\r\nProcessId: 9956\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-d01c-69e7-f506-000000004c00}\r\nParentProcessId: 7360\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                        "opcode": "0",
+                                        "processID": "3660",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-21T19:29:32.9901442Z",
+                                        "task": "1",
+                                        "threadID": "4760",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776799773.41776945",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                                "firedtimes": 8,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100001",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1560.001"
+                                    ],
+                                    "tactic": [
+                                        "Collection"
+                                    ],
+                                    "technique": [
+                                        "Archive via Utility"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-21T19:29:33.657+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                            "firedtimes": 8,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100001",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1560.001"
+                                ],
+                                "tactic": [
+                                    "Collection"
+                                ],
+                                "technique": [
+                                    "Archive via Utility"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-21T19:29:33.657+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                        "wazuh_rule_id": "100001",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100001: Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-21T19:29:33.657Z"
+                },
+                "id": "AwAAAZ2xhPPZlwTGhAAAABhBWjJ4aFBiWUFBQ0hlTXpCVEc3MFdBQUEAAAAkZjE5ZGIxODQtZjNkOS00MDg2LWFkMTMtMjM5YmU1MjhlMDU5AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 58,
+            "request_id": "pddv1ChZWd01EeDlWaVMxMk1sSFJGd2cxNjN3IiwKHDBFq2HPE3EFDzYoz4s718lhufNIN_DsnKuYR2USDEDEPbv9KUxx6jBNXQ",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2Nzk5ODkzLCJleHAiOjE3NzY4MDA3OTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AYEvhxOMQNn3gn6oh6KskZaYESmvepdeIpwkhE_jLWE1kdAxE_G_4ouLofJAXbj1bWnMbFWGe65SAST450GrGi0SAaYbj-ybXJm0_UPrTDsKFdYDGwWyFgEEY-t2bqmi7Njtd_fFsYFDbv77GAoCOND4URdVfJaIeyEm-y_89ao-P4Wh",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Tue, 21 Apr 2026 19:31:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Tue, 21 Apr 2026 19:31:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP1_SOAR_Processing_Time": {
+        "data": 2731
+    },
+    "SOP1_Time_to_Control": {
+        "data": 122941
+    },
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 667
+    },
+    "Time_to_Respond": {
+        "data": 120210
+    }
+}",
+  "run9":"{
+    "Extract_File_Path": {
+        "data": "C:\\\\Temp\\\\art.zip"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Microsoft® Cabinet Maker",
+                                    "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                    "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                    "integrityLevel": "Medium",
+                                    "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                    "logonId": "0x3b09c7",
+                                    "originalFileName": "makecab.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-d129-69e7-0207-000000004c00}",
+                                    "parentProcessId": "3488",
+                                    "parentUser": "CORP\\\\testuser",
+                                    "processGuid": "{826a7360-d129-69e7-0407-000000004c00}",
+                                    "processId": "4992",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "CORP\\\\testuser",
+                                    "utcTime": "2026-04-21 19:34:01.663"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "464248",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:34:01.663\r\nProcessGuid: {826a7360-d129-69e7-0407-000000004c00}\r\nProcessId: 4992\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-d129-69e7-0207-000000004c00}\r\nParentProcessId: 3488\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                    "opcode": "0",
+                                    "processID": "3660",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-21T19:34:01.6676943Z",
+                                    "task": "1",
+                                    "threadID": "4760",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Microsoft® Cabinet Maker",
+                                        "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                        "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                        "integrityLevel": "Medium",
+                                        "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                        "logonId": "0x3b09c7",
+                                        "originalFileName": "makecab.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-d129-69e7-0207-000000004c00}",
+                                        "parentProcessId": "3488",
+                                        "parentUser": "CORP\\\\testuser",
+                                        "processGuid": "{826a7360-d129-69e7-0407-000000004c00}",
+                                        "processId": "4992",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "CORP\\\\testuser",
+                                        "utcTime": "2026-04-21 19:34:01.663"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "464248",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:34:01.663\r\nProcessGuid: {826a7360-d129-69e7-0407-000000004c00}\r\nProcessId: 4992\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-d129-69e7-0207-000000004c00}\r\nParentProcessId: 3488\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                        "opcode": "0",
+                                        "processID": "3660",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-21T19:34:01.6676943Z",
+                                        "task": "1",
+                                        "threadID": "4760",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776800042.41944769",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                                "firedtimes": 9,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100001",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1560.001"
+                                    ],
+                                    "tactic": [
+                                        "Collection"
+                                    ],
+                                    "technique": [
+                                        "Archive via Utility"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-21T19:34:02.289+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                            "firedtimes": 9,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100001",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1560.001"
+                                ],
+                                "tactic": [
+                                    "Collection"
+                                ],
+                                "technique": [
+                                    "Archive via Utility"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-21T19:34:02.289+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                        "wazuh_rule_id": "100001",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100001: Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-21T19:34:02.289Z"
+                },
+                "id": "AwAAAZ2xiQ0x4poNUgAAABhBWjJ4aVJKT0FBQS1FUHZLemVmZHZ3QUEAAAAkZjE5ZGIxODktMGQzMS00NmM4LWJiNTMtYzgxMjZjNjg4NjdkAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 53,
+            "request_id": "pddv1ChZnNnBTMHJCbVJxT3lmSlZ6ZE5zUVh3IiwKHP8f0wAsbDpIsWvuxnn9tUT8nIyNfVRh01jxAXcSDA7PEzX80OHZ8-B67w",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2ODAwMTMyLCJleHAiOjE3NzY4MDEwMzIsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AWeMbVoSr17FYAha6Z3_B350r8DQ_8Z9aG_QKEztqQ50pYDO1zhvHGzRA5DNDT7g4Qg9Ik_WrTwium2KO0xw6UuhAM3TUmRpiYi_Ye-afovxI2EiC22iSdzClVILlrctA4PMnerOgQeTPbEqcu0KE9NrfpFuD-ml-gvHPGFnx9hxarBf",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Tue, 21 Apr 2026 19:35:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Tue, 21 Apr 2026 19:35:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP1_SOAR_Processing_Time": {
+        "data": 2648
+    },
+    "SOP1_Time_to_Control": {
+        "data": 93384
+    },
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 622
+    },
+    "Time_to_Respond": {
+        "data": 90736
+    }
+}",
+  "run10":"{
+    "Extract_File_Path": {
+        "data": "C:\\\\Temp\\\\art.zip"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Microsoft® Cabinet Maker",
+                                    "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                    "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                    "integrityLevel": "Medium",
+                                    "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                    "logonId": "0x3b09c7",
+                                    "originalFileName": "makecab.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-d25d-69e7-0b07-000000004c00}",
+                                    "parentProcessId": "1356",
+                                    "parentUser": "CORP\\\\testuser",
+                                    "processGuid": "{826a7360-d25d-69e7-0d07-000000004c00}",
+                                    "processId": "10088",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "CORP\\\\testuser",
+                                    "utcTime": "2026-04-21 19:39:09.758"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "464280",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:39:09.758\r\nProcessGuid: {826a7360-d25d-69e7-0d07-000000004c00}\r\nProcessId: 10088\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-d25d-69e7-0b07-000000004c00}\r\nParentProcessId: 1356\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                    "opcode": "0",
+                                    "processID": "3660",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-21T19:39:09.7604844Z",
+                                    "task": "1",
+                                    "threadID": "4760",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "makecab.exe  C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\TESTUS~1.006\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Microsoft® Cabinet Maker",
+                                        "fileVersion": "5.00 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E",
+                                        "image": "C:\\\\Windows\\\\System32\\\\makecab.exe",
+                                        "integrityLevel": "Medium",
+                                        "logonGuid": "{826a7360-4e7c-69e7-c709-3b0000000000}",
+                                        "logonId": "0x3b09c7",
+                                        "originalFileName": "makecab.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c makecab.exe C:\\\\Temp\\\\sam.hiv C:\\\\Temp\\\\art.zip",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-d25d-69e7-0b07-000000004c00}",
+                                        "parentProcessId": "1356",
+                                        "parentUser": "CORP\\\\testuser",
+                                        "processGuid": "{826a7360-d25d-69e7-0d07-000000004c00}",
+                                        "processId": "10088",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "CORP\\\\testuser",
+                                        "utcTime": "2026-04-21 19:39:09.758"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "464280",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-21 19:39:09.758\r\nProcessGuid: {826a7360-d25d-69e7-0d07-000000004c00}\r\nProcessId: 10088\r\nImage: C:\\Windows\\System32\\makecab.exe\r\nFileVersion: 5.00 (WinBuild.160101.0800)\r\nDescription: Microsoft® Cabinet Maker\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: makecab.exe\r\nCommandLine: makecab.exe  C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nCurrentDirectory: C:\\Users\\TESTUS~1.006\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-4e7c-69e7-c709-3b0000000000}\r\nLogonId: 0x3B09C7\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=070A98B4F7C03F99048A10F490D5916A9A98417E0D0DE2C414C76B3DD00CB35E\r\nParentProcessGuid: {826a7360-d25d-69e7-0b07-000000004c00}\r\nParentProcessId: 1356\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c makecab.exe C:\\Temp\\sam.hiv C:\\Temp\\art.zip\r\nParentUser: CORP\\testuser\"",
+                                        "opcode": "0",
+                                        "processID": "3660",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-21T19:39:09.7604844Z",
+                                        "task": "1",
+                                        "threadID": "4760",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776800350.42158440",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                                "firedtimes": 10,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100001",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1560.001"
+                                    ],
+                                    "tactic": [
+                                        "Collection"
+                                    ],
+                                    "technique": [
+                                        "Archive via Utility"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-21T19:39:10.436+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                            "firedtimes": 10,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100001",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1560.001"
+                                ],
+                                "tactic": [
+                                    "Collection"
+                                ],
+                                "technique": [
+                                    "Archive via Utility"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-21T19:39:10.436+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                        "wazuh_rule_id": "100001",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100001: Atomic Red Team T1560.001 #11 detected: makecab.exe executed via cmd.exe with source file in C:\\Temp",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-21T19:39:10.436Z"
+                },
+                "id": "AwAAAZ2xjcDk3EI3KQAAABhBWjJ4amNZZ0FBQUVxTlFhazRaZ2t3QUEAAAAkZjE5ZGIxOGQtYzBlNC00ZjJkLWI5NTItMzcxNDY0ODEyMmVmAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 45,
+            "request_id": "pddv1ChZIbDRsc0JtV1FFeV83eG1PbEVoeWl3IiwKHAR3rsUZPH1tODVfc-hSOPuIZhUKb83P4qT4rQoSDLxdKyI1qTdO2Tm31A",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2ODAwNDMzLCJleHAiOjE3NzY4MDEzMzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AMKg67V4mw6yMxEkOU0JUO7UBGw-xrfvj6pLQtFw8-21D2bY_KSPMeXxbREUQArhVbjDslIKiaA7faEjF4rPh3ByAEbjbn4crzgDzXdGURowKim2_WxlbrFGGkhEF5GHpnIeDBOCpzuxzdDmGnoawuZMncQ3UBtT45K2TSamD84btUdo",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Tue, 21 Apr 2026 19:40:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Tue, 21 Apr 2026 19:40:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP1_SOAR_Processing_Time": {
+        "data": 2660
+    },
+    "SOP1_Time_to_Control": {
+        "data": 86015
+    },
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 676
+    },
+    "Time_to_Respond": {
+        "data": 83355
+    }
+}"
+]
