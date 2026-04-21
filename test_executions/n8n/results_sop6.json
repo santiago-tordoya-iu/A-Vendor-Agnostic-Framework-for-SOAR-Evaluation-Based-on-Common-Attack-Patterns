@@ -1,5 +1,5 @@
 [
-  "run1":"{
+  "run1":{
   "id": "541",
   "finished": true,
   "mode": "webhook",
@@ -3707,8 +3707,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run2":"{
+},
+  "run2":{
   "id": "542",
   "finished": true,
   "mode": "webhook",
@@ -7416,8 +7416,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run3":"{
+},
+  "run3":{
   "id": "543",
   "finished": true,
   "mode": "webhook",
@@ -11125,8 +11125,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run4":"{
+},
+  "run4":{
   "id": "544",
   "finished": true,
   "mode": "webhook",
@@ -14834,8 +14834,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run5":"{
+},
+  "run5":{
   "id": "545",
   "finished": true,
   "mode": "webhook",
@@ -18543,8 +18543,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run6":"{
+},
+  "run6":{
   "id": "546",
   "finished": true,
   "mode": "webhook",
@@ -22252,8 +22252,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run7":"{
+},
+  "run7":{
   "id": "547",
   "finished": true,
   "mode": "webhook",
@@ -25962,7 +25962,7 @@
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
 }",
-  "run8":"{
+  "run8":{
   "id": "548",
   "finished": true,
   "mode": "webhook",
@@ -29670,8 +29670,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run9":"{
+},
+  "run9":{
   "id": "549",
   "finished": true,
   "mode": "webhook",
@@ -33379,8 +33379,8 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}",
-  "run10":"{
+},
+  "run10":{
   "id": "550",
   "finished": true,
   "mode": "webhook",
@@ -37088,5 +37088,5 @@
   },
   "workflowVersionId": "01b4162e-47a8-4e31-9564-13e0b48c69bd",
   "customData": {}
-}"
+}
 ]
