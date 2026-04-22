@@ -253,7 +253,7 @@
     "SOP2": {},
     "SOP3": {},
     "SOP3_SOAR_Processing_Time": {
-        "data": 70524
+        "data": 2595
     },
     "SOP3_Time_to_Control": {
         "data": 69938
@@ -528,7 +528,7 @@
         "data": 95411
     },
     "SOP3_Time_to_Control": {
-        "data": 94775
+        "data": 2030
     },
     "SOP4": {},
     "SOP5": {},
@@ -797,7 +797,7 @@
     "SOP2": {},
     "SOP3": {},
     "SOP3_SOAR_Processing_Time": {
-        "data": 120551
+        "data": 2120
     },
     "SOP3_Time_to_Control": {
         "data": 119972
@@ -1069,7 +1069,7 @@
     "SOP2": {},
     "SOP3": {},
     "SOP3_SOAR_Processing_Time": {
-        "data": 116870
+        "data": 2046
     },
     "SOP3_Time_to_Control": {
         "data": 116309
@@ -1341,7 +1341,7 @@
     "SOP2": {},
     "SOP3": {},
     "SOP3_SOAR_Processing_Time": {
-        "data": 78369
+        "data": 2095
     },
     "SOP3_Time_to_Control": {
         "data": 77827
@@ -1613,7 +1613,7 @@
     "SOP2": {},
     "SOP3": {},
     "SOP3_SOAR_Processing_Time": {
-        "data": 78941
+        "data": 2022
     },
     "SOP3_Time_to_Control": {
         "data": 78305
@@ -1885,7 +1885,7 @@
     "SOP2": {},
     "SOP3": {},
     "SOP3_SOAR_Processing_Time": {
-        "data": 125288
+        "data": 1979
     },
     "SOP3_Time_to_Control": {
         "data": 124639
@@ -2157,7 +2157,7 @@
     "SOP2": {},
     "SOP3": {},
     "SOP3_SOAR_Processing_Time": {
-        "data": 123959
+        "data": 3322
     },
     "SOP3_Time_to_Control": {
         "data": 123384
@@ -2429,7 +2429,7 @@
     "SOP2": {},
     "SOP3": {},
     "SOP3_SOAR_Processing_Time": {
-        "data": 73014
+        "data": 2203
     },
     "SOP3_Time_to_Control": {
         "data": 72393
@@ -2701,7 +2701,7 @@
     "SOP2": {},
     "SOP3": {},
     "SOP3_SOAR_Processing_Time": {
-        "data": 116214
+        "data": 2176
     },
     "SOP3_Time_to_Control": {
         "data": 115570
