@@ -1,0 +1,2722 @@
+[
+  "run1":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "002",
+                            "ip": "10.0.1.4",
+                            "name": "dc01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "authenticationPackageName": "Negotiate",
+                                    "elevatedToken": "%%1842",
+                                    "impersonationLevel": "%%1833",
+                                    "ipAddress": "10.0.3.4",
+                                    "ipPort": "0",
+                                    "keyLength": "0",
+                                    "logonGuid": "{05b48b0b-4fc9-2180-a0a1-06f3bfcc232e}",
+                                    "logonProcessName": "User32",
+                                    "logonType": "10",
+                                    "processId": "0x994",
+                                    "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                    "restrictedAdminMode": "%%1843",
+                                    "subjectDomainName": "CORP",
+                                    "subjectLogonId": "0x3e7",
+                                    "subjectUserName": "dc01$",
+                                    "subjectUserSid": "S-1-5-18",
+                                    "targetDomainName": "CORP",
+                                    "targetLinkedLogonId": "0x23a147",
+                                    "targetLogonId": "0x23a10a",
+                                    "targetUserName": "testuser",
+                                    "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                    "virtualAccount": "%%1843",
+                                    "workstationName": "dc01"
+                                },
+                                "system": {
+                                    "channel": "Security",
+                                    "computer": "dc01.corp.soarlab.test",
+                                    "eventID": "4624",
+                                    "eventRecordID": "256680",
+                                    "keywords": "0x8020000000000000",
+                                    "level": "0",
+                                    "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x23A10A\r\n\tLinked Logon ID:\t\t0x23A147\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{05b48b0b-4fc9-2180-a0a1-06f3bfcc232e}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                    "opcode": "0",
+                                    "processID": "728",
+                                    "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                    "providerName": "Microsoft-Windows-Security-Auditing",
+                                    "severityValue": "AUDIT_SUCCESS",
+                                    "systemTime": "2026-04-22T21:55:25.2098391Z",
+                                    "task": "12544",
+                                    "threadID": "3112",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "002",
+                                "ip": "10.0.1.4",
+                                "name": "dc01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "authenticationPackageName": "Negotiate",
+                                        "elevatedToken": "%%1842",
+                                        "impersonationLevel": "%%1833",
+                                        "ipAddress": "10.0.3.4",
+                                        "ipPort": "0",
+                                        "keyLength": "0",
+                                        "logonGuid": "{05b48b0b-4fc9-2180-a0a1-06f3bfcc232e}",
+                                        "logonProcessName": "User32",
+                                        "logonType": "10",
+                                        "processId": "0x994",
+                                        "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                        "restrictedAdminMode": "%%1843",
+                                        "subjectDomainName": "CORP",
+                                        "subjectLogonId": "0x3e7",
+                                        "subjectUserName": "dc01$",
+                                        "subjectUserSid": "S-1-5-18",
+                                        "targetDomainName": "CORP",
+                                        "targetLinkedLogonId": "0x23a147",
+                                        "targetLogonId": "0x23a10a",
+                                        "targetUserName": "testuser",
+                                        "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                        "virtualAccount": "%%1843",
+                                        "workstationName": "dc01"
+                                    },
+                                    "system": {
+                                        "channel": "Security",
+                                        "computer": "dc01.corp.soarlab.test",
+                                        "eventID": "4624",
+                                        "eventRecordID": "256680",
+                                        "keywords": "0x8020000000000000",
+                                        "level": "0",
+                                        "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x23A10A\r\n\tLinked Logon ID:\t\t0x23A147\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{05b48b0b-4fc9-2180-a0a1-06f3bfcc232e}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                        "opcode": "0",
+                                        "processID": "728",
+                                        "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                        "providerName": "Microsoft-Windows-Security-Auditing",
+                                        "severityValue": "AUDIT_SUCCESS",
+                                        "systemTime": "2026-04-22T21:55:25.2098391Z",
+                                        "task": "12544",
+                                        "threadID": "3112",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776894925.11697193",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                                "firedtimes": 1,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100003",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1021.001"
+                                    ],
+                                    "tactic": [
+                                        "Lateral Movement"
+                                    ],
+                                    "technique": [
+                                        "Remote Desktop Protocol"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-22T21:55:25.923+0000"
+                        },
+                        "hostname": "dc01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                            "firedtimes": 1,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100003",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1021.001"
+                                ],
+                                "tactic": [
+                                    "Lateral Movement"
+                                ],
+                                "technique": [
+                                    "Remote Desktop Protocol"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-22T21:55:25.923+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                        "wazuh_rule_id": "100003",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "dc01",
+                    "message": "Wazuh alert 100003: CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-22T21:55:25.923Z"
+                },
+                "id": "AwAAAZ23MNxjcAyYCgAAABhBWjIzTU9ENEFBQWt0UkZ5dHBhMkVnQUEAAAAkZjE5ZGI3MzAtZGM2My00NWJmLWE2NzQtM2Q4Yjc3NjA5YTYzAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 69,
+            "request_id": "pddv1ChZocHpyUmk3U1RyR3BIMDA2NFN3REFnIiwKHIf8moaa7sVtUeSIXa7bovpoJibTZNol0klNrHASDAJcGDl392r8YEbnEA",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2ODk0OTkzLCJleHAiOjE3NzY4OTU4OTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AdMd7QAWBWgHcjrqO-_GjRJ6eT7iEelx9PZH5zbVaKxR7d4KpX4ogFtsfEDeBWF8bA0Pd9VDmfOnKe-sMzlSr2_CALYD9JMeMHxb3tXBIPoWJes0g9UwOzaMuujnsx0975zPuvHrU9GBrNVb8oy5nddCjMzD76cAVkoGWPiQiR-13u6g",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Wed, 22 Apr 2026 21:56:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Session_Termination": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "002"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Wed, 22 Apr 2026 21:56:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP3_SOAR_Processing_Time": {
+        "data": 70524
+    },
+    "SOP3_Time_to_Control": {
+        "data": 69938
+    },
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 714
+    },
+    "Time_to_Respond": {
+        "data": 67343
+    }
+},
+  "run2":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "002",
+                            "ip": "10.0.1.4",
+                            "name": "dc01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "authenticationPackageName": "Negotiate",
+                                    "elevatedToken": "%%1842",
+                                    "impersonationLevel": "%%1833",
+                                    "ipAddress": "10.0.3.4",
+                                    "ipPort": "0",
+                                    "keyLength": "0",
+                                    "logonGuid": "{a2571c4e-8469-b023-56cb-d655dea4e5be}",
+                                    "logonProcessName": "User32",
+                                    "logonType": "10",
+                                    "processId": "0x994",
+                                    "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                    "restrictedAdminMode": "%%1843",
+                                    "subjectDomainName": "CORP",
+                                    "subjectLogonId": "0x3e7",
+                                    "subjectUserName": "dc01$",
+                                    "subjectUserSid": "S-1-5-18",
+                                    "targetDomainName": "CORP",
+                                    "targetLinkedLogonId": "0x30c59b",
+                                    "targetLogonId": "0x30c585",
+                                    "targetUserName": "testuser",
+                                    "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                    "virtualAccount": "%%1843",
+                                    "workstationName": "dc01"
+                                },
+                                "system": {
+                                    "channel": "Security",
+                                    "computer": "dc01.corp.soarlab.test",
+                                    "eventID": "4624",
+                                    "eventRecordID": "257915",
+                                    "keywords": "0x8020000000000000",
+                                    "level": "0",
+                                    "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x30C585\r\n\tLinked Logon ID:\t\t0x30C59B\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{a2571c4e-8469-b023-56cb-d655dea4e5be}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                    "opcode": "0",
+                                    "processID": "728",
+                                    "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                    "providerName": "Microsoft-Windows-Security-Auditing",
+                                    "severityValue": "AUDIT_SUCCESS",
+                                    "systemTime": "2026-04-22T21:59:00.6004356Z",
+                                    "task": "12544",
+                                    "threadID": "4436",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "002",
+                                "ip": "10.0.1.4",
+                                "name": "dc01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "authenticationPackageName": "Negotiate",
+                                        "elevatedToken": "%%1842",
+                                        "impersonationLevel": "%%1833",
+                                        "ipAddress": "10.0.3.4",
+                                        "ipPort": "0",
+                                        "keyLength": "0",
+                                        "logonGuid": "{a2571c4e-8469-b023-56cb-d655dea4e5be}",
+                                        "logonProcessName": "User32",
+                                        "logonType": "10",
+                                        "processId": "0x994",
+                                        "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                        "restrictedAdminMode": "%%1843",
+                                        "subjectDomainName": "CORP",
+                                        "subjectLogonId": "0x3e7",
+                                        "subjectUserName": "dc01$",
+                                        "subjectUserSid": "S-1-5-18",
+                                        "targetDomainName": "CORP",
+                                        "targetLinkedLogonId": "0x30c59b",
+                                        "targetLogonId": "0x30c585",
+                                        "targetUserName": "testuser",
+                                        "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                        "virtualAccount": "%%1843",
+                                        "workstationName": "dc01"
+                                    },
+                                    "system": {
+                                        "channel": "Security",
+                                        "computer": "dc01.corp.soarlab.test",
+                                        "eventID": "4624",
+                                        "eventRecordID": "257915",
+                                        "keywords": "0x8020000000000000",
+                                        "level": "0",
+                                        "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x30C585\r\n\tLinked Logon ID:\t\t0x30C59B\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{a2571c4e-8469-b023-56cb-d655dea4e5be}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                        "opcode": "0",
+                                        "processID": "728",
+                                        "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                        "providerName": "Microsoft-Windows-Security-Auditing",
+                                        "severityValue": "AUDIT_SUCCESS",
+                                        "systemTime": "2026-04-22T21:59:00.6004356Z",
+                                        "task": "12544",
+                                        "threadID": "4436",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776895141.14732811",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                                "firedtimes": 3,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100003",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1021.001"
+                                    ],
+                                    "tactic": [
+                                        "Lateral Movement"
+                                    ],
+                                    "technique": [
+                                        "Remote Desktop Protocol"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-22T21:59:01.701+0000"
+                        },
+                        "hostname": "dc01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                            "firedtimes": 3,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100003",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1021.001"
+                                ],
+                                "tactic": [
+                                    "Lateral Movement"
+                                ],
+                                "technique": [
+                                    "Remote Desktop Protocol"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-22T21:59:01.701+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                        "wazuh_rule_id": "100003",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "dc01",
+                    "message": "Wazuh alert 100003: CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-22T21:59:01.701Z"
+                },
+                "id": "AwAAAZ23NCdFbw_PAgAAABhBWjIzTkNsM0FBQzZJVmphR2NZR1hRQUEAAAAkZjE5ZGI3MzQtMjc0NS00NTliLTk5MjMtNzdmNjQ3NjUyNDUwAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 62,
+            "request_id": "pddv1ChY1cjZsSm40N1RlNlJ1eC15bThVLS1RIiwKHPUunW2moMcwFp2qehD5YHmoDFZ5l5lLmXb9qGoSDDceJ_0eyqOv-fcS3Q",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2ODk1MjMzLCJleHAiOjE3NzY4OTYxMzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.Ad5Np2ZMcW0vYGuYrPZ5esbh3jrq_7t9R_Sd1ZPI6SMvaVgc58Sv1qOjFntzkJcfGTMCxPZ7ryvj8uysIACDgFRUAYsDkN4meSFt1eUBmbB1Q5pRpZ2vBXnFjBVsGhsDW3adu5uWE0i6BRivfh6fNc6z4Ba948awPusUA-LbmrDrfJ2X",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Wed, 22 Apr 2026 22:00:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Session_Termination": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "002"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Wed, 22 Apr 2026 22:00:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP3_SOAR_Processing_Time": {
+        "data": 95411
+    },
+    "SOP3_Time_to_Control": {
+        "data": 94775
+    },
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 1101
+    },
+    "Time_to_Respond": {
+        "data": 92745
+    }
+},
+  "run3":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "002",
+                            "ip": "10.0.1.4",
+                            "name": "dc01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "authenticationPackageName": "Negotiate",
+                                    "elevatedToken": "%%1842",
+                                    "impersonationLevel": "%%1833",
+                                    "ipAddress": "10.0.3.4",
+                                    "ipPort": "0",
+                                    "keyLength": "0",
+                                    "logonGuid": "{25ba1385-961d-9865-cf1a-8a55fb7a0bbe}",
+                                    "logonProcessName": "User32",
+                                    "logonType": "10",
+                                    "processId": "0x994",
+                                    "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                    "restrictedAdminMode": "%%1843",
+                                    "subjectDomainName": "CORP",
+                                    "subjectLogonId": "0x3e7",
+                                    "subjectUserName": "dc01$",
+                                    "subjectUserSid": "S-1-5-18",
+                                    "targetDomainName": "CORP",
+                                    "targetLinkedLogonId": "0x35ab88",
+                                    "targetLogonId": "0x35ab76",
+                                    "targetUserName": "testuser",
+                                    "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                    "virtualAccount": "%%1843",
+                                    "workstationName": "dc01"
+                                },
+                                "system": {
+                                    "channel": "Security",
+                                    "computer": "dc01.corp.soarlab.test",
+                                    "eventID": "4624",
+                                    "eventRecordID": "258165",
+                                    "keywords": "0x8020000000000000",
+                                    "level": "0",
+                                    "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x35AB76\r\n\tLinked Logon ID:\t\t0x35AB88\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{25ba1385-961d-9865-cf1a-8a55fb7a0bbe}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                    "opcode": "0",
+                                    "processID": "728",
+                                    "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                    "providerName": "Microsoft-Windows-Security-Auditing",
+                                    "severityValue": "AUDIT_SUCCESS",
+                                    "systemTime": "2026-04-22T22:01:34.8230123Z",
+                                    "task": "12544",
+                                    "threadID": "2556",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "002",
+                                "ip": "10.0.1.4",
+                                "name": "dc01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "authenticationPackageName": "Negotiate",
+                                        "elevatedToken": "%%1842",
+                                        "impersonationLevel": "%%1833",
+                                        "ipAddress": "10.0.3.4",
+                                        "ipPort": "0",
+                                        "keyLength": "0",
+                                        "logonGuid": "{25ba1385-961d-9865-cf1a-8a55fb7a0bbe}",
+                                        "logonProcessName": "User32",
+                                        "logonType": "10",
+                                        "processId": "0x994",
+                                        "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                        "restrictedAdminMode": "%%1843",
+                                        "subjectDomainName": "CORP",
+                                        "subjectLogonId": "0x3e7",
+                                        "subjectUserName": "dc01$",
+                                        "subjectUserSid": "S-1-5-18",
+                                        "targetDomainName": "CORP",
+                                        "targetLinkedLogonId": "0x35ab88",
+                                        "targetLogonId": "0x35ab76",
+                                        "targetUserName": "testuser",
+                                        "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                        "virtualAccount": "%%1843",
+                                        "workstationName": "dc01"
+                                    },
+                                    "system": {
+                                        "channel": "Security",
+                                        "computer": "dc01.corp.soarlab.test",
+                                        "eventID": "4624",
+                                        "eventRecordID": "258165",
+                                        "keywords": "0x8020000000000000",
+                                        "level": "0",
+                                        "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x35AB76\r\n\tLinked Logon ID:\t\t0x35AB88\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{25ba1385-961d-9865-cf1a-8a55fb7a0bbe}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                        "opcode": "0",
+                                        "processID": "728",
+                                        "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                        "providerName": "Microsoft-Windows-Security-Auditing",
+                                        "severityValue": "AUDIT_SUCCESS",
+                                        "systemTime": "2026-04-22T22:01:34.8230123Z",
+                                        "task": "12544",
+                                        "threadID": "2556",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776895295.15435330",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                                "firedtimes": 1,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100003",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1021.001"
+                                    ],
+                                    "tactic": [
+                                        "Lateral Movement"
+                                    ],
+                                    "technique": [
+                                        "Remote Desktop Protocol"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-22T22:01:35.968+0000"
+                        },
+                        "hostname": "dc01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                            "firedtimes": 1,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100003",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1021.001"
+                                ],
+                                "tactic": [
+                                    "Lateral Movement"
+                                ],
+                                "technique": [
+                                    "Remote Desktop Protocol"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-22T22:01:35.968+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                        "wazuh_rule_id": "100003",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "dc01",
+                    "message": "Wazuh alert 100003: CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-22T22:01:35.968Z"
+                },
+                "id": "AwAAAZ23NoHg3CnMnAAAABhBWjIzTm9PZkFBQ0FGNDdOc2NnZGxRQUEAAAAkZjE5ZGI3MzYtODFlMC00NjBmLWFkN2YtNzNlY2VhZThkNTBlAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 52,
+            "request_id": "pddv1ChZTSkp2eklEUlJaeW85ZkZiMTNyR1BnIiwKHAwv_gu_v6hGjZw6gxfKmb3TYpkCiMXFSn6AxHQSDMs_Ur9ddC-cu-51Og",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2ODk1NDEzLCJleHAiOjE3NzY4OTYzMTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AYsrbsllSLWjzyXT3Bxs6wtYDyBWurvJE_eUSRNlw8bs1wUh9NhNRHKReLSkU1-Mp3fkBjgE8D6Ob9NoBuwK1XjbAB77S30NB5mMWzaG9ISuFmx1uH6dxGqwNjbyJ0t6i0T0MZE1DhPzXUrlo2C4IAa7iaUS5IaxVreJJw9tUp_zVqyz",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Wed, 22 Apr 2026 22:03:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Session_Termination": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "002"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Wed, 22 Apr 2026 22:03:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP3_SOAR_Processing_Time": {
+        "data": 120551
+    },
+    "SOP3_Time_to_Control": {
+        "data": 119972
+    },
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 1145
+    },
+    "Time_to_Respond": {
+        "data": 117852
+    }
+},
+  "run4":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "002",
+                            "ip": "10.0.1.4",
+                            "name": "dc01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "authenticationPackageName": "Negotiate",
+                                    "elevatedToken": "%%1842",
+                                    "impersonationLevel": "%%1833",
+                                    "ipAddress": "10.0.3.4",
+                                    "ipPort": "0",
+                                    "keyLength": "0",
+                                    "logonGuid": "{2cbecf67-9c50-6a67-5216-48858d77b28c}",
+                                    "logonProcessName": "User32",
+                                    "logonType": "10",
+                                    "processId": "0x994",
+                                    "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                    "restrictedAdminMode": "%%1843",
+                                    "subjectDomainName": "CORP",
+                                    "subjectLogonId": "0x3e7",
+                                    "subjectUserName": "dc01$",
+                                    "subjectUserSid": "S-1-5-18",
+                                    "targetDomainName": "CORP",
+                                    "targetLinkedLogonId": "0x39d909",
+                                    "targetLogonId": "0x39d8f7",
+                                    "targetUserName": "testuser",
+                                    "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                    "virtualAccount": "%%1843",
+                                    "workstationName": "dc01"
+                                },
+                                "system": {
+                                    "channel": "Security",
+                                    "computer": "dc01.corp.soarlab.test",
+                                    "eventID": "4624",
+                                    "eventRecordID": "258356",
+                                    "keywords": "0x8020000000000000",
+                                    "level": "0",
+                                    "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x39D8F7\r\n\tLinked Logon ID:\t\t0x39D909\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{2cbecf67-9c50-6a67-5216-48858d77b28c}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                    "opcode": "0",
+                                    "processID": "728",
+                                    "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                    "providerName": "Microsoft-Windows-Security-Auditing",
+                                    "severityValue": "AUDIT_SUCCESS",
+                                    "systemTime": "2026-04-22T22:04:38.7919957Z",
+                                    "task": "12544",
+                                    "threadID": "7424",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "002",
+                                "ip": "10.0.1.4",
+                                "name": "dc01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "authenticationPackageName": "Negotiate",
+                                        "elevatedToken": "%%1842",
+                                        "impersonationLevel": "%%1833",
+                                        "ipAddress": "10.0.3.4",
+                                        "ipPort": "0",
+                                        "keyLength": "0",
+                                        "logonGuid": "{2cbecf67-9c50-6a67-5216-48858d77b28c}",
+                                        "logonProcessName": "User32",
+                                        "logonType": "10",
+                                        "processId": "0x994",
+                                        "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                        "restrictedAdminMode": "%%1843",
+                                        "subjectDomainName": "CORP",
+                                        "subjectLogonId": "0x3e7",
+                                        "subjectUserName": "dc01$",
+                                        "subjectUserSid": "S-1-5-18",
+                                        "targetDomainName": "CORP",
+                                        "targetLinkedLogonId": "0x39d909",
+                                        "targetLogonId": "0x39d8f7",
+                                        "targetUserName": "testuser",
+                                        "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                        "virtualAccount": "%%1843",
+                                        "workstationName": "dc01"
+                                    },
+                                    "system": {
+                                        "channel": "Security",
+                                        "computer": "dc01.corp.soarlab.test",
+                                        "eventID": "4624",
+                                        "eventRecordID": "258356",
+                                        "keywords": "0x8020000000000000",
+                                        "level": "0",
+                                        "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x39D8F7\r\n\tLinked Logon ID:\t\t0x39D909\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{2cbecf67-9c50-6a67-5216-48858d77b28c}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                        "opcode": "0",
+                                        "processID": "728",
+                                        "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                        "providerName": "Microsoft-Windows-Security-Auditing",
+                                        "severityValue": "AUDIT_SUCCESS",
+                                        "systemTime": "2026-04-22T22:04:38.7919957Z",
+                                        "task": "12544",
+                                        "threadID": "7424",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776895479.15954255",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                                "firedtimes": 3,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100003",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1021.001"
+                                    ],
+                                    "tactic": [
+                                        "Lateral Movement"
+                                    ],
+                                    "technique": [
+                                        "Remote Desktop Protocol"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-22T22:04:39.968+0000"
+                        },
+                        "hostname": "dc01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                            "firedtimes": 3,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100003",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1021.001"
+                                ],
+                                "tactic": [
+                                    "Lateral Movement"
+                                ],
+                                "technique": [
+                                    "Remote Desktop Protocol"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-22T22:04:39.968+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                        "wazuh_rule_id": "100003",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "dc01",
+                    "message": "Wazuh alert 100003: CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-22T22:04:39.968Z"
+                },
+                "id": "AwAAAZ23OVCg36L4rwAAABhBWjIzT1ZMNEFBQW90RlJnVGhyUy1BQUEAAAAkZjE5ZGI3MzktNTBhMC00ZTdhLTk1ZTctYzQwMjYxYTQ4ODZhAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 46,
+            "request_id": "pddv1ChZsRFJSVl9RZVNBdWEwVjBiRmdPVS13IiwKHGWJ3lO5VcLEE1dkG43Ssw2ApbFC0DANpokWjxsSDJOwHkUTBQECxPPBmA",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2ODk1NTkzLCJleHAiOjE3NzY4OTY0OTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AS6Tsf1gcI5wiZvZoYADKZejojrS4qHvtmNBnpz-awRbRW7sxB4jdj0CEYVjS83MCQi_O2jZnYVVT3blgWm7p6qUAH1yUxeT-WE_vJ-2dfBwJKjHbV_B30stWhrrBdNpMhfa5T900Ik845Q6PwQlAtt3WGzps5x7H80vU5Y_ePq9uhuX",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Wed, 22 Apr 2026 22:06:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Session_Termination": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "002"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Wed, 22 Apr 2026 22:06:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP3_SOAR_Processing_Time": {
+        "data": 116870
+    },
+    "SOP3_Time_to_Control": {
+        "data": 116309
+    },
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 1177
+    },
+    "Time_to_Respond": {
+        "data": 114263
+    }
+},
+  "run5":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "002",
+                            "ip": "10.0.1.4",
+                            "name": "dc01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "authenticationPackageName": "Negotiate",
+                                    "elevatedToken": "%%1842",
+                                    "impersonationLevel": "%%1833",
+                                    "ipAddress": "10.0.3.4",
+                                    "ipPort": "0",
+                                    "keyLength": "0",
+                                    "logonGuid": "{221999a1-4001-3b47-ca69-b403d9b98a2c}",
+                                    "logonProcessName": "User32",
+                                    "logonType": "10",
+                                    "processId": "0x994",
+                                    "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                    "restrictedAdminMode": "%%1843",
+                                    "subjectDomainName": "CORP",
+                                    "subjectLogonId": "0x3e7",
+                                    "subjectUserName": "dc01$",
+                                    "subjectUserSid": "S-1-5-18",
+                                    "targetDomainName": "CORP",
+                                    "targetLinkedLogonId": "0x3d9c6f",
+                                    "targetLogonId": "0x3d9c5d",
+                                    "targetUserName": "testuser",
+                                    "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                    "virtualAccount": "%%1843",
+                                    "workstationName": "dc01"
+                                },
+                                "system": {
+                                    "channel": "Security",
+                                    "computer": "dc01.corp.soarlab.test",
+                                    "eventID": "4624",
+                                    "eventRecordID": "258582",
+                                    "keywords": "0x8020000000000000",
+                                    "level": "0",
+                                    "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3D9C5D\r\n\tLinked Logon ID:\t\t0x3D9C6F\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{221999a1-4001-3b47-ca69-b403d9b98a2c}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                    "opcode": "0",
+                                    "processID": "728",
+                                    "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                    "providerName": "Microsoft-Windows-Security-Auditing",
+                                    "severityValue": "AUDIT_SUCCESS",
+                                    "systemTime": "2026-04-22T22:07:17.0361883Z",
+                                    "task": "12544",
+                                    "threadID": "2556",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "002",
+                                "ip": "10.0.1.4",
+                                "name": "dc01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "authenticationPackageName": "Negotiate",
+                                        "elevatedToken": "%%1842",
+                                        "impersonationLevel": "%%1833",
+                                        "ipAddress": "10.0.3.4",
+                                        "ipPort": "0",
+                                        "keyLength": "0",
+                                        "logonGuid": "{221999a1-4001-3b47-ca69-b403d9b98a2c}",
+                                        "logonProcessName": "User32",
+                                        "logonType": "10",
+                                        "processId": "0x994",
+                                        "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                        "restrictedAdminMode": "%%1843",
+                                        "subjectDomainName": "CORP",
+                                        "subjectLogonId": "0x3e7",
+                                        "subjectUserName": "dc01$",
+                                        "subjectUserSid": "S-1-5-18",
+                                        "targetDomainName": "CORP",
+                                        "targetLinkedLogonId": "0x3d9c6f",
+                                        "targetLogonId": "0x3d9c5d",
+                                        "targetUserName": "testuser",
+                                        "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                        "virtualAccount": "%%1843",
+                                        "workstationName": "dc01"
+                                    },
+                                    "system": {
+                                        "channel": "Security",
+                                        "computer": "dc01.corp.soarlab.test",
+                                        "eventID": "4624",
+                                        "eventRecordID": "258582",
+                                        "keywords": "0x8020000000000000",
+                                        "level": "0",
+                                        "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3D9C5D\r\n\tLinked Logon ID:\t\t0x3D9C6F\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{221999a1-4001-3b47-ca69-b403d9b98a2c}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                        "opcode": "0",
+                                        "processID": "728",
+                                        "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                        "providerName": "Microsoft-Windows-Security-Auditing",
+                                        "severityValue": "AUDIT_SUCCESS",
+                                        "systemTime": "2026-04-22T22:07:17.0361883Z",
+                                        "task": "12544",
+                                        "threadID": "2556",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776895638.16574408",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                                "firedtimes": 5,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100003",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1021.001"
+                                    ],
+                                    "tactic": [
+                                        "Lateral Movement"
+                                    ],
+                                    "technique": [
+                                        "Remote Desktop Protocol"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-22T22:07:18.145+0000"
+                        },
+                        "hostname": "dc01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                            "firedtimes": 5,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100003",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1021.001"
+                                ],
+                                "tactic": [
+                                    "Lateral Movement"
+                                ],
+                                "technique": [
+                                    "Remote Desktop Protocol"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-22T22:07:18.145+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                        "wazuh_rule_id": "100003",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "dc01",
+                    "message": "Wazuh alert 100003: CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-22T22:07:18.145Z"
+                },
+                "id": "AwAAAZ23O7qBgnAFiAAAABhBWjIzTzd5MkFBREFCRGt5cFFnRl9RQUEAAAAkZjE5ZGI3M2ItYmE4MS00MGI2LTgzNGEtODNjMjk0ZTU4MmE2AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 54,
+            "request_id": "pddv1ChZGcU1LUXVEdFQ5UzVnRzRGZF9hSHp3IiwKHNQgP8sreQrMXeAOvAjBbd4PxwZrK4UrHVNiok4SDLk_-WZZNOtJ4YTbHQ",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2ODk1NzEzLCJleHAiOjE3NzY4OTY2MTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AKDkpoalCWtlU8IJ5gWEiH8nQSjSFmvpHYt8KCNH55ZMOmLUrNkIFaYOly97SQ_Wc1mg0T63ec6Vte9WSalXhvuCAfSdH6m-UhyNOArroJRd_8dGH5Ad7RJmiXUu0KJDFLYxkslOHcRWq8c5lBRG0wwlA7AN3ngN2TKX6uW5i2wuqAm_",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Wed, 22 Apr 2026 22:08:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Session_Termination": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "002"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Wed, 22 Apr 2026 22:08:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP3_SOAR_Processing_Time": {
+        "data": 78369
+    },
+    "SOP3_Time_to_Control": {
+        "data": 77827
+    },
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 1109
+    },
+    "Time_to_Respond": {
+        "data": 75732
+    }
+},
+  "run6":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "002",
+                            "ip": "10.0.1.4",
+                            "name": "dc01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "authenticationPackageName": "Negotiate",
+                                    "elevatedToken": "%%1842",
+                                    "impersonationLevel": "%%1833",
+                                    "ipAddress": "10.0.3.4",
+                                    "ipPort": "0",
+                                    "keyLength": "0",
+                                    "logonGuid": "{7d4864e7-33dd-bb3a-8dd2-2e2bf65e9833}",
+                                    "logonProcessName": "User32",
+                                    "logonType": "10",
+                                    "processId": "0x994",
+                                    "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                    "restrictedAdminMode": "%%1843",
+                                    "subjectDomainName": "CORP",
+                                    "subjectLogonId": "0x3e7",
+                                    "subjectUserName": "dc01$",
+                                    "subjectUserSid": "S-1-5-18",
+                                    "targetDomainName": "CORP",
+                                    "targetLinkedLogonId": "0x413b44",
+                                    "targetLogonId": "0x413af4",
+                                    "targetUserName": "testuser",
+                                    "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                    "virtualAccount": "%%1843",
+                                    "workstationName": "dc01"
+                                },
+                                "system": {
+                                    "channel": "Security",
+                                    "computer": "dc01.corp.soarlab.test",
+                                    "eventID": "4624",
+                                    "eventRecordID": "258771",
+                                    "keywords": "0x8020000000000000",
+                                    "level": "0",
+                                    "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x413AF4\r\n\tLinked Logon ID:\t\t0x413B44\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{7d4864e7-33dd-bb3a-8dd2-2e2bf65e9833}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                    "opcode": "0",
+                                    "processID": "728",
+                                    "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                    "providerName": "Microsoft-Windows-Security-Auditing",
+                                    "severityValue": "AUDIT_SUCCESS",
+                                    "systemTime": "2026-04-22T22:09:16.4335011Z",
+                                    "task": "12544",
+                                    "threadID": "2556",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "002",
+                                "ip": "10.0.1.4",
+                                "name": "dc01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "authenticationPackageName": "Negotiate",
+                                        "elevatedToken": "%%1842",
+                                        "impersonationLevel": "%%1833",
+                                        "ipAddress": "10.0.3.4",
+                                        "ipPort": "0",
+                                        "keyLength": "0",
+                                        "logonGuid": "{7d4864e7-33dd-bb3a-8dd2-2e2bf65e9833}",
+                                        "logonProcessName": "User32",
+                                        "logonType": "10",
+                                        "processId": "0x994",
+                                        "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                        "restrictedAdminMode": "%%1843",
+                                        "subjectDomainName": "CORP",
+                                        "subjectLogonId": "0x3e7",
+                                        "subjectUserName": "dc01$",
+                                        "subjectUserSid": "S-1-5-18",
+                                        "targetDomainName": "CORP",
+                                        "targetLinkedLogonId": "0x413b44",
+                                        "targetLogonId": "0x413af4",
+                                        "targetUserName": "testuser",
+                                        "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                        "virtualAccount": "%%1843",
+                                        "workstationName": "dc01"
+                                    },
+                                    "system": {
+                                        "channel": "Security",
+                                        "computer": "dc01.corp.soarlab.test",
+                                        "eventID": "4624",
+                                        "eventRecordID": "258771",
+                                        "keywords": "0x8020000000000000",
+                                        "level": "0",
+                                        "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x413AF4\r\n\tLinked Logon ID:\t\t0x413B44\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{7d4864e7-33dd-bb3a-8dd2-2e2bf65e9833}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                        "opcode": "0",
+                                        "processID": "728",
+                                        "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                        "providerName": "Microsoft-Windows-Security-Auditing",
+                                        "severityValue": "AUDIT_SUCCESS",
+                                        "systemTime": "2026-04-22T22:09:16.4335011Z",
+                                        "task": "12544",
+                                        "threadID": "2556",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776895757.17068609",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                                "firedtimes": 7,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100003",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1021.001"
+                                    ],
+                                    "tactic": [
+                                        "Lateral Movement"
+                                    ],
+                                    "technique": [
+                                        "Remote Desktop Protocol"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-22T22:09:17.456+0000"
+                        },
+                        "hostname": "dc01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                            "firedtimes": 7,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100003",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1021.001"
+                                ],
+                                "tactic": [
+                                    "Lateral Movement"
+                                ],
+                                "technique": [
+                                    "Remote Desktop Protocol"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-22T22:09:17.456+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                        "wazuh_rule_id": "100003",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "dc01",
+                    "message": "Wazuh alert 100003: CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-22T22:09:17.456Z"
+                },
+                "id": "AwAAAZ23PYyQ2jrPAgAAABhBWjIzUFk0MEFBQzZJVmphR2VWeGlBQUEAAAAkZjE5ZGI3M2QtOGM5MC00YjFlLTg1ZDctZWQzOGQ4ZmNjNjdkAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 40,
+            "request_id": "pddv1ChZESXQwMVd2NlJxQzJFeXFOUjVDamd3IiwKHJQWQvcQICP-eJT5gYNVLYvPDCnpWX9MxN1tnSESDPzkHk9e2PV5uHUJzg",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2ODk1ODMzLCJleHAiOjE3NzY4OTY3MzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AQRN74FIsa5z_tC4rrUMrD3L_Jxw9bOCjZ7S2_sC69rhYden2QxVhFWbhasyjXnYTf4YjBlJypjBpJ5VAZ7zbu3GAc6qPVKrQre9JaTdKdelXyOlMFM3evIllNK1xCqeji5fPWZYAjXXhbOQTLegps2b8-JsT45eEoJEIKttcsBVL_sp",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Wed, 22 Apr 2026 22:10:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Session_Termination": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "002"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Wed, 22 Apr 2026 22:10:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP3_SOAR_Processing_Time": {
+        "data": 78941
+    },
+    "SOP3_Time_to_Control": {
+        "data": 78305
+    },
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 1023
+    },
+    "Time_to_Respond": {
+        "data": 76283
+    }
+},
+  "run7":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "002",
+                            "ip": "10.0.1.4",
+                            "name": "dc01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "authenticationPackageName": "Negotiate",
+                                    "elevatedToken": "%%1842",
+                                    "impersonationLevel": "%%1833",
+                                    "ipAddress": "10.0.3.4",
+                                    "ipPort": "0",
+                                    "keyLength": "0",
+                                    "logonGuid": "{598b6b65-e191-b438-6ed1-d27673a81bfb}",
+                                    "logonProcessName": "User32",
+                                    "logonType": "10",
+                                    "processId": "0x994",
+                                    "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                    "restrictedAdminMode": "%%1843",
+                                    "subjectDomainName": "CORP",
+                                    "subjectLogonId": "0x3e7",
+                                    "subjectUserName": "dc01$",
+                                    "subjectUserSid": "S-1-5-18",
+                                    "targetDomainName": "CORP",
+                                    "targetLinkedLogonId": "0x452736",
+                                    "targetLogonId": "0x452724",
+                                    "targetUserName": "testuser",
+                                    "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                    "virtualAccount": "%%1843",
+                                    "workstationName": "dc01"
+                                },
+                                "system": {
+                                    "channel": "Security",
+                                    "computer": "dc01.corp.soarlab.test",
+                                    "eventID": "4624",
+                                    "eventRecordID": "259019",
+                                    "keywords": "0x8020000000000000",
+                                    "level": "0",
+                                    "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x452724\r\n\tLinked Logon ID:\t\t0x452736\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{598b6b65-e191-b438-6ed1-d27673a81bfb}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                    "opcode": "0",
+                                    "processID": "728",
+                                    "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                    "providerName": "Microsoft-Windows-Security-Auditing",
+                                    "severityValue": "AUDIT_SUCCESS",
+                                    "systemTime": "2026-04-22T22:15:30.8879985Z",
+                                    "task": "12544",
+                                    "threadID": "5660",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "002",
+                                "ip": "10.0.1.4",
+                                "name": "dc01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "authenticationPackageName": "Negotiate",
+                                        "elevatedToken": "%%1842",
+                                        "impersonationLevel": "%%1833",
+                                        "ipAddress": "10.0.3.4",
+                                        "ipPort": "0",
+                                        "keyLength": "0",
+                                        "logonGuid": "{598b6b65-e191-b438-6ed1-d27673a81bfb}",
+                                        "logonProcessName": "User32",
+                                        "logonType": "10",
+                                        "processId": "0x994",
+                                        "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                        "restrictedAdminMode": "%%1843",
+                                        "subjectDomainName": "CORP",
+                                        "subjectLogonId": "0x3e7",
+                                        "subjectUserName": "dc01$",
+                                        "subjectUserSid": "S-1-5-18",
+                                        "targetDomainName": "CORP",
+                                        "targetLinkedLogonId": "0x452736",
+                                        "targetLogonId": "0x452724",
+                                        "targetUserName": "testuser",
+                                        "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                        "virtualAccount": "%%1843",
+                                        "workstationName": "dc01"
+                                    },
+                                    "system": {
+                                        "channel": "Security",
+                                        "computer": "dc01.corp.soarlab.test",
+                                        "eventID": "4624",
+                                        "eventRecordID": "259019",
+                                        "keywords": "0x8020000000000000",
+                                        "level": "0",
+                                        "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x452724\r\n\tLinked Logon ID:\t\t0x452736\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{598b6b65-e191-b438-6ed1-d27673a81bfb}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                        "opcode": "0",
+                                        "processID": "728",
+                                        "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                        "providerName": "Microsoft-Windows-Security-Auditing",
+                                        "severityValue": "AUDIT_SUCCESS",
+                                        "systemTime": "2026-04-22T22:15:30.8879985Z",
+                                        "task": "12544",
+                                        "threadID": "5660",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776896131.17731201",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                                "firedtimes": 9,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100003",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1021.001"
+                                    ],
+                                    "tactic": [
+                                        "Lateral Movement"
+                                    ],
+                                    "technique": [
+                                        "Remote Desktop Protocol"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-22T22:15:31.975+0000"
+                        },
+                        "hostname": "dc01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                            "firedtimes": 9,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100003",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1021.001"
+                                ],
+                                "tactic": [
+                                    "Lateral Movement"
+                                ],
+                                "technique": [
+                                    "Remote Desktop Protocol"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-22T22:15:31.975+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                        "wazuh_rule_id": "100003",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "dc01",
+                    "message": "Wazuh alert 100003: CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-22T22:15:31.975Z"
+                },
+                "id": "AwAAAZ23Q0OHXLFkCgAAABhBWjIzUTBldEFBQzFobEhRQkpvWVNBQUEAAAAkZjE5ZGI3NDMtNDM4Ny00OTg1LThiNTctZDFmZDUxNTA3NTJkAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 60,
+            "request_id": "pddv1ChZldHExbTlpZlNMZWd6T1FqQ3VlQm5RIioKGlIZJ90JPGPMR61MuKDm6cFUI7EiYPSpU7NwEgycP9zSF-LX77srML8",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2ODk2MjUzLCJleHAiOjE3NzY4OTcxNTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaOOkToqBqD4PwyJCYi1DwaVY_Omep_Dotku71P-0xJ_OMSPYaKAdfdFuTBi-pC6piW48yGb2qerVLK93EihebfAAflk51R4DjtFo2j5tGmg77biHAgN_P4HmZfVbRVIeIeLR7JPgKXgeWddqxsMc8YIVNNpiff2fnqrpPpWnAlauwHp",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Wed, 22 Apr 2026 22:17:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Session_Termination": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "002"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Wed, 22 Apr 2026 22:17:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP3_SOAR_Processing_Time": {
+        "data": 125288
+    },
+    "SOP3_Time_to_Control": {
+        "data": 124639
+    },
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 1088
+    },
+    "Time_to_Respond": {
+        "data": 122660
+    }
+},
+  "run8":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "002",
+                            "ip": "10.0.1.4",
+                            "name": "dc01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "authenticationPackageName": "Negotiate",
+                                    "elevatedToken": "%%1842",
+                                    "impersonationLevel": "%%1833",
+                                    "ipAddress": "10.0.3.4",
+                                    "ipPort": "0",
+                                    "keyLength": "0",
+                                    "logonGuid": "{938049dd-be0b-6806-4fa6-9732724b22ec}",
+                                    "logonProcessName": "User32",
+                                    "logonType": "10",
+                                    "processId": "0x994",
+                                    "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                    "restrictedAdminMode": "%%1843",
+                                    "subjectDomainName": "CORP",
+                                    "subjectLogonId": "0x3e7",
+                                    "subjectUserName": "dc01$",
+                                    "subjectUserSid": "S-1-5-18",
+                                    "targetDomainName": "CORP",
+                                    "targetLinkedLogonId": "0x493452",
+                                    "targetLogonId": "0x4933de",
+                                    "targetUserName": "testuser",
+                                    "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                    "virtualAccount": "%%1843",
+                                    "workstationName": "dc01"
+                                },
+                                "system": {
+                                    "channel": "Security",
+                                    "computer": "dc01.corp.soarlab.test",
+                                    "eventID": "4624",
+                                    "eventRecordID": "259262",
+                                    "keywords": "0x8020000000000000",
+                                    "level": "0",
+                                    "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x4933DE\r\n\tLinked Logon ID:\t\t0x493452\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{938049dd-be0b-6806-4fa6-9732724b22ec}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                    "opcode": "0",
+                                    "processID": "728",
+                                    "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                    "providerName": "Microsoft-Windows-Security-Auditing",
+                                    "severityValue": "AUDIT_SUCCESS",
+                                    "systemTime": "2026-04-22T22:18:31.7613810Z",
+                                    "task": "12544",
+                                    "threadID": "5660",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "002",
+                                "ip": "10.0.1.4",
+                                "name": "dc01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "authenticationPackageName": "Negotiate",
+                                        "elevatedToken": "%%1842",
+                                        "impersonationLevel": "%%1833",
+                                        "ipAddress": "10.0.3.4",
+                                        "ipPort": "0",
+                                        "keyLength": "0",
+                                        "logonGuid": "{938049dd-be0b-6806-4fa6-9732724b22ec}",
+                                        "logonProcessName": "User32",
+                                        "logonType": "10",
+                                        "processId": "0x994",
+                                        "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                        "restrictedAdminMode": "%%1843",
+                                        "subjectDomainName": "CORP",
+                                        "subjectLogonId": "0x3e7",
+                                        "subjectUserName": "dc01$",
+                                        "subjectUserSid": "S-1-5-18",
+                                        "targetDomainName": "CORP",
+                                        "targetLinkedLogonId": "0x493452",
+                                        "targetLogonId": "0x4933de",
+                                        "targetUserName": "testuser",
+                                        "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                        "virtualAccount": "%%1843",
+                                        "workstationName": "dc01"
+                                    },
+                                    "system": {
+                                        "channel": "Security",
+                                        "computer": "dc01.corp.soarlab.test",
+                                        "eventID": "4624",
+                                        "eventRecordID": "259262",
+                                        "keywords": "0x8020000000000000",
+                                        "level": "0",
+                                        "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x4933DE\r\n\tLinked Logon ID:\t\t0x493452\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{938049dd-be0b-6806-4fa6-9732724b22ec}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                        "opcode": "0",
+                                        "processID": "728",
+                                        "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                        "providerName": "Microsoft-Windows-Security-Auditing",
+                                        "severityValue": "AUDIT_SUCCESS",
+                                        "systemTime": "2026-04-22T22:18:31.7613810Z",
+                                        "task": "12544",
+                                        "threadID": "5660",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776896312.18353387",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                                "firedtimes": 11,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100003",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1021.001"
+                                    ],
+                                    "tactic": [
+                                        "Lateral Movement"
+                                    ],
+                                    "technique": [
+                                        "Remote Desktop Protocol"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-22T22:18:32.916+0000"
+                        },
+                        "hostname": "dc01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                            "firedtimes": 11,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100003",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1021.001"
+                                ],
+                                "tactic": [
+                                    "Lateral Movement"
+                                ],
+                                "technique": [
+                                    "Remote Desktop Protocol"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-22T22:18:32.916+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                        "wazuh_rule_id": "100003",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "dc01",
+                    "message": "Wazuh alert 100003: CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-22T22:18:32.916Z"
+                },
+                "id": "AwAAAZ23RgZUF_bXUgAAABhBWjIzUmdkN0FBQktBNEdtMUsxanV3QUEAAAAkZjE5ZGI3NDYtMDY1NC00NDA0LWE5ZDQtNTFhOTg2ZDljOGUwAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 62,
+            "request_id": "pddv1ChYwd045dkg5YlFOdVVBOHdqTHJxRXJRIiwKHPpI11WUB0lmn_mc7hzA8k6Wj1V9GxqJHGatEU0SDC9Sgk0CCh7y7P-GbQ",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2ODk2NDMzLCJleHAiOjE3NzY4OTczMzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AJLHPW_eH6uSb2lL-rAmj-o9X5QRAoMhHLs-pURk9AGHEDnmANrRJW-hO_SYFPE2gm91OWHKuZyIX4JMY9NK-u4FAZBAh0dsMwlFUbhrEfc4gHBw05ouM47oy1VapYLGofx00EIuTYJ7AuBwF81XexSnIkRuJ8iseL-Yrw1tP84evgoH",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Wed, 22 Apr 2026 22:20:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Session_Termination": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "002"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Wed, 22 Apr 2026 22:20:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP3_SOAR_Processing_Time": {
+        "data": 123959
+    },
+    "SOP3_Time_to_Control": {
+        "data": 123384
+    },
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 1155
+    },
+    "Time_to_Respond": {
+        "data": 121317
+    }
+},
+  "run9":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "002",
+                            "ip": "10.0.1.4",
+                            "name": "dc01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "authenticationPackageName": "Negotiate",
+                                    "elevatedToken": "%%1842",
+                                    "impersonationLevel": "%%1833",
+                                    "ipAddress": "10.0.3.4",
+                                    "ipPort": "0",
+                                    "keyLength": "0",
+                                    "logonGuid": "{113875b4-d4aa-d8f2-b340-37741a672a45}",
+                                    "logonProcessName": "User32",
+                                    "logonType": "10",
+                                    "processId": "0x994",
+                                    "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                    "restrictedAdminMode": "%%1843",
+                                    "subjectDomainName": "CORP",
+                                    "subjectLogonId": "0x3e7",
+                                    "subjectUserName": "dc01$",
+                                    "subjectUserSid": "S-1-5-18",
+                                    "targetDomainName": "CORP",
+                                    "targetLinkedLogonId": "0x4d0c7e",
+                                    "targetLogonId": "0x4d0c6c",
+                                    "targetUserName": "testuser",
+                                    "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                    "virtualAccount": "%%1843",
+                                    "workstationName": "dc01"
+                                },
+                                "system": {
+                                    "channel": "Security",
+                                    "computer": "dc01.corp.soarlab.test",
+                                    "eventID": "4624",
+                                    "eventRecordID": "259468",
+                                    "keywords": "0x8020000000000000",
+                                    "level": "0",
+                                    "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x4D0C6C\r\n\tLinked Logon ID:\t\t0x4D0C7E\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{113875b4-d4aa-d8f2-b340-37741a672a45}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                    "opcode": "0",
+                                    "processID": "728",
+                                    "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                    "providerName": "Microsoft-Windows-Security-Auditing",
+                                    "severityValue": "AUDIT_SUCCESS",
+                                    "systemTime": "2026-04-22T22:21:22.9110751Z",
+                                    "task": "12544",
+                                    "threadID": "4900",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "002",
+                                "ip": "10.0.1.4",
+                                "name": "dc01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "authenticationPackageName": "Negotiate",
+                                        "elevatedToken": "%%1842",
+                                        "impersonationLevel": "%%1833",
+                                        "ipAddress": "10.0.3.4",
+                                        "ipPort": "0",
+                                        "keyLength": "0",
+                                        "logonGuid": "{113875b4-d4aa-d8f2-b340-37741a672a45}",
+                                        "logonProcessName": "User32",
+                                        "logonType": "10",
+                                        "processId": "0x994",
+                                        "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                        "restrictedAdminMode": "%%1843",
+                                        "subjectDomainName": "CORP",
+                                        "subjectLogonId": "0x3e7",
+                                        "subjectUserName": "dc01$",
+                                        "subjectUserSid": "S-1-5-18",
+                                        "targetDomainName": "CORP",
+                                        "targetLinkedLogonId": "0x4d0c7e",
+                                        "targetLogonId": "0x4d0c6c",
+                                        "targetUserName": "testuser",
+                                        "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                        "virtualAccount": "%%1843",
+                                        "workstationName": "dc01"
+                                    },
+                                    "system": {
+                                        "channel": "Security",
+                                        "computer": "dc01.corp.soarlab.test",
+                                        "eventID": "4624",
+                                        "eventRecordID": "259468",
+                                        "keywords": "0x8020000000000000",
+                                        "level": "0",
+                                        "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x4D0C6C\r\n\tLinked Logon ID:\t\t0x4D0C7E\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{113875b4-d4aa-d8f2-b340-37741a672a45}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                        "opcode": "0",
+                                        "processID": "728",
+                                        "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                        "providerName": "Microsoft-Windows-Security-Auditing",
+                                        "severityValue": "AUDIT_SUCCESS",
+                                        "systemTime": "2026-04-22T22:21:22.9110751Z",
+                                        "task": "12544",
+                                        "threadID": "4900",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776896484.18925557",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                                "firedtimes": 13,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100003",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1021.001"
+                                    ],
+                                    "tactic": [
+                                        "Lateral Movement"
+                                    ],
+                                    "technique": [
+                                        "Remote Desktop Protocol"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-22T22:21:24.022+0000"
+                        },
+                        "hostname": "dc01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                            "firedtimes": 13,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100003",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1021.001"
+                                ],
+                                "tactic": [
+                                    "Lateral Movement"
+                                ],
+                                "technique": [
+                                    "Remote Desktop Protocol"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-22T22:21:24.022+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                        "wazuh_rule_id": "100003",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "dc01",
+                    "message": "Wazuh alert 100003: CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-22T22:21:24.022Z"
+                },
+                "id": "AwAAAZ23SKK2VS_tAAAAABhBWjIzU0tRVUFBREJqSG1VOFcxS3RRQUEAAAAkZjE5ZGI3NDgtYTJiNi00MDk0LTgwZmItZjVhM2Y2MTJlMDU3AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 45,
+            "request_id": "pddv1ChZRcjB4R0NGNFIyYVpFQ2FTSVRkbE5nIioKGi1N4KKbAp8O7_1ih_43wIk6knLdG7V0kdnFEgwP6_uZTS3--89V-jU",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2ODk2NTUzLCJleHAiOjE3NzY4OTc0NTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AQ_XqYHOu5CDzL89d3HaYOKXtQ2aJ-1naccHEDHqMLiXKsGWdLVx-6qD5wMXJSGfKTOGKZfiWdQyQSKdBW3FkefUAW-3eZNSdIQXT5t2OcXH7_fo-axT7cVlBVvlFTdkGFMGn6h299kzEAvgpp6QpR_kGvvEO5uLqiBTAt0s-UEATjBD",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Wed, 22 Apr 2026 22:22:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Session_Termination": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "002"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Wed, 22 Apr 2026 22:22:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP3_SOAR_Processing_Time": {
+        "data": 73014
+    },
+    "SOP3_Time_to_Control": {
+        "data": 72393
+    },
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 1111
+    },
+    "Time_to_Respond": {
+        "data": 70190
+    }
+},
+  "run10":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "002",
+                            "ip": "10.0.1.4",
+                            "name": "dc01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "authenticationPackageName": "Negotiate",
+                                    "elevatedToken": "%%1842",
+                                    "impersonationLevel": "%%1833",
+                                    "ipAddress": "10.0.3.4",
+                                    "ipPort": "0",
+                                    "keyLength": "0",
+                                    "logonGuid": "{e33795d8-9c10-0cac-a61b-ad1251237998}",
+                                    "logonProcessName": "User32",
+                                    "logonType": "10",
+                                    "processId": "0x994",
+                                    "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                    "restrictedAdminMode": "%%1843",
+                                    "subjectDomainName": "CORP",
+                                    "subjectLogonId": "0x3e7",
+                                    "subjectUserName": "dc01$",
+                                    "subjectUserSid": "S-1-5-18",
+                                    "targetDomainName": "CORP",
+                                    "targetLinkedLogonId": "0x50c7a5",
+                                    "targetLogonId": "0x50c793",
+                                    "targetUserName": "testuser",
+                                    "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                    "virtualAccount": "%%1843",
+                                    "workstationName": "dc01"
+                                },
+                                "system": {
+                                    "channel": "Security",
+                                    "computer": "dc01.corp.soarlab.test",
+                                    "eventID": "4624",
+                                    "eventRecordID": "259681",
+                                    "keywords": "0x8020000000000000",
+                                    "level": "0",
+                                    "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x50C793\r\n\tLinked Logon ID:\t\t0x50C7A5\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{e33795d8-9c10-0cac-a61b-ad1251237998}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                    "opcode": "0",
+                                    "processID": "728",
+                                    "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                    "providerName": "Microsoft-Windows-Security-Auditing",
+                                    "severityValue": "AUDIT_SUCCESS",
+                                    "systemTime": "2026-04-22T22:23:39.6773151Z",
+                                    "task": "12544",
+                                    "threadID": "1944",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "002",
+                                "ip": "10.0.1.4",
+                                "name": "dc01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "authenticationPackageName": "Negotiate",
+                                        "elevatedToken": "%%1842",
+                                        "impersonationLevel": "%%1833",
+                                        "ipAddress": "10.0.3.4",
+                                        "ipPort": "0",
+                                        "keyLength": "0",
+                                        "logonGuid": "{e33795d8-9c10-0cac-a61b-ad1251237998}",
+                                        "logonProcessName": "User32",
+                                        "logonType": "10",
+                                        "processId": "0x994",
+                                        "processName": "C:\\\\Windows\\\\System32\\\\svchost.exe",
+                                        "restrictedAdminMode": "%%1843",
+                                        "subjectDomainName": "CORP",
+                                        "subjectLogonId": "0x3e7",
+                                        "subjectUserName": "dc01$",
+                                        "subjectUserSid": "S-1-5-18",
+                                        "targetDomainName": "CORP",
+                                        "targetLinkedLogonId": "0x50c7a5",
+                                        "targetLogonId": "0x50c793",
+                                        "targetUserName": "testuser",
+                                        "targetUserSid": "S-1-5-21-1702950505-3059022430-3262123577-11111",
+                                        "virtualAccount": "%%1843",
+                                        "workstationName": "dc01"
+                                    },
+                                    "system": {
+                                        "channel": "Security",
+                                        "computer": "dc01.corp.soarlab.test",
+                                        "eventID": "4624",
+                                        "eventRecordID": "259681",
+                                        "keywords": "0x8020000000000000",
+                                        "level": "0",
+                                        "message": "\"An account was successfully logged on.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-18\r\n\tAccount Name:\t\tdc01$\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x3E7\r\n\r\nLogon Information:\r\n\tLogon Type:\t\t10\r\n\tRestricted Admin Mode:\tNo\r\n\tVirtual Account:\t\tNo\r\n\tElevated Token:\t\tYes\r\n\r\nImpersonation Level:\t\tImpersonation\r\n\r\nNew Logon:\r\n\tSecurity ID:\t\tS-1-5-21-1702950505-3059022430-3262123577-11111\r\n\tAccount Name:\t\ttestuser\r\n\tAccount Domain:\t\tCORP\r\n\tLogon ID:\t\t0x50C793\r\n\tLinked Logon ID:\t\t0x50C7A5\r\n\tNetwork Account Name:\t-\r\n\tNetwork Account Domain:\t-\r\n\tLogon GUID:\t\t{e33795d8-9c10-0cac-a61b-ad1251237998}\r\n\r\nProcess Information:\r\n\tProcess ID:\t\t0x994\r\n\tProcess Name:\t\tC:\\Windows\\System32\\svchost.exe\r\n\r\nNetwork Information:\r\n\tWorkstation Name:\tdc01\r\n\tSource Network Address:\t10.0.3.4\r\n\tSource Port:\t\t0\r\n\r\nDetailed Authentication Information:\r\n\tLogon Process:\t\tUser32 \r\n\tAuthentication Package:\tNegotiate\r\n\tTransited Services:\t-\r\n\tPackage Name (NTLM only):\t-\r\n\tKey Length:\t\t0\r\n\r\nThis event is generated when a logon session is created. It is generated on the computer that was accessed.\r\n\r\nThe subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.\r\n\r\nThe logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).\r\n\r\nThe New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.\r\n\r\nThe network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.\r\n\r\nThe impersonation level field indicates the extent to which a process in the logon session can impersonate.\r\n\r\nThe authentication information fields provide detailed information about this specific logon request.\r\n\t- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.\r\n\t- Transited services indicate which intermediate services have participated in this logon request.\r\n\t- Package name indicates which sub-protocol was used among the NTLM protocols.\r\n\t- Key length indicates the length of the generated session key. This will be 0 if no session key was requested.\"",
+                                        "opcode": "0",
+                                        "processID": "728",
+                                        "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+                                        "providerName": "Microsoft-Windows-Security-Auditing",
+                                        "severityValue": "AUDIT_SUCCESS",
+                                        "systemTime": "2026-04-22T22:23:39.6773151Z",
+                                        "task": "12544",
+                                        "threadID": "1944",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776896620.19469530",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                                "firedtimes": 15,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100003",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1021.001"
+                                    ],
+                                    "tactic": [
+                                        "Lateral Movement"
+                                    ],
+                                    "technique": [
+                                        "Remote Desktop Protocol"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-22T22:23:40.833+0000"
+                        },
+                        "hostname": "dc01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                            "firedtimes": 15,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100003",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1021.001"
+                                ],
+                                "tactic": [
+                                    "Lateral Movement"
+                                ],
+                                "technique": [
+                                    "Remote Desktop Protocol"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-22T22:23:40.833+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                        "wazuh_rule_id": "100003",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "dc01",
+                    "message": "Wazuh alert 100003: CASS T1021.001 detected: Logon to dc01 from unauthorized subnet (srcip: 10.0.3.4 - not in bastion 10.0.0.0/26)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-22T22:23:40.833Z"
+                },
+                "id": "AwAAAZ23SrkhUkztAAAAABhBWjIzU3J2WEFBREJqSG1VOFhSSDBnQUEAAAAkZjE5ZGI3NGEtYjkyMS00YWQ1LTkzZmMtYzg1NDhiYThiOGZiAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 66,
+            "request_id": "pddv1ChY5VWl1aEpoQVNmS2hxYjhtZHU5RWh3IiwKHAUJw08U8upFAylmr7XfebfAKc7OUdzg-H8zReASDKQIYGPpSPpYCwmkBQ",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2ODk2NzMzLCJleHAiOjE3NzY4OTc2MzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AdMgiEvW_WjVmL1X1CcN2C8tiUECorQIumqI9ZMzDBA-ojsDkCMegWDhf4qfITwrPpDzwBKH80aqzvKlApfATqlZAOEXC-MwFfbK7mK9qO8HkdCRb3INELj9FMVlLQPuw7DqAPL-BVBWMN1JuBtBhcM5zHp5R0UJ_k1wp6FFIqauR9cP",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Wed, 22 Apr 2026 22:25:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Session_Termination": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "002"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Wed, 22 Apr 2026 22:25:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP3_SOAR_Processing_Time": {
+        "data": 116214
+    },
+    "SOP3_Time_to_Control": {
+        "data": 115570
+    },
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 1156
+    },
+    "Time_to_Respond": {
+        "data": 113394
+    }
+}
+]
