@@ -986,7 +986,7 @@
         "parameters": [
           {
             "name": "script",
-            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+            "value": "return Number($.Steps.SOP3_Time_to_Control.data) - Number($.Steps.Time_to_Respond.data);"
           }
         ],
         "outboundEdges": [
@@ -1217,7 +1217,7 @@
         "parameters": [
           {
             "name": "script",
-            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+            "value": "return Number($.Steps.SOP4_Time_to_Control.data) - Number($.Steps.Time_to_Respond.data);"
           }
         ],
         "outboundEdges": [
@@ -1439,7 +1439,7 @@
         "parameters": [
           {
             "name": "script",
-            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+            "value": "return Number($.Steps.SOP5_Time_to_Control.data) - Number($.Steps.Time_to_Respond.data);"
           }
         ],
         "outboundEdges": [
@@ -1704,7 +1704,7 @@
         "parameters": [
           {
             "name": "script",
-            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+            "value": "return Number($.Steps.SOP6_Time_to_Control.data) - Number($.Steps.Time_to_Respond.data);"
           }
         ],
         "outboundEdges": [
@@ -1837,7 +1837,7 @@
         "parameters": [
           {
             "name": "script",
-            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+            "value": "return Number($.Steps.SOP7_Time_to_Control.data) - Number($.Steps.Time_to_Respond.data);"
           }
         ],
         "outboundEdges": [
@@ -1948,7 +1948,7 @@
         "parameters": [
           {
             "name": "script",
-            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+            "value": "return Number($.Steps.SOP8_Time_to_Control.data) - Number($.Steps.Time_to_Respond.data);"
           }
         ],
         "outboundEdges": [
@@ -2195,7 +2195,7 @@
         "parameters": [
           {
             "name": "script",
-            "value": "const systemTime = $.Steps.Get_Alert_Data.data[0].attributes.attributes.full_alert.data.win.system.systemTime;\nreturn Date.now() - Date.parse(systemTime.substring(0, 23) + 'Z');"
+            "value": "return Number($.Steps.SOP9_Time_to_Control.data) - Number($.Steps.Time_to_Respond.data);"
           }
         ],
         "outboundEdges": [
@@ -2298,6 +2298,11 @@
           "name": "output",
           "type": "OBJECT",
           "value": "{{ Steps.Summary.data }}"
+        },
+        {
+          "name": "output_1",
+          "type": "STRING",
+          "value": "{{ Steps }}"
         }
       ]
     }
