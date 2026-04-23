@@ -35,311 +35,6 @@
                                     "parentProcessGuid": "{826a7360-7f0f-69ea-ed02-000000004f00}",
                                     "parentProcessId": "2308",
                                     "parentUser": "CORP\\\\testuser",
-                                    "processGuid": "{826a7360-7fc8-69ea-fb02-000000004f00}",
-                                    "processId": "5208",
-                                    "product": "Microsoft® Windows® Operating System",
-                                    "terminalSessionId": "2",
-                                    "user": "CORP\\\\testuser",
-                                    "utcTime": "2026-04-23 20:23:36.155"
-                                },
-                                "system": {
-                                    "channel": "Microsoft-Windows-Sysmon/Operational",
-                                    "computer": "ws01.corp.soarlab.test",
-                                    "eventID": "1",
-                                    "eventRecordID": "471406",
-                                    "keywords": "0x8000000000000000",
-                                    "level": "4",
-                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 20:23:36.155\r\nProcessGuid: {826a7360-7fc8-69ea-fb02-000000004f00}\r\nProcessId: 5208\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nFileVersion: 10.0.26100.5074 (WinBuild.160101.0800)\r\nDescription: Windows PowerShell\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: PowerShell.EXE\r\nCommandLine: \"powershell.exe\" & {[System.Environment]::UserName | Out-File -FilePath .\\CurrentactiveUser.txt \n$env:UserName | Out-File -FilePath .\\CurrentactiveUser.txt -Append}\r\nCurrentDirectory: C:\\Users\\TESTUS~1.008\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-7f02-69ea-fbbd-590000000000}\r\nLogonId: 0x59BDFB\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=0FF6F2C94BC7E2833A5F7E16DE1622E5DBA70396F31C7D5F56381870317E8C46\r\nParentProcessGuid: {826a7360-7f0f-69ea-ed02-000000004f00}\r\nParentProcessId: 2308\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe\r\nParentCommandLine: \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe\"\r\nParentUser: CORP\\testuser\"",
-                                    "opcode": "0",
-                                    "processID": "1080",
-                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
-                                    "providerName": "Microsoft-Windows-Sysmon",
-                                    "severityValue": "INFORMATION",
-                                    "systemTime": "2026-04-23T20:23:36.1565278Z",
-                                    "task": "1",
-                                    "threadID": "4664",
-                                    "version": "5"
-                                }
-                            }
-                        },
-                        "decoder": {
-                            "name": "windows_eventchannel"
-                        },
-                        "full_alert": {
-                            "agent": {
-                                "id": "003",
-                                "ip": "10.0.3.4",
-                                "name": "ws01"
-                            },
-                            "data": {
-                                "win": {
-                                    "eventdata": {
-                                        "commandLine": "\\\"powershell.exe\\\" &amp; {[System.Environment]::UserName | Out-File -FilePath .\\\\CurrentactiveUser.txt  $env:UserName | Out-File -FilePath .\\\\CurrentactiveUser.txt -Append}",
-                                        "company": "Microsoft Corporation",
-                                        "currentDirectory": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\",
-                                        "description": "Windows PowerShell",
-                                        "fileVersion": "10.0.26100.5074 (WinBuild.160101.0800)",
-                                        "hashes": "SHA256=0FF6F2C94BC7E2833A5F7E16DE1622E5DBA70396F31C7D5F56381870317E8C46",
-                                        "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
-                                        "integrityLevel": "Medium",
-                                        "logonGuid": "{826a7360-7f02-69ea-fbbd-590000000000}",
-                                        "logonId": "0x59bdfb",
-                                        "originalFileName": "PowerShell.EXE",
-                                        "parentCommandLine": "\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell_ise.exe\\\"",
-                                        "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell_ise.exe",
-                                        "parentProcessGuid": "{826a7360-7f0f-69ea-ed02-000000004f00}",
-                                        "parentProcessId": "2308",
-                                        "parentUser": "CORP\\\\testuser",
-                                        "processGuid": "{826a7360-7fc8-69ea-fb02-000000004f00}",
-                                        "processId": "5208",
-                                        "product": "Microsoft® Windows® Operating System",
-                                        "terminalSessionId": "2",
-                                        "user": "CORP\\\\testuser",
-                                        "utcTime": "2026-04-23 20:23:36.155"
-                                    },
-                                    "system": {
-                                        "channel": "Microsoft-Windows-Sysmon/Operational",
-                                        "computer": "ws01.corp.soarlab.test",
-                                        "eventID": "1",
-                                        "eventRecordID": "471406",
-                                        "keywords": "0x8000000000000000",
-                                        "level": "4",
-                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 20:23:36.155\r\nProcessGuid: {826a7360-7fc8-69ea-fb02-000000004f00}\r\nProcessId: 5208\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nFileVersion: 10.0.26100.5074 (WinBuild.160101.0800)\r\nDescription: Windows PowerShell\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: PowerShell.EXE\r\nCommandLine: \"powershell.exe\" & {[System.Environment]::UserName | Out-File -FilePath .\\CurrentactiveUser.txt \n$env:UserName | Out-File -FilePath .\\CurrentactiveUser.txt -Append}\r\nCurrentDirectory: C:\\Users\\TESTUS~1.008\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-7f02-69ea-fbbd-590000000000}\r\nLogonId: 0x59BDFB\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=0FF6F2C94BC7E2833A5F7E16DE1622E5DBA70396F31C7D5F56381870317E8C46\r\nParentProcessGuid: {826a7360-7f0f-69ea-ed02-000000004f00}\r\nParentProcessId: 2308\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe\r\nParentCommandLine: \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe\"\r\nParentUser: CORP\\testuser\"",
-                                        "opcode": "0",
-                                        "processID": "1080",
-                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
-                                        "providerName": "Microsoft-Windows-Sysmon",
-                                        "severityValue": "INFORMATION",
-                                        "systemTime": "2026-04-23T20:23:36.1565278Z",
-                                        "task": "1",
-                                        "threadID": "4664",
-                                        "version": "5"
-                                    }
-                                }
-                            },
-                            "decoder": {
-                                "name": "windows_eventchannel"
-                            },
-                            "id": "1776975816.19538961",
-                            "location": "EventChannel",
-                            "manager": {
-                                "name": "wazuh01"
-                            },
-                            "rule": {
-                                "description": "Atomic Red Team T1033 #4: User Discovery via Environment Variables + Out-File",
-                                "firedtimes": 1,
-                                "groups": [
-                                    "atomic_red_team"
-                                ],
-                                "id": "100005",
-                                "level": 16,
-                                "mail": true,
-                                "mitre": {
-                                    "id": [
-                                        "T1033"
-                                    ],
-                                    "tactic": [
-                                        "Discovery"
-                                    ],
-                                    "technique": [
-                                        "System Owner/User Discovery"
-                                    ]
-                                }
-                            },
-                            "timestamp": "2026-04-23T20:23:36.126+0000"
-                        },
-                        "hostname": "ws01",
-                        "location": "EventChannel",
-                        "manager": {
-                            "name": "wazuh01"
-                        },
-                        "rule": {
-                            "description": "Atomic Red Team T1033 #4: User Discovery via Environment Variables + Out-File",
-                            "firedtimes": 1,
-                            "groups": [
-                                "atomic_red_team"
-                            ],
-                            "id": "100005",
-                            "level": 16,
-                            "mail": true,
-                            "mitre": {
-                                "id": [
-                                    "T1033"
-                                ],
-                                "tactic": [
-                                    "Discovery"
-                                ],
-                                "technique": [
-                                    "System Owner/User Discovery"
-                                ]
-                            }
-                        },
-                        "service": "other",
-                        "timestamp": "2026-04-23T20:23:36.126+0000",
-                        "wazuh_group": "atomic_red_team",
-                        "wazuh_rule_description": "Atomic Red Team T1033 #4: User Discovery via Environment Variables + Out-File",
-                        "wazuh_rule_id": "100005",
-                        "wazuh_rule_level": 16
-                    },
-                    "host": "ws01",
-                    "message": "Wazuh alert 100005: Atomic Red Team T1033 #4: User Discovery via Environment Variables + Out-File",
-                    "service": "other",
-                    "status": "info",
-                    "tags": [
-                        "datadog.submission_auth:api_key",
-                        "env:prod",
-                        "group:atomic_red_team",
-                        "platform:wazuh",
-                        "source:wazuh"
-                    ],
-                    "timestamp": "2026-04-23T20:23:36.126Z"
-                },
-                "id": "AwAAAZ28AyW-gPiFbAAAABhBWjI4QXlxekFBRFVKUGJ3SFVUb0pnQUEAAAAkZjE5ZGJjMDMtMjViZS00YmIyLWI3MWItNjY3ZWY5YTllYzY4AAAAAA",
-                "type": "log"
-            }
-        ],
-        "meta": {
-            "elapsed": 58,
-            "request_id": "pddv1ChZaOV9vWUhJa1RpT1hCcDdicjdjR2hRIi0KHdbqiUUdnsd_vRz5JoTCD1vSvnZ1XRdgYR4swuyAEgxrmo-dpcCuOVKeVdA",
-            "status": "done"
-        }
-    },
-    "Get_Wazuh_Auth_Token": {
-        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTc1OTMyLCJleHAiOjE3NzY5NzY4MzIsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AbtYqFN1WGr0b0iMQTiQyAi193apC4-4nL45xQpaAy1QX5omekHU3HgAatO3SzKuKlImWMomblDyxw1t0CBHPMWeAHTQy4p7l__FAdPp566LKRim0dzY8ebk3UlJUv2j7Uc6qVZR_fGmuWLTtyqSy8NV5BRpVjACZD5gLnjwIu8phAxH",
-        "headers": {
-            "cache-control": "no-store",
-            "connection": "close",
-            "content-length": "398",
-            "content-security-policy": "none",
-            "content-type": "text/plain",
-            "date": "Thu, 23 Apr 2026 20:25:32 GMT",
-            "deprecated": "true",
-            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
-            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
-            "server": "Wazuh",
-            "strict-transport-security": "max-age=63072000; includeSubdomains",
-            "x-content-type-options": "nosniff",
-            "x-frame-options": "deny",
-            "x-xss-protection": "0"
-        },
-        "status": 200
-    },
-    "Invoke_File_Eviction1": {
-        "body": {
-            "data": {
-                "affected_items": [
-                    "003"
-                ],
-                "failed_items": [],
-                "total_affected_items": 1,
-                "total_failed_items": 0
-            },
-            "error": 0,
-            "message": "AR command was sent to all agents"
-        },
-        "headers": {
-            "cache-control": "no-store",
-            "connection": "close",
-            "content-length": "169",
-            "content-security-policy": "none",
-            "content-type": "application/json",
-            "date": "Thu, 23 Apr 2026 20:25:34 GMT",
-            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
-            "server": "Wazuh",
-            "strict-transport-security": "max-age=63072000; includeSubdomains",
-            "x-content-type-options": "nosniff",
-            "x-frame-options": "deny",
-            "x-xss-protection": "0"
-        },
-        "status": 200
-    },
-    "Invoke_Process_Termination1": {
-        "body": {
-            "data": {
-                "affected_items": [
-                    "003"
-                ],
-                "failed_items": [],
-                "total_affected_items": 1,
-                "total_failed_items": 0
-            },
-            "error": 0,
-            "message": "AR command was sent to all agents"
-        },
-        "headers": {
-            "cache-control": "no-store",
-            "connection": "close",
-            "content-length": "169",
-            "content-security-policy": "none",
-            "content-type": "application/json",
-            "date": "Thu, 23 Apr 2026 20:25:33 GMT",
-            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
-            "server": "Wazuh",
-            "strict-transport-security": "max-age=63072000; includeSubdomains",
-            "x-content-type-options": "nosniff",
-            "x-frame-options": "deny",
-            "x-xss-protection": "0"
-        },
-        "status": 200
-    },
-    "SOP1": {},
-    "SOP2": {},
-    "SOP3": {},
-    "SOP4": {},
-    "SOP5": {},
-    "SOP5_SOAR_Processing_Time": {
-        "data": 3685
-    },
-    "SOP5_Time_to_Control": {
-        "data": 119953
-    },
-    "SOP6": {},
-    "SOP7": {},
-    "SOP8": {},
-    "SOP9": {},
-    "Time_to_Detect": {
-        "data": -30
-    },
-    "Time_to_Respond": {
-        "data": 116268
-    }
-},
-  "run2":{
-    "Concat_Path_with_File_Name": {
-        "data": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\CurrentactiveUser.txt"
-    },
-    "Extract_File_Name": {
-        "data": "CurrentactiveUser.txt"
-    },
-    "Get_Alert_Data": {
-        "data": [
-            {
-                "attributes": {
-                    "attributes": {
-                        "agent": {
-                            "id": "003",
-                            "ip": "10.0.3.4",
-                            "name": "ws01"
-                        },
-                        "data": {
-                            "win": {
-                                "eventdata": {
-                                    "commandLine": "\\\"powershell.exe\\\" &amp; {[System.Environment]::UserName | Out-File -FilePath .\\\\CurrentactiveUser.txt  $env:UserName | Out-File -FilePath .\\\\CurrentactiveUser.txt -Append}",
-                                    "company": "Microsoft Corporation",
-                                    "currentDirectory": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\",
-                                    "description": "Windows PowerShell",
-                                    "fileVersion": "10.0.26100.5074 (WinBuild.160101.0800)",
-                                    "hashes": "SHA256=0FF6F2C94BC7E2833A5F7E16DE1622E5DBA70396F31C7D5F56381870317E8C46",
-                                    "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
-                                    "integrityLevel": "Medium",
-                                    "logonGuid": "{826a7360-7f02-69ea-fbbd-590000000000}",
-                                    "logonId": "0x59bdfb",
-                                    "originalFileName": "PowerShell.EXE",
-                                    "parentCommandLine": "\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell_ise.exe\\\"",
-                                    "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell_ise.exe",
-                                    "parentProcessGuid": "{826a7360-7f0f-69ea-ed02-000000004f00}",
-                                    "parentProcessId": "2308",
-                                    "parentUser": "CORP\\\\testuser",
                                     "processGuid": "{826a7360-8089-69ea-0b03-000000004f00}",
                                     "processId": "2220",
                                     "product": "Microsoft® Windows® Operating System",
@@ -609,7 +304,7 @@
         "data": 102217
     }
 },
-  "run3":{
+  "run2":{
     "Concat_Path_with_File_Name": {
         "data": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\CurrentactiveUser.txt"
     },
@@ -914,7 +609,7 @@
         "data": 107303
     }
 },
-  "run4":{
+  "run3":{
     "Concat_Path_with_File_Name": {
         "data": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\CurrentactiveUser.txt"
     },
@@ -1219,7 +914,7 @@
         "data": 122018
     }
 },
-  "run5":{
+  "run4":{
     "Concat_Path_with_File_Name": {
         "data": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\CurrentactiveUser.txt"
     },
@@ -1524,7 +1219,7 @@
         "data": 106314
     }
 },
-  "run6":{
+  "run5":{
     "Concat_Path_with_File_Name": {
         "data": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\CurrentactiveUser.txt"
     },
@@ -1829,7 +1524,7 @@
         "data": 65549
     }
 },
-  "run7":{
+  "run6":{
     "Concat_Path_with_File_Name": {
         "data": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\CurrentactiveUser.txt"
     },
@@ -2134,7 +1829,7 @@
         "data": 120439
     }
 },
-  "run8":{
+  "run7":{
     "Concat_Path_with_File_Name": {
         "data": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\CurrentactiveUser.txt"
     },
@@ -2439,7 +2134,7 @@
         "data": 77972
     }
 },
-  "run9":{
+  "run8":{
     "Concat_Path_with_File_Name": {
         "data": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\CurrentactiveUser.txt"
     },
@@ -2744,7 +2439,7 @@
         "data": 64207
     }
 },
-  "run10":{
+  "run9":{
     "Concat_Path_with_File_Name": {
         "data": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\CurrentactiveUser.txt"
     },
@@ -3047,6 +2742,311 @@
     },
     "Time_to_Respond": {
         "data": 65196
+    }
+},
+"run10":{
+    "Concat_Path_with_File_Name": {
+        "data": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\CurrentactiveUser.txt"
+    },
+    "Extract_File_Name": {
+        "data": "CurrentactiveUser.txt"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "\\\"powershell.exe\\\" &amp; {[System.Environment]::UserName | Out-File -FilePath .\\\\CurrentactiveUser.txt  $env:UserName | Out-File -FilePath .\\\\CurrentactiveUser.txt -Append}",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Windows PowerShell",
+                                    "fileVersion": "10.0.26100.5074 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=0FF6F2C94BC7E2833A5F7E16DE1622E5DBA70396F31C7D5F56381870317E8C46",
+                                    "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "integrityLevel": "Medium",
+                                    "logonGuid": "{826a7360-7f02-69ea-fbbd-590000000000}",
+                                    "logonId": "0x59bdfb",
+                                    "originalFileName": "PowerShell.EXE",
+                                    "parentCommandLine": "\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell_ise.exe\\\"",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell_ise.exe",
+                                    "parentProcessGuid": "{826a7360-7f0f-69ea-ed02-000000004f00}",
+                                    "parentProcessId": "2308",
+                                    "parentUser": "CORP\\\\testuser",
+                                    "processGuid": "{826a7360-87d2-69ea-8903-000000004f00}",
+                                    "processId": "9012",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "CORP\\\\testuser",
+                                    "utcTime": "2026-04-23 20:57:54.210"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "471756",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 20:57:54.210\r\nProcessGuid: {826a7360-87d2-69ea-8903-000000004f00}\r\nProcessId: 9012\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nFileVersion: 10.0.26100.5074 (WinBuild.160101.0800)\r\nDescription: Windows PowerShell\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: PowerShell.EXE\r\nCommandLine: \"powershell.exe\" & {[System.Environment]::UserName | Out-File -FilePath .\\CurrentactiveUser.txt \n$env:UserName | Out-File -FilePath .\\CurrentactiveUser.txt -Append}\r\nCurrentDirectory: C:\\Users\\TESTUS~1.008\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-7f02-69ea-fbbd-590000000000}\r\nLogonId: 0x59BDFB\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=0FF6F2C94BC7E2833A5F7E16DE1622E5DBA70396F31C7D5F56381870317E8C46\r\nParentProcessGuid: {826a7360-7f0f-69ea-ed02-000000004f00}\r\nParentProcessId: 2308\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe\r\nParentCommandLine: \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe\"\r\nParentUser: CORP\\testuser\"",
+                                    "opcode": "0",
+                                    "processID": "1080",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T20:57:54.2120678Z",
+                                    "task": "1",
+                                    "threadID": "4664",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "\\\"powershell.exe\\\" &amp; {[System.Environment]::UserName | Out-File -FilePath .\\\\CurrentactiveUser.txt  $env:UserName | Out-File -FilePath .\\\\CurrentactiveUser.txt -Append}",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\TESTUS~1.008\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Windows PowerShell",
+                                        "fileVersion": "10.0.26100.5074 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=0FF6F2C94BC7E2833A5F7E16DE1622E5DBA70396F31C7D5F56381870317E8C46",
+                                        "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "integrityLevel": "Medium",
+                                        "logonGuid": "{826a7360-7f02-69ea-fbbd-590000000000}",
+                                        "logonId": "0x59bdfb",
+                                        "originalFileName": "PowerShell.EXE",
+                                        "parentCommandLine": "\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell_ise.exe\\\"",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell_ise.exe",
+                                        "parentProcessGuid": "{826a7360-7f0f-69ea-ed02-000000004f00}",
+                                        "parentProcessId": "2308",
+                                        "parentUser": "CORP\\\\testuser",
+                                        "processGuid": "{826a7360-87d2-69ea-8903-000000004f00}",
+                                        "processId": "9012",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "CORP\\\\testuser",
+                                        "utcTime": "2026-04-23 20:57:54.210"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "471756",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 20:57:54.210\r\nProcessGuid: {826a7360-87d2-69ea-8903-000000004f00}\r\nProcessId: 9012\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nFileVersion: 10.0.26100.5074 (WinBuild.160101.0800)\r\nDescription: Windows PowerShell\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: PowerShell.EXE\r\nCommandLine: \"powershell.exe\" & {[System.Environment]::UserName | Out-File -FilePath .\\CurrentactiveUser.txt \n$env:UserName | Out-File -FilePath .\\CurrentactiveUser.txt -Append}\r\nCurrentDirectory: C:\\Users\\TESTUS~1.008\\AppData\\Local\\Temp\\\r\nUser: CORP\\testuser\r\nLogonGuid: {826a7360-7f02-69ea-fbbd-590000000000}\r\nLogonId: 0x59BDFB\r\nTerminalSessionId: 2\r\nIntegrityLevel: Medium\r\nHashes: SHA256=0FF6F2C94BC7E2833A5F7E16DE1622E5DBA70396F31C7D5F56381870317E8C46\r\nParentProcessGuid: {826a7360-7f0f-69ea-ed02-000000004f00}\r\nParentProcessId: 2308\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe\r\nParentCommandLine: \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell_ise.exe\"\r\nParentUser: CORP\\testuser\"",
+                                        "opcode": "0",
+                                        "processID": "1080",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T20:57:54.2120678Z",
+                                        "task": "1",
+                                        "threadID": "4664",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776977874.21722533",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1033 #4: User Discovery via Environment Variables + Out-File",
+                                "firedtimes": 11,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100005",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1033"
+                                    ],
+                                    "tactic": [
+                                        "Discovery"
+                                    ],
+                                    "technique": [
+                                        "System Owner/User Discovery"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T20:57:54.796+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1033 #4: User Discovery via Environment Variables + Out-File",
+                            "firedtimes": 11,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100005",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1033"
+                                ],
+                                "tactic": [
+                                    "Discovery"
+                                ],
+                                "technique": [
+                                    "System Owner/User Discovery"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T20:57:54.796+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1033 #4: User Discovery via Environment Variables + Out-File",
+                        "wazuh_rule_id": "100005",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100005: Atomic Red Team T1033 #4: User Discovery via Environment Variables + Out-File",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T20:57:54.796Z"
+                },
+                "id": "AwAAAZ28Io9sP2OHQgAAABhBWjI4SXBPX0FBRG5oT2hQclUzbUZRQUEAAAAkZjE5ZGJjMjItOGY2Yy00NTkwLWEzYzUtMTIwOWU2YmZkNjQxAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 78,
+            "request_id": "pddv1ChZZX3JRMGd1T1NpT3dGQW00akRoNWtnIi0KHXOXCjOSwSn7KHGAyTP_jiFdREkKNhYh8sGVvk6OEgyfpJ00uLNL9K0Bwbg",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTc3OTczLCJleHAiOjE3NzY5Nzg4NzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AdIqjTqwnEmyRqpXpC8c9mCZTxn9i1IkTM14Vy9Up-J2Gwmgo1rk8iBiQeNkW06nKtmKaTt_rEGyQI13DY08l79AAdiH8XPz3CmbRvg75dxy5QIkngCP7rp_YsBeWA2FarCOuLgLnRmhVwts0TPe1OuaTBUQq0nllaBvHSnWP6G8Ls46",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 20:59:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction1": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 20:59:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination1": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 20:59:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP5_SOAR_Processing_Time": {
+        "data": 3567
+    },
+    "SOP5_Time_to_Control": {
+        "data": 102365
+    },
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 584
+    },
+    "Time_to_Respond": {
+        "data": 98798
     }
 }
 ]
