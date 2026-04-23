@@ -1,0 +1,2802 @@
+[
+  "run1":{
+    "Extract_Scheduled_Task": {
+        "data": {
+            "taskNames": "T1053_005_OnLogon, T1053_005_OnStartup"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Task Scheduler Configuration Tool",
+                                    "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                    "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                    "logonId": "0xeb607",
+                                    "originalFileName": "schtasks.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-735b-69ea-f001-000000004f00}",
+                                    "parentProcessId": "10732",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-735b-69ea-f201-000000004f00}",
+                                    "processId": "7980",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 19:30:35.443"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "470430",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:30:35.443\r\nProcessGuid: {826a7360-735b-69ea-f201-000000004f00}\r\nProcessId: 7980\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-735b-69ea-f001-000000004f00}\r\nParentProcessId: 10732\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "1080",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T19:30:35.4455979Z",
+                                    "task": "1",
+                                    "threadID": "4664",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Task Scheduler Configuration Tool",
+                                        "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                        "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                        "logonId": "0xeb607",
+                                        "originalFileName": "schtasks.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-735b-69ea-f001-000000004f00}",
+                                        "parentProcessId": "10732",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-735b-69ea-f201-000000004f00}",
+                                        "processId": "7980",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 19:30:35.443"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "470430",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:30:35.443\r\nProcessGuid: {826a7360-735b-69ea-f201-000000004f00}\r\nProcessId: 7980\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-735b-69ea-f001-000000004f00}\r\nParentProcessId: 10732\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "1080",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T19:30:35.4455979Z",
+                                        "task": "1",
+                                        "threadID": "4664",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776972635.14215795",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                                "firedtimes": 4,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100004",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1053.005"
+                                    ],
+                                    "tactic": [
+                                        "Execution",
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Scheduled Task"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T19:30:35.709+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                            "firedtimes": 4,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100004",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1053.005"
+                                ],
+                                "tactic": [
+                                    "Execution",
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Scheduled Task"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T19:30:35.709+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                        "wazuh_rule_id": "100004",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100004: Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T19:30:35.709Z"
+                },
+                "id": "AwAAAZ270p49fE2PrQAAABhBWjI3MHFCX0FBREFGX2pxRDF6U3VnQUEAAAAkZjE5ZGJiZDItOWUzZC00MmZhLWEyNjMtZTA2MzEzNzE4NzgyAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 60,
+            "request_id": "pddv1ChZZMEdsRlRyOVJoZV9seVlVdENodHFnIi0KHZLpMdlIYUcnrg-I13HmGvrvh6WTIzAGlTS3tikPEgw9mlfUJOVEn8JS7X0",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTcyNzUyLCJleHAiOjE3NzY5NzM2NTIsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AQ15pYgbCGxvnzqDJOIAG2-izZfKl7zIvQisE-y2qwegERqM1qpxQf83oGxguWeIpjisMrS3Js0zQ1vlwBI6No4mAOmEZI-SSZIRrYt6kmGcA7wph7e2oKsFdssDNxXbRqZY5nE83tetD9mXgiseNuf80Ba6F0wqlXC3miJmj8WEha_5",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 19:32:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination_with_Task_Deletion": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 19:32:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP4_SOAR_Processing_Time": {
+        "data": 2833
+    },
+    "SOP4_Time_to_Control": {
+        "data": 119720
+    },
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Tasks_present": {},
+    "Time_to_Detect": {
+        "data": 264
+    },
+    "Time_to_Respond": {
+        "data": 116887
+    }
+},
+  "run2":{
+    "Extract_Scheduled_Task": {
+        "data": {
+            "taskNames": "T1053_005_OnLogon, T1053_005_OnStartup"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Task Scheduler Configuration Tool",
+                                    "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                    "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                    "logonId": "0xeb607",
+                                    "originalFileName": "schtasks.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-750b-69ea-0e02-000000004f00}",
+                                    "parentProcessId": "3768",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-750b-69ea-1002-000000004f00}",
+                                    "processId": "9732",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 19:37:47.861"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "470535",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:37:47.861\r\nProcessGuid: {826a7360-750b-69ea-1002-000000004f00}\r\nProcessId: 9732\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-750b-69ea-0e02-000000004f00}\r\nParentProcessId: 3768\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "1080",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T19:37:47.8629448Z",
+                                    "task": "1",
+                                    "threadID": "4664",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Task Scheduler Configuration Tool",
+                                        "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                        "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                        "logonId": "0xeb607",
+                                        "originalFileName": "schtasks.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-750b-69ea-0e02-000000004f00}",
+                                        "parentProcessId": "3768",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-750b-69ea-1002-000000004f00}",
+                                        "processId": "9732",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 19:37:47.861"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "470535",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:37:47.861\r\nProcessGuid: {826a7360-750b-69ea-1002-000000004f00}\r\nProcessId: 9732\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-750b-69ea-0e02-000000004f00}\r\nParentProcessId: 3768\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "1080",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T19:37:47.8629448Z",
+                                        "task": "1",
+                                        "threadID": "4664",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776973068.14587353",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                                "firedtimes": 5,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100004",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1053.005"
+                                    ],
+                                    "tactic": [
+                                        "Execution",
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Scheduled Task"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T19:37:48.385+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                            "firedtimes": 5,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100004",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1053.005"
+                                ],
+                                "tactic": [
+                                    "Execution",
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Scheduled Task"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T19:37:48.385+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                        "wazuh_rule_id": "100004",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100004: Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T19:37:48.385Z"
+                },
+                "id": "AwAAAZ272ThhiJJmyQAAABhBWjI3MlR5MUFBQUNuNk9xNXlWYU53QUEAAAAkZjE5ZGJiZDktMzg2MS00ODA5LTg2YjYtNmIwMmEwY2M0YjY0AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 52,
+            "request_id": "pddv1ChZNcEZqMTk2NVNTMlF2T0dyVHZlX3JRIisKGy6L0ez9VpANSOy5p1ztGWTVzASag5-61vDGiRIMb2RkAguUrpt7pJBQ",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTczMTcyLCJleHAiOjE3NzY5NzQwNzIsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.Af3375_-q6B-0VA6JpT_r2i_jR2Zt6G65oB0Xe6lOLoVSTGr6QIjopFlRHwedRWElKmpi-UO3oZBRG1SWp4HD38JAHbEia2mfSpI5NAQTrva23qSzAgdda1Eip26wu0RAeFVzkmyPb5GZ2MWy6tWzYLxaXt4tNjP___Plv9TvoOmJz6M",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 19:39:31 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination_with_Task_Deletion": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 19:39:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP4_SOAR_Processing_Time": {
+        "data": 2708
+    },
+    "SOP4_Time_to_Control": {
+        "data": 107067
+    },
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Tasks_present": {},
+    "Time_to_Detect": {
+        "data": 523
+    },
+    "Time_to_Respond": {
+        "data": 104359
+    }
+},
+  "run3":{
+    "Extract_Scheduled_Task": {
+        "data": {
+            "taskNames": "T1053_005_OnLogon, T1053_005_OnStartup"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Task Scheduler Configuration Tool",
+                                    "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                    "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                    "logonId": "0xeb607",
+                                    "originalFileName": "schtasks.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-75ab-69ea-1c02-000000004f00}",
+                                    "parentProcessId": "9084",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-75ac-69ea-1e02-000000004f00}",
+                                    "processId": "7184",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 19:40:28.006"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "470564",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:40:28.006\r\nProcessGuid: {826a7360-75ac-69ea-1e02-000000004f00}\r\nProcessId: 7184\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-75ab-69ea-1c02-000000004f00}\r\nParentProcessId: 9084\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "1080",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T19:40:28.0072113Z",
+                                    "task": "1",
+                                    "threadID": "4664",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Task Scheduler Configuration Tool",
+                                        "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                        "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                        "logonId": "0xeb607",
+                                        "originalFileName": "schtasks.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-75ab-69ea-1c02-000000004f00}",
+                                        "parentProcessId": "9084",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-75ac-69ea-1e02-000000004f00}",
+                                        "processId": "7184",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 19:40:28.006"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "470564",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:40:28.006\r\nProcessGuid: {826a7360-75ac-69ea-1e02-000000004f00}\r\nProcessId: 7184\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-75ab-69ea-1c02-000000004f00}\r\nParentProcessId: 9084\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "1080",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T19:40:28.0072113Z",
+                                        "task": "1",
+                                        "threadID": "4664",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776973228.14806146",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                                "firedtimes": 6,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100004",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1053.005"
+                                    ],
+                                    "tactic": [
+                                        "Execution",
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Scheduled Task"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T19:40:28.521+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                            "firedtimes": 6,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100004",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1053.005"
+                                ],
+                                "tactic": [
+                                    "Execution",
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Scheduled Task"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T19:40:28.521+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                        "wazuh_rule_id": "100004",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100004: Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T19:40:28.521Z"
+                },
+                "id": "AwAAAZ2726npQi8u5wAAABhBWjI3MjY1QUFBQVNuZXozTDN4S1RRQUEAAAAkZjE5ZGJiZGItYTllOS00MzcwLWEzZWQtN2ZhNzE4YWQzMDljAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 71,
+            "request_id": "pddv1ChYwYkV4TmlzLVJnMjljUllYSEx0Q3pnIi0KHdachSfLS6mRzIpOkn5H0GQUIfiflqEkg0DlVinOEgxnrFiPn3vvJBorWeE",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTczMjkyLCJleHAiOjE3NzY5NzQxOTIsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.ALvLFRGKIQ9PKjqgYlHWBrqNSKbvZcvu-7G5fcJGgrWPWAd3-jABwYvzQlOMo5nKs0xtIJt5bvX1aVlKzunWRRYFASSRICLU7Oy8XGyB-LckHIP0YiBLjAuS2FMoWOsNJzH5R2C1FWklPkLxaROhphWHDMvwNL4dD8y2XmfO2khovqZZ",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 19:41:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination_with_Task_Deletion": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 19:41:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP4_SOAR_Processing_Time": {
+        "data": 2612
+    },
+    "SOP4_Time_to_Control": {
+        "data": 66818
+    },
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Tasks_present": {},
+    "Time_to_Detect": {
+        "data": 514
+    },
+    "Time_to_Respond": {
+        "data": 64206
+    }
+},
+  "run4":{
+    "Extract_Scheduled_Task": {
+        "data": {
+            "taskNames": "T1053_005_OnLogon, T1053_005_OnStartup"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Task Scheduler Configuration Tool",
+                                    "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                    "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                    "logonId": "0xeb607",
+                                    "originalFileName": "schtasks.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-761a-69ea-2802-000000004f00}",
+                                    "parentProcessId": "6348",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-761a-69ea-2a02-000000004f00}",
+                                    "processId": "3228",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 19:42:18.599"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "470590",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:42:18.599\r\nProcessGuid: {826a7360-761a-69ea-2a02-000000004f00}\r\nProcessId: 3228\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-761a-69ea-2802-000000004f00}\r\nParentProcessId: 6348\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "1080",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T19:42:18.6009341Z",
+                                    "task": "1",
+                                    "threadID": "4664",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Task Scheduler Configuration Tool",
+                                        "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                        "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                        "logonId": "0xeb607",
+                                        "originalFileName": "schtasks.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-761a-69ea-2802-000000004f00}",
+                                        "parentProcessId": "6348",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-761a-69ea-2a02-000000004f00}",
+                                        "processId": "3228",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 19:42:18.599"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "470590",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:42:18.599\r\nProcessGuid: {826a7360-761a-69ea-2a02-000000004f00}\r\nProcessId: 3228\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-761a-69ea-2802-000000004f00}\r\nParentProcessId: 6348\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "1080",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T19:42:18.6009341Z",
+                                        "task": "1",
+                                        "threadID": "4664",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776973339.14947435",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                                "firedtimes": 7,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100004",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1053.005"
+                                    ],
+                                    "tactic": [
+                                        "Execution",
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Scheduled Task"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T19:42:19.113+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                            "firedtimes": 7,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100004",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1053.005"
+                                ],
+                                "tactic": [
+                                    "Execution",
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Scheduled Task"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T19:42:19.113+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                        "wazuh_rule_id": "100004",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100004: Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T19:42:19.113Z"
+                },
+                "id": "AwAAAZ273VnpkbY1PAAAABhBWjI3M1Z4MEFBQTBnQkRQdWYxMmtRQUEAAAAkZjE5ZGJiZGQtNTllOS00MGQyLTkzMjAtNmFiZTQ3ZDIzMzQwAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 51,
+            "request_id": "pddv1ChZyRzZBSk5xbVFUQy1abjdHd2UyNERRIisKG-u40Fbw1t8bckmwh5FXBvQS3gmAuwbjTotnSxIMU4z9DTNM6WS3Se5V",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTczNDEzLCJleHAiOjE3NzY5NzQzMTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.APsNwIllWBVj41xDd_G9XXDh296aXQqDkEHbeTVklPAqg4iJAgbdvHaJl1QbYbwBmrOzKJ95DCUi8DJQMo2GU2TiAZJ3u4swXysFtwOGl14h82wdQRayqAf3W64FynNIc9Pa2MZcYHcK80HESmCs3wlhk9uecpTmvLL68CbzUCLZtIVQ",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 19:43:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination_with_Task_Deletion": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 19:43:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP4_SOAR_Processing_Time": {
+        "data": 2694
+    },
+    "SOP4_Time_to_Control": {
+        "data": 77339
+    },
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Tasks_present": {},
+    "Time_to_Detect": {
+        "data": 513
+    },
+    "Time_to_Respond": {
+        "data": 74645
+    }
+},
+  "run5":{
+    "Extract_Scheduled_Task": {
+        "data": {
+            "taskNames": "T1053_005_OnLogon, T1053_005_OnStartup"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Task Scheduler Configuration Tool",
+                                    "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                    "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                    "logonId": "0xeb607",
+                                    "originalFileName": "schtasks.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-76a6-69ea-3402-000000004f00}",
+                                    "parentProcessId": "6808",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-76a6-69ea-3602-000000004f00}",
+                                    "processId": "6928",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 19:44:38.201"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "470616",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:44:38.201\r\nProcessGuid: {826a7360-76a6-69ea-3602-000000004f00}\r\nProcessId: 6928\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-76a6-69ea-3402-000000004f00}\r\nParentProcessId: 6808\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "1080",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T19:44:38.2022088Z",
+                                    "task": "1",
+                                    "threadID": "4664",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Task Scheduler Configuration Tool",
+                                        "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                        "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                        "logonId": "0xeb607",
+                                        "originalFileName": "schtasks.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-76a6-69ea-3402-000000004f00}",
+                                        "parentProcessId": "6808",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-76a6-69ea-3602-000000004f00}",
+                                        "processId": "6928",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 19:44:38.201"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "470616",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:44:38.201\r\nProcessGuid: {826a7360-76a6-69ea-3602-000000004f00}\r\nProcessId: 6928\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-76a6-69ea-3402-000000004f00}\r\nParentProcessId: 6808\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "1080",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T19:44:38.2022088Z",
+                                        "task": "1",
+                                        "threadID": "4664",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776973478.15193209",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                                "firedtimes": 8,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100004",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1053.005"
+                                    ],
+                                    "tactic": [
+                                        "Execution",
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Scheduled Task"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T19:44:38.729+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                            "firedtimes": 8,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100004",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1053.005"
+                                ],
+                                "tactic": [
+                                    "Execution",
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Scheduled Task"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T19:44:38.729+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                        "wazuh_rule_id": "100004",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100004: Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T19:44:38.729Z"
+                },
+                "id": "AwAAAZ2733tJPQQwKgAAABhBWjI3MzNfM0FBRHhEU0lMUkFoSVd3QUEAAAAkZjE5ZGJiZGYtN2I0OS00MjE3LTkzNWUtZTMzYzJjYWMwYTg0AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 68,
+            "request_id": "pddv1ChZLWkM2NmsxSVNqQ2VNZmdUcVAxdnJnIisKG3BQnwbiSFVPXxNdcMHXFGCPt-y4OiAIY8ghcRIML9R1HkKSfUCwrNNd",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTczNTkzLCJleHAiOjE3NzY5NzQ0OTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AFyeim8Bh4IjdW4YzsTmauWtaDWtkvQCp_BNb2W2Az4kvovJ-pm1OxNGk5mVzVEIpjhWojrRiBbs6pkhCo0nXxjVAK2DmhqPPmU2h_8Rn7n7pBuM_ATrT0GcjytYQgtFBhReDOGlBtCd64-JpVOk-Xuv5M5_o60fWmY3NDFxDtFwRyzC",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 19:46:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination_with_Task_Deletion": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 19:46:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP4_SOAR_Processing_Time": {
+        "data": 2745
+    },
+    "SOP4_Time_to_Control": {
+        "data": 117775
+    },
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Tasks_present": {},
+    "Time_to_Detect": {
+        "data": 527
+    },
+    "Time_to_Respond": {
+        "data": 115030
+    }
+},
+  "run6":{
+    "Extract_Scheduled_Task": {
+        "data": {
+            "taskNames": "T1053_005_OnLogon, T1053_005_OnStartup"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Task Scheduler Configuration Tool",
+                                    "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                    "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                    "logonId": "0xeb607",
+                                    "originalFileName": "schtasks.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-7753-69ea-4402-000000004f00}",
+                                    "parentProcessId": "4928",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-7753-69ea-4602-000000004f00}",
+                                    "processId": "8284",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 19:47:31.579"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "470646",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:47:31.579\r\nProcessGuid: {826a7360-7753-69ea-4602-000000004f00}\r\nProcessId: 8284\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-7753-69ea-4402-000000004f00}\r\nParentProcessId: 4928\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "1080",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T19:47:31.5809985Z",
+                                    "task": "1",
+                                    "threadID": "4664",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Task Scheduler Configuration Tool",
+                                        "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                        "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                        "logonId": "0xeb607",
+                                        "originalFileName": "schtasks.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-7753-69ea-4402-000000004f00}",
+                                        "parentProcessId": "4928",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-7753-69ea-4602-000000004f00}",
+                                        "processId": "8284",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 19:47:31.579"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "470646",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:47:31.579\r\nProcessGuid: {826a7360-7753-69ea-4602-000000004f00}\r\nProcessId: 8284\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-7753-69ea-4402-000000004f00}\r\nParentProcessId: 4928\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "1080",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T19:47:31.5809985Z",
+                                        "task": "1",
+                                        "threadID": "4664",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776973652.15420338",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                                "firedtimes": 9,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100004",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1053.005"
+                                    ],
+                                    "tactic": [
+                                        "Execution",
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Scheduled Task"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T19:47:32.087+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                            "firedtimes": 9,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100004",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1053.005"
+                                ],
+                                "tactic": [
+                                    "Execution",
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Scheduled Task"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T19:47:32.087+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                        "wazuh_rule_id": "100004",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100004: Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T19:47:32.087Z"
+                },
+                "id": "AwAAAZ274iB3zQk1PAAAABhBWjI3NGlSTUFBQTBnQkRQdVEyeDVBQUEAAAAkZjE5ZGJiZTItMjA3Ny00Yzk0LTg0NjctNWEwMzkwMzJkYWU2AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 54,
+            "request_id": "pddv1ChZjXzlwMFBNd1NxQ3N0NHlJSThQaVpRIisKGw45qqT-N7NZ0PnIG7QTjwQQuv9J6QFxws3kGBIMtcfzktRr5bjI81L-",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTczNzczLCJleHAiOjE3NzY5NzQ2NzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.ASAaz0NkKKeyHxFhkovkFC4lwO5nSFFOWjwUQL8FS5nwGP7yNRGOL4CzNZg8CO8Env7SJOHyfTyi1WYFcxwSxtJgASYUefKXhp94zmHJuHjAN-6VPekiEM0vyVc_Ptk5llc0mwRWCjB4TQUMcK4dnDvYtR9VigSZjoB6rVeZX-9-QEvE",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 19:49:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination_with_Task_Deletion": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 19:49:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP4_SOAR_Processing_Time": {
+        "data": 2709
+    },
+    "SOP4_Time_to_Control": {
+        "data": 123931
+    },
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Tasks_present": {},
+    "Time_to_Detect": {
+        "data": 507
+    },
+    "Time_to_Respond": {
+        "data": 121222
+    }
+},
+  "run7":{
+    "Extract_Scheduled_Task": {
+        "data": {
+            "taskNames": "T1053_005_OnLogon, T1053_005_OnStartup"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Task Scheduler Configuration Tool",
+                                    "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                    "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                    "logonId": "0xeb607",
+                                    "originalFileName": "schtasks.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-780b-69ea-5e02-000000004f00}",
+                                    "parentProcessId": "2684",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-780b-69ea-6002-000000004f00}",
+                                    "processId": "8604",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 19:50:35.333"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "470696",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:50:35.333\r\nProcessGuid: {826a7360-780b-69ea-6002-000000004f00}\r\nProcessId: 8604\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-780b-69ea-5e02-000000004f00}\r\nParentProcessId: 2684\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "1080",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T19:50:35.3347526Z",
+                                    "task": "1",
+                                    "threadID": "4664",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Task Scheduler Configuration Tool",
+                                        "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                        "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                        "logonId": "0xeb607",
+                                        "originalFileName": "schtasks.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-780b-69ea-5e02-000000004f00}",
+                                        "parentProcessId": "2684",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-780b-69ea-6002-000000004f00}",
+                                        "processId": "8604",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 19:50:35.333"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "470696",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:50:35.333\r\nProcessGuid: {826a7360-780b-69ea-6002-000000004f00}\r\nProcessId: 8604\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-780b-69ea-5e02-000000004f00}\r\nParentProcessId: 2684\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "1080",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T19:50:35.3347526Z",
+                                        "task": "1",
+                                        "threadID": "4664",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776973835.15766931",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                                "firedtimes": 10,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100004",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1053.005"
+                                    ],
+                                    "tactic": [
+                                        "Execution",
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Scheduled Task"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T19:50:35.845+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                            "firedtimes": 10,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100004",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1053.005"
+                                ],
+                                "tactic": [
+                                    "Execution",
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Scheduled Task"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T19:50:35.845+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                        "wazuh_rule_id": "100004",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100004: Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T19:50:35.845Z"
+                },
+                "id": "AwAAAZ275O5FxIWH6AAAABhBWjI3NU8tX0FBQjcwYkU1bzBaU29RQUEAAAAkZjE5ZGJiZTQtZWU0NS00NjQ2LWE3ZjYtNWZlMzQzMjI2ZGIzAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 59,
+            "request_id": "pddv1ChYyaWxCbjR4TVFERzJ4Q1RkV0t0ZHNnIi0KHUAHlrYNLQh4dBwSUSDR62h6b_kA1p2ja3qJJTdfEgxQoISLf3DKnQg5qKY",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTczOTUzLCJleHAiOjE3NzY5NzQ4NTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.Af2ILkqZlvQbyr3HIKK06tsUwggTOxtdyq3oCiiQtB8XEuxFFghRIoS_lM4rlINdsYer8Jk7zw4NudGCNu-beD4yAZA3NiUZFA0qBDRZLSkMAXCy_3AcUuGfANZGAntvCEQj1txyyhU3xHSL4jHHzhDNv7XB91wWMT0-1xuwWzlbZqTq",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 19:52:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination_with_Task_Deletion": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 19:52:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP4_SOAR_Processing_Time": {
+        "data": 2916
+    },
+    "SOP4_Time_to_Control": {
+        "data": 121228
+    },
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Tasks_present": {},
+    "Time_to_Detect": {
+        "data": 511
+    },
+    "Time_to_Respond": {
+        "data": 118312
+    }
+},
+  "run8":{
+    "Extract_Scheduled_Task": {
+        "data": {
+            "taskNames": "T1053_005_OnLogon, T1053_005_OnStartup"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Task Scheduler Configuration Tool",
+                                    "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                    "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                    "logonId": "0xeb607",
+                                    "originalFileName": "schtasks.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-78bc-69ea-6d02-000000004f00}",
+                                    "parentProcessId": "9248",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-78bc-69ea-6f02-000000004f00}",
+                                    "processId": "4596",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 19:53:32.597"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "470732",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:53:32.597\r\nProcessGuid: {826a7360-78bc-69ea-6f02-000000004f00}\r\nProcessId: 4596\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-78bc-69ea-6d02-000000004f00}\r\nParentProcessId: 9248\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "1080",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T19:53:32.5982919Z",
+                                    "task": "1",
+                                    "threadID": "4664",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Task Scheduler Configuration Tool",
+                                        "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                        "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                        "logonId": "0xeb607",
+                                        "originalFileName": "schtasks.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-78bc-69ea-6d02-000000004f00}",
+                                        "parentProcessId": "9248",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-78bc-69ea-6f02-000000004f00}",
+                                        "processId": "4596",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 19:53:32.597"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "470732",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:53:32.597\r\nProcessGuid: {826a7360-78bc-69ea-6f02-000000004f00}\r\nProcessId: 4596\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-78bc-69ea-6d02-000000004f00}\r\nParentProcessId: 9248\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "1080",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T19:53:32.5982919Z",
+                                        "task": "1",
+                                        "threadID": "4664",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776974012.15937573",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                                "firedtimes": 11,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100004",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1053.005"
+                                    ],
+                                    "tactic": [
+                                        "Execution",
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Scheduled Task"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T19:53:32.879+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                            "firedtimes": 11,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100004",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1053.005"
+                                ],
+                                "tactic": [
+                                    "Execution",
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Scheduled Task"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T19:53:32.879+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                        "wazuh_rule_id": "100004",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100004: Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T19:53:32.879Z"
+                },
+                "id": "AwAAAZ2756HPDniIgwAAABhBWjI3NTZQR0FBQ3VLMGwtMkg4UWJ3QUEAAAAkZjE5ZGJiZTctYTFjZi00MzNjLTkxZjYtNWNmYjVmMjRjNzZjAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 115,
+            "request_id": "pddv1ChZ4eVp5dnd0alNfdW9MQWV5RXBKN1h3IisKGwf5Vvar_hmAm-ShjbkKse51ZSSxvQUjcaQdxxIMCfJk75B0Cvb4ynPi",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTc0MTMzLCJleHAiOjE3NzY5NzUwMzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.ADO-AuYMW8ef3Tlzo8JDM9FbFDIIro4QKiLo4BuHG3ZOIF6_T0aE7j0RXffCnTS_V3eUiT5DO6mZ3pp2g4rt5qewAMfKmEh3b9a5XJs7T3AY7yRr3OQcYFNiGL2ZGZNOC_4MKey5rPStfHCbX9clOwZrFPGd-gsYVBu4vTvYVrSGz35p",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 19:55:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination_with_Task_Deletion": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 19:55:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP4_SOAR_Processing_Time": {
+        "data": 2689
+    },
+    "SOP4_Time_to_Control": {
+        "data": 123154
+    },
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Tasks_present": {},
+    "Time_to_Detect": {
+        "data": 281
+    },
+    "Time_to_Respond": {
+        "data": 120465
+    }
+},
+  "run9":{
+    "Extract_Scheduled_Task": {
+        "data": {
+            "taskNames": "T1053_005_OnLogon, T1053_005_OnStartup"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Task Scheduler Configuration Tool",
+                                    "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                    "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                    "logonId": "0xeb607",
+                                    "originalFileName": "schtasks.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-7a2b-69ea-8e02-000000004f00}",
+                                    "parentProcessId": "9324",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-7a2b-69ea-9002-000000004f00}",
+                                    "processId": "5784",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 19:59:39.671"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "470802",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:59:39.671\r\nProcessGuid: {826a7360-7a2b-69ea-9002-000000004f00}\r\nProcessId: 5784\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-7a2b-69ea-8e02-000000004f00}\r\nParentProcessId: 9324\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "1080",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T19:59:39.6725232Z",
+                                    "task": "1",
+                                    "threadID": "4664",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Task Scheduler Configuration Tool",
+                                        "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                        "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                        "logonId": "0xeb607",
+                                        "originalFileName": "schtasks.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-7a2b-69ea-8e02-000000004f00}",
+                                        "parentProcessId": "9324",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-7a2b-69ea-9002-000000004f00}",
+                                        "processId": "5784",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 19:59:39.671"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "470802",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 19:59:39.671\r\nProcessGuid: {826a7360-7a2b-69ea-9002-000000004f00}\r\nProcessId: 5784\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-7a2b-69ea-8e02-000000004f00}\r\nParentProcessId: 9324\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "1080",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T19:59:39.6725232Z",
+                                        "task": "1",
+                                        "threadID": "4664",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776974380.16578919",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                                "firedtimes": 14,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100004",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1053.005"
+                                    ],
+                                    "tactic": [
+                                        "Execution",
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Scheduled Task"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T19:59:40.141+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                            "firedtimes": 14,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100004",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1053.005"
+                                ],
+                                "tactic": [
+                                    "Execution",
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Scheduled Task"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T19:59:40.141+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                        "wazuh_rule_id": "100004",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100004: Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T19:59:40.141Z"
+                },
+                "id": "AwAAAZ277TxtyWOIgwAAABhBWjI3N1VPVUFBQ3VLMGwtMkpMTFdnQUEAAAAkZjE5ZGJiZWQtM2M2ZC00OTAyLWFiODUtYzRkN2NkNjhmZjU2AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 51,
+            "request_id": "pddv1ChZQbXZUTVNKeVJOeW13RG9jbHdxazV3IiwKHANlISHt2wovg6nnJIaBvfMIUZaHzfzdidq4E-USDOCld4mT9kK8OOshrA",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTc0NDkzLCJleHAiOjE3NzY5NzUzOTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.ASeRj16u3RI57oEwTI_keBYOLtyh4sJol7EYOyumXt0hqPsA_OK2dK_-VE29EVHOyhGWXoHtKg9e9ZCAhZnok5mxAD9sYKv4awndErKUE1LT-C7WtPemEboDLK3L2kDF0NFNPBmHaN5JfOapIrQ59xXSVtKIiPySu4tb_XM98YRISWnp",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 20:01:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination_with_Task_Deletion": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 20:01:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP4_SOAR_Processing_Time": {
+        "data": 2678
+    },
+    "SOP4_Time_to_Control": {
+        "data": 116077
+    },
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Tasks_present": {},
+    "Time_to_Detect": {
+        "data": 469
+    },
+    "Time_to_Respond": {
+        "data": 113399
+    }
+},
+  "run10":{
+    "Extract_Scheduled_Task": {
+        "data": {
+            "taskNames": "T1053_005_OnLogon, T1053_005_OnStartup"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Task Scheduler Configuration Tool",
+                                    "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                    "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                    "logonId": "0xeb607",
+                                    "originalFileName": "schtasks.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-7b0c-69ea-9e02-000000004f00}",
+                                    "parentProcessId": "8252",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-7b0c-69ea-a002-000000004f00}",
+                                    "processId": "5872",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 20:03:24.066"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "470836",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 20:03:24.066\r\nProcessGuid: {826a7360-7b0c-69ea-a002-000000004f00}\r\nProcessId: 5872\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-7b0c-69ea-9e02-000000004f00}\r\nParentProcessId: 8252\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "1080",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T20:03:24.0680079Z",
+                                    "task": "1",
+                                    "threadID": "4664",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Task Scheduler Configuration Tool",
+                                        "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                        "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-70c3-69ea-07b6-0e0000000000}",
+                                        "logonId": "0xeb607",
+                                        "originalFileName": "schtasks.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-7b0c-69ea-9e02-000000004f00}",
+                                        "parentProcessId": "8252",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-7b0c-69ea-a002-000000004f00}",
+                                        "processId": "5872",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 20:03:24.066"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "470836",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 20:03:24.066\r\nProcessGuid: {826a7360-7b0c-69ea-a002-000000004f00}\r\nProcessId: 5872\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-70c3-69ea-07b6-0e0000000000}\r\nLogonId: 0xEB607\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-7b0c-69ea-9e02-000000004f00}\r\nParentProcessId: 8252\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "1080",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T20:03:24.0680079Z",
+                                        "task": "1",
+                                        "threadID": "4664",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776974604.16776024",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                                "firedtimes": 1,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100004",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1053.005"
+                                    ],
+                                    "tactic": [
+                                        "Execution",
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Scheduled Task"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T20:03:24.526+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                            "firedtimes": 1,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100004",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1053.005"
+                                ],
+                                "tactic": [
+                                    "Execution",
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Scheduled Task"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T20:03:24.526+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                        "wazuh_rule_id": "100004",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100004: Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T20:03:24.526Z"
+                },
+                "id": "AwAAAZ278KjuRYlgqAAAABhBWjI3OEtzOEFBQmRlOTVCWklWOEVnQUEAAAAkZjE5ZGJiZjAtYThlZS00ZDM5LTgzNjgtODZkNTVkZTc4NzFjAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 60,
+            "request_id": "pddv1ChZXSWlZYkdkdlFXT3A2YnRJUllCZ01nIiwKHH_2jv7bWWbvLhUX9e6-7wPEdKP9rx9WfnqWg98SDGzCAWym6TkL8H5b0A",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTc0NjczLCJleHAiOjE3NzY5NzU1NzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AFYh2nlD0zh-nVkBgUswWsv4DckqenSiKUImCifCc1elLeM5TplIjY0bDVOiKw-qP_oaTx4FHI_GCXd6vs3FN46PAHCu0HgBPeHKFL7wSQ63KqnUYOUrkSKaw-64jZmbqzEDOjaMdgheKJkGKf_WyYmPrJwvf7PmsG-HBoKPIB7cj3ki",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 20:04:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination_with_Task_Deletion": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 20:04:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP4_SOAR_Processing_Time": {
+        "data": 2763
+    },
+    "SOP4_Time_to_Control": {
+        "data": 72208
+    },
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Tasks_present": {},
+    "Time_to_Detect": {
+        "data": 458
+    },
+    "Time_to_Respond": {
+        "data": 69445
+    }
+}
+]
