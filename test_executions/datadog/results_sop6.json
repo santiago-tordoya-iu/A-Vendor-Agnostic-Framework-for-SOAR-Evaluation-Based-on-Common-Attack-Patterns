@@ -1,285 +1,5 @@
 [
   "run1":{
-    "Extract_Scheduled_Task": {
-        "data": {
-            "taskNames": "T1053_005_OnLogon, T1053_005_OnStartup"
-        }
-    },
-    "Get_Alert_Data": {
-        "data": [
-            {
-                "attributes": {
-                    "attributes": {
-                        "agent": {
-                            "id": "003",
-                            "ip": "10.0.3.4",
-                            "name": "ws01"
-                        },
-                        "data": {
-                            "win": {
-                                "eventdata": {
-                                    "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
-                                    "company": "Microsoft Corporation",
-                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
-                                    "description": "Task Scheduler Configuration Tool",
-                                    "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
-                                    "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
-                                    "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
-                                    "integrityLevel": "High",
-                                    "logonGuid": "{826a7360-8ba6-69ea-4227-0f0000000000}",
-                                    "logonId": "0xf2742",
-                                    "originalFileName": "schtasks.exe",
-                                    "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
-                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
-                                    "parentProcessGuid": "{826a7360-8c55-69ea-8901-000000005000}",
-                                    "parentProcessId": "2132",
-                                    "parentUser": "ws01\\\\ws_administrator",
-                                    "processGuid": "{826a7360-8c55-69ea-8b01-000000005000}",
-                                    "processId": "4288",
-                                    "product": "Microsoft® Windows® Operating System",
-                                    "terminalSessionId": "2",
-                                    "user": "ws01\\\\ws_administrator",
-                                    "utcTime": "2026-04-23 21:17:09.299"
-                                },
-                                "system": {
-                                    "channel": "Microsoft-Windows-Sysmon/Operational",
-                                    "computer": "ws01.corp.soarlab.test",
-                                    "eventID": "1",
-                                    "eventRecordID": "473062",
-                                    "keywords": "0x8000000000000000",
-                                    "level": "4",
-                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:17:09.299\r\nProcessGuid: {826a7360-8c55-69ea-8b01-000000005000}\r\nProcessId: 4288\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-8ba6-69ea-4227-0f0000000000}\r\nLogonId: 0xF2742\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-8c55-69ea-8901-000000005000}\r\nParentProcessId: 2132\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
-                                    "opcode": "0",
-                                    "processID": "3800",
-                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
-                                    "providerName": "Microsoft-Windows-Sysmon",
-                                    "severityValue": "INFORMATION",
-                                    "systemTime": "2026-04-23T21:17:09.3071276Z",
-                                    "task": "1",
-                                    "threadID": "4748",
-                                    "version": "5"
-                                }
-                            }
-                        },
-                        "decoder": {
-                            "name": "windows_eventchannel"
-                        },
-                        "full_alert": {
-                            "agent": {
-                                "id": "003",
-                                "ip": "10.0.3.4",
-                                "name": "ws01"
-                            },
-                            "data": {
-                                "win": {
-                                    "eventdata": {
-                                        "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
-                                        "company": "Microsoft Corporation",
-                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
-                                        "description": "Task Scheduler Configuration Tool",
-                                        "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
-                                        "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
-                                        "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
-                                        "integrityLevel": "High",
-                                        "logonGuid": "{826a7360-8ba6-69ea-4227-0f0000000000}",
-                                        "logonId": "0xf2742",
-                                        "originalFileName": "schtasks.exe",
-                                        "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
-                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
-                                        "parentProcessGuid": "{826a7360-8c55-69ea-8901-000000005000}",
-                                        "parentProcessId": "2132",
-                                        "parentUser": "ws01\\\\ws_administrator",
-                                        "processGuid": "{826a7360-8c55-69ea-8b01-000000005000}",
-                                        "processId": "4288",
-                                        "product": "Microsoft® Windows® Operating System",
-                                        "terminalSessionId": "2",
-                                        "user": "ws01\\\\ws_administrator",
-                                        "utcTime": "2026-04-23 21:17:09.299"
-                                    },
-                                    "system": {
-                                        "channel": "Microsoft-Windows-Sysmon/Operational",
-                                        "computer": "ws01.corp.soarlab.test",
-                                        "eventID": "1",
-                                        "eventRecordID": "473062",
-                                        "keywords": "0x8000000000000000",
-                                        "level": "4",
-                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:17:09.299\r\nProcessGuid: {826a7360-8c55-69ea-8b01-000000005000}\r\nProcessId: 4288\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-8ba6-69ea-4227-0f0000000000}\r\nLogonId: 0xF2742\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-8c55-69ea-8901-000000005000}\r\nParentProcessId: 2132\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
-                                        "opcode": "0",
-                                        "processID": "3800",
-                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
-                                        "providerName": "Microsoft-Windows-Sysmon",
-                                        "severityValue": "INFORMATION",
-                                        "systemTime": "2026-04-23T21:17:09.3071276Z",
-                                        "task": "1",
-                                        "threadID": "4748",
-                                        "version": "5"
-                                    }
-                                }
-                            },
-                            "decoder": {
-                                "name": "windows_eventchannel"
-                            },
-                            "id": "1776979029.25731284",
-                            "location": "EventChannel",
-                            "manager": {
-                                "name": "wazuh01"
-                            },
-                            "rule": {
-                                "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
-                                "firedtimes": 1,
-                                "groups": [
-                                    "atomic_red_team"
-                                ],
-                                "id": "100004",
-                                "level": 16,
-                                "mail": true,
-                                "mitre": {
-                                    "id": [
-                                        "T1053.005"
-                                    ],
-                                    "tactic": [
-                                        "Execution",
-                                        "Persistence",
-                                        "Privilege Escalation"
-                                    ],
-                                    "technique": [
-                                        "Scheduled Task"
-                                    ]
-                                }
-                            },
-                            "timestamp": "2026-04-23T21:17:09.980+0000"
-                        },
-                        "hostname": "ws01",
-                        "location": "EventChannel",
-                        "manager": {
-                            "name": "wazuh01"
-                        },
-                        "rule": {
-                            "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
-                            "firedtimes": 1,
-                            "groups": [
-                                "atomic_red_team"
-                            ],
-                            "id": "100004",
-                            "level": 16,
-                            "mail": true,
-                            "mitre": {
-                                "id": [
-                                    "T1053.005"
-                                ],
-                                "tactic": [
-                                    "Execution",
-                                    "Persistence",
-                                    "Privilege Escalation"
-                                ],
-                                "technique": [
-                                    "Scheduled Task"
-                                ]
-                            }
-                        },
-                        "service": "other",
-                        "timestamp": "2026-04-23T21:17:09.980+0000",
-                        "wazuh_group": "atomic_red_team",
-                        "wazuh_rule_description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
-                        "wazuh_rule_id": "100004",
-                        "wazuh_rule_level": 16
-                    },
-                    "host": "ws01",
-                    "message": "Wazuh alert 100004: Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
-                    "service": "other",
-                    "status": "info",
-                    "tags": [
-                        "datadog.submission_auth:api_key",
-                        "env:prod",
-                        "group:atomic_red_team",
-                        "platform:wazuh",
-                        "source:wazuh"
-                    ],
-                    "timestamp": "2026-04-23T21:17:09.980Z"
-                },
-                "id": "AwAAAZ28NC_cgghDNwAAABhBWjI4TkRIY0FBRFlTcUNyYzJyeEJRQUEAAAAkZjE5ZGJjMzQtMmZkYy00NDAyLTljOTctZWE4OTE2MDY5OGNkAAAAAA",
-                "type": "log"
-            }
-        ],
-        "meta": {
-            "elapsed": 51,
-            "request_id": "pddv1ChZ0Ym5xT3dIN1JQLXZfNzZRUzJxdU5RIisKG6nYw2eTNwEcCKc-6SeXtoTO_tq9Fnvs5rIL_RIMJ7TrUMq5xnMw9mkn",
-            "status": "done"
-        }
-    },
-    "Get_Wazuh_Auth_Token": {
-        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTc5MTEzLCJleHAiOjE3NzY5ODAwMTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaOCW6ho1BMl8R0cHQxBSesLJwnqLTTQK9fIAVlTbblJrRcTJiCL-WqnWeirYCT7jFvTTIjlQ77H536fIK2LiqGsAXpk6WpXiV5o894P2TC0Xk3B2csccVhQ_Zl2TzYpOxTUxFWcI80_simftFCwVuU4EAKMQ6I7_5XQUCSMmhjYiSfx",
-        "headers": {
-            "cache-control": "no-store",
-            "connection": "close",
-            "content-length": "398",
-            "content-security-policy": "none",
-            "content-type": "text/plain",
-            "date": "Thu, 23 Apr 2026 21:18:32 GMT",
-            "deprecated": "true",
-            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
-            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
-            "server": "Wazuh",
-            "strict-transport-security": "max-age=63072000; includeSubdomains",
-            "x-content-type-options": "nosniff",
-            "x-frame-options": "deny",
-            "x-xss-protection": "0"
-        },
-        "status": 200
-    },
-    "Invoke_Process_Termination_with_Task_Deletion": {
-        "body": {
-            "data": {
-                "affected_items": [
-                    "003"
-                ],
-                "failed_items": [],
-                "total_affected_items": 1,
-                "total_failed_items": 0
-            },
-            "error": 0,
-            "message": "AR command was sent to all agents"
-        },
-        "headers": {
-            "cache-control": "no-store",
-            "connection": "close",
-            "content-length": "169",
-            "content-security-policy": "none",
-            "content-type": "application/json",
-            "date": "Thu, 23 Apr 2026 21:18:34 GMT",
-            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
-            "server": "Wazuh",
-            "strict-transport-security": "max-age=63072000; includeSubdomains",
-            "x-content-type-options": "nosniff",
-            "x-frame-options": "deny",
-            "x-xss-protection": "0"
-        },
-        "status": 200
-    },
-    "SOP1": {},
-    "SOP2": {},
-    "SOP3": {},
-    "SOP4": {},
-    "SOP4_SOAR_Processing_Time": {
-        "data": 2799
-    },
-    "SOP4_Time_to_Control": {
-        "data": 86451
-    },
-    "SOP5": {},
-    "SOP6": {},
-    "SOP7": {},
-    "SOP8": {},
-    "SOP9": {},
-    "Tasks_present": {},
-    "Time_to_Detect": {
-        "data": 673
-    },
-    "Time_to_Respond": {
-        "data": 83652
-    }
-},
-  "run2":{
     "Extract_File_Path1": {
         "data": "C:\\\\inetpub\\\\wwwroot"
     },
@@ -610,7 +330,7 @@
         "data": 122719
     }
 },
-  "run3":{
+  "run2":{
     "Extract_File_Path1": {
         "data": "C:\\\\inetpub\\\\wwwroot"
     },
@@ -941,7 +661,7 @@
         "data": 85535
     }
 },
-  "run4":{
+  "run3":{
     "Extract_File_Path1": {
         "data": "C:\\\\inetpub\\\\wwwroot"
     },
@@ -1272,7 +992,7 @@
         "data": 104052
     }
 },
-  "run5":{
+  "run4":{
     "Extract_File_Path1": {
         "data": "C:\\\\inetpub\\\\wwwroot"
     },
@@ -1603,7 +1323,7 @@
         "data": 107881
     }
 },
-  "run6":{
+  "run5":{
     "Extract_File_Path1": {
         "data": "C:\\\\inetpub\\\\wwwroot"
     },
@@ -1934,7 +1654,7 @@
         "data": 102643
     }
 },
-  "run7":{
+  "run6":{
     "Extract_File_Path1": {
         "data": "C:\\\\inetpub\\\\wwwroot"
     },
@@ -2265,7 +1985,7 @@
         "data": 119559
     }
 },
-  "run8":{
+  "run7":{
     "Extract_File_Path1": {
         "data": "C:\\\\inetpub\\\\wwwroot"
     },
@@ -2596,7 +2316,7 @@
         "data": 122979
     }
 },
-  "run9":{
+  "run8":{
     "Extract_File_Path1": {
         "data": "C:\\\\inetpub\\\\wwwroot"
     },
@@ -2927,7 +2647,7 @@
         "data": 119660
     }
 },
-  "run10":{
+  "run9":{
     "Extract_File_Path1": {
         "data": "C:\\\\inetpub\\\\wwwroot"
     },
@@ -3256,6 +2976,337 @@
     },
     "Time_to_Respond": {
         "data": 114715
+    }
+},
+"run10":{
+    "Extract_File_Path1": {
+        "data": "C:\\\\inetpub\\\\wwwroot"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Extended Copy Utility",
+                                    "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                    "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-9fe4-69ea-f0ad-280000000000}",
+                                    "logonId": "0x28adf0",
+                                    "originalFileName": "XCOPY.EXE",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-9ff8-69ea-b501-000000006000}",
+                                    "parentProcessId": "9824",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-9ff8-69ea-b701-000000006000}",
+                                    "processId": "9868",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 22:40:56.814"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "488763",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 22:40:56.814\r\nProcessGuid: {826a7360-9ff8-69ea-b701-000000006000}\r\nProcessId: 9868\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-9fe4-69ea-f0ad-280000000000}\r\nLogonId: 0x28ADF0\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-9ff8-69ea-b501-000000006000}\r\nParentProcessId: 9824\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4044",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T22:40:56.8171553Z",
+                                    "task": "1",
+                                    "threadID": "4604",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Extended Copy Utility",
+                                        "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                        "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-9fe4-69ea-f0ad-280000000000}",
+                                        "logonId": "0x28adf0",
+                                        "originalFileName": "XCOPY.EXE",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-9ff8-69ea-b501-000000006000}",
+                                        "parentProcessId": "9824",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-9ff8-69ea-b701-000000006000}",
+                                        "processId": "9868",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 22:40:56.814"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "488763",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 22:40:56.814\r\nProcessGuid: {826a7360-9ff8-69ea-b701-000000006000}\r\nProcessId: 9868\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-9fe4-69ea-f0ad-280000000000}\r\nLogonId: 0x28ADF0\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-9ff8-69ea-b501-000000006000}\r\nParentProcessId: 9824\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4044",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T22:40:56.8171553Z",
+                                        "task": "1",
+                                        "threadID": "4604",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776984057.69174349",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                                "firedtimes": 1,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100006",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1505.003"
+                                    ],
+                                    "tactic": [
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Web Shell"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T22:40:57.671+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                            "firedtimes": 1,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100006",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1505.003"
+                                ],
+                                "tactic": [
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Web Shell"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T22:40:57.671+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                        "wazuh_rule_id": "100006",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100006: Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T22:40:57.671Z"
+                },
+                "id": "AwAAAZ28gOdHf5FERQAAABhBWjI4Z09xSkFBRGppeDZueUF1NENnQUEAAAAkZjE5ZGJjODAtZTc0Ny00MWFlLWIyZGUtYmE1MzgxMjkzNGYwAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 112,
+            "request_id": "pddv1ChZnOGtlWnc2LVNmQ1dJdTUtTERFRFRBIi0KHTNvxv4FSW_M4tl2avbtWFaB9dGdh7SFq9gmhGqOEgzPVZJ3bvfuxXHsXEU",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTg0MTUzLCJleHAiOjE3NzY5ODUwNTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AXpw6-Ko6qBDHGACfKnLb1SByWB-U1TltivfEKYm13PpV0IJPQRxfAVCSIBAo5PaZnEPgrVFhIM-Sf9VBiqVQVYKABZTwCiSs15SbIOgoSgFoenoIGci0lWw6elDK0Wr83n7M1sxKkwR1ttBWbeLRWkFHNGmBXssAKh3YmzxBdSYg9OL",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 22:42:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 22:42:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Host_Reboot": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 22:42:36 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 22:42:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP6_SOAR_Processing_Time": {
+        "data": 3451
+    },
+    "SOP6_Time_to_Control": {
+        "data": 100080
+    },
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 854
+    },
+    "Time_to_Respond": {
+        "data": 96629
     }
 }
 ]
