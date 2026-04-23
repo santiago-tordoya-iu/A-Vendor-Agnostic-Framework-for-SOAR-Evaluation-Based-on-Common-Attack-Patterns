@@ -1,0 +1,3261 @@
+[
+  "run1":{
+    "Extract_Scheduled_Task": {
+        "data": {
+            "taskNames": "T1053_005_OnLogon, T1053_005_OnStartup"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Task Scheduler Configuration Tool",
+                                    "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                    "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-8ba6-69ea-4227-0f0000000000}",
+                                    "logonId": "0xf2742",
+                                    "originalFileName": "schtasks.exe",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-8c55-69ea-8901-000000005000}",
+                                    "parentProcessId": "2132",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-8c55-69ea-8b01-000000005000}",
+                                    "processId": "4288",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 21:17:09.299"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "473062",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:17:09.299\r\nProcessGuid: {826a7360-8c55-69ea-8b01-000000005000}\r\nProcessId: 4288\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-8ba6-69ea-4227-0f0000000000}\r\nLogonId: 0xF2742\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-8c55-69ea-8901-000000005000}\r\nParentProcessId: 2132\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "3800",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T21:17:09.3071276Z",
+                                    "task": "1",
+                                    "threadID": "4748",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "schtasks  /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Task Scheduler Configuration Tool",
+                                        "fileVersion": "10.0.26100.6725 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D",
+                                        "image": "C:\\\\Windows\\\\System32\\\\schtasks.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-8ba6-69ea-4227-0f0000000000}",
+                                        "logonId": "0xf2742",
+                                        "originalFileName": "schtasks.exe",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c schtasks /create /tn \\\"T1053_005_OnLogon\\\" /sc onlogon /tr \\\"cmd.exe /c calc.exe\\\" &amp; schtasks /create /tn \\\"T1053_005_OnStartup\\\" /sc onstart /ru system /tr \\\"cmd.exe /c calc.exe\\\"",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-8c55-69ea-8901-000000005000}",
+                                        "parentProcessId": "2132",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-8c55-69ea-8b01-000000005000}",
+                                        "processId": "4288",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 21:17:09.299"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "473062",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:17:09.299\r\nProcessGuid: {826a7360-8c55-69ea-8b01-000000005000}\r\nProcessId: 4288\r\nImage: C:\\Windows\\System32\\schtasks.exe\r\nFileVersion: 10.0.26100.6725 (WinBuild.160101.0800)\r\nDescription: Task Scheduler Configuration Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: schtasks.exe\r\nCommandLine: schtasks  /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" \r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-8ba6-69ea-4227-0f0000000000}\r\nLogonId: 0xF2742\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=B96AF3066F0B9DE8A460F77BAAE006C5372A266BE18C561DAA7C7AE8635D399D\r\nParentProcessGuid: {826a7360-8c55-69ea-8901-000000005000}\r\nParentProcessId: 2132\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c schtasks /create /tn \"T1053_005_OnLogon\" /sc onlogon /tr \"cmd.exe /c calc.exe\" & schtasks /create /tn \"T1053_005_OnStartup\" /sc onstart /ru system /tr \"cmd.exe /c calc.exe\"\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "3800",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T21:17:09.3071276Z",
+                                        "task": "1",
+                                        "threadID": "4748",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776979029.25731284",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                                "firedtimes": 1,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100004",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1053.005"
+                                    ],
+                                    "tactic": [
+                                        "Execution",
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Scheduled Task"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T21:17:09.980+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                            "firedtimes": 1,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100004",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1053.005"
+                                ],
+                                "tactic": [
+                                    "Execution",
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Scheduled Task"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T21:17:09.980+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                        "wazuh_rule_id": "100004",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100004: Atomic Red Team T1053.005 #1 detected: schtasks.exe used to create OnLogon scheduled task",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T21:17:09.980Z"
+                },
+                "id": "AwAAAZ28NC_cgghDNwAAABhBWjI4TkRIY0FBRFlTcUNyYzJyeEJRQUEAAAAkZjE5ZGJjMzQtMmZkYy00NDAyLTljOTctZWE4OTE2MDY5OGNkAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 51,
+            "request_id": "pddv1ChZ0Ym5xT3dIN1JQLXZfNzZRUzJxdU5RIisKG6nYw2eTNwEcCKc-6SeXtoTO_tq9Fnvs5rIL_RIMJ7TrUMq5xnMw9mkn",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTc5MTEzLCJleHAiOjE3NzY5ODAwMTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AaOCW6ho1BMl8R0cHQxBSesLJwnqLTTQK9fIAVlTbblJrRcTJiCL-WqnWeirYCT7jFvTTIjlQ77H536fIK2LiqGsAXpk6WpXiV5o894P2TC0Xk3B2csccVhQ_Zl2TzYpOxTUxFWcI80_simftFCwVuU4EAKMQ6I7_5XQUCSMmhjYiSfx",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 21:18:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination_with_Task_Deletion": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:18:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP4_SOAR_Processing_Time": {
+        "data": 2799
+    },
+    "SOP4_Time_to_Control": {
+        "data": 86451
+    },
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Tasks_present": {},
+    "Time_to_Detect": {
+        "data": 673
+    },
+    "Time_to_Respond": {
+        "data": 83652
+    }
+},
+  "run2":{
+    "Extract_File_Path1": {
+        "data": "C:\\\\inetpub\\\\wwwroot"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Extended Copy Utility",
+                                    "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                    "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-8ba6-69ea-4227-0f0000000000}",
+                                    "logonId": "0xf2742",
+                                    "originalFileName": "XCOPY.EXE",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-8ca6-69ea-9101-000000005000}",
+                                    "parentProcessId": "10804",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-8ca6-69ea-9301-000000005000}",
+                                    "processId": "7076",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 21:18:30.537"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "473088",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:18:30.537\r\nProcessGuid: {826a7360-8ca6-69ea-9301-000000005000}\r\nProcessId: 7076\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-8ba6-69ea-4227-0f0000000000}\r\nLogonId: 0xF2742\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-8ca6-69ea-9101-000000005000}\r\nParentProcessId: 10804\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "3800",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T21:18:30.5417623Z",
+                                    "task": "1",
+                                    "threadID": "4748",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Extended Copy Utility",
+                                        "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                        "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-8ba6-69ea-4227-0f0000000000}",
+                                        "logonId": "0xf2742",
+                                        "originalFileName": "XCOPY.EXE",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-8ca6-69ea-9101-000000005000}",
+                                        "parentProcessId": "10804",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-8ca6-69ea-9301-000000005000}",
+                                        "processId": "7076",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 21:18:30.537"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "473088",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:18:30.537\r\nProcessGuid: {826a7360-8ca6-69ea-9301-000000005000}\r\nProcessId: 7076\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-8ba6-69ea-4227-0f0000000000}\r\nLogonId: 0xF2742\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-8ca6-69ea-9101-000000005000}\r\nParentProcessId: 10804\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "3800",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T21:18:30.5417623Z",
+                                        "task": "1",
+                                        "threadID": "4748",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776979111.25820418",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                                "firedtimes": 3,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100006",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1505.003"
+                                    ],
+                                    "tactic": [
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Web Shell"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T21:18:31.119+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                            "firedtimes": 3,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100006",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1505.003"
+                                ],
+                                "tactic": [
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Web Shell"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T21:18:31.119+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                        "wazuh_rule_id": "100006",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100006: Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T21:18:31.119Z"
+                },
+                "id": "AwAAAZ28NWzP4bePrQAAABhBWjI4Tlc3SkFBREFGX2pxRDc0NEpBQUEAAAAkZjE5ZGJjMzUtNmNjZi00MDVhLTgxZjctNTJmNTVjOGM2MmE5AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 71,
+            "request_id": "pddv1ChZfdUZpbzg3c1NvYUF1WmZQLUhQTThBIiwKHNGSD_WatkYJB1mDti7PfdQkTFs4ev32ECIRjJwSDFGyEQO7l27ysTEwHw",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTc5MjMzLCJleHAiOjE3NzY5ODAxMzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AAeewPDbVWwtxFxZz4WE80uONyyc-64aCE0T36Zor21b_lDx9uU0xpDYL_Bes5CSC9Jw01uMowbKAy7xp8vgQTxtAaF-rmRIWTGiWodSTGLRbkdj4-_MgZEvL-Ar44g7s6Lc2EGqgMC7mJrCNrnf-zHVvvG8JIsi2EHN0-Ik5cO4ah82",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 21:20:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:20:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Host_Reboot": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:20:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:20:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP6_SOAR_Processing_Time": {
+        "data": 3139
+    },
+    "SOP6_Time_to_Control": {
+        "data": 125858
+    },
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 578
+    },
+    "Time_to_Respond": {
+        "data": 122719
+    }
+},
+  "run3":{
+    "Extract_File_Path1": {
+        "data": "C:\\\\inetpub\\\\wwwroot"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Extended Copy Utility",
+                                    "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                    "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-8e0d-69ea-9b95-100000000000}",
+                                    "logonId": "0x10959b",
+                                    "originalFileName": "XCOPY.EXE",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-8e33-69ea-6601-000000005200}",
+                                    "parentProcessId": "10304",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-8e33-69ea-6801-000000005200}",
+                                    "processId": "10384",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 21:25:07.377"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "475010",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:25:07.377\r\nProcessGuid: {826a7360-8e33-69ea-6801-000000005200}\r\nProcessId: 10384\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-8e0d-69ea-9b95-100000000000}\r\nLogonId: 0x10959B\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-8e33-69ea-6601-000000005200}\r\nParentProcessId: 10304\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "3156",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T21:25:07.3810272Z",
+                                    "task": "1",
+                                    "threadID": "4540",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Extended Copy Utility",
+                                        "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                        "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-8e0d-69ea-9b95-100000000000}",
+                                        "logonId": "0x10959b",
+                                        "originalFileName": "XCOPY.EXE",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-8e33-69ea-6601-000000005200}",
+                                        "parentProcessId": "10304",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-8e33-69ea-6801-000000005200}",
+                                        "processId": "10384",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 21:25:07.377"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "475010",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:25:07.377\r\nProcessGuid: {826a7360-8e33-69ea-6801-000000005200}\r\nProcessId: 10384\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-8e0d-69ea-9b95-100000000000}\r\nLogonId: 0x10959B\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-8e33-69ea-6601-000000005200}\r\nParentProcessId: 10304\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "3156",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T21:25:07.3810272Z",
+                                        "task": "1",
+                                        "threadID": "4540",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776979508.31189915",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                                "firedtimes": 5,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100006",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1505.003"
+                                    ],
+                                    "tactic": [
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Web Shell"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T21:25:08.043+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                            "firedtimes": 5,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100006",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1505.003"
+                                ],
+                                "tactic": [
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Web Shell"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T21:25:08.043+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                        "wazuh_rule_id": "100006",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100006: Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T21:25:08.043Z"
+                },
+                "id": "AwAAAZ28O3tLN8c6HQAAABhBWjI4TzM2dUFBQ1RiVW9POWFkS2pRQUEAAAAkZjE5ZGJjM2ItN2I0Yi00YWE5LWJjMDctMGNiODQ4ZjAwNGUwAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 40,
+            "request_id": "pddv1ChZybUk0a2Y3ZFFseXdHdnJMbF84RGdBIisKG1PfAN_FMyNj7ch3uw1EfFBxHhca7TOcML_PyBIM4WI1jK4GIWU2aMCV",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTc5NTkzLCJleHAiOjE3NzY5ODA0OTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AYQJbB-isYcior1e8YCxWWca9Qd-oBe0OoCFrfBtM9H5qNDE3fbrrYPgXvaTLDQsZFMRsTt3n7344H9whJ3EXIBkAfMoCuEfCKAHk8J_cWz5z7zNjq-pLAQvIUUEIvHPwBj-5r5I8NXCvCrz7Ki4JeIl__UZ4q_EJuDgIph9u_zdrggc",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 21:26:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:26:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Host_Reboot": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:26:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:26:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP6_SOAR_Processing_Time": {
+        "data": 3397
+    },
+    "SOP6_Time_to_Control": {
+        "data": 88932
+    },
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 662
+    },
+    "Time_to_Respond": {
+        "data": 85535
+    }
+},
+  "run4":{
+    "Extract_File_Path1": {
+        "data": "C:\\\\inetpub\\\\wwwroot"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Extended Copy Utility",
+                                    "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                    "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-8eba-69ea-8838-100000000000}",
+                                    "logonId": "0x103888",
+                                    "originalFileName": "XCOPY.EXE",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-8ed4-69ea-5801-000000005300}",
+                                    "parentProcessId": "10848",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-8ed4-69ea-5a01-000000005300}",
+                                    "processId": "10892",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 21:27:48.332"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "475965",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:27:48.332\r\nProcessGuid: {826a7360-8ed4-69ea-5a01-000000005300}\r\nProcessId: 10892\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-8eba-69ea-8838-100000000000}\r\nLogonId: 0x103888\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-8ed4-69ea-5801-000000005300}\r\nParentProcessId: 10848\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "3680",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T21:27:48.3351215Z",
+                                    "task": "1",
+                                    "threadID": "4576",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Extended Copy Utility",
+                                        "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                        "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-8eba-69ea-8838-100000000000}",
+                                        "logonId": "0x103888",
+                                        "originalFileName": "XCOPY.EXE",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-8ed4-69ea-5801-000000005300}",
+                                        "parentProcessId": "10848",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-8ed4-69ea-5a01-000000005300}",
+                                        "processId": "10892",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 21:27:48.332"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "475965",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:27:48.332\r\nProcessGuid: {826a7360-8ed4-69ea-5a01-000000005300}\r\nProcessId: 10892\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-8eba-69ea-8838-100000000000}\r\nLogonId: 0x103888\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-8ed4-69ea-5801-000000005300}\r\nParentProcessId: 10848\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "3680",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T21:27:48.3351215Z",
+                                        "task": "1",
+                                        "threadID": "4576",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776979671.33381309",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                                "firedtimes": 6,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100006",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1505.003"
+                                    ],
+                                    "tactic": [
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Web Shell"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T21:27:51.299+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                            "firedtimes": 6,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100006",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1505.003"
+                                ],
+                                "tactic": [
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Web Shell"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T21:27:51.299+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                        "wazuh_rule_id": "100006",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100006: Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T21:27:51.299Z"
+                },
+                "id": "AwAAAZ28PfkDoEpDNwAAABhBWjI4UGZfVkFBRFlTcUNyYzQ0UFJ3QUEAAAAkZjE5ZGJjM2QtZjkwMy00M2M1LWE0NjctMDhkMDEzNTEwM2I2AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 82,
+            "request_id": "pddv1ChZQY0p6UnpzdFRVV1ZkUnFHMDJ3T1VBIiwKHMlKj4YcP1PV35hL4IanpC-BIUHlCHYfxi36Y7MSDKfKeNkeq8T5pfLAYg",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTc5NzcyLCJleHAiOjE3NzY5ODA2NzIsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AIMyJlCGhQ3Oxg9fFCq3x-CmPCvNtXLERJzwXakz4WBJ3h1HuoULgzk-cRe7EZpKNiJcSKSD0f2A2ESUaDB-JiLXAW05WQEdyjBm8OeC8S87wyJ2o8zCaC9yue85BxgShjHZuHOxow_ckU9cl-qu8ZrQEqylA0EHwOg0BzmPxefeJ26r",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 21:29:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:29:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Host_Reboot": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:29:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:29:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP6_SOAR_Processing_Time": {
+        "data": 3300
+    },
+    "SOP6_Time_to_Control": {
+        "data": 107352
+    },
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 2964
+    },
+    "Time_to_Respond": {
+        "data": 104052
+    }
+},
+  "run5":{
+    "Extract_File_Path1": {
+        "data": "C:\\\\inetpub\\\\wwwroot"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Extended Copy Utility",
+                                    "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                    "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-90d1-69ea-f549-0e0000000000}",
+                                    "logonId": "0xe49f5",
+                                    "originalFileName": "XCOPY.EXE",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-90ec-69ea-5701-000000005600}",
+                                    "parentProcessId": "10976",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-90ed-69ea-5901-000000005600}",
+                                    "processId": "11020",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 21:36:45.004"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "478876",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:36:45.004\r\nProcessGuid: {826a7360-90ed-69ea-5901-000000005600}\r\nProcessId: 11020\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-90d1-69ea-f549-0e0000000000}\r\nLogonId: 0xE49F5\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-90ec-69ea-5701-000000005600}\r\nParentProcessId: 10976\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4100",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T21:36:45.0078998Z",
+                                    "task": "1",
+                                    "threadID": "4564",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Extended Copy Utility",
+                                        "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                        "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-90d1-69ea-f549-0e0000000000}",
+                                        "logonId": "0xe49f5",
+                                        "originalFileName": "XCOPY.EXE",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-90ec-69ea-5701-000000005600}",
+                                        "parentProcessId": "10976",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-90ed-69ea-5901-000000005600}",
+                                        "processId": "11020",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 21:36:45.004"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "478876",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:36:45.004\r\nProcessGuid: {826a7360-90ed-69ea-5901-000000005600}\r\nProcessId: 11020\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-90d1-69ea-f549-0e0000000000}\r\nLogonId: 0xE49F5\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-90ec-69ea-5701-000000005600}\r\nParentProcessId: 10976\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4100",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T21:36:45.0078998Z",
+                                        "task": "1",
+                                        "threadID": "4564",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776980221.40959375",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                                "firedtimes": 9,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100006",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1505.003"
+                                    ],
+                                    "tactic": [
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Web Shell"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T21:37:01.130+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                            "firedtimes": 9,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100006",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1505.003"
+                                ],
+                                "tactic": [
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Web Shell"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T21:37:01.130+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                        "wazuh_rule_id": "100006",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100006: Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T21:37:01.130Z"
+                },
+                "id": "AwAAAZ28RlzKeS6H6AAAABhBWjI4Umw1cUFBQjcwYkU1bzZJSFNnQUEAAAAkZjE5ZGJjNDYtNWNjYS00NWRlLWJlOTctM2UwOTg4YzhjYmYzAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 53,
+            "request_id": "pddv1ChZNX3Rnb1BRa1NUR29pSHVwaFcyMlN3IiwKHKYKhpU9d7nZajQu0r8eDM6dEOdVik7KV0haqXwSDH0XMaakCZisI0LCyQ",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTgwMzEzLCJleHAiOjE3NzY5ODEyMTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AfI2JowjPoAbFPei_e3pKUUHu3DWTeWkzQz-ejrfHgPuy9DVdTy2xN1FHzYZd0riAigTp-F19qOXcHheMk53305_AFIYKHnSUkCmw-b-oC63p2wWka5REKTfNoippKloxCMRc6iSg1pR8acgCUSSFbBQ3IWmV0h6u1lBVYSuNZGmn-aj",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 21:38:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:38:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Host_Reboot": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:38:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:38:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP6_SOAR_Processing_Time": {
+        "data": 3639
+    },
+    "SOP6_Time_to_Control": {
+        "data": 111520
+    },
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 16123
+    },
+    "Time_to_Respond": {
+        "data": 107881
+    }
+},
+  "run6":{
+    "Extract_File_Path1": {
+        "data": "C:\\\\inetpub\\\\wwwroot"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Extended Copy Utility",
+                                    "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                    "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-9189-69ea-1fc8-0f0000000000}",
+                                    "logonId": "0xfc81f",
+                                    "originalFileName": "XCOPY.EXE",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-92d1-69ea-8f01-000000005700}",
+                                    "parentProcessId": "4016",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-92d1-69ea-9101-000000005700}",
+                                    "processId": "8756",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 21:44:49.921"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "480015",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:44:49.921\r\nProcessGuid: {826a7360-92d1-69ea-9101-000000005700}\r\nProcessId: 8756\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-9189-69ea-1fc8-0f0000000000}\r\nLogonId: 0xFC81F\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-92d1-69ea-8f01-000000005700}\r\nParentProcessId: 4016\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "2616",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T21:44:49.9249537Z",
+                                    "task": "1",
+                                    "threadID": "4580",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Extended Copy Utility",
+                                        "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                        "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-9189-69ea-1fc8-0f0000000000}",
+                                        "logonId": "0xfc81f",
+                                        "originalFileName": "XCOPY.EXE",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-92d1-69ea-8f01-000000005700}",
+                                        "parentProcessId": "4016",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-92d1-69ea-9101-000000005700}",
+                                        "processId": "8756",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 21:44:49.921"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "480015",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:44:49.921\r\nProcessGuid: {826a7360-92d1-69ea-9101-000000005700}\r\nProcessId: 8756\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-9189-69ea-1fc8-0f0000000000}\r\nLogonId: 0xFC81F\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-92d1-69ea-8f01-000000005700}\r\nParentProcessId: 4016\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "2616",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T21:44:49.9249537Z",
+                                        "task": "1",
+                                        "threadID": "4580",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776980690.44513951",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                                "firedtimes": 10,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100006",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1505.003"
+                                    ],
+                                    "tactic": [
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Web Shell"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T21:44:50.572+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                            "firedtimes": 10,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100006",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1505.003"
+                                ],
+                                "tactic": [
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Web Shell"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T21:44:50.572+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                        "wazuh_rule_id": "100006",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100006: Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T21:44:50.572Z"
+                },
+                "id": "AwAAAZ28TYaMLsyygQAAABhBWjI4VFlzdUFBQmNwWGxJSjh2TmhBQUEAAAAkZjE5ZGJjNGQtODY4Yy00YzYwLWFlZmEtZDE3NTgyMTY2YjE5AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 166,
+            "request_id": "pddv1ChY4d0JuV2pYblFHQzBUWDFscXZXTEdnIisKG5DZMKYprv5Vh8l-OODJcDTTUoXJvcjFQ1aCARIMbmFzImvJuP799men",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTgwNzkyLCJleHAiOjE3NzY5ODE2OTIsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AQvi9uZqozXVLaFVEQsGa_uXQtwcYEjI3g6ejazzs48YCT5zQ0vDFy4mpqoSvPeCRI2uHq1XsVG2MHw6XSLKq3-oAFy36Zpvxv-8tNWQVLzbxCXyMuMYmhTfpGITLdt9FqNZ6jTr8WJtg3Spmp9iClsOSMR7VPKuvZABvkmgfpiYezsz",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 21:46:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:46:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Host_Reboot": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:46:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:46:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP6_SOAR_Processing_Time": {
+        "data": 3448
+    },
+    "SOP6_Time_to_Control": {
+        "data": 106091
+    },
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 648
+    },
+    "Time_to_Respond": {
+        "data": 102643
+    }
+},
+  "run7":{
+    "Extract_File_Path1": {
+        "data": "C:\\\\inetpub\\\\wwwroot"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Extended Copy Utility",
+                                    "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                    "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-9415-69ea-50db-0d0000000000}",
+                                    "logonId": "0xddb50",
+                                    "originalFileName": "XCOPY.EXE",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-9429-69ea-5201-000000005900}",
+                                    "parentProcessId": "6040",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-942a-69ea-5401-000000005900}",
+                                    "processId": "6456",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 21:50:34.025"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "481887",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:50:34.025\r\nProcessGuid: {826a7360-942a-69ea-5401-000000005900}\r\nProcessId: 6456\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-9415-69ea-50db-0d0000000000}\r\nLogonId: 0xDDB50\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-9429-69ea-5201-000000005900}\r\nParentProcessId: 6040\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "3724",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T21:50:34.0287346Z",
+                                    "task": "1",
+                                    "threadID": "4596",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Extended Copy Utility",
+                                        "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                        "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-9415-69ea-50db-0d0000000000}",
+                                        "logonId": "0xddb50",
+                                        "originalFileName": "XCOPY.EXE",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-9429-69ea-5201-000000005900}",
+                                        "parentProcessId": "6040",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-942a-69ea-5401-000000005900}",
+                                        "processId": "6456",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 21:50:34.025"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "481887",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:50:34.025\r\nProcessGuid: {826a7360-942a-69ea-5401-000000005900}\r\nProcessId: 6456\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-9415-69ea-50db-0d0000000000}\r\nLogonId: 0xDDB50\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-9429-69ea-5201-000000005900}\r\nParentProcessId: 6040\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "3724",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T21:50:34.0287346Z",
+                                        "task": "1",
+                                        "threadID": "4596",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776981060.49294921",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                                "firedtimes": 12,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100006",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1505.003"
+                                    ],
+                                    "tactic": [
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Web Shell"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T21:51:00.777+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                            "firedtimes": 12,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100006",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1505.003"
+                                ],
+                                "tactic": [
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Web Shell"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T21:51:00.777+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                        "wazuh_rule_id": "100006",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100006: Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T21:51:00.777Z"
+                },
+                "id": "AwAAAZ28Uyyph91DNwAAABhBWjI4VXpHeUFBRFlTcUNyYzlYMjJnQUEAAAAkZjE5ZGJjNTMtMmNhOS00ZDZkLWJhZTktZTJlZjE2ZDFjZmEzAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 52,
+            "request_id": "pddv1ChY4SXFacEpQSVNnV0tmWU9Zd2c2MVhRIisKG7ARdiydb7c7dw5Hv1hsex3smTb4sYDyWJxr2RIMC52YngtwD8PBwtdt",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTgxMTUzLCJleHAiOjE3NzY5ODIwNTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.ATjQ-Fm4k9tgKIrue7nBWCGrzZTwK9VUuNjr5Fl3CdiM902530pABJBi3Ojudaf5_wwCR-B6hKVLhmcFjSelePC-Ae6D9e4WWy_3H9MGZUVRX7-t7mLNqtEgegQl0S_2kEm1jHal8IHb5ggwqkKSaL6VpyoPP7MNsPwlMLzU-zYD_WVN",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 21:52:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:52:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Host_Reboot": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:52:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:52:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP6_SOAR_Processing_Time": {
+        "data": 3316
+    },
+    "SOP6_Time_to_Control": {
+        "data": 122875
+    },
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 26749
+    },
+    "Time_to_Respond": {
+        "data": 119559
+    }
+},
+  "run8":{
+    "Extract_File_Path1": {
+        "data": "C:\\\\inetpub\\\\wwwroot"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Extended Copy Utility",
+                                    "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                    "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-95b2-69ea-60bc-0b0000000000}",
+                                    "logonId": "0xbbc60",
+                                    "originalFileName": "XCOPY.EXE",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-95ca-69ea-0b01-000000005b00}",
+                                    "parentProcessId": "4440",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-95ca-69ea-0d01-000000005b00}",
+                                    "processId": "7884",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 21:57:30.346"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "483728",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:57:30.346\r\nProcessGuid: {826a7360-95ca-69ea-0d01-000000005b00}\r\nProcessId: 7884\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-95b2-69ea-60bc-0b0000000000}\r\nLogonId: 0xBBC60\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-95ca-69ea-0b01-000000005b00}\r\nParentProcessId: 4440\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4092",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T21:57:30.3495906Z",
+                                    "task": "1",
+                                    "threadID": "4612",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Extended Copy Utility",
+                                        "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                        "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-95b2-69ea-60bc-0b0000000000}",
+                                        "logonId": "0xbbc60",
+                                        "originalFileName": "XCOPY.EXE",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-95ca-69ea-0b01-000000005b00}",
+                                        "parentProcessId": "4440",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-95ca-69ea-0d01-000000005b00}",
+                                        "processId": "7884",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 21:57:30.346"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "483728",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 21:57:30.346\r\nProcessGuid: {826a7360-95ca-69ea-0d01-000000005b00}\r\nProcessId: 7884\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-95b2-69ea-60bc-0b0000000000}\r\nLogonId: 0xBBC60\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-95ca-69ea-0b01-000000005b00}\r\nParentProcessId: 4440\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4092",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T21:57:30.3495906Z",
+                                        "task": "1",
+                                        "threadID": "4612",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776981470.54443745",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                                "firedtimes": 14,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100006",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1505.003"
+                                    ],
+                                    "tactic": [
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Web Shell"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T21:57:50.390+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                            "firedtimes": 14,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100006",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1505.003"
+                                ],
+                                "tactic": [
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Web Shell"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T21:57:50.390+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                        "wazuh_rule_id": "100006",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100006: Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T21:57:50.390Z"
+                },
+                "id": "AwAAAZ28WWy2yTKH6AAAABhBWjI4V1hDcEFBQjcwYkU1bzk5WFRnQUEAAAAkZjE5ZGJjNTktNmNiNi00ZTRlLThjNGYtOGY0MGJhZWJkNTg5AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 45,
+            "request_id": "pddv1ChZFdVlMX0FwOVRpMlAtclhGZVhkcVFRIisKG2Hw3_OCwDJAVNVPAAdeHr4ZwrjLau4Zz8wKvhIMBOCk_JVdimtc1sPX",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTgxNTczLCJleHAiOjE3NzY5ODI0NzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AG1Llj8ihnQf9T9iVMTIZFIFwWn1VaQ_zysM9nEjg8wS_r7EPtZ1b9fkTSy0etv6G_Kbme6s32us6DAAetC_DF5iAbmvq_Wjk5fZj7WjmLC-5jI9wjfTcI6F8pabZrsU72r6l_CnLV-j8vfm9LP3YTGfS_xcCM7iwRkw0-wLWfKtYE5W",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 21:59:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:59:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Host_Reboot": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:59:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 21:59:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP6_SOAR_Processing_Time": {
+        "data": 3383
+    },
+    "SOP6_Time_to_Control": {
+        "data": 126362
+    },
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 20041
+    },
+    "Time_to_Respond": {
+        "data": 122979
+    }
+},
+  "run9":{
+    "Extract_File_Path1": {
+        "data": "C:\\\\inetpub\\\\wwwroot"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Extended Copy Utility",
+                                    "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                    "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-971d-69ea-c5eb-0b0000000000}",
+                                    "logonId": "0xbebc5",
+                                    "originalFileName": "XCOPY.EXE",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-9737-69ea-5401-000000005d00}",
+                                    "parentProcessId": "10328",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-9737-69ea-5601-000000005d00}",
+                                    "processId": "10380",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 22:03:35.196"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "485844",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 22:03:35.196\r\nProcessGuid: {826a7360-9737-69ea-5601-000000005d00}\r\nProcessId: 10380\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-971d-69ea-c5eb-0b0000000000}\r\nLogonId: 0xBEBC5\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-9737-69ea-5401-000000005d00}\r\nParentProcessId: 10328\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "3716",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T22:03:35.1988016Z",
+                                    "task": "1",
+                                    "threadID": "4644",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Extended Copy Utility",
+                                        "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                        "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-971d-69ea-c5eb-0b0000000000}",
+                                        "logonId": "0xbebc5",
+                                        "originalFileName": "XCOPY.EXE",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-9737-69ea-5401-000000005d00}",
+                                        "parentProcessId": "10328",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-9737-69ea-5601-000000005d00}",
+                                        "processId": "10380",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 22:03:35.196"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "485844",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 22:03:35.196\r\nProcessGuid: {826a7360-9737-69ea-5601-000000005d00}\r\nProcessId: 10380\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-971d-69ea-c5eb-0b0000000000}\r\nLogonId: 0xBEBC5\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-9737-69ea-5401-000000005d00}\r\nParentProcessId: 10328\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "3716",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T22:03:35.1988016Z",
+                                        "task": "1",
+                                        "threadID": "4644",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776981831.58246645",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                                "firedtimes": 2,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100006",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1505.003"
+                                    ],
+                                    "tactic": [
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Web Shell"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T22:03:51.451+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                            "firedtimes": 2,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100006",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1505.003"
+                                ],
+                                "tactic": [
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Web Shell"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T22:03:51.451+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                        "wazuh_rule_id": "100006",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100006: Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T22:03:51.451Z"
+                },
+                "id": "AwAAAZ28Xu8bWBgcMgAAABhBWjI4WHZQNkFBRFZ6N1BsMHBMbklRQUEAAAAkZjE5ZGJjNWUtZWYxYi00ZGQ5LWIwZTAtMTRkZjA5N2UyNzM0AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 56,
+            "request_id": "pddv1ChZMVkJDMlREdlFLT2ZGc1Zib2dEQjhnIi0KHRQNlE1KwZ5_S5v__XOciKSQQ3nzJH8UPywyqOPeEgwb4KHKpOkLSSJWsUE",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTgxOTM0LCJleHAiOjE3NzY5ODI4MzQsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.Ab0W0COzHCL0P97DQXOrGgMVYDdTi9bJeZNkIJKRv3iVD8gFHPgDD4GCklUOZDjxjWZUiPt1KaeG8fsb-JXNg0kZAbwLb8j7khnNaglB8hLkUehxtD9PF0LxlL4eU-vVEnx3ps37ZMaCA557GwWFJ-ti23qq5fNICNvNQEyl9264pvrt",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 22:05:34 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 22:05:36 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Host_Reboot": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 22:05:36 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 22:05:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP6_SOAR_Processing_Time": {
+        "data": 3305
+    },
+    "SOP6_Time_to_Control": {
+        "data": 122965
+    },
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 16253
+    },
+    "Time_to_Respond": {
+        "data": 119660
+    }
+},
+  "run10":{
+    "Extract_File_Path1": {
+        "data": "C:\\\\inetpub\\\\wwwroot"
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "company": "Microsoft Corporation",
+                                    "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                    "description": "Extended Copy Utility",
+                                    "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                    "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                    "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                    "integrityLevel": "High",
+                                    "logonGuid": "{826a7360-97d2-69ea-efda-0b0000000000}",
+                                    "logonId": "0xbdaef",
+                                    "originalFileName": "XCOPY.EXE",
+                                    "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                    "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                    "parentProcessGuid": "{826a7360-97ee-69ea-0201-000000005e00}",
+                                    "parentProcessId": "10300",
+                                    "parentUser": "ws01\\\\ws_administrator",
+                                    "processGuid": "{826a7360-97ee-69ea-0401-000000005e00}",
+                                    "processId": "10340",
+                                    "product": "Microsoft® Windows® Operating System",
+                                    "terminalSessionId": "2",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-23 22:06:38.326"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "1",
+                                    "eventRecordID": "486659",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 22:06:38.326\r\nProcessGuid: {826a7360-97ee-69ea-0401-000000005e00}\r\nProcessId: 10340\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-97d2-69ea-efda-0b0000000000}\r\nLogonId: 0xBDAEF\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-97ee-69ea-0201-000000005e00}\r\nParentProcessId: 10300\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "3704",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-23T22:06:38.3308826Z",
+                                    "task": "1",
+                                    "threadID": "4524",
+                                    "version": "5"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "commandLine": "xcopy  /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "company": "Microsoft Corporation",
+                                        "currentDirectory": "C:\\\\Users\\\\WS_ADM~1\\\\AppData\\\\Local\\\\Temp\\\\",
+                                        "description": "Extended Copy Utility",
+                                        "fileVersion": "10.0.26100.1 (WinBuild.160101.0800)",
+                                        "hashes": "SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828",
+                                        "image": "C:\\\\Windows\\\\System32\\\\xcopy.exe",
+                                        "integrityLevel": "High",
+                                        "logonGuid": "{826a7360-97d2-69ea-efda-0b0000000000}",
+                                        "logonId": "0xbdaef",
+                                        "originalFileName": "XCOPY.EXE",
+                                        "parentCommandLine": "\\\"cmd.exe\\\" /c xcopy /I /Y \\\"C:\\\\AtomicRedTeam\\\\atomics\\\\T1505.003\\\\src\\\" C:\\\\inetpub\\\\wwwroot",
+                                        "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+                                        "parentProcessGuid": "{826a7360-97ee-69ea-0201-000000005e00}",
+                                        "parentProcessId": "10300",
+                                        "parentUser": "ws01\\\\ws_administrator",
+                                        "processGuid": "{826a7360-97ee-69ea-0401-000000005e00}",
+                                        "processId": "10340",
+                                        "product": "Microsoft® Windows® Operating System",
+                                        "terminalSessionId": "2",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-23 22:06:38.326"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "1",
+                                        "eventRecordID": "486659",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-23 22:06:38.326\r\nProcessGuid: {826a7360-97ee-69ea-0401-000000005e00}\r\nProcessId: 10340\r\nImage: C:\\Windows\\System32\\xcopy.exe\r\nFileVersion: 10.0.26100.1 (WinBuild.160101.0800)\r\nDescription: Extended Copy Utility\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: XCOPY.EXE\r\nCommandLine: xcopy  /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nCurrentDirectory: C:\\Users\\WS_ADM~1\\AppData\\Local\\Temp\\\r\nUser: ws01\\ws_administrator\r\nLogonGuid: {826a7360-97d2-69ea-efda-0b0000000000}\r\nLogonId: 0xBDAEF\r\nTerminalSessionId: 2\r\nIntegrityLevel: High\r\nHashes: SHA256=96E01CDC713A4306ABB3B58AEF982D67A209DDDADC8CFF5C4C77A5595F712828\r\nParentProcessGuid: {826a7360-97ee-69ea-0201-000000005e00}\r\nParentProcessId: 10300\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c xcopy /I /Y \"C:\\AtomicRedTeam\\atomics\\T1505.003\\src\" C:\\inetpub\\wwwroot\r\nParentUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "3704",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-23T22:06:38.3308826Z",
+                                        "task": "1",
+                                        "threadID": "4524",
+                                        "version": "5"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1776981998.61966742",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                                "firedtimes": 3,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100006",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1505.003"
+                                    ],
+                                    "tactic": [
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Web Shell"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-23T22:06:38.731+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                            "firedtimes": 3,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100006",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1505.003"
+                                ],
+                                "tactic": [
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Web Shell"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-23T22:06:38.731+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                        "wazuh_rule_id": "100006",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100006: Atomic Red Team T1505.003 #1: Web shell deployment - xcopy to C:\\inetpub\\wwwroot",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-23T22:06:38.731Z"
+                },
+                "id": "AwAAAZ28YXyLR5o6HQAAABhBWjI4WVlFSEFBQ1RiVW9POVNaYVlBQUEAAAAkZjE5ZGJjNjEtN2M4Yi00MzlhLWIxYzEtNmRkNmVkZjBlYjMyAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 51,
+            "request_id": "pddv1ChZxbF9WQkd4c1J3S2dqSy1DdlU3eXFBIi0KHbOelPlyDvjmqDyIms7I9HQbZhP0l4eVIL_PCrO3EgxCj8bqnjRpUpzg4wY",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc2OTgyMTEzLCJleHAiOjE3NzY5ODMwMTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AJI2fd48v2Vofb4Qy6jDcf6bTRNMwRqErEBNsGLzH8z2xe3WwoEZUBHl3PMIXvCcxzAiMGehUtOpnubouwb7OIh1AIfIkxVyJJNWi2JPyo1ZmEOiNY_kBmHOmQWcMu_fp3i6LFZvWXL8VM_wXDsAbd7aEZxQu-rUcL52RB-_jE9hWeoq",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Thu, 23 Apr 2026 22:08:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 22:08:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Host_Reboot": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 22:08:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_Process_Termination2": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Thu, 23 Apr 2026 22:08:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP6_SOAR_Processing_Time": {
+        "data": 3274
+    },
+    "SOP6_Time_to_Control": {
+        "data": 117989
+    },
+    "SOP7": {},
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 401
+    },
+    "Time_to_Respond": {
+        "data": 114715
+    }
+}
+]
