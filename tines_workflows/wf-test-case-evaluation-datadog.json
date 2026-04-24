@@ -1,0 +1,701 @@
+{
+  "schema_version": 28,
+  "standard_lib_version": 90,
+  "action_runtime_version": 75,
+  "name": "Test Case Evaluation Datadog",
+  "description": null,
+  "guid": "7dbd4af7931cfcacae75912b902bdad3",
+  "slug": "test_case_evaluation_datadog",
+  "agents": [
+    {
+      "type": "Agents::HTTPRequestAgent",
+      "name": "Get Datadog Execution Data",
+      "disabled": false,
+      "description": null,
+      "guid": "6be123aad87428391f9e4488aad6dd24",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "url": "https://api.datadoghq.eu/api/v2/workflows/3b93edbe-70d6-451a-ace1-34b39cfe8614/instances/<<explode_executions.execution>>",
+        "content_type": "application_json",
+        "method": "get",
+        "headers": {
+          "DD-API-KEY": "<<CREDENTIAL.datadog_api_key>>",
+          "DD-APPLICATION-KEY": "<<CREDENTIAL.datadog_application_key>>",
+          "Content-Type": "application/json"
+        },
+        "timeout": "500"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP1 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "dbdb4cd4388b4da8760f6db4393578ce",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "a09704a4-9deb-4947-8264-533ac82d6429",
+          "b15c8eb1-6323-4e24-a91a-5bdbf152207c",
+          "a518e26d-fab8-44f8-b842-1a08b0596fc2",
+          "93518f71-c33d-4f40-88bf-fdc93edcc272",
+          "126b4e41-0b7f-4bc0-9338-4c7b09077d84",
+          "bf6948cf-46d0-4e60-921c-3e5c30da0e81",
+          "1462940e-818e-4634-8a11-3fec54512129",
+          "85f4edc4-7a62-429e-8cd1-c491f0ae8fd0",
+          "90361bd8-090c-4c45-8cd2-4ac42e70e1b1",
+          "b9fac251-73d7-4c42-be35-3fcfa80dc16c"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "cfdd4b0c66627fdb4dd08c503eeb149b",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": "=DEFAULT(\n  sop1_executions,\n  sop2_executions,\n  sop3_executions,\n  sop4_executions,\n  sop5_executions,\n  sop6_executions,\n  sop7_executions,\n  sop8_executions,\n  sop9_executions\n)"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Explode Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "710f7d200554e2527024757b71b7ff7a",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "explode",
+        "path": "=executions",
+        "to": "execution",
+        "limit": "500"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Throttle Datadog Requests",
+      "disabled": false,
+      "description": null,
+      "guid": "d6baff5c59b764edb4006ec501285985",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:7dbd4af7931cfcacae75912b902bdad3",
+      "options": {
+        "mode": "throttle",
+        "interval": "minute",
+        "capacity": 20,
+        "events_per_run": 1
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Implode Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "c95f79b8b5bab66d7194f3d22f91dc1c",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:7dbd4af7931cfcacae75912b902bdad3",
+      "options": {
+        "mode": "implode",
+        "item_path": "=results_datadog_per_execution",
+        "guid_path": "=explode_executions.guid",
+        "size_path": "=explode_executions.size",
+        "customize_output": "=REVERSE(SORT(OUTPUT, \"Execution Time\"))"
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Results Datadog per Execution",
+      "disabled": false,
+      "description": null,
+      "guid": "a880c3bba4f06487955c2692660538b3",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:7dbd4af7931cfcacae75912b902bdad3",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": {
+          "<<APPEND(\"run\",explode_executions.index+1)>>": {
+            "Execution Time": "=DATE(get_datadog_execution_data.body.data.attributes.outputs.output['Execution Time'],\"%Y-%m-%d %H:%M:%S.%L\")",
+            "Time to Detect": "=get_datadog_execution_data.body.data.attributes.outputs.output['Time to Detect']",
+            "Time to Respond": "=get_datadog_execution_data.body.data.attributes.outputs.output['Time to Respond']",
+            "Time to Control": "=get_datadog_execution_data.body.data.attributes.outputs.output['Time to Control']",
+            "SOAR Processing Time": "=get_datadog_execution_data.body.data.attributes.outputs.output['SOAR Processing Time']",
+            "Containment Success": "=get_datadog_execution_data.body.data.attributes.outputs.output['Containment Success']",
+            "Event Consumption": "=SIZE(get_datadog_execution_data.body.data.attributes.stepStateAssociations)-1",
+            "Cost per Execution": "=(14/100)*1"
+          }
+        }
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "Scorecard per SOP",
+      "disabled": false,
+      "description": null,
+      "guid": "089edfade98329b3e0b8da581242a7fd",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": {
+          "test_case": "=SWITCH(\n  TRUE,\n  IS_PRESENT(sop1_executions),\n  \"SOP1\",\n  IS_PRESENT(sop2_executions),\n  \"SOP2\",\n  IS_PRESENT(sop3_executions),\n  \"SOP3\",\n  IS_PRESENT(sop4_executions),\n  \"SOP4\",\n  IS_PRESENT(sop5_executions),\n  \"SOP5\",\n  IS_PRESENT(sop6_executions),\n  \"SOP6\",\n  IS_PRESENT(sop7_executions),\n  \"SOP7\",\n  IS_PRESENT(sop8_executions),\n  \"SOP8\",\n  \"SOP9\"\n)",
+          "mttd": "=AVERAGE(MAP(LOCAL.runs,\"['Time to Detect']\"))",
+          "mttr": "=AVERAGE(MAP(LOCAL.runs,\"['Time to Respond']\"))",
+          "mttc": "=AVERAGE(MAP(LOCAL.runs,\"['Time to Control']\"))",
+          "mspt": "=AVERAGE(MAP(LOCAL.runs,\"['SOAR Processing Time']\"))",
+          "csr": "=ROUND(AVERAGE(MAP(LOCAL.runs,\"['Containment Success']\"))*100,2)",
+          "mec": "=AVERAGE(MAP(LOCAL.runs,\"['Event Consumption']\"))",
+          "mcpe": "=AVERAGE(MAP(LOCAL.runs,\"['Cost per Execution']\"))"
+        },
+        "local": {
+          "runs": "=FLATTEN(MAP_LAMBDA(implode_executions, LAMBDA(execution, VALUES(execution))))"
+        }
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP3 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "5001cfc670063a5dcf6add5c171217ae",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "390ed03a-7625-4492-b13c-d0e055d32dc5",
+          "f2f0b493-42e1-482d-8f5b-0ab9f805d106",
+          "24f2b438-b9b5-4d1b-89ee-407d87286d4a",
+          "6f269a40-0785-456f-86e2-09a359f547d2",
+          "5acbf720-f81b-4d87-834b-df08c3da999d",
+          "cf8c9d20-b6ce-41b7-a9e9-de1869e6841f",
+          "bcae7708-ef15-4a23-af05-fa275c87b3ff",
+          "6f6a1502-1445-4ca5-b369-5015bba446f0",
+          "e9057704-f6e2-41c6-832f-a53cc64ee67b",
+          "4ace14c9-9881-4f7e-9292-1299d98b06ab"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP4 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "345243f352822ae2edac308a55cedd47",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "cb9e0533-af27-4b92-9946-da50d12533c5",
+          "65d6b4c5-b4f8-4dfe-9f9d-92a3b3e2954c",
+          "c2abdd81-8cf2-4eec-8dd4-61e4c0b049e3",
+          "0569c338-1298-440d-ba0a-aaa340f941dc",
+          "1a6b1cbb-5a47-4774-b4fd-8192ba4261f4",
+          "3063ec62-cbb5-450b-9d45-634a996e2926",
+          "69eee5c7-c679-4c9d-87bf-579de78a8fe4",
+          "1163bdb5-65fc-449a-8662-2089980cde1f",
+          "beb45bec-3eb0-4bba-8633-556bd5ea4dde",
+          "5b908bcf-426f-4000-a5f7-50a662687c6b"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP2 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "b0ab7a555a2908cefa632bbe7bf0554a",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "9c259727-685a-46c7-bd40-a132f32ee355",
+          "d24a4e2e-8059-463b-ad8d-5021744d16b1",
+          "f39a6ec4-fc67-4cf3-9d23-40d180538c5b",
+          "f1a39f77-367e-4e5c-99cf-e3fa20a1efb6",
+          "6069db15-c4a3-48c0-8090-00a1eb0601f9",
+          "3dbc66b6-da2d-4566-a08a-6b6e30ba80b6",
+          "918debb5-36bf-4470-9473-0de9c9d4b3e8",
+          "0de6ef66-ddba-4e6a-9c77-5ff6dd0888aa",
+          "b5a415d6-6b13-4f97-b960-6bc2f48c27f0",
+          "4e4ae40d-e122-4f55-b2f7-78621dfdb06b"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP5 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "f5ef240d264c95264f3fa3dfb2568782",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "2cd4ea4f-287d-4d3e-acff-127dec7c5a69",
+          "6bd85269-6442-4584-9214-ef2ac7203306",
+          "c0d7ac2c-d0d7-44ec-9d14-fcf41a94ea5c",
+          "a389f5a5-fdf9-4537-b396-c35687d4dbe7",
+          "b1e9b110-f765-44db-8b49-e489c106b665",
+          "30f27afa-3769-4318-96fa-b597e71207c9",
+          "0a54d858-a685-4e83-878a-54db82b4f199",
+          "02e4a8a2-7727-4d9a-a7af-e1a6660d31ed",
+          "98e893d5-c685-4814-8b71-a21f20de10aa",
+          "f615208e-7a1b-4081-bbe8-b36b3832f17e"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP6 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "a46433b02869fd777fbd59fbb35a6bfd",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "546a72a8-a4da-4904-9f23-dcebd20b475b",
+          "248f0444-008b-48fc-ab34-6e692fa2b7f3",
+          "6576eddd-7112-4d77-8327-d1709ee3e55e",
+          "0528c86e-8cd9-46e8-98f9-50c16ee74166",
+          "8369c35a-d089-427a-b2fc-ffee22da15af",
+          "0ef67cc4-0f94-468c-affc-83cb56083319",
+          "3bbed236-882c-4aad-b124-a0805332ec83",
+          "8db88e38-3419-427c-b22e-f5c3ff524b52",
+          "f89b5616-2a44-40a5-a37e-91fb0a614bb1",
+          "9ad7e939-08b9-4476-af47-add5a2e87b60"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP7 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "02877d38f5539461939efb97ace0d2b5",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "84205037-7f50-4e4e-86c0-df006f5a033f",
+          "d99b9485-a988-4b71-bbf5-210d685d4474",
+          "ec549ed3-af20-466c-bf49-31f40847297b",
+          "86e48588-3783-49af-821d-ab9f029e1d9f",
+          "a02b4da9-c7de-4671-bc28-ff5baff7dd77",
+          "98c4e7dd-d09a-4c98-a59f-b7d41d9df091",
+          "70eb14a0-571c-4386-bfbe-680b70a6c9f2",
+          "6a5614ba-c7b2-42f4-8242-8bf6e78dfec2",
+          "e70860c5-6cc9-4856-adb8-b99372af17e4",
+          "09a03c58-9cc7-4e25-8e31-03e98e9fa9a9"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP8 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "cfb6352e87fc90ee9a975bfa3516cc93",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "c9c89fac-e863-4dd8-abfb-35c084d75d81",
+          "20602294-0044-477a-afb5-ac7cc9667708",
+          "904eb815-44f6-49c6-b854-e15696095c32",
+          "bebc0be3-5ccd-4e00-82fc-ead331ba03b7",
+          "4076bda5-514d-4791-8c12-e73edc197e86",
+          "c5399a87-716e-41a9-98f3-cac044d8ca29",
+          "7806e3d3-6603-4f21-a657-3ec795ee834b",
+          "0909ad8f-dd2a-4db3-92df-ec817a14732c",
+          "b486196b-dc6d-4516-93bf-80bb7324f74e",
+          "5d8a86e1-2375-40ce-b772-644ad5ef2c1c"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    },
+    {
+      "type": "Agents::EventTransformationAgent",
+      "name": "SOP9 Executions",
+      "disabled": false,
+      "description": null,
+      "guid": "61cfa396befb4ecd429e4697e00a6775",
+      "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:236261b69a0ad4d1e7faf50a60261900",
+      "options": {
+        "mode": "message_only",
+        "loop": false,
+        "payload": [
+          "7cd2034a-5c50-4f87-9951-84be7b74a257",
+          "21568365-1e58-4fe9-a041-2667fe0b99ab",
+          "ecab4c83-d40a-401a-8143-56127b8a5c3b",
+          "2c6a54c9-19c5-4164-b831-20726697c244",
+          "a8e487f5-5eb0-4945-9ff1-b1842da23859",
+          "a1cb32cb-f2cd-4269-b6d6-bce40e9d2267",
+          "7d1da30f-1755-4d88-a112-3881e9975f7d",
+          "9701c7ba-c46b-4f1b-b94c-5f7161dec1b9",
+          "92da4b11-676e-4f76-bada-741942faae55",
+          "4f730740-747b-4add-a67e-13c1e1e37f86"
+        ]
+      },
+      "reporting": {
+        "time_saved_value": 0,
+        "time_saved_unit": "minutes"
+      },
+      "monitoring": {
+        "monitor_all_events": false,
+        "monitor_failures": false,
+        "monitor_no_events_emitted": null
+      },
+      "template": {
+        "created_from_template_guid": null,
+        "created_from_template_version": null,
+        "template_tags": []
+      },
+      "width": null,
+      "schedule": null
+    }
+  ],
+  "diagram_notes": [],
+  "links": [
+    {
+      "source": 0,
+      "receiver": 6
+    },
+    {
+      "source": 1,
+      "receiver": 2
+    },
+    {
+      "source": 2,
+      "receiver": 3
+    },
+    {
+      "source": 3,
+      "receiver": 4
+    },
+    {
+      "source": 4,
+      "receiver": 0
+    },
+    {
+      "source": 5,
+      "receiver": 7
+    },
+    {
+      "source": 6,
+      "receiver": 5
+    },
+    {
+      "source": 8,
+      "receiver": 2
+    },
+    {
+      "source": 9,
+      "receiver": 2
+    },
+    {
+      "source": 10,
+      "receiver": 2
+    },
+    {
+      "source": 11,
+      "receiver": 2
+    },
+    {
+      "source": 12,
+      "receiver": 2
+    },
+    {
+      "source": 13,
+      "receiver": 2
+    },
+    {
+      "source": 14,
+      "receiver": 2
+    },
+    {
+      "source": 15,
+      "receiver": 2
+    }
+  ],
+  "diagram_layout": "{\"02877d38f5539461939efb97ace0d2b5\":[870,105],\"089edfade98329b3e0b8da581242a7fd\":[480,585],\"345243f352822ae2edac308a55cedd47\":[285,105],\"5001cfc670063a5dcf6add5c171217ae\":[105,105],\"61cfa396befb4ecd429e4697e00a6775\":[1230,105],\"6be123aad87428391f9e4488aad6dd24\":[480,390],\"710f7d200554e2527024757b71b7ff7a\":[480,255],\"a46433b02869fd777fbd59fbb35a6bfd\":[690,105],\"a880c3bba4f06487955c2692660538b3\":[480,450],\"b0ab7a555a2908cefa632bbe7bf0554a\":[-75,105],\"c95f79b8b5bab66d7194f3d22f91dc1c\":[480,525],\"cfb6352e87fc90ee9a975bfa3516cc93\":[1050,105],\"cfdd4b0c66627fdb4dd08c503eeb149b\":[480,180],\"d6baff5c59b764edb4006ec501285985\":[480,315],\"dbdb4cd4388b4da8760f6db4393578ce\":[-240,105],\"f5ef240d264c95264f3fa3dfb2568782\":[480,105]}",
+  "story_library_metadata": {},
+  "monitor_failures": false,
+  "synchronous_webhooks_enabled": false,
+  "integrations": [],
+  "sections": [],
+  "parent_only_send_to_story": false,
+  "send_to_story_timeout_enabled": false,
+  "send_to_story_timeout_duration_seconds": null,
+  "keep_events_for": 86400,
+  "reporting_status": true,
+  "send_to_story_enabled": false,
+  "entry_agent_guid": null,
+  "exit_agent_guids": [],
+  "api_entry_action_guids": [],
+  "api_exit_action_guids": [],
+  "send_to_story_access": null,
+  "send_to_story_access_source": 0,
+  "send_to_story_skill_use_requires_confirmation": true,
+  "pages": [],
+  "tags": [],
+  "time_saved_unit": "minutes",
+  "time_saved_value": 0,
+  "origin_story_identifier": "cloud:0224858beecd9378f9a79657235a144b:7dbd4af7931cfcacae75912b902bdad3",
+  "recipients": [],
+  "integration_product": null,
+  "integration_vendor": null,
+  "llm_product_instructions": "",
+  "start_reference": null,
+  "send_to_stories": [],
+  "exported_at": "2026-04-24T21:12:52Z",
+  "icon": ":fishing_pole_and_fish:"
+}
