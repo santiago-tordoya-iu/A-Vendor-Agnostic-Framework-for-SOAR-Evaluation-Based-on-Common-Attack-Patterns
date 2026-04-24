@@ -1,0 +1,2422 @@
+[
+  "run1":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "creationUtcTime": "2026-04-24 19:09:27.782",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-bfe7-69eb-c302-000000006200}",
+                                    "processId": "5728",
+                                    "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 19:09:27.782"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "11",
+                                    "eventRecordID": "491808",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:09:27.782\r\nProcessGuid: {826a7360-bfe7-69eb-c302-000000006200}\r\nProcessId: 5728\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:09:27.782\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T19:09:27.7849763Z",
+                                    "task": "11",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "creationUtcTime": "2026-04-24 19:09:27.782",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-bfe7-69eb-c302-000000006200}",
+                                        "processId": "5728",
+                                        "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 19:09:27.782"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "11",
+                                        "eventRecordID": "491808",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:09:27.782\r\nProcessGuid: {826a7360-bfe7-69eb-c302-000000006200}\r\nProcessId: 5728\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:09:27.782\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T19:09:27.7849763Z",
+                                        "task": "11",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777057767.8406171",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                                "firedtimes": 1,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100008",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1547.001"
+                                    ],
+                                    "tactic": [
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Registry Run Keys / Startup Folder"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T19:09:27.849+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                            "firedtimes": 1,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100008",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1547.001"
+                                ],
+                                "tactic": [
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Registry Run Keys / Startup Folder"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T19:09:27.849+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                        "wazuh_rule_id": "100008",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100008: Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T19:09:27.849Z"
+                },
+                "id": "AwAAAZ3A5aGpV1iH6AAAABhBWjNBNWFLU0FBQUxzSG1fTUV0aTR3QUEAAAAkZjE5ZGMwZTUtYTFhOS00MTFjLTk2YzItNjI4YjUxMmMzN2RiAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 61,
+            "request_id": "pddv1ChZFNHVVaWVDMlRNNnRQWXdNbEdLWVV3Ii0KHQiyMtYS30BY8a9YWioMzTFGrGbjWSOhcEQb124bEgxjGlt4eOvGdUmS1Ow",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU3ODMyLCJleHAiOjE3NzcwNTg3MzIsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.Ac4h8fU-vghGgddO_5sqkfqU-cEtAtnpew_pDbnQK2OZMi2gxAxvV8reu72WFQ67a9qeKqp_waSUYDDl-FfME7iWAOVTKA_Hva5aHiS1cXU_2oYK_0fRaewR-X6ofFq2B7kR_l-Gi6TNjCFm0js6b74vxXALJX-gr3gH3Fek803d_tji",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 19:10:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction3": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 19:10:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP8_SOAR_Processing_Time": {
+        "data": 2212
+    },
+    "SOP8_Time_to_Control": {
+        "data": 66707
+    },
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 65
+    },
+    "Time_to_Respond": {
+        "data": 64495
+    }
+},
+  "run2":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "creationUtcTime": "2026-04-24 19:11:40.641",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-c06c-69eb-ce02-000000006200}",
+                                    "processId": "9204",
+                                    "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 19:11:40.641"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "11",
+                                    "eventRecordID": "491837",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:11:40.641\r\nProcessGuid: {826a7360-c06c-69eb-ce02-000000006200}\r\nProcessId: 9204\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:11:40.641\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T19:11:40.6445364Z",
+                                    "task": "11",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "creationUtcTime": "2026-04-24 19:11:40.641",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-c06c-69eb-ce02-000000006200}",
+                                        "processId": "9204",
+                                        "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 19:11:40.641"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "11",
+                                        "eventRecordID": "491837",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:11:40.641\r\nProcessGuid: {826a7360-c06c-69eb-ce02-000000006200}\r\nProcessId: 9204\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:11:40.641\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T19:11:40.6445364Z",
+                                        "task": "11",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777057900.8543985",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                                "firedtimes": 2,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100008",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1547.001"
+                                    ],
+                                    "tactic": [
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Registry Run Keys / Startup Folder"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T19:11:40.689+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                            "firedtimes": 2,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100008",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1547.001"
+                                ],
+                                "tactic": [
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Registry Run Keys / Startup Folder"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T19:11:40.689+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                        "wazuh_rule_id": "100008",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100008: Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T19:11:40.689Z"
+                },
+                "id": "AwAAAZ3A56iRKuZpOAAAABhBWjNBNTZxNEFBQ2cxN1NKNVFMSkt3QUEAAAAkZjE5ZGMwZTctYTg5MS00MWI5LTlkYWItMDdkYmQ5OGZjMzNhAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 51,
+            "request_id": "pddv1ChZaSll4alRneVF6V3RHNHdaVnhqOWF3IisKG60ILvMN3P-bMarjf_97OvZAjpzX1FLu4M617xIMff-Z9iPbCglMqBgD",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU4MDEzLCJleHAiOjE3NzcwNTg5MTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AVAw-dVdxGcgQWRJH7bQPMWfQqvgacrR9_2MeENBS3Ei4eM1rsJ5Icqvzy28-13mHMGEJ9mMsPrI1sDGVrqQS5cVAUXbt4H4Gy6dHXzI-MOS9wyLB0wtU7X_2noIy3qDKL20Ll2ZojlRljsbKfLaNLuzIGoTGT6zN3pN4ZI2fKLiqkkG",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 19:13:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction3": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 19:13:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP8_SOAR_Processing_Time": {
+        "data": 2066
+    },
+    "SOP8_Time_to_Control": {
+        "data": 114463
+    },
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 45
+    },
+    "Time_to_Respond": {
+        "data": 112397
+    }
+},
+  "run3":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "creationUtcTime": "2026-04-24 19:18:35.597",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-c20b-69eb-e602-000000006200}",
+                                    "processId": "7076",
+                                    "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 19:18:35.599"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "11",
+                                    "eventRecordID": "491900",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:18:35.599\r\nProcessGuid: {826a7360-c20b-69eb-e602-000000006200}\r\nProcessId: 7076\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:18:35.597\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T19:18:35.6001632Z",
+                                    "task": "11",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "creationUtcTime": "2026-04-24 19:18:35.597",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-c20b-69eb-e602-000000006200}",
+                                        "processId": "7076",
+                                        "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 19:18:35.599"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "11",
+                                        "eventRecordID": "491900",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:18:35.599\r\nProcessGuid: {826a7360-c20b-69eb-e602-000000006200}\r\nProcessId: 7076\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:18:35.597\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T19:18:35.6001632Z",
+                                        "task": "11",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777058315.8911725",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                                "firedtimes": 3,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100008",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1547.001"
+                                    ],
+                                    "tactic": [
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Registry Run Keys / Startup Folder"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T19:18:35.681+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                            "firedtimes": 3,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100008",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1547.001"
+                                ],
+                                "tactic": [
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Registry Run Keys / Startup Folder"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T19:18:35.681+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                        "wazuh_rule_id": "100008",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100008: Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T19:18:35.681Z"
+                },
+                "id": "AwAAAZ3A7f2hCnUk4QAAABhBWjNBN2dDT0FBQll5bDhhMHJKZmF3QUEAAAAkZjE5ZGMwZWQtZmRhMS00ZTMwLWE3MjEtMmI1N2M2MTEyNzRiAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 53,
+            "request_id": "pddv1ChY0SFhUMk96SFMxMjBDRU5PNExsc2xRIi0KHWyLrWBvMdsGxT1YPKYs-CisWsYsbJLEdIQNJB2tEgwaxXDK0xQX4waS24o",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU4NDMzLCJleHAiOjE3NzcwNTkzMzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AWBwirM7RRB-0kk7yGY7UQtU7xbSiKg7DC_o7btTL7hC3Vlgf1lxC2oSwAENrhpCSL4vdJxvk6DYwnBxIH8827zMATc9SUGdoyQEgA5kI2ZirD1KtDf8iPzowtV_Ub5f-3rLN4ozZbLAZslIDUloTLjRI-6IEviqWJgzxbuocU9BSM_p",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 19:20:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction3": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 19:20:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP8_SOAR_Processing_Time": {
+        "data": 1945
+    },
+    "SOP8_Time_to_Control": {
+        "data": 119313
+    },
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 81
+    },
+    "Time_to_Respond": {
+        "data": 117368
+    }
+},
+  "run4":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "creationUtcTime": "2026-04-24 19:21:46.597",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-c2ca-69eb-f602-000000006200}",
+                                    "processId": "9076",
+                                    "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 19:21:46.597"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "11",
+                                    "eventRecordID": "491935",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:21:46.597\r\nProcessGuid: {826a7360-c2ca-69eb-f602-000000006200}\r\nProcessId: 9076\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:21:46.597\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T19:21:46.5991490Z",
+                                    "task": "11",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "creationUtcTime": "2026-04-24 19:21:46.597",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-c2ca-69eb-f602-000000006200}",
+                                        "processId": "9076",
+                                        "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 19:21:46.597"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "11",
+                                        "eventRecordID": "491935",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:21:46.597\r\nProcessGuid: {826a7360-c2ca-69eb-f602-000000006200}\r\nProcessId: 9076\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:21:46.597\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T19:21:46.5991490Z",
+                                        "task": "11",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777058506.9103306",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                                "firedtimes": 4,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100008",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1547.001"
+                                    ],
+                                    "tactic": [
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Registry Run Keys / Startup Folder"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T19:21:46.632+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                            "firedtimes": 4,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100008",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1547.001"
+                                ],
+                                "tactic": [
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Registry Run Keys / Startup Folder"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T19:21:46.632+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                        "wazuh_rule_id": "100008",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100008: Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T19:21:46.632Z"
+                },
+                "id": "AwAAAZ3A8OeIbKiVWQAAABhBWjNBOE9zekFBQjJ5WEp0WllZX19BQUEAAAAkZjE5ZGMwZjAtZTc4OC00YjI3LTkxMzEtZTM1ZTM3NDI1N2EyAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 58,
+            "request_id": "pddv1ChZqQXJmWkpJWlRicXo3ZTR0NF9sSnpRIi0KHRHat6tEZyXoYTlUZPuu694Cai02EiKYh1y_FFhnEgz93e5PgcqpQfiScrs",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU4NjEyLCJleHAiOjE3NzcwNTk1MTIsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AWMIeiOV9a5IHmXFCRpDL43BMMv3UY__Dl1Nre3ynVjY3mZYDpD_7SREZ_wXRZBX3KjvSoiJHbCfoo1gbN0jydaAAIdj7oCicHSXQWOnPMlhQ2zRBiFGwGlldTmPTgIdmS0SyyP_uCb3YvrMpYfMvcU0BnoT3ecaYYNVvqhaDzGQPKvE",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 19:23:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction3": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 19:23:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP8_SOAR_Processing_Time": {
+        "data": 2058
+    },
+    "SOP8_Time_to_Control": {
+        "data": 108004
+    },
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 33
+    },
+    "Time_to_Respond": {
+        "data": 105946
+    }
+},
+  "run5":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "creationUtcTime": "2026-04-24 19:25:20.069",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-c39f-69eb-0203-000000006200}",
+                                    "processId": "2816",
+                                    "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 19:25:20.069"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "11",
+                                    "eventRecordID": "491966",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:25:20.069\r\nProcessGuid: {826a7360-c39f-69eb-0203-000000006200}\r\nProcessId: 2816\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:25:20.069\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T19:25:20.0727011Z",
+                                    "task": "11",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "creationUtcTime": "2026-04-24 19:25:20.069",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-c39f-69eb-0203-000000006200}",
+                                        "processId": "2816",
+                                        "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 19:25:20.069"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "11",
+                                        "eventRecordID": "491966",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:25:20.069\r\nProcessGuid: {826a7360-c39f-69eb-0203-000000006200}\r\nProcessId: 2816\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:25:20.069\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T19:25:20.0727011Z",
+                                        "task": "11",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777058720.9286154",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                                "firedtimes": 5,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100008",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1547.001"
+                                    ],
+                                    "tactic": [
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Registry Run Keys / Startup Folder"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T19:25:20.167+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                            "firedtimes": 5,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100008",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1547.001"
+                                ],
+                                "tactic": [
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Registry Run Keys / Startup Folder"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T19:25:20.167+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                        "wazuh_rule_id": "100008",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100008: Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T19:25:20.167Z"
+                },
+                "id": "AwAAAZ3A9CmnzLclWAAAABhBWjNBOUN2NkFBRGh3UzFhaFBUczl3QUEAAAAkZjE5ZGMwZjQtMjlhNy00MmRiLTg4NjEtODRhYjk0Y2YwNzczAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 80,
+            "request_id": "pddv1ChZXMjZDUU12UVFPZVRuR29JTjZTYmtnIiwKHLuFet75_bYt81cWA602ajz977qfYZEQ3gkn-rgSDLmpFJ_Z7lGs24Z-Og",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU4NzkzLCJleHAiOjE3NzcwNTk2OTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AWTo39Prc-JltupdHeRZSVwrq312P8IgcF_-tRZiSIvv--xrPMH-WNn3X5aNW_4Uv_0OA6hK_9Vf7X59XoyxDFwIAYtJzL-YIIrMboP1Of1EmEVKgOWPGV0YzVO9jY1CX7Buer9kR0_QqxbyMwC7jqEYO7gGyNKV4GtvVBnAWVXerULT",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 19:26:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction3": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 19:26:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP8_SOAR_Processing_Time": {
+        "data": 2061
+    },
+    "SOP8_Time_to_Control": {
+        "data": 74785
+    },
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 95
+    },
+    "Time_to_Respond": {
+        "data": 72724
+    }
+},
+  "run6":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "creationUtcTime": "2026-04-24 19:27:22.923",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-c41a-69eb-0d03-000000006200}",
+                                    "processId": "836",
+                                    "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 19:27:22.923"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "11",
+                                    "eventRecordID": "491994",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:27:22.923\r\nProcessGuid: {826a7360-c41a-69eb-0d03-000000006200}\r\nProcessId: 836\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:27:22.923\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T19:27:22.9258098Z",
+                                    "task": "11",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "creationUtcTime": "2026-04-24 19:27:22.923",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-c41a-69eb-0d03-000000006200}",
+                                        "processId": "836",
+                                        "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 19:27:22.923"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "11",
+                                        "eventRecordID": "491994",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:27:22.923\r\nProcessGuid: {826a7360-c41a-69eb-0d03-000000006200}\r\nProcessId: 836\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:27:22.923\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T19:27:22.9258098Z",
+                                        "task": "11",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777058842.9461448",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                                "firedtimes": 6,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100008",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1547.001"
+                                    ],
+                                    "tactic": [
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Registry Run Keys / Startup Folder"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T19:27:22.979+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                            "firedtimes": 6,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100008",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1547.001"
+                                ],
+                                "tactic": [
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Registry Run Keys / Startup Folder"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T19:27:22.979+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                        "wazuh_rule_id": "100008",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100008: Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T19:27:22.979Z"
+                },
+                "id": "AwAAAZ3A9gljum0LowAAABhBWjNBOWcwdkFBRGxvbkhYVzVHUzlnQUEAAAAkZjE5ZGMwZjYtMDk2My00ODcwLWFkNDAtNGZmYjYwZWVhNWZjAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 146,
+            "request_id": "pddv1ChZXZmhXQmtjc1EzcWJIUExMWFpFMWRRIisKG6uTeS7KfWdN772lr4mKPQJDhUAJharMQHEJBhIMwmWyIebkcoEqOLj7",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU4OTE0LCJleHAiOjE3NzcwNTk4MTQsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AUHzqV7j-3Uk2G9j6ue3KcdCjhGmhnSOoSSZLZ-8ZLkJuJ9-JvIxrgHfYz9LfpNbfIj_6N51waBejz7i-koo5RBqAbnumsAA8BmczIPiSIgl35jekdbH87BILsD2PqDz8YKIf9rC8YPgDcwaOv_cdb3YEwLKDNovlOjDNdop57b4DrVG",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 19:28:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction3": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 19:28:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP8_SOAR_Processing_Time": {
+        "data": 1958
+    },
+    "SOP8_Time_to_Control": {
+        "data": 73009
+    },
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 54
+    },
+    "Time_to_Respond": {
+        "data": 71051
+    }
+},
+  "run7":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "creationUtcTime": "2026-04-24 19:30:00.639",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-c4b8-69eb-1803-000000006200}",
+                                    "processId": "2820",
+                                    "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 19:30:00.639"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "11",
+                                    "eventRecordID": "492020",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:30:00.639\r\nProcessGuid: {826a7360-c4b8-69eb-1803-000000006200}\r\nProcessId: 2820\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:30:00.639\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T19:30:00.6409589Z",
+                                    "task": "11",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "creationUtcTime": "2026-04-24 19:30:00.639",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-c4b8-69eb-1803-000000006200}",
+                                        "processId": "2820",
+                                        "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 19:30:00.639"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "11",
+                                        "eventRecordID": "492020",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:30:00.639\r\nProcessGuid: {826a7360-c4b8-69eb-1803-000000006200}\r\nProcessId: 2820\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:30:00.639\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T19:30:00.6409589Z",
+                                        "task": "11",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777059000.9588955",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                                "firedtimes": 7,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100008",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1547.001"
+                                    ],
+                                    "tactic": [
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Registry Run Keys / Startup Folder"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T19:30:00.726+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                            "firedtimes": 7,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100008",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1547.001"
+                                ],
+                                "tactic": [
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Registry Run Keys / Startup Folder"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T19:30:00.726+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                        "wazuh_rule_id": "100008",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100008: Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T19:30:00.726Z"
+                },
+                "id": "AwAAAZ3A-HGWJDGGzAAAABhBWjNBLUhiNUFBQ3BVV3pWY3c2cnJ3QUEAAAAkZjE5ZGMwZjgtNzE5Ni00Y2QzLWEwN2EtZDFmYjY3NTk4Njc4AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 109,
+            "request_id": "pddv1ChYxUXVNZkdGcVRacXZSRVh2b2V5U2lBIisKG3UlQGDKZ-z8Dud1etL_KglZ8qcR5LDlmUJETxIMSO3nn3Qz305jWwxv",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU5MDkzLCJleHAiOjE3NzcwNTk5OTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AE5NJpiPCwUoPk_kURC-ioUVeB9A_d8ZIMc25FR5bGfPY5qi55Urqv3YL8SJIWtioPL7Ru8PcyXuChyY6BV1s8S2AFewsmyUblBFs5Zphkt7W4bL1qpcf7xdTQaaRmF8rGrrAAVka-Ixps-2UENTCv8rlCwNKiM50LJUEqQ5yLRQHlSP",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 19:31:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction3": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 19:31:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP8_SOAR_Processing_Time": {
+        "data": 2313
+    },
+    "SOP8_Time_to_Control": {
+        "data": 94756
+    },
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 86
+    },
+    "Time_to_Respond": {
+        "data": 92443
+    }
+},
+  "run8":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "creationUtcTime": "2026-04-24 19:32:32.017",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-c54f-69eb-2303-000000006200}",
+                                    "processId": "4044",
+                                    "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 19:32:32.017"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "11",
+                                    "eventRecordID": "492048",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:32:32.017\r\nProcessGuid: {826a7360-c54f-69eb-2303-000000006200}\r\nProcessId: 4044\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:32:32.017\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T19:32:32.0186159Z",
+                                    "task": "11",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "creationUtcTime": "2026-04-24 19:32:32.017",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-c54f-69eb-2303-000000006200}",
+                                        "processId": "4044",
+                                        "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 19:32:32.017"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "11",
+                                        "eventRecordID": "492048",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:32:32.017\r\nProcessGuid: {826a7360-c54f-69eb-2303-000000006200}\r\nProcessId: 4044\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:32:32.017\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T19:32:32.0186159Z",
+                                        "task": "11",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777059152.9760581",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                                "firedtimes": 8,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100008",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1547.001"
+                                    ],
+                                    "tactic": [
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Registry Run Keys / Startup Folder"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T19:32:32.069+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                            "firedtimes": 8,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100008",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1547.001"
+                                ],
+                                "tactic": [
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Registry Run Keys / Startup Folder"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T19:32:32.069+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                        "wazuh_rule_id": "100008",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100008: Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T19:32:32.069Z"
+                },
+                "id": "AwAAAZ3A-sDF3-rbyAAAABhBWjNBLXNWcUFBQkI3dThxTzVybThnQUEAAAAkZjE5ZGMwZmEtYzBjNS00M2QyLWIyNWYtOTc4NmMwNzRiOWQwAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 60,
+            "request_id": "pddv1ChZnR2xiRU9GSVNLMmttME5WSW82M0FBIisKG5ypBtWbQf40FUj9SDlSOv_EtYFRBCjtad2A1xIMIE7K1_L1FiKPPH1V",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU5MjczLCJleHAiOjE3NzcwNjAxNzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.ATeidg1tsDiw2wlpuFLmvq7lN74Y0YBy_u3VJy6DWTd5zmADP7gHfi2cVxoOxY82S-_GG_r3POcvL2XbeEVqjD07AOcIkJBLBrO5bzpNMSZXHUL5aOVCT7HbWgX4WnPKrpnbn67cLf-LBJpxAiVi1z_tbndwIVYroHoHYBdc9sDiJM4b",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 19:34:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction3": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 19:34:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP8_SOAR_Processing_Time": {
+        "data": 2048
+    },
+    "SOP8_Time_to_Control": {
+        "data": 123006
+    },
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 51
+    },
+    "Time_to_Respond": {
+        "data": 120958
+    }
+},
+  "run9":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "creationUtcTime": "2026-04-24 19:35:38.811",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-c60a-69eb-2e03-000000006200}",
+                                    "processId": "3092",
+                                    "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 19:35:38.811"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "11",
+                                    "eventRecordID": "492076",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:35:38.811\r\nProcessGuid: {826a7360-c60a-69eb-2e03-000000006200}\r\nProcessId: 3092\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:35:38.811\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T19:35:38.8136022Z",
+                                    "task": "11",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "creationUtcTime": "2026-04-24 19:35:38.811",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-c60a-69eb-2e03-000000006200}",
+                                        "processId": "3092",
+                                        "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 19:35:38.811"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "11",
+                                        "eventRecordID": "492076",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:35:38.811\r\nProcessGuid: {826a7360-c60a-69eb-2e03-000000006200}\r\nProcessId: 3092\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:35:38.811\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T19:35:38.8136022Z",
+                                        "task": "11",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777059338.9897358",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                                "firedtimes": 9,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100008",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1547.001"
+                                    ],
+                                    "tactic": [
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Registry Run Keys / Startup Folder"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T19:35:38.901+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                            "firedtimes": 9,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100008",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1547.001"
+                                ],
+                                "tactic": [
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Registry Run Keys / Startup Folder"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T19:35:38.901+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                        "wazuh_rule_id": "100008",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100008: Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T19:35:38.901Z"
+                },
+                "id": "AwAAAZ3A_ZqV-FElWAAAABhBWjNBX2FCeEFBRGh3UzFhaEJZWW1BQUEAAAAkZjE5ZGMwZmQtOWE5NS00YWZiLTk1MDQtYTlhMDY1NTMwZDk1AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 47,
+            "request_id": "pddv1ChZkVWNWdUx1YVJPLVFJX2xxTE1VbmhRIi0KHQZ7D2uKdfgwisesb_6Rrw4VHTRHbqnllEYD00NfEgx-svPfDdhOgoak_UI",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU5NDUzLCJleHAiOjE3NzcwNjAzNTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AEf_Q4HoANYvBDK8zMY9EZzb3vZufznGtFIvZsqywE8hbgNSzamUcHb_iEOogXxaAR4XzyTEt_rLNF2xCaXN_FqJAOYjwkptndslWbK09jhkHV0MUHpUQ2o-298yGbKzD3AN2GuUqhhWhX6b6KZz8GI3QEgf8W52czxr9IiopJblhYKf",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 19:37:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction3": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 19:37:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP8_SOAR_Processing_Time": {
+        "data": 2108
+    },
+    "SOP8_Time_to_Control": {
+        "data": 116691
+    },
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 88
+    },
+    "Time_to_Respond": {
+        "data": 114583
+    }
+},
+  "run10":{
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "creationUtcTime": "2026-04-24 19:38:38.516",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-c6be-69eb-3d03-000000006200}",
+                                    "processId": "4756",
+                                    "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 19:38:38.516"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "11",
+                                    "eventRecordID": "492112",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:38:38.516\r\nProcessGuid: {826a7360-c6be-69eb-3d03-000000006200}\r\nProcessId: 4756\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:38:38.516\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T19:38:38.5184414Z",
+                                    "task": "11",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "creationUtcTime": "2026-04-24 19:38:38.516",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-c6be-69eb-3d03-000000006200}",
+                                        "processId": "4756",
+                                        "targetFilename": "C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\Start Menu\\\\Programs\\\\Startup\\\\vbsstartup.vbs",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 19:38:38.516"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "11",
+                                        "eventRecordID": "492112",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-24 19:38:38.516\r\nProcessGuid: {826a7360-c6be-69eb-3d03-000000006200}\r\nProcessId: 4756\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\vbsstartup.vbs\r\nCreationUtcTime: 2026-04-24 19:38:38.516\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T19:38:38.5184414Z",
+                                        "task": "11",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777059518.10140190",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                                "firedtimes": 10,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100008",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1547.001"
+                                    ],
+                                    "tactic": [
+                                        "Persistence",
+                                        "Privilege Escalation"
+                                    ],
+                                    "technique": [
+                                        "Registry Run Keys / Startup Folder"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T19:38:38.572+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                            "firedtimes": 10,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100008",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1547.001"
+                                ],
+                                "tactic": [
+                                    "Persistence",
+                                    "Privilege Escalation"
+                                ],
+                                "technique": [
+                                    "Registry Run Keys / Startup Folder"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T19:38:38.572+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                        "wazuh_rule_id": "100008",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100008: Atomic Red Team T1547.001 #4: PowerShell copied file to ProgramData Startup folder",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T19:38:38.572Z"
+                },
+                "id": "AwAAAZ3BAFhsqtYLowAAABhBWjNCQUZ4SEFBRGxvbkhYVzdXRFh3QUEAAAAkZjE5ZGMxMDAtNTg2Yy00YTEwLWJkN2YtYWYyNzAyNzk4NDNiAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 47,
+            "request_id": "pddv1ChZuV2VGOTNNWVJQMndnbVY3QS03NjJ3Ii0KHbOB0ABXpaLExuCdg2f-5Eeny8DRGywN50oqEITzEgwP5_rxtI46rMK10Vo",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU5NjMzLCJleHAiOjE3NzcwNjA1MzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.ARBB1xOKCK0Sdj_RbxzuZ8IT6KRczCQbHnzcCC-y9RJEUCm4_Kagyc10hPqY6XicUo6m1PT10aKr8Eiv1XdNiVYcAFCjllOMgMUuH9h3M3VsvQOlDcXqYShPwaLHujuidCVG3YqpQYvmh1etlyhzrT_DvJraM8vDbigKNh06NSLxiQOi",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 19:40:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction3": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 19:40:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP8": {},
+    "SOP8_SOAR_Processing_Time": {
+        "data": 1957
+    },
+    "SOP8_Time_to_Control": {
+        "data": 116776
+    },
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 54
+    },
+    "Time_to_Respond": {
+        "data": 114819
+    }
+}
+]
