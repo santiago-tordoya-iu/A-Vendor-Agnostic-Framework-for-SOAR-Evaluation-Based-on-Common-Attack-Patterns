@@ -1,0 +1,2489 @@
+[
+  "run1":{
+    "Extract_Registry_Path": {
+        "data": {
+            "targetPath": "HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                    "eventType": "SetValue",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-b555-69eb-e801-000000006200}",
+                                    "processId": "2264",
+                                    "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 18:24:21.824"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "13",
+                                    "eventRecordID": "491266",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:24:21.824\r\nProcessGuid: {826a7360-b555-69eb-e801-000000006200}\r\nProcessId: 2264\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T18:24:21.8244591Z",
+                                    "task": "13",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                        "eventType": "SetValue",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-b555-69eb-e801-000000006200}",
+                                        "processId": "2264",
+                                        "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 18:24:21.824"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "13",
+                                        "eventRecordID": "491266",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:24:21.824\r\nProcessGuid: {826a7360-b555-69eb-e801-000000006200}\r\nProcessId: 2264\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T18:24:21.8244591Z",
+                                        "task": "13",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777055062.5021476",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                                "firedtimes": 1,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100007",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1546.015"
+                                    ],
+                                    "tactic": [
+                                        "Privilege Escalation",
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Component Object Model Hijacking"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T18:24:22.638+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                            "firedtimes": 1,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100007",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1546.015"
+                                ],
+                                "tactic": [
+                                    "Privilege Escalation",
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Component Object Model Hijacking"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T18:24:22.638+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                        "wazuh_rule_id": "100007",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100007: Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T18:24:22.638Z"
+                },
+                "id": "AwAAAZ3AvFpuSHY_CgAAABhBWjNBdkZ4ZkFBQ1VmRFpJbDFuM1pBQUEAAAAkZjE5ZGMwYmMtNWE2ZS00ZDMwLTk1NTgtOTcwOGZjNzdmODg3AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 364,
+            "request_id": "pddv1ChZPc1Itemk4MVM5ZXZCVzFRTC1VYjNRIisKGwK3Iuar5iSk3h4wy8gVIUYENkovJQc3pKfEXRIMXzeeTRX-30BOmmiq",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU1MTM0LCJleHAiOjE3NzcwNTYwMzQsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.APCCYMrXDVJenDjyqtRUXjS7uylmtKOuAredjNGzv8Gu9p8PXrWrfCbv0Cj7zRt2aBx1p5FLyGdSADVTM-MsnrdtAIpgpOQdNKLdVo6paGgtU1oFTqxMf1U-ijO68iTScIhKsuD5nmYYnpuFb0Z5vNQu4s1ydyW_bnS4IkWhOeAeYsGA",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 18:25:34 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction_for_Registry_Path": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 18:25:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP7_SOAR_Processing_Time": {
+        "data": 2772
+    },
+    "SOP7_Time_to_Control": {
+        "data": 75181
+    },
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 814
+    },
+    "Time_to_Respond": {
+        "data": 72409
+    }
+},
+  "run2":{
+    "Extract_Registry_Path": {
+        "data": {
+            "targetPath": "HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                    "eventType": "SetValue",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-b630-69eb-f401-000000006200}",
+                                    "processId": "7324",
+                                    "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 18:28:00.474"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "13",
+                                    "eventRecordID": "491307",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:28:00.474\r\nProcessGuid: {826a7360-b630-69eb-f401-000000006200}\r\nProcessId: 7324\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T18:28:00.4762064Z",
+                                    "task": "13",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                        "eventType": "SetValue",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-b630-69eb-f401-000000006200}",
+                                        "processId": "7324",
+                                        "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 18:28:00.474"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "13",
+                                        "eventRecordID": "491307",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:28:00.474\r\nProcessGuid: {826a7360-b630-69eb-f401-000000006200}\r\nProcessId: 7324\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T18:28:00.4762064Z",
+                                        "task": "13",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777055280.5207456",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                                "firedtimes": 2,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100007",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1546.015"
+                                    ],
+                                    "tactic": [
+                                        "Privilege Escalation",
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Component Object Model Hijacking"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T18:28:00.729+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                            "firedtimes": 2,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100007",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1546.015"
+                                ],
+                                "tactic": [
+                                    "Privilege Escalation",
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Component Object Model Hijacking"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T18:28:00.729+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                        "wazuh_rule_id": "100007",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100007: Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T18:28:00.729Z"
+                },
+                "id": "AwAAAZ3Av65ZTT-VWQAAABhBWjNBdjdDb0FBQjJ5WEp0WmVNZ2t3QUEAAAAkZjE5ZGMwYmYtYWU1OS00NWE3LTlkOTctOTZkZDNlYWYwODUyAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 72,
+            "request_id": "pddv1ChZtODBLV3QwNFRzR1NOSXdTX2lXNGZBIisKG3fRkb6-Uu7B2T8BNQWRWFjTd1gOwPhSOuKHxxIM-r51e37OkY0FR9bm",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU1MzczLCJleHAiOjE3NzcwNTYyNzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AB7BVfJeWj8SBKhPkZKOJB5stC1eOAwG-QyT7AZAqon-myaIrk0UPGo6E_KoAHLLPI4_swIbsvqewTQMV5YRtgowAAvc2tfCqSVJFSB63o5JgxYHEy4BFYzZBHhnEIxufkO_OD7jFVJ_26EWMYVb-mIiyyNh3dHshGP4WhrAOUzcbCHw",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 18:29:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction_for_Registry_Path": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 18:29:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP7_SOAR_Processing_Time": {
+        "data": 2595
+    },
+    "SOP7_Time_to_Control": {
+        "data": 94738
+    },
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 253
+    },
+    "Time_to_Respond": {
+        "data": 92143
+    }
+},
+  "run3":{
+    "Extract_Registry_Path": {
+        "data": {
+            "targetPath": "HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                    "eventType": "SetValue",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-b6d1-69eb-0002-000000006200}",
+                                    "processId": "5644",
+                                    "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 18:30:41.951"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "13",
+                                    "eventRecordID": "491335",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:30:41.951\r\nProcessGuid: {826a7360-b6d1-69eb-0002-000000006200}\r\nProcessId: 5644\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T18:30:41.9524859Z",
+                                    "task": "13",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                        "eventType": "SetValue",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-b6d1-69eb-0002-000000006200}",
+                                        "processId": "5644",
+                                        "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 18:30:41.951"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "13",
+                                        "eventRecordID": "491335",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:30:41.951\r\nProcessGuid: {826a7360-b6d1-69eb-0002-000000006200}\r\nProcessId: 5644\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T18:30:41.9524859Z",
+                                        "task": "13",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777055442.5383351",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                                "firedtimes": 3,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100007",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1546.015"
+                                    ],
+                                    "tactic": [
+                                        "Privilege Escalation",
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Component Object Model Hijacking"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T18:30:42.155+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                            "firedtimes": 3,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100007",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1546.015"
+                                ],
+                                "tactic": [
+                                    "Privilege Escalation",
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Component Object Model Hijacking"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T18:30:42.155+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                        "wazuh_rule_id": "100007",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100007: Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T18:30:42.155Z"
+                },
+                "id": "AwAAAZ3AwiTrAKAK0AAAABhBWjNBd2lvaEFBQVFGdHJnaDAtMlB3QUEAAAAkZjE5ZGMwYzItMjRlYi00MzdkLWE0ZTAtNDM5NjYxMDgyMmNlAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 55,
+            "request_id": "pddv1ChZJM3BLZVhzWVFPT3Y1T0lJUlZpWG1nIisKG1gbU-2eOE1lhmethswq8c2EdL2jHfvO_n2-0hIM26YsU0hgSLPq-NGD",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU1NTUyLCJleHAiOjE3NzcwNTY0NTIsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AL7G5c6dZBDKOhvJeWYNzcQB7pAzJeI_TyGCcsFnQsTMW46lJXs5czdJ2a31zFRvsHz72VoW7aHbIPOmSEEX_RCDAOnh1CtokNvwzbp9eYCqQdmH7-3mqgOPFXrhP8fLcBqedi3R0CdMYujOl7tbHFcZ-zCT4GWbbqrvax1Pl9xnBj3b",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 18:32:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction_for_Registry_Path": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 18:32:33 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP7_SOAR_Processing_Time": {
+        "data": 2665
+    },
+    "SOP7_Time_to_Control": {
+        "data": 112935
+    },
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Respond": {
+        "data": 110270
+    }
+},
+  "run4":{
+    "Extract_Registry_Path": {
+        "data": {
+            "targetPath": "HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                    "eventType": "SetValue",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-b76d-69eb-1002-000000006200}",
+                                    "processId": "10028",
+                                    "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 18:33:18.101"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "13",
+                                    "eventRecordID": "491371",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:33:18.101\r\nProcessGuid: {826a7360-b76d-69eb-1002-000000006200}\r\nProcessId: 10028\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T18:33:18.1024561Z",
+                                    "task": "13",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                        "eventType": "SetValue",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-b76d-69eb-1002-000000006200}",
+                                        "processId": "10028",
+                                        "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 18:33:18.101"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "13",
+                                        "eventRecordID": "491371",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:33:18.101\r\nProcessGuid: {826a7360-b76d-69eb-1002-000000006200}\r\nProcessId: 10028\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T18:33:18.1024561Z",
+                                        "task": "13",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777055597.5622872",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                                "firedtimes": 4,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100007",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1546.015"
+                                    ],
+                                    "tactic": [
+                                        "Privilege Escalation",
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Component Object Model Hijacking"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T18:33:17.997+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                            "firedtimes": 4,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100007",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1546.015"
+                                ],
+                                "tactic": [
+                                    "Privilege Escalation",
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Component Object Model Hijacking"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T18:33:17.997+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                        "wazuh_rule_id": "100007",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100007: Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T18:33:17.997Z"
+                },
+                "id": "AwAAAZ3AxIWtk1c2CgAAABhBWjNBeEloaUFBQ21yM0pDamVpS2hRQUEAAAAkZjE5ZGMwYzQtODVhZC00YzJkLTkzYzQtNmU4OTA2NzdkOThlAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 44,
+            "request_id": "pddv1ChZSanVBNEVyWlRnT0oyYUNyMm05Ykp3Ii0KHexBZBpJ9J5DAGO6BCGJ3F6qaHGbuBHOpG_gj5HXEgySAjxn6BD2oAXnD7M",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU1NjczLCJleHAiOjE3NzcwNTY1NzMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.ANY658BG-nSjwe-R1Wwv2EnESznY5POuCwY2xO04cncRVmV2c_1ii8dN7-YGUjH30MAJchTFZq7JHLvJAd4XnjelAJ6YXQxt70cfwvsz5Y1XLalu-ig5Zni_wML1cM9V_u-r-h5B6GtjpEj5kRks0LXhO0MrGc1HtUllOmlEzobhJcVR",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 18:34:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction_for_Registry_Path": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 18:34:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP7_SOAR_Processing_Time": {
+        "data": 3102
+    },
+    "SOP7_Time_to_Control": {
+        "data": 78161
+    },
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": -105
+    },
+    "Time_to_Respond": {
+        "data": 75059
+    }
+},
+  "run5":{
+    "Extract_Registry_Path": {
+        "data": {
+            "targetPath": "HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                    "eventType": "SetValue",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-b81a-69eb-1c02-000000006200}",
+                                    "processId": "8864",
+                                    "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 18:36:10.737"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "13",
+                                    "eventRecordID": "491400",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:36:10.737\r\nProcessGuid: {826a7360-b81a-69eb-1c02-000000006200}\r\nProcessId: 8864\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T18:36:10.7383832Z",
+                                    "task": "13",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                        "eventType": "SetValue",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-b81a-69eb-1c02-000000006200}",
+                                        "processId": "8864",
+                                        "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 18:36:10.737"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "13",
+                                        "eventRecordID": "491400",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:36:10.737\r\nProcessGuid: {826a7360-b81a-69eb-1c02-000000006200}\r\nProcessId: 8864\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T18:36:10.7383832Z",
+                                        "task": "13",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777055770.5766137",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                                "firedtimes": 5,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100007",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1546.015"
+                                    ],
+                                    "tactic": [
+                                        "Privilege Escalation",
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Component Object Model Hijacking"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T18:36:10.902+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                            "firedtimes": 5,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100007",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1546.015"
+                                ],
+                                "tactic": [
+                                    "Privilege Escalation",
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Component Object Model Hijacking"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T18:36:10.902+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                        "wazuh_rule_id": "100007",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100007: Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T18:36:10.902Z"
+                },
+                "id": "AwAAAZ3AxykWErCbTwAAABhBWjNBeHl6SkFBQzY5Q3BpYlFmc3l3QUEAAAAkZjE5ZGMwYzctMjkxNi00MzJkLTg5ZTctYjhjNmEzZjExMTE2AAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 53,
+            "request_id": "pddv1ChZGWHBMbjMxZFI5YUVFdUdySFFmUHB3Ii0KHeGqxzeBL4In9MAvJqGGa1undzvv6hKlsfc0H_k9EgzgqPhp4j8pt997PME",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU1ODUzLCJleHAiOjE3NzcwNTY3NTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AW6VLYt-1gM4dVtMBxT8IAgoHP_otVH1nnQmS96IKr77sYREcXr6Gt6asq-Ctgn7rEwAikzKDdlybqTxTZuk1adhAd9xktnHH74rKrGUJK3G4J16E_QxsKytWydFRjmDYAfbGkuR0Gbsx09tU0586rciaCZ-Oa0OUT9e60dq4HE_6jsq",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 18:37:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction_for_Registry_Path": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 18:37:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP7_SOAR_Processing_Time": {
+        "data": 2737
+    },
+    "SOP7_Time_to_Control": {
+        "data": 84969
+    },
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 164
+    },
+    "Time_to_Respond": {
+        "data": 82232
+    }
+},
+  "run6":{
+    "Extract_Registry_Path": {
+        "data": {
+            "targetPath": "HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                    "eventType": "SetValue",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-b8fd-69eb-3902-000000006200}",
+                                    "processId": "8860",
+                                    "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 18:39:57.791"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "13",
+                                    "eventRecordID": "491470",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:39:57.791\r\nProcessGuid: {826a7360-b8fd-69eb-3902-000000006200}\r\nProcessId: 8860\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T18:39:57.7932243Z",
+                                    "task": "13",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                        "eventType": "SetValue",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-b8fd-69eb-3902-000000006200}",
+                                        "processId": "8860",
+                                        "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 18:39:57.791"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "13",
+                                        "eventRecordID": "491470",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:39:57.791\r\nProcessGuid: {826a7360-b8fd-69eb-3902-000000006200}\r\nProcessId: 8860\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T18:39:57.7932243Z",
+                                        "task": "13",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777055997.6160478",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                                "firedtimes": 6,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100007",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1546.015"
+                                    ],
+                                    "tactic": [
+                                        "Privilege Escalation",
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Component Object Model Hijacking"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T18:39:57.965+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                            "firedtimes": 6,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100007",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1546.015"
+                                ],
+                                "tactic": [
+                                    "Privilege Escalation",
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Component Object Model Hijacking"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T18:39:57.965+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                        "wazuh_rule_id": "100007",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100007: Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T18:39:57.965Z"
+                },
+                "id": "AwAAAZ3AyqAN8rtpOAAAABhBWjNBeXFRTEFBQ2cxN1NKNWFDUkFBQUEAAAAkZjE5ZGMwY2EtYTAwZC00YTM1LTkxMTEtODJjNDliOGFkMGUyAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 303,
+            "request_id": "pddv1ChZMRnZQYzNKeVNVYVRRTWIwOVVXMWFnIi0KHVPU4G5Q-XrN_D78nIKhsDzB5Yxz8cQqrPgOr4q3EgwfAQDF9fHjZZbnvHo",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU2MDkzLCJleHAiOjE3NzcwNTY5OTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AWSK4joDpxgW0wQAnuHBxAK-mFHeCmCokCxlZISBvwCcggUb0wcNYCYrCpikGLf9hloDgmKKKUywwxYzxg1OMVFdAUu_oCCfRWzoLJqK8MUMgbL7hPbyOzWL5dPT6f9DVh2qpPVEwIYK6DBOH5-cwMAQOYpFlFR_nNnHZ5CK7ctcJJEm",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 18:41:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction_for_Registry_Path": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 18:41:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP7_SOAR_Processing_Time": {
+        "data": 2742
+    },
+    "SOP7_Time_to_Control": {
+        "data": 98188
+    },
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 172
+    },
+    "Time_to_Respond": {
+        "data": 95446
+    }
+},
+  "run7":{
+    "Extract_Registry_Path": {
+        "data": {
+            "targetPath": "HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                    "eventType": "SetValue",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-b98c-69eb-4502-000000006200}",
+                                    "processId": "6236",
+                                    "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 18:42:21.079"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "13",
+                                    "eventRecordID": "491500",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:42:21.079\r\nProcessGuid: {826a7360-b98c-69eb-4502-000000006200}\r\nProcessId: 6236\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T18:42:21.0797899Z",
+                                    "task": "13",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                        "eventType": "SetValue",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-b98c-69eb-4502-000000006200}",
+                                        "processId": "6236",
+                                        "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 18:42:21.079"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "13",
+                                        "eventRecordID": "491500",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:42:21.079\r\nProcessGuid: {826a7360-b98c-69eb-4502-000000006200}\r\nProcessId: 6236\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T18:42:21.0797899Z",
+                                        "task": "13",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777056141.6391168",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                                "firedtimes": 7,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100007",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1546.015"
+                                    ],
+                                    "tactic": [
+                                        "Privilege Escalation",
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Component Object Model Hijacking"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T18:42:21.252+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                            "firedtimes": 7,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100007",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1546.015"
+                                ],
+                                "tactic": [
+                                    "Privilege Escalation",
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Component Object Model Hijacking"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T18:42:21.252+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                        "wazuh_rule_id": "100007",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100007: Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T18:42:21.252Z"
+                },
+                "id": "AwAAAZ3AzM_EpRVjEwAAABhBWjNBek5NeUFBQW91YW81dGVqczR3QUEAAAAkZjE5ZGMwY2MtY2ZjNC00Njk0LWEyNmYtNDU3M2Y4YzIxNDJhAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 61,
+            "request_id": "pddv1ChZ3M3dPS0RxWVM4dThyZkdTQUdBeXNnIisKG-djaYuc2n-t8P7Gxw1YVWOgGj_P3r1MhWlczRIMzFrMNTNfzsznDzAk",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU2MjEzLCJleHAiOjE3NzcwNTcxMTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AOXPmkVErJQtJOaRb99P3Hv4Y0o-EUpkzqpjfKi0XDh9_x7iMa_Gvt55N49cQT-sozHbBb0hpNnLAKZjCPx3r8teAC1jqdn9IxdzsWgTEjdWRZ7u3gV2NscFRUtnGcrVm88m6vSQskL-gmU7XO4lkBGgIOkEP2_eMJoFcEn4YX-juEQx",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 18:43:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction_for_Registry_Path": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 18:43:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP7_SOAR_Processing_Time": {
+        "data": 2657
+    },
+    "SOP7_Time_to_Control": {
+        "data": 74403
+    },
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 173
+    },
+    "Time_to_Respond": {
+        "data": 71746
+    }
+},
+  "run8":{
+    "Extract_Registry_Path": {
+        "data": {
+            "targetPath": "HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                    "eventType": "SetValue",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-ba19-69eb-5202-000000006200}",
+                                    "processId": "7312",
+                                    "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 18:44:41.854"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "13",
+                                    "eventRecordID": "491530",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:44:41.854\r\nProcessGuid: {826a7360-ba19-69eb-5202-000000006200}\r\nProcessId: 7312\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T18:44:41.8561649Z",
+                                    "task": "13",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                        "eventType": "SetValue",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-ba19-69eb-5202-000000006200}",
+                                        "processId": "7312",
+                                        "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 18:44:41.854"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "13",
+                                        "eventRecordID": "491530",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:44:41.854\r\nProcessGuid: {826a7360-ba19-69eb-5202-000000006200}\r\nProcessId: 7312\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T18:44:41.8561649Z",
+                                        "task": "13",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777056282.6540973",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                                "firedtimes": 8,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100007",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1546.015"
+                                    ],
+                                    "tactic": [
+                                        "Privilege Escalation",
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Component Object Model Hijacking"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T18:44:42.017+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                            "firedtimes": 8,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100007",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1546.015"
+                                ],
+                                "tactic": [
+                                    "Privilege Escalation",
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Component Object Model Hijacking"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T18:44:42.017+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                        "wazuh_rule_id": "100007",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100007: Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T18:44:42.017Z"
+                },
+                "id": "AwAAAZ3AzvWh00YhZgAAABhBWjNBenZhaEFBQkVlZVo4MjYyN3VnQUEAAAAkZjE5ZGMwY2UtZjVhMS00NTI4LTllYmYtMzQyYjM1YzI3NGVjAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 53,
+            "request_id": "pddv1ChZMWFBocWxYWVMxdXFqR2V3ck9yMWtRIiwKHEAN_CPVMbTVv5swC2DEIepG2RQuj_TqVExD1oQSDEY98IY7TSh-jsOhGw",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU2MzkzLCJleHAiOjE3NzcwNTcyOTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.ACWU4PSHRY0g0UmYO7goHfUOFlwu1tDo5c8fNVyBM2R-t9Cs6E0K7eoctFL2y_RaqPGH6LdM6T7OLa7Z4p7B3vFOAP3okxYhzR4Wht5gWNiN9GZSYHZYR9qxAR41cRvVnqL96UApfQRDEjDgeFKoUEFCeMocCHwj1pmQnsqlUzF-9Voo",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 18:46:32 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction_for_Registry_Path": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 18:46:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP7_SOAR_Processing_Time": {
+        "data": 2572
+    },
+    "SOP7_Time_to_Control": {
+        "data": 114123
+    },
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 161
+    },
+    "Time_to_Respond": {
+        "data": 111551
+    }
+},
+  "run9":{
+    "Extract_Registry_Path": {
+        "data": {
+            "targetPath": "HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                    "eventType": "SetValue",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-bab2-69eb-6002-000000006200}",
+                                    "processId": "7436",
+                                    "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 18:47:14.885"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "13",
+                                    "eventRecordID": "491564",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:47:14.885\r\nProcessGuid: {826a7360-bab2-69eb-6002-000000006200}\r\nProcessId: 7436\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T18:47:14.8870621Z",
+                                    "task": "13",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                        "eventType": "SetValue",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-bab2-69eb-6002-000000006200}",
+                                        "processId": "7436",
+                                        "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 18:47:14.885"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "13",
+                                        "eventRecordID": "491564",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:47:14.885\r\nProcessGuid: {826a7360-bab2-69eb-6002-000000006200}\r\nProcessId: 7436\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T18:47:14.8870621Z",
+                                        "task": "13",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777056434.6763106",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                                "firedtimes": 9,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100007",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1546.015"
+                                    ],
+                                    "tactic": [
+                                        "Privilege Escalation",
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Component Object Model Hijacking"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T18:47:14.934+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                            "firedtimes": 9,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100007",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1546.015"
+                                ],
+                                "tactic": [
+                                    "Privilege Escalation",
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Component Object Model Hijacking"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T18:47:14.934+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                        "wazuh_rule_id": "100007",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100007: Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T18:47:14.934Z"
+                },
+                "id": "AwAAAZ3A0Ur24Hj8mQAAABhBWjNBMFV6NEFBRFl2dTRObFJTa2Z3QUEAAAAkZjE5ZGMwZDEtNGFmNi00NGViLWEzYjMtYjIzNWJhYjdlNjkwAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 52,
+            "request_id": "pddv1ChY4ZFNJY1R1clI3ZTJ2T1NHYkdYT3FRIiwKHP2on0pFdhI_nfvd26TQejYZhFPBh96d8yKLWo0SDMU499vfuGJuXvAKYg",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU2NTEzLCJleHAiOjE3NzcwNTc0MTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.Af0mX-bNvcIrPLMKjrU6z_D5GSsquqDJQPZgdTnZNgP14w_PGvfVmqirU8FSSMZKaZgKnvufn7QQ9DXlMmdzJO2WAJG9IyBTRp-3gfaoaLukYBGjfsgcn_b1DxGn11ftUCIjfMXYTx3bii1-qnguIx1jJHQOV8tY9HJkfsjCdtMCZxeW",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 18:48:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction_for_Registry_Path": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 18:48:34 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP7_SOAR_Processing_Time": {
+        "data": 2823
+    },
+    "SOP7_Time_to_Control": {
+        "data": 80626
+    },
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 47
+    },
+    "Time_to_Respond": {
+        "data": 77803
+    }
+},
+  "run10":{
+    "Extract_Registry_Path": {
+        "data": {
+            "targetPath": "HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}"
+        }
+    },
+    "Get_Alert_Data": {
+        "data": [
+            {
+                "attributes": {
+                    "attributes": {
+                        "agent": {
+                            "id": "003",
+                            "ip": "10.0.3.4",
+                            "name": "ws01"
+                        },
+                        "data": {
+                            "win": {
+                                "eventdata": {
+                                    "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                    "eventType": "SetValue",
+                                    "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                    "processGuid": "{826a7360-bb60-69eb-6c02-000000006200}",
+                                    "processId": "8360",
+                                    "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                    "user": "ws01\\\\ws_administrator",
+                                    "utcTime": "2026-04-24 18:50:09.215"
+                                },
+                                "system": {
+                                    "channel": "Microsoft-Windows-Sysmon/Operational",
+                                    "computer": "ws01.corp.soarlab.test",
+                                    "eventID": "13",
+                                    "eventRecordID": "491594",
+                                    "keywords": "0x8000000000000000",
+                                    "level": "4",
+                                    "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:50:09.215\r\nProcessGuid: {826a7360-bb60-69eb-6c02-000000006200}\r\nProcessId: 8360\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                    "opcode": "0",
+                                    "processID": "4340",
+                                    "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                    "providerName": "Microsoft-Windows-Sysmon",
+                                    "severityValue": "INFORMATION",
+                                    "systemTime": "2026-04-24T18:50:09.2182758Z",
+                                    "task": "13",
+                                    "threadID": "4676",
+                                    "version": "2"
+                                }
+                            }
+                        },
+                        "decoder": {
+                            "name": "windows_eventchannel"
+                        },
+                        "full_alert": {
+                            "agent": {
+                                "id": "003",
+                                "ip": "10.0.3.4",
+                                "name": "ws01"
+                            },
+                            "data": {
+                                "win": {
+                                    "eventdata": {
+                                        "details": "C:\\\\AtomicRedTeam\\\\atomics\\\\..\\\\ExternalPayloads\\\\T1546.015_calc.dll",
+                                        "eventType": "SetValue",
+                                        "image": "C:\\\\Windows\\\\system32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+                                        "processGuid": "{826a7360-bb60-69eb-6c02-000000006200}",
+                                        "processId": "8360",
+                                        "targetObject": "HKU\\\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\\\CLSID\\\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\\\InprocServer32\\\\(Default)",
+                                        "user": "ws01\\\\ws_administrator",
+                                        "utcTime": "2026-04-24 18:50:09.215"
+                                    },
+                                    "system": {
+                                        "channel": "Microsoft-Windows-Sysmon/Operational",
+                                        "computer": "ws01.corp.soarlab.test",
+                                        "eventID": "13",
+                                        "eventRecordID": "491594",
+                                        "keywords": "0x8000000000000000",
+                                        "level": "4",
+                                        "message": "\"Registry value set:\r\nRuleName: -\r\nEventType: SetValue\r\nUtcTime: 2026-04-24 18:50:09.215\r\nProcessGuid: {826a7360-bb60-69eb-6c02-000000006200}\r\nProcessId: 8360\r\nImage: C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetObject: HKU\\S-1-5-21-2919669256-1865303586-1805099321-500_Classes\\CLSID\\{B5F8350B-0548-48B1-A6EE-88BD00B4A5E7}\\InprocServer32\\(Default)\r\nDetails: C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\T1546.015_calc.dll\r\nUser: ws01\\ws_administrator\"",
+                                        "opcode": "0",
+                                        "processID": "4340",
+                                        "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+                                        "providerName": "Microsoft-Windows-Sysmon",
+                                        "severityValue": "INFORMATION",
+                                        "systemTime": "2026-04-24T18:50:09.2182758Z",
+                                        "task": "13",
+                                        "threadID": "4676",
+                                        "version": "2"
+                                    }
+                                }
+                            },
+                            "decoder": {
+                                "name": "windows_eventchannel"
+                            },
+                            "id": "1777056609.6899567",
+                            "location": "EventChannel",
+                            "manager": {
+                                "name": "wazuh01"
+                            },
+                            "rule": {
+                                "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                                "firedtimes": 10,
+                                "groups": [
+                                    "atomic_red_team"
+                                ],
+                                "id": "100007",
+                                "level": 16,
+                                "mail": true,
+                                "mitre": {
+                                    "id": [
+                                        "T1546.015"
+                                    ],
+                                    "tactic": [
+                                        "Privilege Escalation",
+                                        "Persistence"
+                                    ],
+                                    "technique": [
+                                        "Component Object Model Hijacking"
+                                    ]
+                                }
+                            },
+                            "timestamp": "2026-04-24T18:50:09.394+0000"
+                        },
+                        "hostname": "ws01",
+                        "location": "EventChannel",
+                        "manager": {
+                            "name": "wazuh01"
+                        },
+                        "rule": {
+                            "description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                            "firedtimes": 10,
+                            "groups": [
+                                "atomic_red_team"
+                            ],
+                            "id": "100007",
+                            "level": 16,
+                            "mail": true,
+                            "mitre": {
+                                "id": [
+                                    "T1546.015"
+                                ],
+                                "tactic": [
+                                    "Privilege Escalation",
+                                    "Persistence"
+                                ],
+                                "technique": [
+                                    "Component Object Model Hijacking"
+                                ]
+                            }
+                        },
+                        "service": "other",
+                        "timestamp": "2026-04-24T18:50:09.394+0000",
+                        "wazuh_group": "atomic_red_team",
+                        "wazuh_rule_description": "Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                        "wazuh_rule_id": "100007",
+                        "wazuh_rule_level": 16
+                    },
+                    "host": "ws01",
+                    "message": "Wazuh alert 100007: Atomic Red Team T1546.015 #1: COM Hijacking - InprocServer32 registry modification (Sysmon Event 13)",
+                    "service": "other",
+                    "status": "info",
+                    "tags": [
+                        "datadog.submission_auth:api_key",
+                        "env:prod",
+                        "group:atomic_red_team",
+                        "platform:wazuh",
+                        "source:wazuh"
+                    ],
+                    "timestamp": "2026-04-24T18:50:09.394Z"
+                },
+                "id": "AwAAAZ3A0_RyF6ITHQAAABhBWjNBMF9sUEFBRGEzSm1UdFVneUdRQUEAAAAkZjE5ZGMwZDMtZjQ3Mi00ZTBmLWE4N2ItMTRkNzJkYzg1MzczAAAAAA",
+                "type": "log"
+            }
+        ],
+        "meta": {
+            "elapsed": 58,
+            "request_id": "pddv1ChYtQUpLcUItX1I4dXVTSnJsd0ZNaElnIiwKHFA8_FbwoZ1Okzvmt6d5_ek_lwDVvNoW2uFVPOMSDEj49IJbU2ndkC2yBQ",
+            "status": "done"
+        }
+    },
+    "Get_Wazuh_Auth_Token": {
+        "body": "eyJhbGciOiJFUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ3YXp1aCIsImF1ZCI6IldhenVoIEFQSSBSRVNUIiwibmJmIjoxNzc3MDU2NjkzLCJleHAiOjE3NzcwNTc1OTMsInN1YiI6IndhenVoIiwicnVuX2FzIjpmYWxzZSwicmJhY19yb2xlcyI6WzFdLCJyYmFjX21vZGUiOiJ3aGl0ZSJ9.AJNEHU0eQabxFRrcfo4akUsehsWiEnBuA2xD9KTXeLV2z4pS9kXOS3EG64G8idcwyUUHLMrpm4IhF7F8Bhw-C3evAQV7QtU3g-B6emjrW_prVd4fNz9_LnXiPZ0EfCBDNcec4ktpZCTH8Ri9vDcZvITHINr_7VecZdrfhllfvfhv0iPP",
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "398",
+            "content-security-policy": "none",
+            "content-type": "text/plain",
+            "date": "Fri, 24 Apr 2026 18:51:33 GMT",
+            "deprecated": "true",
+            "link": "<https://documentation.wazuh.com/4.14.4/user-manual/api/reference.html#operation/api.controllers.security_controller.login_user>; rel=\"Deprecated\"",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "Invoke_File_Eviction_for_Registry_Path": {
+        "body": {
+            "data": {
+                "affected_items": [
+                    "003"
+                ],
+                "failed_items": [],
+                "total_affected_items": 1,
+                "total_failed_items": 0
+            },
+            "error": 0,
+            "message": "AR command was sent to all agents"
+        },
+        "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "169",
+            "content-security-policy": "none",
+            "content-type": "application/json",
+            "date": "Fri, 24 Apr 2026 18:51:35 GMT",
+            "referrer-policy": "no-referrer, strict-origin-when-cross-origin",
+            "server": "Wazuh",
+            "strict-transport-security": "max-age=63072000; includeSubdomains",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-xss-protection": "0"
+        },
+        "status": 200
+    },
+    "SOP1": {},
+    "SOP2": {},
+    "SOP3": {},
+    "SOP4": {},
+    "SOP5": {},
+    "SOP6": {},
+    "SOP7": {},
+    "SOP7_SOAR_Processing_Time": {
+        "data": 2905
+    },
+    "SOP7_Time_to_Control": {
+        "data": 86949
+    },
+    "SOP8": {},
+    "SOP9": {},
+    "Time_to_Detect": {
+        "data": 176
+    },
+    "Time_to_Respond": {
+        "data": 84044
+    }
+}
+]
