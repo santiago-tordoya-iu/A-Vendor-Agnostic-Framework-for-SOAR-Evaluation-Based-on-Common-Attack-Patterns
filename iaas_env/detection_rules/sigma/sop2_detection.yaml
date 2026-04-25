@@ -27,6 +27,4 @@ fields:
     - ProcessId
     - ParentImage
     - ParentCommandLine
-falsepositives:
-    - NA
 level: critical
