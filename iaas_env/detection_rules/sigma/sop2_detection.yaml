@@ -1,0 +1,32 @@
+title: Mimikatz Golden Ticket Creation
+id: 2b1c9b1d-5c3f-4f0c-9c7a-100002000001
+status: test
+description: Detects possible Golden Ticket creation using Mimikatz via the kerberos::golden command.
+references:
+    - https://attack.mitre.org/techniques/T1558/001/
+author: Santiago Czifra Tordoya
+date: 2026-04-25
+tags:
+    - attack.credential_access
+    - attack.t1558.001
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection:
+        OriginalFileName|re: '(?i)mimikatz\.exe'
+        CommandLine|re: '(?i)kerberos::golden'
+    condition: selection
+fields:
+    - Image
+    - OriginalFileName
+    - CommandLine
+    - User
+    - Computer
+    - CurrentDirectory
+    - ProcessId
+    - ParentImage
+    - ParentCommandLine
+falsepositives:
+    - NA
+level: critical
