@@ -1,0 +1,33 @@
+title: RDP Logon To DC01 From Unauthorized Subnet
+id: 8c9a7f6e-3e21-4f1a-9e5d-100003000001
+status: test
+description: Detects successful RDP logon to dc01 from an IP address outside the authorized bastion subnet 10.0.0.0/26.
+references:
+    - https://attack.mitre.org/techniques/T1021/001/
+author: Santiago Czifra Tordoya
+date: 2026-04-25
+tags:
+    - attack.lateral_movement
+    - attack.t1021.001
+logsource:
+    product: windows
+    service: security
+detection:
+    selection_logon:
+        EventID: 4624
+        LogonType: 10
+    selection_host_short:
+        Computer: 'dc01'
+    selection_host_fqdn:
+        Computer|startswith: 'dc01.'
+    filter_authorized_bastion_subnet:
+        IpAddress|cidr: '10.0.0.0/26'
+    condition: selection_logon and 1 of selection_host_* and not filter_authorized_bastion_subnet
+fields:
+    - Computer
+    - TargetUserName
+    - TargetDomainName
+    - LogonType
+    - IpAddress
+    - WorkstationName
+level: critical
