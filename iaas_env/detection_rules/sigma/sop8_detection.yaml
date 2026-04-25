@@ -1,0 +1,32 @@
+title: PowerShell File Write To ProgramData Startup Folder
+id: 0c3f0d2e-9d4c-4f2c-8a55-100008000001
+status: test
+description: Detects PowerShell writing or copying a file to the ProgramData Startup folder.
+references:
+    - https://attack.mitre.org/techniques/T1547/001/
+author: Santiago Czifra Tordoya
+date: 2026-04-25
+tags:
+    - attack.persistence
+    - attack.privilege_escalation
+    - attack.t1547.001
+logsource:
+    product: windows
+    category: file_event
+detection:
+    selection_event:
+        EventID: 11
+    selection_process:
+        Image|endswith: '\powershell.exe'
+    selection_target:
+        TargetFilename|contains: '\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp'
+    condition: selection_event and selection_process and selection_target
+fields:
+    - EventID
+    - Image
+    - TargetFilename
+    - User
+    - Computer
+    - ProcessGuid
+    - ProcessId
+level: critical
