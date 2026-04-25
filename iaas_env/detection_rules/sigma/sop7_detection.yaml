@@ -1,0 +1,33 @@
+title: COM Hijacking InprocServer32 Registry Modification
+id: 6b7d2f49-8b89-4e0e-9a34-100007000001
+status: test
+description: Detects COM hijacking behavior where an InprocServer32 registry value under a user CLSID path is modified to reference a DLL.
+references:
+    - https://attack.mitre.org/techniques/T1546/015/
+author: Santiago Czifra Tordoya
+date: 2026-04-25
+tags:
+    - attack.persistence
+    - attack.privilege_escalation
+    - attack.t1546.015
+logsource:
+    product: windows
+    category: registry_set
+detection:
+    selection_event:
+        EventID: 13
+    selection_target:
+        TargetObject|re: '(?i)HKU\\S-1-5-.*_Classes\\CLSID\\\{[0-9a-fA-F-]+\}\\InprocServer32'
+    selection_details:
+        Details|contains: '.dll'
+    condition: selection_event and selection_target and selection_details
+fields:
+    - EventID
+    - Image
+    - TargetObject
+    - Details
+    - User
+    - Computer
+    - ProcessGuid
+    - ProcessId
+level: critical
