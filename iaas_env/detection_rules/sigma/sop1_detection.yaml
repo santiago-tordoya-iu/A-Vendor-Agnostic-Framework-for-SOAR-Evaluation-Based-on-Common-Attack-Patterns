@@ -1,0 +1,32 @@
+title: Makecab Executed Via Cmd With Source File In C Temp
+id: 8e6d7c4a-7c5f-4f7a-9d7b-100001000001
+status: test
+description: Detects Atomic Red Team T1560.001 test #11 behavior where makecab.exe is executed via cmd.exe with a source file located in C:\Temp.
+references:
+    - https://attack.mitre.org/techniques/T1560/001/
+author: Santiago Czifra Tordoya
+date: 2026-04-25
+tags:
+    - attack.collection
+    - attack.t1560.001
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_process:
+        Image|endswith: '\makecab.exe'
+        ParentImage|endswith: '\cmd.exe'
+    selection_commandline:
+        CommandLine|re: '(?i)^\s*(?:"?[^"]*\\makecab\.exe"?|makecab\.exe)\s+(?:"C:\\Temp\\[^"]+"|C:\\Temp\\\S+)\s+(?:"[^"]+"|\S+)\s*$'
+    condition: selection_process and selection_commandline
+fields:
+    - Image
+    - ParentImage
+    - CommandLine
+    - User
+    - CurrentDirectory
+    - ProcessId
+    - ParentProcessId
+falsepositives:
+    - NA
+level: critical
