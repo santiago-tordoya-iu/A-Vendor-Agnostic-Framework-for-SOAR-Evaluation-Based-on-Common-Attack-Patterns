@@ -1,0 +1,33 @@
+title: Scheduled Task Created With OnLogon Trigger
+id: 5f0e6b8c-3a77-4d6c-9b7f-100004000001
+status: test
+description: Detects schtasks.exe being used to create a scheduled task with an OnLogon trigger.
+references:
+    - https://attack.mitre.org/techniques/T1053/005/
+author: Santiago Czifra Tordoya
+date: 2026-04-25
+tags:
+    - attack.execution
+    - attack.persistence
+    - attack.privilege_escalation
+    - attack.t1053.005
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection:
+        OriginalFileName|re: '(?i)schtasks\.exe'
+        CommandLine|re: '(?i)schtasks.*(/create).*?(/sc\s+onlogon)\b'
+    condition: selection
+fields:
+    - Image
+    - OriginalFileName
+    - CommandLine
+    - User
+    - Computer
+    - CurrentDirectory
+    - ParentImage
+    - ParentCommandLine
+    - ProcessId
+    - ParentProcessId
+level: critical
