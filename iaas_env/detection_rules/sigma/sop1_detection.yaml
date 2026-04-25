@@ -27,6 +27,4 @@ fields:
     - CurrentDirectory
     - ProcessId
     - ParentProcessId
-falsepositives:
-    - NA
 level: critical
