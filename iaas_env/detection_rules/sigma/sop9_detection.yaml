@@ -1,0 +1,49 @@
+title: PowerShell AD CIM Reconnaissance Fragment
+id: 1c7f0c44-18a7-4f7b-9b78-100101000001
+status: test
+description: Detects a PowerShell 4103 module logging fragment associated with AD/CIM reconnaissance where Set-Alias is used for CIM-related commands.
+references:
+    - https://attack.mitre.org/techniques/T1087/002/
+author: Santiago Czifra Tordoya
+date: 2026-04-25
+tags:
+    - attack.discovery
+    - attack.t1087.002
+logsource:
+    product: windows
+    service: powershell
+detection:
+    selection:
+        EventID: 4103
+        Channel: 'Microsoft-Windows-PowerShell/Operational'
+        Payload|re: '(?i)CommandInvocation\(Set-Alias\).*ParameterBinding\(Set-Alias\): name=\\?"Value\\?"; value=\\?"(?:Get-CimAssociatedInstance|New-CimSessionOption|New-CimSession)\\?"'
+    condition: selection
+fields:
+    - EventID
+    - Channel
+    - Computer
+    - User
+    - Payload
+level: high
+
+title: Correlated PowerShell AD Reconnaissance Behavior
+id: 56b6eaf7-574c-4c2e-8a8c-100009000001
+status: test
+description: Detects repeated PowerShell AD/CIM reconnaissance fragments on the same computer within a short time window.
+references:
+    - https://attack.mitre.org/techniques/T1087/002/
+author: Santiago Czifra Tordoya
+date: 2026-04-25
+tags:
+    - attack.discovery
+    - attack.t1087.002
+correlation:
+    type: event_count
+    rules:
+        - 1c7f0c44-18a7-4f7b-9b78-100101000001
+    group-by:
+        - Computer
+    timespan: 1s
+    condition:
+        gte: 2
+level: critical
