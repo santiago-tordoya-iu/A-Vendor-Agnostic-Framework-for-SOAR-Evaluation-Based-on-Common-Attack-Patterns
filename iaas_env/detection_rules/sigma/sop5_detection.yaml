@@ -1,0 +1,33 @@
+title: User Discovery Via PowerShell Environment Variables And Out-File
+id: 7c2f6c1a-4b8e-4c0d-8d3f-100005000001
+status: test
+description: Detects PowerShell user discovery through environment variable enumeration with output written using Out-File.
+references:
+    - https://attack.mitre.org/techniques/T1033/
+author: Santiago Czifra Tordoya
+date: 2026-04-25
+tags:
+    - attack.discovery
+    - attack.t1033
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_process:
+        Image|endswith: '\powershell.exe'
+    selection_env_discovery:
+        CommandLine|re: '(?i)(\$env:|Get-ChildItem env:| \[System\.Environment\]::UserName|USERNAME|USERDOMAIN)'
+    selection_output:
+        CommandLine|re: '(?i)Out-File'
+    condition: selection_process and selection_env_discovery and selection_output
+fields:
+    - Image
+    - CommandLine
+    - User
+    - Computer
+    - CurrentDirectory
+    - ParentImage
+    - ParentCommandLine
+    - ProcessId
+    - ParentProcessId
+level: critical
